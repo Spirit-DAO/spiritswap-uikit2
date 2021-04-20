@@ -23,7 +23,7 @@ const PriceLink = styled.a`
 
 const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
   return cakePriceUsd ? (
-    <PriceLink href="https://dex.guru/token/0x99834ff7B59D4bFa3195f859FB27fA293D7b1091-bsc" target="_blank">
+    <PriceLink href="https://dex.guru/token/0x9A7Cb962B9a9D36bfD52A75D277959Aa07c0a45f-bsc" target="_blank">
       <PancakeRoundIcon width="24px" mr="8px" />
       <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
