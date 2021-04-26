@@ -8,22 +8,17 @@ interface Props {
   cakePriceUsd?: number;
 }
 
-const PriceLink = styled.a`
+const PriceLink = styled.span`
   display: flex;
   align-items: center;
   svg {
     transition: transform 0.3s;
   }
-  :hover {
-    svg {
-      transform: scale(1.2);
-    }
-  }
 `;
 
 const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
   return cakePriceUsd ? (
-    <PriceLink href="https://dex.guru/token/0x5Cc61A78F164885776AA610fb0FE1257df78E59B-bsc" target="_blank">
+    <PriceLink>
       <PancakeRoundIcon width="24px" mr="8px" />
       <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
     </PriceLink>

@@ -2346,7 +2346,7 @@ var links = [
             {
                 label: "Github",
                 href: "https://github.com/Layer3Org/SpiritSwap/",
-                target: "_blank",
+                target: '_blank',
             },
             {
                 label: "Docs",
@@ -2360,6 +2360,20 @@ var links = [
     },
 ];
 var socials = [
+    // {
+    //   label: "Telegram",
+    //   icon: "TelegramIcon",
+    //   items: [
+    //     {
+    //       label: "English",
+    //       href: "https://t.me/spiritswapchat",
+    //     },
+    //     {
+    //       label: "Announcements",
+    //       href: "https://t.me/spiritswap",
+    //     },
+    //   ],
+    // },
     {
         label: "Twitter",
         icon: "TwitterIcon",
@@ -2474,10 +2488,10 @@ var PanelBody = function (_a) {
 };
 var templateObject_1$E;
 
-var PriceLink = styled__default['default'].a(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
+var PriceLink = styled__default['default'].span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
-    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dex.guru/token/0x5Cc61A78F164885776AA610fb0FE1257df78E59B-bsc", target: "_blank" },
+    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, null,
         React__default['default'].createElement(Icon$x, { width: "24px", mr: "8px" }),
         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
@@ -2501,17 +2515,6 @@ var SocialLinks = function () { return (React__default['default'].createElement(
     var Icon = Icons$2[social.icon];
     var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
     var mr = index < socials.length - 1 ? "24px" : 0;
-    // if (social.items) {
-    //   return (
-    //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
-    //       {social.items.map((item) => (
-    //         <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
-    //           {item.label}
-    //         </Link>
-    //       ))}
-    //     </Dropdown>
-    //   );
-    // }
     return (React__default['default'].createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
         React__default['default'].createElement(Icon, __assign({}, iconProps))));
 }))); };

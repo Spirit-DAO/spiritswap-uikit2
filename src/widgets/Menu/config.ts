@@ -111,7 +111,7 @@ export const links = [
       {
         label: "Github",
         href: "https://github.com/Layer3Org/SpiritSwap/",
-        target: "_blank",
+        target: '_blank',
       },
       {
         label: "Docs",
@@ -126,6 +126,20 @@ export const links = [
 ];
 
 export const socials = [
+  // {
+  //   label: "Telegram",
+  //   icon: "TelegramIcon",
+  //   items: [
+  //     {
+  //       label: "English",
+  //       href: "https://t.me/spiritswapchat",
+  //     },
+  //     {
+  //       label: "Announcements",
+  //       href: "https://t.me/spiritswap",
+  //     },
+  //   ],
+  // },
   {
     label: "Twitter",
     icon: "TwitterIcon",
