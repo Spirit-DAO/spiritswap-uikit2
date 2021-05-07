@@ -127,9 +127,19 @@ export const links = [
 
 export const socials = [
   {
+    label: "Youtube",
+    icon: "YoutubeIcon",
+    href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
+  },
+  {
     label: "Telegram",
     icon: "TelegramIcon",
     href: "https://t.me/spirit_swap",
+  },
+  {
+    label: "Discord",
+    icon: "DiscordIcon",
+    href: "https://discord.gg/8FGd4nFQdT",
   },
   {
     label: "Twitter",
