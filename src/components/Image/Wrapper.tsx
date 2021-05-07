@@ -11,7 +11,7 @@ const Wrapper = styled.div<ContainerProps>`
   max-width: ${({ width }) => width}px;
   max-height: ${({ height }) => height}px;
   width: 100%;
-  padding-top: ${({ width, height, responsive }) => (responsive ? (height / width) * 100 : 0)}%;  
+  padding-top: ${({ width, height, responsive }) => (responsive ? (height / width) * 100 : 0)}%;
 `;
 
 export default Wrapper;

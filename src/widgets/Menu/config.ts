@@ -111,7 +111,7 @@ export const links = [
       {
         label: "Github",
         href: "https://github.com/Layer3Org/SpiritSwap/",
-        target: '_blank',
+        target: "_blank",
       },
       {
         label: "Docs",
