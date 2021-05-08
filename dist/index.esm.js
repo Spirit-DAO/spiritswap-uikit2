@@ -2760,10 +2760,10 @@ var UserBlock = function (_a) {
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
     var OwnButton = styled(Button)(templateObject_1$K || (templateObject_1$K = __makeTemplateObject(["\n    border-radius: 100rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";\n  "], ["\n    border-radius: 100rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";\n  "])), function (_a) {
         var theme = _a.theme;
-        return (!theme.isDark ? "#fff" : "#0ad9e4");
+        return (theme.isDark ? "#fff" : "#0ad9e4");
     }, function (_a) {
         var theme = _a.theme;
-        return (!theme.isDark ? "2px 1000px 1px #1f2b46 inset" : "2px 1000px 1px #fff inset");
+        return (theme.isDark ? "2px 1000px 1px #1f2b46 inset" : "2px 1000px 1px #fff inset");
     });
     return (React.createElement("div", null, account ? (React.createElement(OwnButton, { scale: "sm", onClick: function () {
             onPresentAccountModal();
