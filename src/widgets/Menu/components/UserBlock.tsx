@@ -8,6 +8,7 @@ interface Props {
   account?: string;
   login: Login;
   logout: () => void;
+  isDark: boolean;
 }
 
 const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
@@ -16,14 +17,14 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
 
   const OwnButton = styled(Button)`
     border-radius: 100rem;
-    color: #ffff;
+    color: ${({ theme }) => (!theme.isDark ? `#fff` : `#0ad9e4`)};
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
       linear-gradient(90deg, #42d784, #60d5dc);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px #1f2b46 inset;
+    box-shadow: ${({ theme }) => (!theme.isDark ? `2px 1000px 1px #1f2b46 inset` : `2px 1000px 1px #fff inset`)};
   `;
 
   return (
