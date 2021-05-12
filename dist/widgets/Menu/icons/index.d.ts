@@ -22,3 +22,8 @@ export { default as DiscordIcon } from "./Discord";
 export { default as YoutubeIcon } from "./Youtube";
 export { default as ShieldIcon } from "./Shield";
 export { default as BushIcon } from "./Bush";
+export { default as BridgeIcon } from "./Bridge";
+export { default as VaultIcon } from "./Vault";
+export { default as StoreIcon } from "./Store";
+export { default as AnalyticIcon } from "./Analytic";
+export { default as DonateIcon } from "./Donate";
