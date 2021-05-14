@@ -40,7 +40,7 @@ export const darkColors: Colors = {
   ...baseColors,
   ...brandColors,
   secondary: "#52D784", //
-  background: "linear-gradient(to top, #151e31 40%, #1F2B46 80%)", //
+  background: "#1F2B46", //
   backgroundDisabled: "#424037", //
   contrast: "#FFFFFF",
   invertedContrast: "#262513",

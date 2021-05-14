@@ -14,7 +14,7 @@ interface Props extends PanelProps, PushedProps {}
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
-  background-color: ${({ theme }) => theme.nav.backgroundFooter};
+  background: ${({ theme }) => theme.nav.backgroundFooter};
   border-top: solid 2px #42d784;
 `;
 
