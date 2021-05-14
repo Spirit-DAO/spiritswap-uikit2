@@ -32,7 +32,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   background: ${({ theme }) =>
     theme.isDark
       ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-      : "linear-gradient(to bottom, #FFEFBA 40%, #FFFFFF 80%)"};
+      : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)"};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
