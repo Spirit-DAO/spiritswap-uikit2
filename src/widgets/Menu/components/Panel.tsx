@@ -19,8 +19,8 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-  
-  background: ${({ theme }) => theme.isDark? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)" : "#FFFFFF"};
+
+  background: ${({ theme }) => (theme.isDark ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)" : "#FFFFFF")};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100vh;
   transition: padding-top 0.2s, width 0.2s;
