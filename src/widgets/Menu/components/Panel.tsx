@@ -23,7 +23,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   background: ${({ theme }) =>
     theme.isDark
       ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
-      : "linear-gradient(to top, #FFEFBA 40%, ##FFFFFF 80%)"};
+      : "linear-gradient(to top, #FFEFBA 40%, #FFFFFF 80%)"};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100vh;
   transition: padding-top 0.2s, width 0.2s;
