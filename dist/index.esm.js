@@ -2213,8 +2213,8 @@ var Icon$19 = function (props) {
 };
 
 var Icon$1a = function (props) {
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 16 1" }, props),
-        React.createElement("path", { d: "M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" })));
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
+        React.createElement("path", { d: "M 300 192C 353 192 404 213 441 250C 500 317 500 317 559 250C 596 213 647 192 700 192C 753 192 804 213 841 250C 879 288 900 339 900 392C 900 443 880 492 845 529C 845 529 845 530 845 530C 845 530 550 846 550 846C 512 881 487 881 450 846C 450 846 159 533 159 533C 121 495 100 445 100 392C 100 339 121 288 159 250C 196 213 247 192 300 192C 300 192 300 192 300 192" })));
 };
 
 var IconModule = /*#__PURE__*/Object.freeze({
@@ -2612,7 +2612,7 @@ var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return pre
 
 var Container$4 = styled.div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.nav.background;
+    return theme.nav.backgroundFooter;
 });
 var SettingsEntry = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
@@ -2986,7 +2986,7 @@ var brandColors = {
 var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#ffffff", secondary: "#52D784", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputSecondary: "#d7caec", tertiary: "#EFF4F5", text: "#452A7A", textDisabled: "#BDC2C4", textSubtle: "#52D784", borderColor: "#E9EAEB", card: "#FFFFFF", nav: "#333333", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#52D784", background: "#1F2B46", backgroundDisabled: "#424037", contrast: "#FFFFFF", invertedContrast: "#262513", input: "#483F5A", inputSecondary: "#8d8857", primaryDark: "#8f8104", tertiary: "#28444A", text: "#fcfae2", textDisabled: "#717161", textSubtle: "#52D784", borderColor: "#61634b", card: "linear-gradient(to top, #151e31 40%, #1F2B46 80%);", nav: "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#52D784", background: "linear-gradient(to top, #151e31 40%, #1F2B46 80%)", backgroundDisabled: "#424037", contrast: "#FFFFFF", invertedContrast: "#262513", input: "#483F5A", inputSecondary: "#8d8857", primaryDark: "#8f8104", tertiary: "#28444A", text: "#fcfae2", textDisabled: "#717161", textSubtle: "#52D784", borderColor: "#61634b", card: "linear-gradient(to top, #151e31 40%, #1F2B46 80%)", nav: "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });
 
