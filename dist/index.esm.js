@@ -2612,7 +2612,7 @@ var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return pre
 
 var Container$4 = styled.div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "#1F2B46" : "#FFFFFF");
+    return (theme.isDark ? "#161f33" : "#FFFFFF");
 });
 var SettingsEntry = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
@@ -2638,7 +2638,7 @@ var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeT
     return (showMenu ? "80px" : 0);
 }, function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)" : "#FFFFFF");
+    return (theme.isDark ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)" : "linear-gradient(to top, ##FFEFBA 40%, ##FFFFFF 80%)");
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
@@ -2815,7 +2815,7 @@ var StyledNav = styled.nav(templateObject_2$h || (templateObject_2$h = __makeTem
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)" : "#FFFFFF");
+    return (theme.isDark ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)" : "linear-gradient(to bottom, ##FFEFBA 40%, ##FFFFFF 80%)");
 });
 var BodyWrapper = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
