@@ -878,7 +878,7 @@ var getBottom = function (_a) {
 };
 var DropdownContent = styled.div(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  width: max-content;\n  display: none;\n  flex-direction: column;\n  position: absolute;\n  transform: translate(-50%, 0);\n  left: ", ";\n  bottom: ", ";\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n  padding: 16px;\n  max-height: 500px;\n  overflow-y: auto;\n  z-index: ", ";\n  border-radius: ", ";\n"], ["\n  width: max-content;\n  display: none;\n  flex-direction: column;\n  position: absolute;\n  transform: translate(-50%, 0);\n  left: ", ";\n  bottom: ", ";\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n  padding: 16px;\n  max-height: 500px;\n  overflow-y: auto;\n  z-index: ", ";\n  border-radius: ", ";\n"])), getLeft, getBottom, function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "#161f33" : "#FFFFFF");
+    return (theme.isDark ? "#161f33" : "#E6FDFF");
 }, function (_a) {
     var theme = _a.theme;
     return (theme.isDark ? "#FFFFFF" : "#161f33");
@@ -2615,7 +2615,7 @@ var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return pre
 
 var Container$4 = styled.div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "#161f33" : "#FFFFFF");
+    return (theme.isDark ? "#161f33" : "#E6FDFF");
 });
 var SettingsEntry = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
@@ -2644,7 +2644,7 @@ var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeT
     var theme = _a.theme;
     return theme.isDark
         ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
-        : "linear-gradient(to top, #FFEFBA 40%, #FFFFFF 80%)";
+        : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)";
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
@@ -2824,7 +2824,7 @@ var StyledNav = styled.nav(templateObject_2$h || (templateObject_2$h = __makeTem
     var theme = _a.theme;
     return theme.isDark
         ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-        : "linear-gradient(to bottom, #FFEFBA 40%, #FFFFFF 80%)";
+        : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
 });
 var BodyWrapper = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
