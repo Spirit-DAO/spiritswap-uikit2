@@ -19,7 +19,6 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-  margin-right: 500px;
   background: ${({ theme }) =>
     theme.isDark
       ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
