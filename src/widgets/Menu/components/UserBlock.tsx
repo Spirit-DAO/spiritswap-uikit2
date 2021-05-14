@@ -17,7 +17,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
 
   const OwnButton = styled(Button)`
     border-radius: 100rem;
-    color: ${({ theme }) => (theme.isDark ? `#fff` : `#0ad9e4`)};
+    color: ${({ theme }) => (theme.isDark ? `#fcfae2` : `#0d0e21`)};
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
