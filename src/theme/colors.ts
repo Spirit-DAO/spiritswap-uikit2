@@ -28,6 +28,7 @@ export const lightColors: Colors = {
   text: "#452A7A", //
   textDisabled: "#544786",
   textSubtle: "#46357B",
+  backgroundFram: "#46357B",
   borderColor: "#E9EAEB",
   card: "#FFFFFF",
   nav: "#333333", //
@@ -50,7 +51,8 @@ export const darkColors: Colors = {
   tertiary: "#28444A", //
   text: "#fcfae2", //
   textDisabled: "#717161", //
-  textSubtle: "red", //
+  textSubtle: "#fcfae2", //
+  backgroundFram: "#151E31", //
   borderColor: "#61634b",
   card: "#0D0F22", //
   nav: "#0D0F22", //

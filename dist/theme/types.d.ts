@@ -43,6 +43,7 @@ export declare type Colors = {
     text: string;
     textDisabled: string;
     textSubtle: string;
+    backgroundFram: string;
     borderColor: string;
     card: string;
     nav: string;
