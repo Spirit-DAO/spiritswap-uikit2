@@ -45,7 +45,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="subtle">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="toggle">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -53,7 +53,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} onItemClick={handleClick1} scale="sm" variant="subtle">
+        <ButtonMenu activeIndex={index1} onItemClick={handleClick1} scale="sm" variant="toggle">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
