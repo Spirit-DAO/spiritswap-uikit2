@@ -3,7 +3,7 @@ export interface ButtonMenuItemProps extends BaseButtonProps {
     isActive?: boolean;
 }
 export interface ButtonMenuProps {
-    variant?: typeof variants.PRIMARY | typeof variants.SUBTLE;
+    variant?: typeof variants.PRIMARY | typeof variants.SUBTLE | typeof variants.TOGGLE;
     activeIndex?: number;
     onItemClick?: (index: number) => void;
     scale?: Scale;
