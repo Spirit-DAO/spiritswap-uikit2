@@ -27,6 +27,7 @@ export const lightColors: Colors = {
   tertiary: "#EFF4F5",
   text: "#452A7A", //
   farmBackground: "#FCFAE2", //
+  toggleBackground: "#FCFAE2", //
   textDisabled: "#544786",
   textSubtle: "#46357B",
   borderColor: "#E9EAEB",
@@ -51,6 +52,7 @@ export const darkColors: Colors = {
   tertiary: "#28444A", //
   text: "#fcfae2", //
   farmBackground: "#452A7A", //
+  toggleBackground: "#0D0F22", //
   textDisabled: "#717161", //
   textSubtle: "#fcfae2", //
   borderColor: "#61634b",
