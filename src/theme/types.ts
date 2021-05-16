@@ -42,7 +42,8 @@ export type Colors = {
   warning: string;
   contrast: string;
   invertedContrast: string;
-  farmBackground: string, 
+  farmBackground: string;
+  toggleBackground: string;
   input: string;
   inputSecondary: string;
   background: string;
