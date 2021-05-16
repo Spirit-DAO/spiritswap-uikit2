@@ -140,6 +140,7 @@ var variants = {
     DANGER: "danger",
     SUBTLE: "subtle",
     SUCCESS: "success",
+    TOGGLE: "toggle",
 };
 
 var _a, _b;
@@ -195,7 +196,7 @@ var styleVariants = (_b = {},
         color: "primary",
         boxShadow: "none",
     },
-    _b[variants.TEXT] = {
+    _b[variants.TOGGLE] = {
         backgroundColor: "toggleBackground",
         color: "text",
     },
