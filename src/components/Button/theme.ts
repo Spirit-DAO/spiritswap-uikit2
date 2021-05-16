@@ -53,7 +53,7 @@ export const styleVariants = {
     color: "primary",
     boxShadow: "none",
   },
-  [variants.TEXT]: {
+  [variants.TOGGLE]: {
     backgroundColor: "toggleBackground",
     color: "text",
   },
