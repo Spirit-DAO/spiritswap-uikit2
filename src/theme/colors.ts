@@ -54,7 +54,7 @@ export const darkColors: Colors = {
   farmBackground: "#452A7A", //
   toggleBackground: "#0D0F22", //
   textDisabled: "#717161", //
-  textSubtle: "##6DD784", //
+  textSubtle: "#6DD784", //
   borderColor: "#61634b",
   card: "#0D0F22", //
   nav: "#0D0F22", //
