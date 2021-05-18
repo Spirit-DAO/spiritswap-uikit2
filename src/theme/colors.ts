@@ -26,8 +26,8 @@ export const lightColors: Colors = {
   inputSecondary: "#d7caec",
   tertiary: "#EFF4F5",
   text: "#452A7A", //
-  farmBackground: "#FCFAE2", //
-  toggleBackground: "#FCFAE2", //
+  farmBackground: "#F4F3F6", //
+  toggleBackground: "#E6FDFE", //
   textDisabled: "#544786",
   textSubtle: "#46357B",
   borderColor: "#E9EAEB",
