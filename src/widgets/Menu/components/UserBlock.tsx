@@ -23,8 +23,8 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
       linear-gradient(90deg, #42d784, #60d5dc);
     background-origin: border-box;
-    background-clip: content-box, border-box;
     box-shadow: ${({ theme }) => (theme.isDark ? `2px 1000px 1px #1f2b46 inset` : `2px 1000px 1px #fff inset`)};
+    background-clip: content-box, border-box;
   `;
 
   return (

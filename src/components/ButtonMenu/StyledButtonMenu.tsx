@@ -11,10 +11,6 @@ const getBackgroundColor = ({ theme, variant }: StyledButtonMenuProps) => {
 };
 
 const StyledButtonMenu = styled.div<{ variant: Variant }>`
-  //background-color: ${getBackgroundColor};
-  //border-radius: 16px;
-  display: inline-flex;
-  & > button {
     border-radius: 0.5rem;
     color: ${({ theme }) => (theme.isDark ? `#fff` : `#0ad9e4`)};
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
@@ -24,8 +20,8 @@ const StyledButtonMenu = styled.div<{ variant: Variant }>`
     background-origin: border-box;
     box-shadow: ${getBackgroundColor};
     background-clip: content-box, border-box;
-  }  
-  & > button + button,
+  display: inline-flex; 
+  & > button,
   & > a + a {
     margin-left: 2px; // To avoid focus shadow overlap
   }
