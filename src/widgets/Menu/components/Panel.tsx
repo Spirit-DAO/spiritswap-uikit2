@@ -35,7 +35,20 @@ const Panel: React.FC<Props> = (props) => {
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100vh;
   transition: padding-top 0.2s, width 0.2s;
-  border-right: ${() => (isMobile ? "2px solid #42d785" : "2px solid  none")};
+  border-right: 2px solid #42d785;
+  border-right: ${() => {
+      switch (isMobile) {
+        case true:
+          return isPushed ? "2px solid #42d785" : "2px solid #none";
+          break;
+        case false:
+          return isPushed ? "2px solid #42d785" : "2px solid #42d785";
+          break;
+        default:
+          break;
+      }
+      return "";
+    }};
   z-index: 11;
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
   transform: translate3d(0, 0, 0);
