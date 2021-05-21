@@ -2628,33 +2628,32 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$G, templateObject_2$f, templateObject_3$7;
 
-var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
-    ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
-    var showMenu = _a.showMenu;
-    return (showMenu ? "80px" : 0);
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.isDark
-        ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
-        : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)";
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? "2px solid #42d785" : "2px solid #42d785");
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? "initial" : "hidden");
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.mediaQueries.nav;
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
-});
 var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu;
+    var isXl = useMatchBreakpoints().isXl;
+    var isMobile = isXl === false;
+    var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  \n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
+        ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  \n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
+        var showMenu = _a.showMenu;
+        return (showMenu ? "80px" : 0);
+    }, function (_a) {
+        var theme = _a.theme;
+        return theme.isDark
+            ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+            : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)";
+    }, function (_a) {
+        var isPushed = _a.isPushed;
+        return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
+    }, function () { return (isMobile ? "2px solid #42d785" : "2px solid  none"); }, function (_a) {
+        var isPushed = _a.isPushed;
+        return (isPushed ? "initial" : "hidden");
+    }, function (_a) {
+        var theme = _a.theme;
+        return theme.mediaQueries.nav;
+    }, function (_a) {
+        var isPushed = _a.isPushed;
+        return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
+    });
     return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React.createElement(PanelBody, __assign({}, props)),
         React.createElement(PanelFooter, __assign({}, props))));
