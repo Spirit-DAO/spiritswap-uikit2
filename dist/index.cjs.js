@@ -2645,8 +2645,8 @@ var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
-    var StyledPanel = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n    position: fixed;\n    padding-top: ", ";\n    top: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    flex-shrink: 0;\n    background: ", ";\n    width: ", ";\n    height: 100vh;\n    transition: padding-top 0.2s, width 0.2s;\n    border-right: 2px solid #42d785;\n    border-right: ", ";\n    z-index: 11;\n    overflow: ", ";\n    transform: translate3d(0, 0, 0);\n\n    ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n  "], ["\n    position: fixed;\n    padding-top: ", ";\n    top: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    flex-shrink: 0;\n    background: ",
-        ";\n    width: ", ";\n    height: 100vh;\n    transition: padding-top 0.2s, width 0.2s;\n    border-right: 2px solid #42d785;\n    border-right: ",
+    var StyledPanel = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n    position: fixed;\n    padding-top: ", ";\n    top: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    flex-shrink: 0;\n    background: ", ";\n    width: ", ";\n    height: 100vh;\n    transition: padding-top 0.2s, width 0.2s;\n    //border-right: 2px solid #42d785;\n    border-right: ", ";\n    z-index: 11;\n    overflow: ", ";\n    transform: translate3d(0, 0, 0);\n\n    ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n  "], ["\n    position: fixed;\n    padding-top: ", ";\n    top: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    flex-shrink: 0;\n    background: ",
+        ";\n    width: ", ";\n    height: 100vh;\n    transition: padding-top 0.2s, width 0.2s;\n    //border-right: 2px solid #42d785;\n    border-right: ",
         ";\n    z-index: 11;\n    overflow: ", ";\n    transform: translate3d(0, 0, 0);\n\n    ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n  "])), function (_a) {
         var showMenu = _a.showMenu;
         return (showMenu ? "80px" : 0);
@@ -2661,7 +2661,7 @@ var Panel = function (props) {
     }, function () {
         switch (isMobile) {
             case true:
-                return isPushed ? "2px solid #42d785" : "2px solid none";
+                return isPushed ? "2px solid #42d785" : "none";
             case false:
                 return isPushed ? "2px solid #42d785" : "2px solid #42d785";
         }

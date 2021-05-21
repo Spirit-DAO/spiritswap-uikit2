@@ -33,11 +33,11 @@ const Panel: React.FC<Props> = (props) => {
     width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
     height: 100vh;
     transition: padding-top 0.2s, width 0.2s;
-    border-right: 2px solid #42d785;
+    //border-right: 2px solid #42d785;
     border-right: ${() => {
       switch (isMobile) {
         case true:
-          return isPushed ? "2px solid #42d785" : "2px solid none";
+          return isPushed ? "2px solid #42d785" : "none";
           break;
         case false:
           return isPushed ? "2px solid #42d785" : "2px solid #42d785";
