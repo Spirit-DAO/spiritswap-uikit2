@@ -46,7 +46,7 @@ export const lightColors: Colors = {
   background: "#1F2B46", //
   backgroundDisabled: "#424037", //
   contrast: "#FFFFFF",
-  invertedContrast: "#262513",
+  invertedContrast: "#0D0F22",
   input: "#483F5A",
   inputSecondary: "#8d8857",
   primaryDark: "#8f8104",
@@ -71,7 +71,7 @@ export const darkColors: Colors = {
   background: "#1F2B46", //
   backgroundDisabled: "#424037", //
   contrast: "#FFFFFF",
-  invertedContrast: "#262513",
+  invertedContrast: "#0D0F22",
   input: "#483F5A",
   inputSecondary: "#8d8857",
   primaryDark: "#8f8104",
