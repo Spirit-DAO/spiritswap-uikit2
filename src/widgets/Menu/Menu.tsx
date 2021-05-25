@@ -18,7 +18,8 @@ const Wrapper = styled.div`
 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
-  top: ${({ showMenu }) => (showMenu ? `-${MENU_HEIGHT}px` : `-${MENU_HEIGHT}px`)};
+  //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+  top: ${({ showMenu }) => (showMenu ? 0 : 0)};
   left: 0;
   transition: top 0.2s;
   display: flex;
