@@ -19,7 +19,7 @@ const PriceLink = styled.span`
 const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
   return cakePriceUsd ? (
     <PriceLink>
-      <PancakeRoundIcon width="24px" mr="8px" />
+      <PancakeRoundIcon width="24px" mr="15px" />
       <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
   ) : (

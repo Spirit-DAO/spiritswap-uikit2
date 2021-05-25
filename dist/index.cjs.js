@@ -267,7 +267,7 @@ Button.defaultProps = {
     disabled: false,
 };
 
-var IconButton = styled__default['default'](Button)(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  padding: 0 3px;\n  width: ", ";\n"], ["\n  padding: 0 3px;\n  width: ", ";\n"])), function (_a) {
+var IconButton = styled__default['default'](Button)(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  padding: 0 ;\n  width: ", ";\n"], ["\n  padding: 0 ;\n  width: ", ";\n"])), function (_a) {
     var scale = _a.scale;
     return (scale === "sm" ? "32px" : "48px");
 });
@@ -2592,7 +2592,7 @@ var PriceLink = styled__default['default'].span(templateObject_1$F || (templateO
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
     return cakePriceUsd ? (React__default['default'].createElement(PriceLink, null,
-        React__default['default'].createElement(Icon$x, { width: "24px", mr: "8px" }),
+        React__default['default'].createElement(Icon$x, { width: "24px", mr: "15px" }),
         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var CakePrice$1 = React__default['default'].memo(CakePrice);
