@@ -12,8 +12,9 @@ const PriceLink = styled.span`
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  background-color: red;
   svg {
+    padding-right: 5px;
     transition: transform 0.3s;
   }
 `;
