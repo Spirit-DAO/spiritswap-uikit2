@@ -23,7 +23,7 @@ const SettingsEntry = styled.div`
   display: flex;
   align-items: center;
   //justify-content: space-between;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 8px;
 `;
