@@ -24,7 +24,8 @@ const SettingsEntry = styled.div`
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
+  // Tu add the Theme mode, put in padding 0 8px
+  //padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
