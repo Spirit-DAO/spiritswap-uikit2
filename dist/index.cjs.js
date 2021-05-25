@@ -2588,7 +2588,7 @@ var PanelBody = function (_a) {
 };
 var templateObject_1$E;
 
-var PriceLink = styled__default['default'].span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  justify-content: space-between;\n  background-color: red;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  justify-content: space-between;\n  background-color: red;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
+var PriceLink = styled__default['default'].span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  justify-content: space-evenly;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  justify-content: space-evenly;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
     return cakePriceUsd ? (React__default['default'].createElement(PriceLink, null,
