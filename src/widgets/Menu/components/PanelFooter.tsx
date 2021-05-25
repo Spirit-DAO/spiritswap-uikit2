@@ -25,7 +25,8 @@ const SettingsEntry = styled.div`
   //justify-content: space-between;
   justify-content: flex-start;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
+  background-color: red;
+  //padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
