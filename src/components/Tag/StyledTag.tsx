@@ -14,7 +14,7 @@ export const StyledTag = styled.div<ThemedProps>`
   background-color: ${({ outline, theme, variant = "primary" }) =>
     outline ? "transparent" : getColor(variant, theme)};
   border: 2px solid ${({ variant = "primary", theme }) => getColor(variant, theme)};
-  border-radius: 16px;
+  border-radius: 0.5rem;
   color: ${getThemeTextColor};
   display: inline-flex;
   font-size: 14px;
