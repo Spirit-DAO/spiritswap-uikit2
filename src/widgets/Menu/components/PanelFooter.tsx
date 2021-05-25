@@ -13,21 +13,19 @@ interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   flex: none;
-  padding: 8px 4px;
+  padding: 8px 0;
 
   background: ${({ theme }) => (theme.isDark ? "#161f33" : "#E6FDFF")};
   border-top: solid 2px #42d784;
 `;
 
 const SettingsEntry = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   //justify-content: space-between;
   justify-content: flex-start;
   height: ${MENU_ENTRY_HEIGHT}px;
-  background-color: red;
-  //padding: 0 8px;
+  padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`

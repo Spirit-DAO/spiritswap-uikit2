@@ -2619,11 +2619,11 @@ var LangSelector = function (_a) {
 };
 var LangSelector$1 = React__default['default'].memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
-var Container$4 = styled__default['default'].div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 4px;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"])), function (_a) {
+var Container$4 = styled__default['default'].div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  border-top: solid 2px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
     return (theme.isDark ? "#161f33" : "#E6FDFF");
 });
-var SettingsEntry = styled__default['default'].div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  background-color: red;\n  //padding: 0 8px;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  background-color: red;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var SettingsEntry = styled__default['default'].div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
