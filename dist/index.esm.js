@@ -2835,7 +2835,7 @@ var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplat
     return (showMenu ? MENU_HEIGHT + "px" : 0);
 }, function (_a) {
     var showMenu = _a.showMenu;
-    return (showMenu ? 0 : 0);
+    return (showMenu ? MENU_HEIGHT + "px" : MENU_HEIGHT + "px");
 }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
