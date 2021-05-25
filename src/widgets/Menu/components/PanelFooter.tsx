@@ -23,19 +23,18 @@ const SettingsEntry = styled.div`
   display: flex;
   align-items: center;
   //justify-content: space-between;
-  justify-content: center;
+  justify-content: flex-end;
   height: ${MENU_ENTRY_HEIGHT}px;
-  // Tu add the Theme mode, put in padding 0 8px
-  //padding: 0 8px;
+  padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 8px;
-  margin-right: 10px;
 `;
 
 const PanelFooter: React.FC<Props> = ({
