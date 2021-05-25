@@ -19,7 +19,8 @@ const Panel: React.FC<Props> = (props) => {
 
   const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
     position: fixed;
-    padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
+    //padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
+    padding-top: ${({ showMenu }) => (showMenu ? "80px" : "80px")};
     top: 0;
     left: 0;
     display: flex;
