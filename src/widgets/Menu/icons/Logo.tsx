@@ -27,7 +27,7 @@ const IconContainer = styled.div`
     height: 120%;
     background: blue;
     & > img {
-        align-items: center;
+      align-items: center;
     }
   }
 `;
