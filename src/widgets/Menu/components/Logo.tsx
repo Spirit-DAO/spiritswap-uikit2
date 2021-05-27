@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 72px;
+    width: 55px;
     height: 75px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
