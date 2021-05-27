@@ -2651,8 +2651,9 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$G, templateObject_2$f, templateObject_3$8;
 
-var StyledPanel = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
-    ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
+    ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ",
+    ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.isDark
         ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
@@ -2666,6 +2667,15 @@ var StyledPanel = styled__default['default'].div(templateObject_1$H || (template
 }, function (_a) {
     var isMobile = _a.isMobile;
     return (isMobile ? "2px solid #42d785" : "none");
+}, function (_a) {
+    var isMobile = _a.isMobile, isPushed = _a.isPushed;
+    switch (isMobile) {
+        case true:
+            return isPushed ? "2px solid #42d785" : "none";
+        case false:
+            return isPushed ? "2px solid #42d785" : "2px solid #42d785";
+    }
+    return "";
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
