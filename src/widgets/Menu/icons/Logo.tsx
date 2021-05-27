@@ -15,18 +15,18 @@ const Tspan = styled.tspan`
   letter-spacing: 0em;
 `;
 const IconContainer = styled.div`
-position: relative;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-/* flex-wrap: wrap; */
-height: 50px;
-background: red;
-> img {
-  width: 30px;
-  height: 120%;
-}
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  height: 50px;
+  background: red;
+  > img {
+    /* width: 30px; */
+    height: 120%;
+  }
 `;
 
 interface LogoProps extends SvgProps {
