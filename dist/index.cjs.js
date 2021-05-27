@@ -2129,7 +2129,7 @@ var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React__default['default'].createElement(IconContainer, null,
         React__default['default'].createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        React__default['default'].createElement("span", __assign({}, props, { style: { color: "#52D784", letterSpacing: "3px" } }),
+        React__default['default'].createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React__default['default'].createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
 };
