@@ -2559,7 +2559,7 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"])));
+var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 60px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 60px;\n"])));
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = useLocation();
@@ -2584,12 +2584,12 @@ var PanelBody = function (_a) {
 };
 var templateObject_1$E;
 
-var PriceLink = styled.span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  /* width: 100%; */\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  /* width: 100%; */\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
+var PriceLink = styled.span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
-    return (React.createElement(PriceLink, null,
+    return cakePriceUsd ? (React.createElement(PriceLink, null,
         React.createElement(Icon$x, { width: "24px", mr: "8px" }),
-        cakePriceUsd ? (React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3))) : (React.createElement(Skeleton, { width: 80, height: 24 }))));
+        React.createElement(Text, { color: "textSubtle", style: { marginLeft: "5px" }, bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }));
 };
 var CakePrice$1 = React.memo(CakePrice);
 var templateObject_1$F;
