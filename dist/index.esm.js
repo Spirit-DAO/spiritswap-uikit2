@@ -2638,18 +2638,21 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$G, templateObject_2$f, templateObject_3$8;
 
-var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
-    var showMenu = _a.showMenu;
-    return (showMenu ? "80px" : 0);
-}, function (_a) {
+var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
+    ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  border-right: ", ";\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n      border-width: 3px;\n      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n      width: ", ";\n    }\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.nav.background;
+    return theme.isDark
+        ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+        : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)";
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
 }, function (_a) {
     var isPushed = _a.isPushed;
-    return (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0);
+    return (isPushed ? "2px solid #42d785" : "2px solid #42d785");
+}, function (_a) {
+    var isMobile = _a.isMobile;
+    return (isMobile ? "2px solid #42d785" : "none");
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
@@ -2661,8 +2664,8 @@ var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeT
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
 var Panel = function (props) {
-    var isPushed = props.isPushed, showMenu = props.showMenu;
-    return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
+    var isPushed = props.isPushed, showMenu = props.showMenu, isMobile = props.isMobile;
+    return (React.createElement(StyledPanel, { isMobile: isMobile, isPushed: isPushed, showMenu: showMenu },
         React.createElement(PanelBody, __assign({}, props)),
         React.createElement(PanelFooter, __assign({}, props))));
 };
@@ -2681,35 +2684,13 @@ var templateObject_1$H;
 //     flex-direction: column;
 //     justify-content: space-between;
 //     flex-shrink: 0;
-//     background: ${({ theme }) =>
-//       theme.isDark
-//         ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
-//         : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
 //     width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
 //     height: 100vh;
 //     transition: padding-top 0.2s, width 0.2s;
 //     //border-right: 2px solid #42d785;
-//     border-right: ${() => {
-//       switch (isMobile) {
-//         case true:
-//           return isPushed ? "2px solid #42d785" : "none";
-//           break;
-//         case false:
-//           return isPushed ? "2px solid #42d785" : "2px solid #42d785";
-//           break;
-//         default:
-//           break;
-//       }
-//       return "";
-//     }};
 //     z-index: 11;
 //     overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
 //     transform: translate3d(0, 0, 0);
-//     ${({ theme }) => theme.mediaQueries.nav} {
-//       border-width: 3px;
-//       border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
-//       width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-//     }
 //   `;
 //   return (
 //     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
