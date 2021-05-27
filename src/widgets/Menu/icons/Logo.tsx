@@ -22,9 +22,13 @@ const IconContainer = styled.div`
   align-items: center;
   height: 50px;
   background: red;
-  > div {
-    width: 30px;
+  & > div {
+    width: 60px;
     height: 120%;
+    background: blue;
+    & > img {
+        align-items: center;
+    }
   }
 `;
 
@@ -41,7 +45,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   return (
     <IconContainer>
       <div>
-        <img {...props} src="/images/spiritswap_logo.png" alt="" width='80' height='116'/>
+        <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
       </div>
       <span style={{ color: "#52D784", letterSpacing: "3px" }}>
         Spirit<span style={{ color: "#60D5DC" }}>Swap</span>
