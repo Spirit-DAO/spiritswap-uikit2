@@ -17,9 +17,15 @@ const Tspan = styled.tspan`
 const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   height: 50px;
   background: red;
+  > img {
+    width: 35px;
+    height: 50px
+  }
 `;
 
 interface LogoProps extends SvgProps {
@@ -34,7 +40,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#432918";
   return (
     <IconContainer>
-      <img {...props} src="/images/spiritswap_logo.png" alt="" width="35" height="50" />
+      <img {...props} src="/images/spiritswap_logo.png" alt=""/>
       <span style={{ color: "#52D784", letterSpacing: "3px" }}>
         Spirit<span style={{ color: "#60D5DC" }}>Swap</span>
       </span>
