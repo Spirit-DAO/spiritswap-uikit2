@@ -2114,7 +2114,7 @@ styled.tspan(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["
 var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React.createElement(React.Fragment, null,
-        React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
+        React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "40", height: "58" })),
         React.createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
