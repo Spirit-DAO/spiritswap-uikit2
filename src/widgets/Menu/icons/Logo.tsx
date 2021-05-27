@@ -20,7 +20,7 @@ const IconContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
+
   /* & > img {
     width: 60px;
     align-items: center;
@@ -43,7 +43,10 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
 
       <span {...props} style={{ color: "#52D784", letterSpacing: "3px" }}>
-        Spirit<span {...props} style={{ color: "#60D5DC" }}>Swap</span>
+        Spirit
+        <span style={{ color: "#60D5DC" }}>
+          Swap
+        </span>
       </span>
     </IconContainer>
   );
