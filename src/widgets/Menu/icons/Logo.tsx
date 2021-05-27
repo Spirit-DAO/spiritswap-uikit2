@@ -24,11 +24,11 @@ const IconContainer = styled.div`
   background: red;
   & > div {
     width: 60px;
-    height: 120%;
+    height: 150%;
     background: blue;
     & > img {
       align-items: center;
-      height: 150%;
+      height: 120%;
     }
   }
 `;
