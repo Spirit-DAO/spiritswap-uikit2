@@ -21,9 +21,9 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   justify-content: space-between;
   flex-shrink: 0;
   background: ${({ theme }) =>
-      theme.isDark
-        ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
-        : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
+    theme.isDark
+      ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+      : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100vh;
   transition: padding-top 0.2s, width 0.2s;
@@ -34,10 +34,10 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   transform: translate3d(0, 0, 0);
 
   ${({ theme }) => theme.mediaQueries.nav} {
-      border-width: 3px;
-      border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
-      width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    }
+    border-width: 3px;
+    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
+    width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+  }
 `;
 
 const Panel: React.FC<Props> = (props) => {
@@ -68,7 +68,7 @@ export default Panel;
 //     flex-direction: column;
 //     justify-content: space-between;
 //     flex-shrink: 0;
-    
+
 //     width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
 //     height: 100vh;
 //     transition: padding-top 0.2s, width 0.2s;
@@ -77,7 +77,6 @@ export default Panel;
 //     z-index: 11;
 //     overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
 //     transform: translate3d(0, 0, 0);
-
 
 //   `;
 
