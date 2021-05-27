@@ -27,10 +27,10 @@ const IconContainer = styled.div`
     height: 150%;
     background: blue;
   } */
-    & > img {
-      align-items: center;
-      height: 150%;
-    }
+  & > img {
+    align-items: center;
+    height: 150%;
+  }
 `;
 
 interface LogoProps extends SvgProps {
@@ -45,9 +45,8 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#432918";
   return (
     <IconContainer>
-      
-        <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
-      
+      <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
+
       <span style={{ color: "#52D784", letterSpacing: "3px" }}>
         Spirit<span style={{ color: "#60D5DC" }}>Swap</span>
       </span>
