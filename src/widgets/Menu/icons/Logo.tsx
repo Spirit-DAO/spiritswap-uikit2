@@ -15,14 +15,14 @@ const Tspan = styled.tspan`
   letter-spacing: 0em;
 `;
 const IconContainer = styled.div`
-  /* position: relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  background: red;
-  & > img {
+  /* height: 50px;
+  background: red; */
+  /* & > img {
     width: 60px;
     align-items: center;
     height: 150%;
