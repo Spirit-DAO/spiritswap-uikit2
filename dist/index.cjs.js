@@ -2120,9 +2120,17 @@ var Icon$U = function (props) {
 
 styled__default['default'].text(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled__default['default'].tspan(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
+// const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
+//   const textColor = isDark ? "#FFFFFF" : "#432918";
+//   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
+// };
 var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
-    return React__default['default'].createElement("img", __assign({}, props, { width: "220px", height: "50px", src: "/images/logo.png" }));
+    return React__default['default'].createElement(React__default['default'].Fragment, null,
+        React__default['default'].createElement("img", __assign({}, props, { src: "/images/logo.png", alt: '', width: '80', height: '116' })),
+        React__default['default'].createElement("span", { style: { color: '#52D784', letterSpacing: '3px' } },
+            "Spirit",
+            React__default['default'].createElement("span", { style: { color: '#60D5DC' } }, "Swap")));
 };
 var templateObject_1$z, templateObject_2$b;
 
@@ -2907,9 +2915,6 @@ var Menu = function (_a) {
     return (React__default['default'].createElement(Wrapper$1, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React__default['default'].createElement("span", { style: { color: '#52D784', letterSpacing: '3px' } },
-                "Spirit",
-                React__default['default'].createElement("span", { style: { color: '#60D5DC' } }, "Swap")),
             React__default['default'].createElement(Flex, null,
                 React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark }))),
         React__default['default'].createElement(BodyWrapper, null,

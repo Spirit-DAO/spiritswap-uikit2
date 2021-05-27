@@ -128,9 +128,6 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <span style={{ color: '#52D784', letterSpacing: '3px' }}>
-            Spirit<span style={{ color: '#60D5DC' }}>Swap</span>
-        </span>
         <Flex>
           <UserBlock account={account} login={login} logout={logout} isDark={isDark} />
         </Flex>
