@@ -2127,7 +2127,7 @@ styled__default['default'].tspan(templateObject_2$b || (templateObject_2$b = __m
 var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React__default['default'].createElement(React__default['default'].Fragment, null,
-        React__default['default'].createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", width: "220px", height: "50px" })),
+        React__default['default'].createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
         React__default['default'].createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React__default['default'].createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
