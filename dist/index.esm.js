@@ -2586,9 +2586,9 @@ var templateObject_1$E;
 var PriceLink = styled.span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  width: 100%;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
-    return cakePriceUsd ? (React.createElement(PriceLink, null,
+    return (React.createElement(PriceLink, null,
         React.createElement(Icon$x, { width: "24px", mr: "8px" }),
-        React.createElement(Text, { color: "textSubtle", style: { marginLeft: "6px" }, bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }));
+        cakePriceUsd ? (React.createElement(Text, { color: "textSubtle", style: { marginLeft: "6px" }, bold: true }, "$" + cakePriceUsd.toFixed(3))) : (React.createElement(Skeleton, { width: 80, height: 24 }))));
 };
 var CakePrice$1 = React.memo(CakePrice);
 var templateObject_1$F;
