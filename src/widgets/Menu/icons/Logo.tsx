@@ -40,7 +40,9 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#432918";
   return (
     <IconContainer>
-      <div><img {...props} src="/images/spiritswap_logo.png" alt="" /></div>
+      <div>
+        <img {...props} src="/images/spiritswap_logo.png" alt="" width='80' height='116'/>
+      </div>
       <span style={{ color: "#52D784", letterSpacing: "3px" }}>
         Spirit<span style={{ color: "#60D5DC" }}>Swap</span>
       </span>
