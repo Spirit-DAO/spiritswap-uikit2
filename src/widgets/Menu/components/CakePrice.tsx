@@ -10,7 +10,7 @@ interface Props {
 
 const PriceLink = styled.span`
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   svg {
     transition: transform 0.3s;
@@ -22,7 +22,7 @@ const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
     <PriceLink>
       <PancakeRoundIcon width="24px" mr="8px" />
       {cakePriceUsd ? (
-        <Text color="textSubtle" style={{ marginLeft: "6px" }} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+        <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
       ) : (
         <Skeleton width={80} height={24} />
       )}
