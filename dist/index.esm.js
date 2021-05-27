@@ -2107,7 +2107,7 @@ var Icon$U = function (props) {
 
 styled.text(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled.tspan(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  height: 50px;\n  background: red;\n"], ["\n  height: 50px;\n  background: red;\n"])));
+var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  height: 50px;\n  background: red;\n"], ["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  height: 50px;\n  background: red;\n"])));
 // const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
@@ -2115,7 +2115,7 @@ var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __mak
 var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React.createElement(IconContainer, null,
-        React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
+        React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "35", height: "50" })),
         React.createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
