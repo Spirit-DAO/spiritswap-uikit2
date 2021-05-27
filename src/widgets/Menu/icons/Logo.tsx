@@ -22,9 +22,14 @@ const IconContainer = styled.div`
   align-items: center;
   height: 50px;
   background: red;
-  > div {
-    width: 30px;
-    height: 120%;
+  & > div {
+    width: 60px;
+    height: 150%;
+    background: blue;
+    & > img {
+      align-items: center;
+      height: 120%;
+    }
   }
 `;
 
