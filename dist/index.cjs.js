@@ -2309,6 +2309,7 @@ var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href, showMenu = _a.showMenu;
     var isAbsoluteUrl = href.startsWith("http");
     React.useEffect(function () {
+        console.log("showMenu", showMenu);
         console.log("TEST NO TE RENDERICES MUCHO");
     }, [showMenu]);
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
