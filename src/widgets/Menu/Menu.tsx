@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  top: ${({ showMenu }) => (showMenu ? 0 : "-65px")};
+  top: 0;
   left: 0;
   transition: 0.2s;
   display: flex;
@@ -29,12 +29,25 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-
-  background: ${({ theme }) =>
+  background: ${({showMenu,theme}) => {
+      switch (showMenu) {
+        case true:
+          return theme.isDark ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)" : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
+          break;
+        case false:
+          return "transparent";
+          break;
+        default:
+          break;
+      }
+      return "";
+    }};
+  /* background: ${({ theme }) =>
     theme.isDark
       ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-      : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)"};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+      : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)"}; */
+  //border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
@@ -129,7 +142,8 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
-          <UserBlock account={account} login={login} logout={logout} isDark={isDark} />
+          {showMenu ? (<UserBlock account={account} login={login} logout={logout} isDark={isDark} />) : (<></>)}
+          
         </Flex>
       </StyledNav>
       <BodyWrapper>
