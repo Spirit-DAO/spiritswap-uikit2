@@ -94,7 +94,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     border-bottom: 3px solid #42d785;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    background-Image: none;
+    background-image: none;
     border: ${() => (isMobile ? "none" : "")};
   `;
 
