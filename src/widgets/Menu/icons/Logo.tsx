@@ -21,7 +21,6 @@ const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-left: 20px;
 `;
 
 interface LogoProps extends SvgProps {
