@@ -220,7 +220,7 @@ var getDisabledStyles = function (_a) {
     if (isLoading === true) {
         return "\n      &:disabled,\n      &.pancake-button--disabled {\n        cursor: not-allowed;\n      }\n    ";
     }
-    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
+    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
 };
 var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;

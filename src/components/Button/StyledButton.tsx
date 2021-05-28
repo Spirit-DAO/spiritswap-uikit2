@@ -22,7 +22,6 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedButtonProps) => {
     &.pancake-button--disabled {
       background-color: ${theme.colors.backgroundDisabled};
       border-color: ${theme.colors.backgroundDisabled};
-      box-shadow: none;
       color: ${theme.colors.textDisabled};
       cursor: not-allowed;
     }
