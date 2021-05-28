@@ -2308,6 +2308,9 @@ var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObjec
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href, showMenu = _a.showMenu;
     var isAbsoluteUrl = href.startsWith("http");
+    React.useEffect(function () {
+        console.log("TEST NO TE RENDERICES MUCHO");
+    }, [showMenu]);
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
@@ -2328,7 +2331,7 @@ var Logo$1 = function (_a) {
             case true:
                 return "10px";
             case false:
-                return showMenu ? "383px" : "320px";
+                return showMenu ? "320px" : "383px";
         }
         return "";
     }, function () {
