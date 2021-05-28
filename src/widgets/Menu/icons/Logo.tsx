@@ -24,22 +24,22 @@ const IconContainer = styled.div`
 
 interface LogoProps extends SvgProps {
   isDark: boolean;
+  isPushed: boolean;
 }
 
 // const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
-const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
-  const textColor = isDark ? "#FFFFFF" : "#432918";
+const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
   return (
     <IconContainer>
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
-
-      <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
+      {isPushed ? ( <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
         Spirit
         <span style={{ color: "#60D5DC" }}>Swap</span>
-      </span>
+      </span>) : (<></>) }
+     
     </IconContainer>
   );
 };

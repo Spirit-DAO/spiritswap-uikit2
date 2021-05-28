@@ -2121,12 +2121,12 @@ var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __mak
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
 var Logo = function (_a) {
-    _a.isDark; var props = __rest(_a, ["isDark"]);
+    _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
+        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
-            React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
+            React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React.createElement(React.Fragment, null))));
 };
 var templateObject_1$z, templateObject_2$b, templateObject_3$6;
 
@@ -2296,7 +2296,7 @@ var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
-        React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
+        React.createElement(Logo, { className: "desktop-icon", isPushed: isPushed, isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var StyledMenuButton = styled(MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n    position: absolute;\n    left: ", ";\n    top: ", ";\n    padding: ", ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    background-image: none;\n    border: ", ";\n  "], ["\n    position: absolute;\n    left: ",
@@ -2874,7 +2874,9 @@ var StyledNav = styled.nav(templateObject_2$h || (templateObject_2$h = __makeTem
     var showMenu = _a.showMenu, theme = _a.theme;
     switch (showMenu) {
         case true:
-            return theme.isDark ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)" : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
+            return theme.isDark
+                ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
+                : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
         case false:
             return "transparent";
     }
@@ -2950,7 +2952,7 @@ var Menu = function (_a) {
     return (React.createElement(Wrapper$1, null,
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React.createElement(Flex, null, showMenu ? (React.createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark })) : (React.createElement(React.Fragment, null)))),
+            React.createElement(Flex, null, showMenu ? React.createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark }) : React.createElement(React.Fragment, null))),
         React.createElement(BodyWrapper, null,
             React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
