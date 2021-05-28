@@ -2113,7 +2113,7 @@ var Icon$U = function (props) {
 
 styled.text(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled.tspan(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n\n  /* & > img {\n    width: 60px;\n    align-items: center;\n    height: 150%;\n  } */\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n\n  /* & > img {\n    width: 60px;\n    align-items: center;\n    height: 150%;\n  } */\n"])));
+var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n\n  margin-left: 20px;\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n\n  margin-left: 20px;\n"])));
 // const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
@@ -2122,7 +2122,7 @@ var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        React.createElement("span", __assign({}, props, { style: { color: "#52D784", letterSpacing: "3px" } }),
+        React.createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
 };
@@ -2283,7 +2283,10 @@ MenuButton.defaultProps = {
 };
 var templateObject_1$A;
 
-var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
+var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n    & > span {\n      ", " {\n        display: none;\n      }\n    }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n    & > span {\n      ", " {\n        display: none;\n      }\n    }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.nav;
+}, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
