@@ -29,9 +29,9 @@ const StyledLink = styled(Link)`
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       /* display: block; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
