@@ -57,7 +57,7 @@ const StyledButton = styled.button<BaseButtonProps>`
   line-height: 1;
   opacity: ${getOpacity};
   outline: 0;
-  transition: background-color 0.2s; 
+  transition: background-color 0.2s;
 
   border-radius: 0.5rem;
   //color: ${({ theme }) => (theme.isDark ? `#fff` : `#0ad9e4`)};
