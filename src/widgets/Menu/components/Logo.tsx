@@ -22,11 +22,6 @@ const StyledLink = styled(Link)`
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
-    & > span {
-      ${({ theme }) => theme.mediaQueries.nav} {
-        display: none;
-      }
-    }
   }
   .desktop-icon {
     width: 55px;
@@ -36,6 +31,11 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
+    & > span {
+      ${({ theme }) => theme.mediaQueries.nav} {
+        display: none;
+      }
+    }
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
