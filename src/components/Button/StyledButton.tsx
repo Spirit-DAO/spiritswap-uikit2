@@ -44,9 +44,9 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 
 const StyledButton = styled.button<BaseButtonProps>`
   align-items: center;
-  border: 0;
+  /* border: 0;
   border-radius: 0.5rem;
-  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
+  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset; */
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -57,7 +57,25 @@ const StyledButton = styled.button<BaseButtonProps>`
   line-height: 1;
   opacity: ${getOpacity};
   outline: 0;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s; 
+
+  border-radius: 0.5rem;
+  //color: ${({ theme }) => (theme.isDark ? `#fff` : `#0ad9e4`)};
+
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, #42d784, #60d5dc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  ${(props) =>
+    !props.disabled
+      ? `
+    box-shadow: 2px 1000px 1px #212230 inset; `
+      : ` 
+    box-shadow: 2px 1000px 1px rgb(66,64,55) inset;
+    color: rgb(113,113,97);
+    background-image: none;
+    `}
 
   &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
     opacity: 0.65;
