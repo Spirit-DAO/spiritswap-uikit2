@@ -10,6 +10,7 @@ import { useMatchBreakpoints } from "../../../hooks";
 interface Props {
   isPushed: boolean;
   isDark: boolean;
+  showMenu: boolean;
   togglePush: () => void;
   href: string;
 }
@@ -37,7 +38,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, showMenu }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
@@ -69,7 +70,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           return "10px";
           break;
         case false:
-          return "320px";
+          return showMenu ? "320px" : "383px";
           break;
         default:
           break;

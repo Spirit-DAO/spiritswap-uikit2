@@ -2,6 +2,7 @@ import React from "react";
 interface Props {
     isPushed: boolean;
     isDark: boolean;
+    showMenu: boolean;
     togglePush: () => void;
     href: string;
 }

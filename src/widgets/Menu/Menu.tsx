@@ -19,9 +19,9 @@ const Wrapper = styled.div`
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  top: ${({ showMenu }) => (showMenu ? 0 : 0)};
+  top: ${({ showMenu }) => (showMenu ? 0 : "-65px")};
   left: 0;
-  //transition: top 0.2s;
+  transition: 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,6 +123,7 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Logo
+          showMenu={showMenu}
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
