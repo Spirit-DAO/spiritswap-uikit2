@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useState, useEffect,useRef} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { LogoIcon } from "../../../components/Svg";
+import throttle from "lodash/throttle";
 import Flex from "../../../components/Box/Flex";
 import { LogoIcon as LogoWithText, ChevronLeft, ChevronRight, HamburgerCloseIcon, HamburgerIcon } from "../icons";
 import MenuButton from "./MenuButton";
@@ -10,7 +10,6 @@ import { useMatchBreakpoints } from "../../../hooks";
 interface Props {
   isPushed: boolean;
   isDark: boolean;
-  showMenu: boolean;
   togglePush: () => void;
   href: string;
 }
@@ -38,8 +37,39 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, showMenu }) => {
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
+  const [showMenu, setShowMenu] = useState(true);
+  const refPrevOffset = useRef(window.pageYOffset);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentOffset = window.pageYOffset;
+      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+      const isTopOfPage = currentOffset === 0;
+      // Always show the menu when user reach the top
+      if (isTopOfPage) {
+        setShowMenu(true);
+      }
+      // Avoid triggering anything at the bottom because of layout shift
+      else if (!isBottomOfPage) {
+        if (currentOffset < refPrevOffset.current) {
+          // Has scroll up
+          setShowMenu(true);
+        } else {
+          // Has scroll down
+          setShowMenu(false);
+        }
+      }
+      refPrevOffset.current = currentOffset;
+    };
+    const throttledHandleScroll = throttle(handleScroll, 200);
+
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
+
   const innerLogo = (
     <>
       <LogoWithText className="desktop-icon" isDark={isDark} />

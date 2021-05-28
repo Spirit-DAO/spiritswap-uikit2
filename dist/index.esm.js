@@ -2293,8 +2293,38 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __
     return theme.mediaQueries.nav;
 });
 var Logo$1 = function (_a) {
-    var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href, showMenu = _a.showMenu;
+    var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
+    var _b = useState(true), showMenu = _b[0], setShowMenu = _b[1];
+    var refPrevOffset = useRef(window.pageYOffset);
+    useEffect(function () {
+        var handleScroll = function () {
+            var currentOffset = window.pageYOffset;
+            var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+            var isTopOfPage = currentOffset === 0;
+            // Always show the menu when user reach the top
+            if (isTopOfPage) {
+                setShowMenu(true);
+            }
+            // Avoid triggering anything at the bottom because of layout shift
+            else if (!isBottomOfPage) {
+                if (currentOffset < refPrevOffset.current) {
+                    // Has scroll up
+                    setShowMenu(true);
+                }
+                else {
+                    // Has scroll down
+                    setShowMenu(false);
+                }
+            }
+            refPrevOffset.current = currentOffset;
+        };
+        var throttledHandleScroll = throttle(handleScroll, 200);
+        window.addEventListener("scroll", throttledHandleScroll);
+        return function () {
+            window.removeEventListener("scroll", throttledHandleScroll);
+        };
+    }, []);
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
@@ -2912,7 +2942,6 @@ var Menu = function (_a) {
             var currentOffset = window.pageYOffset;
             var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
             var isTopOfPage = currentOffset === 0;
-            console.log("TEST DE RENDER");
             // Always show the menu when user reach the top
             if (isTopOfPage) {
                 setShowMenu(true);
@@ -2935,12 +2964,12 @@ var Menu = function (_a) {
         return function () {
             window.removeEventListener("scroll", throttledHandleScroll);
         };
-    }, [showMenu]);
+    }, []);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,
         React.createElement(StyledNav, { showMenu: showMenu },
-            React.createElement(Logo$2, { showMenu: showMenu, isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
+            React.createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,
                 React.createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark }))),
         React.createElement(BodyWrapper, null,
