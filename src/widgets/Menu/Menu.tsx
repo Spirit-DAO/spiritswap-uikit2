@@ -92,6 +92,7 @@ const Menu: React.FC<NavProps> = ({
       const currentOffset = window.pageYOffset;
       const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
       const isTopOfPage = currentOffset === 0;
+      console.log("TEST DE RENDER");
       // Always show the menu when user reach the top
       if (isTopOfPage) {
         setShowMenu(true);
@@ -114,7 +115,7 @@ const Menu: React.FC<NavProps> = ({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, []);
+  }, [showMenu]);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");

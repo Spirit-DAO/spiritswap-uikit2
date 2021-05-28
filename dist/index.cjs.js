@@ -2308,10 +2308,6 @@ var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObjec
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href, showMenu = _a.showMenu;
     var isAbsoluteUrl = href.startsWith("http");
-    React.useEffect(function () {
-        console.log("showMenu", showMenu);
-        console.log("TEST NO TE RENDERICES MUCHO");
-    }, [showMenu]);
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
@@ -2929,6 +2925,7 @@ var Menu = function (_a) {
             var currentOffset = window.pageYOffset;
             var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
             var isTopOfPage = currentOffset === 0;
+            console.log("TEST DE RENDER");
             // Always show the menu when user reach the top
             if (isTopOfPage) {
                 setShowMenu(true);
@@ -2951,7 +2948,7 @@ var Menu = function (_a) {
         return function () {
             window.removeEventListener("scroll", throttledHandleScroll);
         };
-    }, []);
+    }, [showMenu]);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React__default['default'].createElement(Wrapper$1, null,

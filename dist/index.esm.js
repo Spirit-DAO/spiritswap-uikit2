@@ -2295,10 +2295,6 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href, showMenu = _a.showMenu;
     var isAbsoluteUrl = href.startsWith("http");
-    useEffect(function () {
-        console.log("showMenu", showMenu);
-        console.log("TEST NO TE RENDERICES MUCHO");
-    }, [showMenu]);
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
@@ -2916,6 +2912,7 @@ var Menu = function (_a) {
             var currentOffset = window.pageYOffset;
             var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
             var isTopOfPage = currentOffset === 0;
+            console.log("TEST DE RENDER");
             // Always show the menu when user reach the top
             if (isTopOfPage) {
                 setShowMenu(true);
@@ -2938,7 +2935,7 @@ var Menu = function (_a) {
         return function () {
             window.removeEventListener("scroll", throttledHandleScroll);
         };
-    }, []);
+    }, [showMenu]);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,

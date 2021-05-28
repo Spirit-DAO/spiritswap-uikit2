@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "../../../components/Svg";
@@ -40,12 +40,6 @@ const StyledLink = styled(Link)`
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, showMenu }) => {
   const isAbsoluteUrl = href.startsWith("http");
-
-  useEffect(() => {
-    console.log("showMenu",showMenu)
-    console.log("TEST NO TE RENDERICES MUCHO");
-  }, [showMenu]);
-
   const innerLogo = (
     <>
       <LogoWithText className="desktop-icon" isDark={isDark} />
