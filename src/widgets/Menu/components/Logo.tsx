@@ -70,7 +70,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, showMenu })
           return "10px";
           break;
         case false:
-          return showMenu ? "320px" : "383px";
+          return showMenu ? "383px" : "320px";
           break;
         default:
           break;

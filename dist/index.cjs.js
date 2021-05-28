@@ -2328,7 +2328,7 @@ var Logo$1 = function (_a) {
             case true:
                 return "10px";
             case false:
-                return showMenu ? "320px" : "383px";
+                return showMenu ? "383px" : "320px";
         }
         return "";
     }, function () {
