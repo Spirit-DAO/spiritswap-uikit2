@@ -26,14 +26,11 @@ const StyledLink = styled(Link)`
   .desktop-icon {
     width: 55px;
     height: 75px;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
-    }
-  }
-  & > span {
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: none;
     }
   }
 `;
