@@ -2844,7 +2844,7 @@ var AccountModal = function (_a) {
             React__default['default'].createElement(LinkExternal, { small: true, href: "https://ftmscan.com/address/" + account, mr: "16px" }, "View on FtmScan"),
             React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex, { justifyContent: "center" },
-            React__default['default'].createElement(Button, { scale: "sm", variant: "secondary", onClick: function () {
+            React__default['default'].createElement(Button, { scale: "sm", variant: "subtle", onClick: function () {
                     logout();
                     window.localStorage.removeItem(connectorLocalStorageKey);
                     onDismiss();

@@ -31,7 +31,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
     <Flex justifyContent="center">
       <Button
         scale="sm"
-        variant="secondary"
+        variant="subtle"
         onClick={() => {
           logout();
           window.localStorage.removeItem(connectorLocalStorageKey);
