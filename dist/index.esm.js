@@ -2116,7 +2116,7 @@ var Logo = function (_a) {
     _a.isDark; var props = __rest(_a, ["isDark"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        React.createElement("span", { style: { color: "#52D784", letterSpacing: "3px" } },
+        React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
 };
@@ -2277,7 +2277,7 @@ MenuButton.defaultProps = {
 };
 var templateObject_1$A;
 
-var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n    & > span {\n      ", " {\n        display: none;\n      }\n    }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n    & > span {\n      ", " {\n        display: none;\n      }\n    }\n"])), function (_a) {
+var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n  & > span {\n    ", " {\n      display: none;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 55px;\n    height: 75px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n  & > span {\n    ", " {\n      display: none;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
