@@ -21,11 +21,7 @@ const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  /* & > img {
-    width: 60px;
-    align-items: center;
-    height: 150%;
-  } */
+  margin-left: 20px;
 `;
 
 interface LogoProps extends SvgProps {
