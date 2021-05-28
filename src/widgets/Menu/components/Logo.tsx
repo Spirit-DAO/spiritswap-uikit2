@@ -27,13 +27,10 @@ const StyledLink = styled(Link)`
     width: 55px;
     height: 75px;
     display: none;
+    justify-content: center;
+    align-items: center;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
-    }
-  }
-  & > span {
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: none;
     }
   }
 `;
