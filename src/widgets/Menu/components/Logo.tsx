@@ -14,7 +14,12 @@ interface Props {
   href: string;
 }
 
-const StyledLink = styled(Link)`
+
+
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+  const isAbsoluteUrl = href.startsWith("http");
+
+  const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   .mobile-icon {
@@ -26,7 +31,7 @@ const StyledLink = styled(Link)`
   .desktop-icon {
     width: 55px;
     height: 75px;
-    margin-left: 30px;
+    margin-left: ${() => (isPushed ? "30px" : "-4px")};
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       /* display: block; */
@@ -37,8 +42,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
-  const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       <LogoWithText className="desktop-icon" isPushed={isPushed} isDark={isDark} />

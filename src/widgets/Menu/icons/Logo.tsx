@@ -35,11 +35,14 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
   return (
     <IconContainer>
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
-      {isPushed ? ( <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
-        Spirit
-        <span style={{ color: "#60D5DC" }}>Swap</span>
-      </span>) : (<></>) }
-     
+      {isPushed ? (
+        <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
+          Spirit
+          <span style={{ color: "#60D5DC" }}>Swap</span>
+        </span>
+      ) : (
+        <></>
+      )}
     </IconContainer>
   );
 };
