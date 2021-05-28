@@ -66,6 +66,7 @@ const StyledButton = styled.button<BaseButtonProps>`
     linear-gradient(90deg, #42d784, #60d5dc);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #212230 inset;
   ${(props) =>
     !props.disabled
       ? `
