@@ -2131,7 +2131,7 @@ var Icon$U = function (props) {
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
 var Logo = function (_a) {
-    _a.isDark; var isPushed = _a.isPushed;
+    _a.isDark; _a.isPushed;
     //   const Text = styled.text`
     //   font-size: 26.26px;
     //   font-family: GoodTimingRg-Bold, Good Timing !important;
@@ -2147,9 +2147,9 @@ var Logo = function (_a) {
     var ImageLogo = styled__default['default'].img(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n    width: 46px;\n    height: 65px;\n    transition: 0.2s;\n  "], ["\n    width: 46px;\n    height: 65px;\n    transition: 0.2s;\n  "])));
     return (React__default['default'].createElement(IconContainer, null,
         React__default['default'].createElement(ImageLogo, { src: "/images/spiritswap_logo.png", alt: "" }),
-        isPushed ? (React__default['default'].createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px", marginLeft: "30px" } },
+        React__default['default'].createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px", marginLeft: "5px" } },
             "Spirit",
-            React__default['default'].createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React__default['default'].createElement(React__default['default'].Fragment, null))));
+            React__default['default'].createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
 };
 var templateObject_1$z, templateObject_2$b;
 
