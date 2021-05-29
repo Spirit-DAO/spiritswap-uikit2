@@ -33,9 +33,8 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     transition: 0.2s;
   `;
   const ImageLogo = styled.img`
-    width: 55px;
-    height: 75px;
-    margin-left: ${() => (!isPushed ? "0" : "30px")};
+    width: 46px;
+    height: 65px;
     transition: 0.2s;
   `;
 
