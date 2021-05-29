@@ -2121,12 +2121,12 @@ var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __mak
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
 var Logo = function (_a) {
-    _a.isDark; var props = __rest(_a, ["isDark"]);
+    _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
+        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
             "Spirit",
-            React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))));
+            React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React.createElement(React.Fragment, null))));
 };
 var templateObject_1$z, templateObject_2$b, templateObject_3$6;
 
@@ -2296,13 +2296,13 @@ var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
-        React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
+        React.createElement(Logo, { className: "desktop-icon", isDark: isDark, isPushed: isPushed })));
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
-    var StyledMenuButton = styled(MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n    position: absolute;\n    left: ", ";\n    top: ", ";\n    padding: ", ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "], ["\n    position: absolute;\n    left: ",
+    var StyledMenuButton = styled(MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n    position: absolute;\n    left: ", ";\n    top: ", ";\n    padding: ", ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    background-image: none;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "], ["\n    position: absolute;\n    left: ",
         ";\n    top: ",
         ";\n    padding: ",
-        ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "])), function () {
+        ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    background-image: none;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "])), function () {
         switch (isMobile) {
             case true:
                 return "20px";
