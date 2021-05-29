@@ -11,7 +11,53 @@ import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+`;
 
+const StyledNav = styled.nav<{ showMenu: boolean }>`
+  position: fixed;
+  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+  left: 0;
+  transition: top 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 16px;
+  width: 100%;
+  height: ${MENU_HEIGHT}px;
+  background-color: ${({ theme }) => theme.nav.background};
+  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  z-index: 20;
+  transform: translate3d(0, 0, 0);
+`;
+
+const BodyWrapper = styled.div`
+  position: relative;
+  display: flex;
+`;
+
+const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+  flex-grow: 1;
+  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
+  transition: margin-top 0.2s;
+  transform: translate3d(0, 0, 0);
+  max-width: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+  }
+`;
+
+const MobileOnlyOverlay = styled(Overlay)`
+  position: fixed;
+  height: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    display: none;
+  }
+`;
 
 const Menu: React.FC<NavProps> = ({
   account,
@@ -34,7 +80,6 @@ const Menu: React.FC<NavProps> = ({
   const refPrevOffset = useRef(window.pageYOffset);
 
   useEffect(() => {
-    console.log("TESTEO ",showMenu);
     const handleScroll = () => {
       const currentOffset = window.pageYOffset;
       const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
@@ -63,72 +108,6 @@ const Menu: React.FC<NavProps> = ({
     };
   }, []);
 
-  const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
-const StyledNav = styled.nav<{ showMenu: boolean }>`
-  position: fixed;
-  //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  top: 0;
-  left: 0;
-  transition: 0.2s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
-  width: 100%;
-  height: ${MENU_HEIGHT}px;
-  background: ${({ showMenu, theme }) => {
-    switch (showMenu) {
-      case true:
-        return theme.isDark
-          ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-          : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
-        break;
-      case false:
-        return "transparent";
-        break;
-      default:
-        break;
-    }
-    return "";
-  }};
-  border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
-  z-index: 20;
-  transform: translate3d(0, 0, 0);
-`;
-
-const BodyWrapper = styled.div`
-  position: relative;
-  display: flex;
-`;
-
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  flex-grow: 1;
-  //margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : `${MENU_HEIGHT}px`)};
-  //colortransition: margin-top 0.2s;
-  transform: translate3d(0, 0, 0);
-  max-width: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
-`;
-
-const MobileOnlyOverlay = styled(Overlay)`
-  position: fixed;
-  height: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    display: none;
-  }
-`;
-
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
@@ -141,7 +120,9 @@ const MobileOnlyOverlay = styled(Overlay)`
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <Flex>{showMenu ? <UserBlock account={account} login={login} logout={logout} isDark={isDark} /> : <></>}</Flex>
+        <Flex>
+          <UserBlock account={account} login={login} logout={logout} isDark={isDark} />
+        </Flex>
       </StyledNav>
       <BodyWrapper>
         <Panel
