@@ -35,13 +35,14 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     width: 55px;
     height: 75px;
     margin-left: ${() => (isPushed ? "0" : "30px")};
+    transition: 0.2s;
   `;
 
   return (
     <IconContainer>
       <ImageLogo src="/images/spiritswap_logo.png" alt="" />
       {isPushed ? (
-        <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
+        <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px", marginLeft:"30px" }}>
           Spirit
           <span style={{ color: "#60D5DC" }}>Swap</span>
         </span>
