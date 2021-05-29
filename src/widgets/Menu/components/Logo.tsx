@@ -29,7 +29,8 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     .desktop-icon {
       width: 55px;
       height: 75px;
-      margin-left: 30px;
+      margin-left: ${() => isPushed ? "0" : "30px"};
+      transition: 0.2s;
       display: none;
       ${({ theme }) => theme.mediaQueries.nav} {
         /* display: block; */
