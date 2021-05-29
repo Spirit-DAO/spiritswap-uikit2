@@ -31,10 +31,14 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     justify-content: center;
     align-items: center;
   `;
+   const ImageLogo = styled.img`
+    width: 80px;
+    height: 116px;
+ `;
 
   return (
     <IconContainer>
-      <img src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
+      <ImageLogo src="/images/spiritswap_logo.png" alt="" />
       {isPushed ? (
         <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px" }}>
           Spirit
