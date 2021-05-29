@@ -19,7 +19,8 @@ const Wrapper = styled.div`
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  top: 0;
+  //top: 0;
+  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   left: 0;
   transition: 0.2s;
   display: flex;
@@ -98,7 +99,7 @@ const Menu: React.FC<NavProps> = ({
   const refPrevOffset = useRef(window.pageYOffset);
 
   useEffect(() => {
-    console.log("TESTEO");
+    console.log("TESTEO ",showMenu);
     const handleScroll = () => {
       const currentOffset = window.pageYOffset;
       const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
@@ -125,7 +126,7 @@ const Menu: React.FC<NavProps> = ({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, [showMenu]);
+  }, []);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
