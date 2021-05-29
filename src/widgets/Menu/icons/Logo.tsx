@@ -30,15 +30,12 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    & > img {
-      margin-left: ${() => (isPushed ? "0" : "30px")};
-    }
   `;
 
   const Image = styled.img`
-   margin-left: ${() => (isPushed ? "0" : "30px")};
+    margin-left: ${() => (isPushed ? "0" : "30px")};
   `;
-
+  console.log(isPushed);
   return (
     <IconContainer>
       <Image {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />

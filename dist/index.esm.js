@@ -2130,8 +2130,9 @@ var Logo = function (_a) {
     //   font-weight: 700;
     //   letter-spacing: 0em;
     // `;
-    var IconContainer = styled.div(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    & > img {\n      margin-left: ", ";\n    }\n  "], ["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    & > img {\n      margin-left: ", ";\n    }\n  "])), function () { return (isPushed ? "0" : "30px"); });
-    var Image = styled.img(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n   margin-left: ", ";\n  "], ["\n   margin-left: ", ";\n  "])), function () { return (isPushed ? "0" : "30px"); });
+    var IconContainer = styled.div(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n  "], ["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n  "])));
+    var Image = styled.img(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n    margin-left: ", ";\n  "], ["\n    margin-left: ", ";\n  "])), function () { return (isPushed ? "0" : "30px"); });
+    console.log(isPushed);
     return (React.createElement(IconContainer, null,
         React.createElement(Image, __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
         isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
