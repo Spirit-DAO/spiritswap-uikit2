@@ -14,29 +14,31 @@ interface Props {
   href: string;
 }
 
+const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  .mobile-icon {
+    width: 32px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: none;
+    }
+  }
+  .desktop-icon {
+    width: 55px;
+    height: 75px;
+    margin-left: 30px;
+    display: none;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      /* display: block; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
-
-  const StyledLink = styled(Link)`
-    display: flex;
-    align-items: center;
-    .mobile-icon {
-      width: 32px;
-      ${({ theme }) => theme.mediaQueries.nav} {
-        display: none;
-      }
-    }
-    .desktop-icon {
-      display: none;
-      ${({ theme }) => theme.mediaQueries.nav} {
-        /* display: block; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  `;
-
   const innerLogo = (
     <>
       <LogoWithText className="desktop-icon" isDark={isDark} />
@@ -92,7 +94,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     border-bottom: 3px solid #42d785;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    background-image: none;
     border: ${() => (isMobile ? "none" : "")};
   `;
 
