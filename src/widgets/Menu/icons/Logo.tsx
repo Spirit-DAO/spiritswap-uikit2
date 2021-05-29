@@ -30,11 +30,12 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    transition: 0.2s;
   `;
   const ImageLogo = styled.img`
     width: 55px;
     height: 75px;
-    margin-left: ${() => (isPushed ? "0" : "30px")};
+    margin-left: ${() => (!isPushed ? "0" : "30px")};
     transition: 0.2s;
   `;
 
@@ -42,7 +43,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     <IconContainer>
       <ImageLogo src="/images/spiritswap_logo.png" alt="" />
       {isPushed ? (
-        <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px", marginLeft:"30px" }}>
+        <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px", marginLeft: "30px" }}>
           Spirit
           <span style={{ color: "#60D5DC" }}>Swap</span>
         </span>
