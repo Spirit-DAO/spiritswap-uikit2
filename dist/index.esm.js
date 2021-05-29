@@ -2131,7 +2131,7 @@ var Logo = function (_a) {
     //   letter-spacing: 0em;
     // `;
     var IconContainer = styled.div(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n  "], ["\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n  "])));
-    var ImageLogo = styled.img(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n    width: 80px;\n    height: 116px;\n "], ["\n    width: 80px;\n    height: 116px;\n "])));
+    var ImageLogo = styled.img(templateObject_2$b || (templateObject_2$b = __makeTemplateObject(["\n    width: 55px;\n    height: 75px;\n    margin-left: ", ";\n  "], ["\n    width: 55px;\n    height: 75px;\n    margin-left: ", ";\n  "])), function () { return (isPushed ? "0" : "30px"); });
     return (React.createElement(IconContainer, null,
         React.createElement(ImageLogo, { src: "/images/spiritswap_logo.png", alt: "" }),
         isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px" } },
@@ -2298,10 +2298,10 @@ var templateObject_1$A;
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
-    var StyledLink = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n    display: flex;\n    align-items: center;\n    .mobile-icon {\n      width: 32px;\n      ", " {\n        display: none;\n      }\n    }\n    .desktop-icon {\n      width: 55px;\n      height: 75px;\n      margin-left: ", ";\n      transition: 0.2s;\n      display: none;\n      ", " {\n        /* display: block; */\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n    }\n  "], ["\n    display: flex;\n    align-items: center;\n    .mobile-icon {\n      width: 32px;\n      ", " {\n        display: none;\n      }\n    }\n    .desktop-icon {\n      width: 55px;\n      height: 75px;\n      margin-left: ", ";\n      transition: 0.2s;\n      display: none;\n      ", " {\n        /* display: block; */\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n    }\n  "])), function (_a) {
+    var StyledLink = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n    display: flex;\n    align-items: center;\n    .mobile-icon {\n      width: 32px;\n      ", " {\n        display: none;\n      }\n    }\n    .desktop-icon {\n      width: 55px;\n      height: 75px;\n      transition: 0.2s;\n      display: none;\n      ", " {\n        /* display: block; */\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n    }\n  "], ["\n    display: flex;\n    align-items: center;\n    .mobile-icon {\n      width: 32px;\n      ", " {\n        display: none;\n      }\n    }\n    .desktop-icon {\n      width: 55px;\n      height: 75px;\n      transition: 0.2s;\n      display: none;\n      ", " {\n        /* display: block; */\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n    }\n  "])), function (_a) {
         var theme = _a.theme;
         return theme.mediaQueries.nav;
-    }, function () { return (isPushed ? "0" : "30px"); }, function (_a) {
+    }, function (_a) {
         var theme = _a.theme;
         return theme.mediaQueries.nav;
     });

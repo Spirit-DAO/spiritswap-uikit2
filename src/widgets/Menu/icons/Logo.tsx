@@ -31,10 +31,11 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed }) => {
     justify-content: center;
     align-items: center;
   `;
-   const ImageLogo = styled.img`
-    width: 80px;
-    height: 116px;
- `;
+  const ImageLogo = styled.img`
+    width: 55px;
+    height: 75px;
+    margin-left: ${() => (isPushed ? "0" : "30px")};
+  `;
 
   return (
     <IconContainer>
