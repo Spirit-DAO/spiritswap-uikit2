@@ -44,10 +44,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
     }
     return "";
   }};
-  /* background: ${({ theme }) =>
-    theme.isDark
-      ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-      : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)"}; */
   border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -102,6 +98,7 @@ const Menu: React.FC<NavProps> = ({
   const refPrevOffset = useRef(window.pageYOffset);
 
   useEffect(() => {
+    console.log("TESTEO");
     const handleScroll = () => {
       const currentOffset = window.pageYOffset;
       const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
@@ -128,7 +125,7 @@ const Menu: React.FC<NavProps> = ({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, []);
+  }, [showMenu]);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
