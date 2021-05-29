@@ -11,7 +11,59 @@ import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
-const Wrapper = styled.div`
+
+
+const Menu: React.FC<NavProps> = ({
+  account,
+  login,
+  logout,
+  isDark,
+  toggleTheme,
+  langs,
+  setLang,
+  currentLang,
+  cakePriceUsd,
+  links,
+  profile,
+  children,
+}) => {
+  const { isXl } = useMatchBreakpoints();
+  const isMobile = isXl === false;
+  const [isPushed, setIsPushed] = useState(!isMobile);
+  const [showMenu, setShowMenu] = useState(true);
+  const refPrevOffset = useRef(window.pageYOffset);
+
+  useEffect(() => {
+    console.log("TESTEO ",showMenu);
+    const handleScroll = () => {
+      const currentOffset = window.pageYOffset;
+      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+      const isTopOfPage = currentOffset === 0;
+      // Always show the menu when user reach the top
+      if (isTopOfPage) {
+        setShowMenu(true);
+      }
+      // Avoid triggering anything at the bottom because of layout shift
+      else if (!isBottomOfPage) {
+        if (currentOffset < refPrevOffset.current) {
+          // Has scroll up
+          setShowMenu(true);
+        } else {
+          // Has scroll down
+          setShowMenu(false);
+        }
+      }
+      refPrevOffset.current = currentOffset;
+    };
+    const throttledHandleScroll = throttle(handleScroll, 200);
+
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
+
+  const Wrapper = styled.div`
   position: relative;
   width: 100%;
 `;
@@ -19,8 +71,7 @@ const Wrapper = styled.div`
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   position: fixed;
   //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  //top: 0;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
+  top: 0;
   left: 0;
   transition: 0.2s;
   display: flex;
@@ -77,56 +128,6 @@ const MobileOnlyOverlay = styled(Overlay)`
     display: none;
   }
 `;
-
-const Menu: React.FC<NavProps> = ({
-  account,
-  login,
-  logout,
-  isDark,
-  toggleTheme,
-  langs,
-  setLang,
-  currentLang,
-  cakePriceUsd,
-  links,
-  profile,
-  children,
-}) => {
-  const { isXl } = useMatchBreakpoints();
-  const isMobile = isXl === false;
-  const [isPushed, setIsPushed] = useState(!isMobile);
-  const [showMenu, setShowMenu] = useState(true);
-  const refPrevOffset = useRef(window.pageYOffset);
-
-  useEffect(() => {
-    console.log("TESTEO ",showMenu);
-    const handleScroll = () => {
-      const currentOffset = window.pageYOffset;
-      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
-      const isTopOfPage = currentOffset === 0;
-      // Always show the menu when user reach the top
-      if (isTopOfPage) {
-        setShowMenu(true);
-      }
-      // Avoid triggering anything at the bottom because of layout shift
-      else if (!isBottomOfPage) {
-        if (currentOffset < refPrevOffset.current) {
-          // Has scroll up
-          setShowMenu(true);
-        } else {
-          // Has scroll down
-          setShowMenu(false);
-        }
-      }
-      refPrevOffset.current = currentOffset;
-    };
-    const throttledHandleScroll = throttle(handleScroll, 200);
-
-    window.addEventListener("scroll", throttledHandleScroll);
-    return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
-    };
-  }, []);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
