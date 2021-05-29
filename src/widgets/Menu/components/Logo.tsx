@@ -14,33 +14,31 @@ interface Props {
   href: string;
 }
 
-
-
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
 
   const StyledLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  .mobile-icon {
-    width: 32px;
-    ${({ theme }) => theme.mediaQueries.nav} {
+    display: flex;
+    align-items: center;
+    .mobile-icon {
+      width: 32px;
+      ${({ theme }) => theme.mediaQueries.nav} {
+        display: none;
+      }
+    }
+    .desktop-icon {
+      width: 55px;
+      height: 75px;
+      margin-left: 30px;
       display: none;
+      ${({ theme }) => theme.mediaQueries.nav} {
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
-  }
-  .desktop-icon {
-    width: 55px;
-    height: 75px;
-    margin-left: ${() => (isPushed ? "30px" : "-4px")};
-    display: none;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      /* display: block; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-`;
+  `;
 
   const innerLogo = (
     <>
