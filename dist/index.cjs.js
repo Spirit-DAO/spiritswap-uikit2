@@ -2131,7 +2131,7 @@ var Icon$U = function (props) {
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
 var Logo = function (_a) {
-    _a.isDark; _a.isPushed;
+    _a.isDark;
     //   const Text = styled.text`
     //   font-size: 26.26px;
     //   font-family: GoodTimingRg-Bold, Good Timing !important;
@@ -2319,7 +2319,7 @@ var Logo$1 = function (_a) {
         return theme.mediaQueries.nav;
     });
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
-        React__default['default'].createElement(Logo, { className: "desktop-icon", isPushed: isPushed, isDark: isDark })));
+        React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n    position: absolute;\n    left: ", ";\n    top: ", ";\n    padding: ", ";\n    border-right: 3px solid #42d785;\n    border-top: 3px solid #42d785;\n    border-bottom: 3px solid #42d785;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    background-image: none;\n    border: ", ";\n  "], ["\n    position: absolute;\n    left: ",
