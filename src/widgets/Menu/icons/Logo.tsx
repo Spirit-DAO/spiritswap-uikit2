@@ -11,7 +11,7 @@ interface LogoProps extends SvgProps {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
-const Logo: React.FC<LogoProps> = ({ isDark }) => {
+const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   //   const Text = styled.text`
   //   font-size: 26.26px;
   //   font-family: GoodTimingRg-Bold, Good Timing !important;
@@ -29,17 +29,12 @@ const Logo: React.FC<LogoProps> = ({ isDark }) => {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
   `;
-  const ImageLogo = styled.img`
-    width: 46px;
-    height: 65px;
-    transition: 0.2s;
-  `;
+
 
   return (
     <IconContainer>
-      <ImageLogo src="/images/spiritswap_logo.png" alt="" />
+      <img {...props} src="/images/spiritswap_logo.png" alt="" style={{height:"65px", width: "46px"}} />
 
       <span className="desktop-icon" style={{ color: "#52D784", letterSpacing: "3px", marginLeft: "5px" }}>
         Spirit
