@@ -44,7 +44,8 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
     }
     return "";
   }};
-  border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
+  //border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
+  border-bottom: none;
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
