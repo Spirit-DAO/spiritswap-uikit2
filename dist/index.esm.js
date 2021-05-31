@@ -3012,15 +3012,15 @@ var Toast = function (_a) {
     }, [timer, ttl, handleRemove]);
     var titleSpecific = title;
     var descriptionSpecific = description;
+    if (type === "danger") {
+        titleSpecific = "Error";
+    }
     if (description === "No Ethereum provider was found on window.ethereum.") {
         titleSpecific = "Provider Error";
         descriptionSpecific = "No provider was found.";
     }
     if (description === "Already processing eth_requestAccounts. Please wait.") {
         descriptionSpecific = "Already processing request. Please wait.";
-    }
-    if (title === "t") {
-        titleSpecific = "Error";
     }
     console.log(title);
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),

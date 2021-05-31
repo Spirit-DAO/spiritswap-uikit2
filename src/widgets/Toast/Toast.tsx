@@ -65,16 +65,15 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   let titleSpecific = title;
   let descriptionSpecific = description;
 
+  if (type === "danger") {
+    titleSpecific = "Error";
+  }
   if (description === "No Ethereum provider was found on window.ethereum.") {
     titleSpecific = "Provider Error";
     descriptionSpecific = "No provider was found.";
   }
-
   if (description === "Already processing eth_requestAccounts. Please wait.") {
     descriptionSpecific = "Already processing request. Please wait.";
-  }
-  if (title === "t") {
-    titleSpecific = "Error";
   }
   console.log(title);
 
