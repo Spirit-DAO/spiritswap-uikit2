@@ -19,6 +19,7 @@ const StyledToast = styled.div`
   max-width: calc(100% - 32px);
   transition: all 250ms ease-in;
   width: 100%;
+  margin-right: 30px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     max-width: 400px;
@@ -62,7 +63,6 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   }, [timer, ttl, handleRemove]);
   console.log(type === "danger");
   console.log(type == "danger");
-  console.log(title);
   console.log(toast);
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
