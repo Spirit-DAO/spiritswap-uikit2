@@ -3023,10 +3023,22 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         };
     }, [timer, ttl, handleRemove]);
+    var titleSpecific = title;
+    var descriptionSpecific = description;
+    if (description === "No Ethereum provider was found on window.ethereum.") {
+        titleSpecific = "Provider Error";
+        descriptionSpecific = "No provider was found.";
+    }
+    if (description === "Already processing eth_requestAccounts. Please wait.") {
+        descriptionSpecific = "Already processing request. Please wait.";
+    }
+    if (title === "t") {
+        titleSpecific = "Error";
+    }
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React__default['default'].createElement(Alert, { title: type === "danger" ? "Error" : title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
-                React__default['default'].createElement(Text, { as: "p", mb: "8px" }, description),
+            React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
+                React__default['default'].createElement(Text, { as: "p", mb: "8px" }, descriptionSpecific),
                 React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
 };
 var templateObject_1$M;

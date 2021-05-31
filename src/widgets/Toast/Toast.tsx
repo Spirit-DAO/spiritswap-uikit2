@@ -61,14 +61,30 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
       clearTimeout(timer.current);
     };
   }, [timer, ttl, handleRemove]);
+
+  let titleSpecific = title;
+  let descriptionSpecific = description;
+
+  if (description === "No Ethereum provider was found on window.ethereum.") {
+    titleSpecific = "Provider Error";
+    descriptionSpecific = "No provider was found.";
+  }
+
+  if (description === "Already processing eth_requestAccounts. Please wait.") {
+    descriptionSpecific = "Already processing request. Please wait.";
+  }
+  if (title === "t") {
+    titleSpecific = "Error";
+  }
+
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Alert title={type === "danger" ? "Error" : title} variant={alertTypeMap[type]} onClick={handleRemove}>
+        <Alert title={titleSpecific} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
               <Text as="p" mb="8px">
-                {description}
+                {descriptionSpecific}
               </Text>
               <ToastAction action={action} />
             </>
