@@ -76,6 +76,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   if (title === "t") {
     titleSpecific = "Error";
   }
+  console.log(title);
 
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>

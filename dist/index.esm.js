@@ -3022,6 +3022,7 @@ var Toast = function (_a) {
     if (title === "t") {
         titleSpecific = "Error";
     }
+    console.log(title);
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React.createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
             React.createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
