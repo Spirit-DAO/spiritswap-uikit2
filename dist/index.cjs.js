@@ -2774,7 +2774,7 @@ exports.ConnectorNames = void 0;
 
 var connectors = [
     {
-        title: "Metamask",
+        title: "MetaMask",
         icon: Icon$1b,
         connectorId: exports.ConnectorNames.Injected,
     },
