@@ -487,7 +487,7 @@ it("renders AccountModal correctly", () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              View on FtmScan
+              View on FTMScan
               <svg
                 class="sc-dlfnbm dJUqYR"
                 color="primary"

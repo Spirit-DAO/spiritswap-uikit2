@@ -19,6 +19,7 @@ const StyledToast = styled.div`
   max-width: calc(100% - 32px);
   transition: all 250ms ease-in;
   width: 100%;
+  margin-right: 30px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     max-width: 400px;
@@ -60,11 +61,10 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
       clearTimeout(timer.current);
     };
   }, [timer, ttl, handleRemove]);
-
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Alert title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
+        <Alert title={type === "danger" ? "Error" : title} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
               <Text as="p" mb="8px">

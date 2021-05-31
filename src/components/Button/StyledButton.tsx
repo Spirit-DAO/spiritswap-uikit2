@@ -46,6 +46,7 @@ const StyledButton = styled.button<BaseButtonProps>`
   /* border: 0;
   border-radius: 0.5rem;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset; */
+  box-shadow: 2px 1000px 1px #212230 inset;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -66,11 +67,9 @@ const StyledButton = styled.button<BaseButtonProps>`
     linear-gradient(90deg, #42d784, #60d5dc);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #212230 inset;
   ${(props) =>
     !props.disabled
-      ? `
-    box-shadow: 2px 1000px 1px #212230 inset; `
+      ? ``
       : ` 
     box-shadow: 2px 1000px 1px rgb(66,64,55) inset;
     color: rgb(113,113,97);

@@ -26,7 +26,7 @@ const StyledLink = styled(Link)`
   .desktop-icon {
     width: 55px;
     height: 75px;
-    margin-left: 30px;
+    //margin-left: 30px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       /* display: block; */
@@ -41,7 +41,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <LogoWithText className="desktop-icon" isDark={isDark} isPushed={isPushed} />
     </>
   );
 
@@ -92,6 +92,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     border-right: 3px solid #42d785;
     border-top: 3px solid #42d785;
     border-bottom: 3px solid #42d785;
+    background-image: none;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border: ${() => (isMobile ? "none" : "")};
