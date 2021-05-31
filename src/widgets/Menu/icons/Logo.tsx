@@ -37,7 +37,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
     <IconContainer>
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
       {isPushed ? (
-        <span className="desktop-icon" style={{ color: "#52D784", marginLeft: "30px" }}>
+        <span className="desktop-icon" style={{ color: "#52D784", marginLeft: "20px", fontSize: "20px" }}>
           Spirit
           <span style={{ color: "#60D5DC" }}>Swap</span>
         </span>
