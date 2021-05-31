@@ -60,7 +60,10 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
       clearTimeout(timer.current);
     };
   }, [timer, ttl, handleRemove]);
-  console.log(type);
+  console.log(type === "danger");
+  console.log(type == "danger");
+  console.log(title);
+  console.log(toast);
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
