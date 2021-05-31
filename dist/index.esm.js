@@ -3013,7 +3013,7 @@ var Toast = function (_a) {
     console.log(type);
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React.createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React.createElement(Alert, { title: type === "DANGER" ? "Error" : title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
+            React.createElement(Alert, { title: type == "danger" ? "Error" : title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
                 React.createElement(Text, { as: "p", mb: "8px" }, description),
                 React.createElement(ToastAction, { action: action }))) : (description)))));
 };
