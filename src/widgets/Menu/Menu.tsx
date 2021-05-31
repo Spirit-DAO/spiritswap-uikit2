@@ -139,7 +139,9 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <Flex><UserBlock account={account} login={login} logout={logout} isDark={isDark} /></Flex>
+        <Flex>
+          <UserBlock account={account} login={login} logout={logout} isDark={isDark} />
+        </Flex>
       </StyledNav>
       <BodyWrapper>
         <Panel

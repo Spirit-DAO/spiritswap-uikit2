@@ -64,7 +64,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Alert title={type === "DANGER" ? "Error" : title} variant={alertTypeMap[type]} onClick={handleRemove}>
+        <Alert title={type == "danger" ? "Error" : title} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
               <Text as="p" mb="8px">
