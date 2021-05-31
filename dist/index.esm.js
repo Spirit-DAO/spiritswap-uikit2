@@ -2986,7 +2986,7 @@ var Toast = function (_a) {
     var timer = useRef();
     var ref = useRef(null);
     var removeHandler = useRef(onRemove);
-    var id = toast.id, title = toast.title, description = toast.description, type = toast.type, action = toast.action;
+    var id = toast.id; toast.title; var description = toast.description, type = toast.type, action = toast.action;
     var handleRemove = useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
     var handleMouseEnter = function () {
         clearTimeout(timer.current);
@@ -3012,7 +3012,7 @@ var Toast = function (_a) {
     }, [timer, ttl, handleRemove]);
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React.createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React.createElement(Alert, { title: title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
+            React.createElement(Alert, { title: 'Error', variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
                 React.createElement(Text, { as: "p", mb: "8px" }, description),
                 React.createElement(ToastAction, { action: action }))) : (description)))));
 };

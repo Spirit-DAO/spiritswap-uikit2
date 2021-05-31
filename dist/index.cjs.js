@@ -2999,7 +2999,7 @@ var Toast = function (_a) {
     var timer = React.useRef();
     var ref = React.useRef(null);
     var removeHandler = React.useRef(onRemove);
-    var id = toast.id, title = toast.title, description = toast.description, type = toast.type, action = toast.action;
+    var id = toast.id; toast.title; var description = toast.description, type = toast.type, action = toast.action;
     var handleRemove = React.useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
     var handleMouseEnter = function () {
         clearTimeout(timer.current);
@@ -3025,7 +3025,7 @@ var Toast = function (_a) {
     }, [timer, ttl, handleRemove]);
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React__default['default'].createElement(Alert, { title: title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
+            React__default['default'].createElement(Alert, { title: 'Error', variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
                 React__default['default'].createElement(Text, { as: "p", mb: "8px" }, description),
                 React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
 };
