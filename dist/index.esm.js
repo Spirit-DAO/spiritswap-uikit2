@@ -2124,7 +2124,7 @@ var Logo = function (_a) {
     _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px", marginLeft: "30px" } },
+        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "20px", fontSize: "20px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React.createElement(React.Fragment, null))));
 };
@@ -2761,7 +2761,7 @@ var ConnectorNames;
 
 var connectors = [
     {
-        title: "Metamask",
+        title: "MetaMask",
         icon: Icon$1b,
         connectorId: ConnectorNames.Injected,
     },
@@ -2976,7 +2976,7 @@ var alertTypeMap = (_a$2 = {},
     _a$2[types.DANGER] = variants$1.DANGER,
     _a$2[types.WARNING] = variants$1.WARNING,
     _a$2);
-var StyledToast = styled.div(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
+var StyledToast = styled.div(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
@@ -3009,10 +3009,23 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         };
     }, [timer, ttl, handleRemove]);
+    var titleSpecific = title;
+    var descriptionSpecific = description;
+    if (type === "danger") {
+        titleSpecific = "Error";
+    }
+    if (description === "No Ethereum provider was found on window.ethereum.") {
+        titleSpecific = "Provider Error";
+        descriptionSpecific = "No provider was found.";
+    }
+    if (description === "Already processing eth_requestAccounts. Please wait.") {
+        descriptionSpecific = "Already processing request. Please wait.";
+    }
+    console.log(title);
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React.createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React.createElement(Alert, { title: title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
-                React.createElement(Text, { as: "p", mb: "8px" }, description),
+            React.createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
+                React.createElement(Text, { as: "p", mb: "8px" }, descriptionSpecific),
                 React.createElement(ToastAction, { action: action }))) : (description)))));
 };
 var templateObject_1$M;

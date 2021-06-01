@@ -2137,7 +2137,7 @@ var Logo = function (_a) {
     _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
     return (React__default['default'].createElement(IconContainer, null,
         React__default['default'].createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        isPushed ? (React__default['default'].createElement("span", { className: "desktop-icon", style: { color: "#52D784", letterSpacing: "3px", marginLeft: "30px" } },
+        isPushed ? (React__default['default'].createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "20px", fontSize: "20px" } },
             "Spirit",
             React__default['default'].createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React__default['default'].createElement(React__default['default'].Fragment, null))));
 };
@@ -2774,7 +2774,7 @@ exports.ConnectorNames = void 0;
 
 var connectors = [
     {
-        title: "Metamask",
+        title: "MetaMask",
         icon: Icon$1b,
         connectorId: exports.ConnectorNames.Injected,
     },
@@ -2989,7 +2989,7 @@ var alertTypeMap = (_a$2 = {},
     _a$2[types.DANGER] = variants$1.DANGER,
     _a$2[types.WARNING] = variants$1.WARNING,
     _a$2);
-var StyledToast = styled__default['default'].div(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
+var StyledToast = styled__default['default'].div(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
@@ -3022,10 +3022,23 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         };
     }, [timer, ttl, handleRemove]);
+    var titleSpecific = title;
+    var descriptionSpecific = description;
+    if (type === "danger") {
+        titleSpecific = "Error";
+    }
+    if (description === "No Ethereum provider was found on window.ethereum.") {
+        titleSpecific = "Provider Error";
+        descriptionSpecific = "No provider was found.";
+    }
+    if (description === "Already processing eth_requestAccounts. Please wait.") {
+        descriptionSpecific = "Already processing request. Please wait.";
+    }
+    console.log(title);
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React__default['default'].createElement(Alert, { title: title, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
-                React__default['default'].createElement(Text, { as: "p", mb: "8px" }, description),
+            React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
+                React__default['default'].createElement(Text, { as: "p", mb: "8px" }, descriptionSpecific),
                 React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
 };
 var templateObject_1$M;
