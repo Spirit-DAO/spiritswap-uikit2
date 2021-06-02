@@ -14,7 +14,7 @@ const Icon: React.FC<SvgProps> = (props) => {
       height="617px"
       viewBox="0 0 576 617"
       enable-background="new 0 0 576 617"
-      style={{marginRight: "8px"}}
+      style={{ marginRight: "8px" }}
     >
       <image
         id="image0"
