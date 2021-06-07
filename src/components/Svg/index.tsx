@@ -44,5 +44,6 @@ export { default as SwapVertIcon } from "./Icons/SwapVert";
 export { default as SyncAltIcon } from "./Icons/SyncAlt";
 export { default as WarningIcon } from "./Icons/Warning";
 export { default as ThunderIcon } from "./Icons/Thunder";
+export { default as ThunderBgIcon } from "./Icons/ThunderBg";
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
