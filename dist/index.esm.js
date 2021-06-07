@@ -628,10 +628,8 @@ var Icon$I = function (props) {
 };
 
 var Icon$J = function (props) {
-    return (React.createElement(Svg, { version: "1.1", id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", x: "0px", y: "0px", viewBox: "0 0 82.1 122.88" },
-        React.createElement("style", { type: "text/css" }, ".st0"),
-        React.createElement("g", null,
-            React.createElement("path", { d: "M19.62,0h50.2l-17.5,33.88L82.1,34.4L9.53,122.88l13.96-58.21L0,64.67L19.62,0L19.62,0L19.62,0z M13.92,53.48 l14.65-41.7h22.75L39.49,43.53l17.85,0.3L27.31,88.79l8.95-35.31L13.92,53.48L13.92,53.48L13.92,53.48z" }))));
+    return (React.createElement(Svg, { width: "24", height: "24", viewBox: "0 0 1000 1000", xmlns: "http://www.w3.org/2000/svg" },
+        React.createElement("path", { d: " M 638 138C 664 138 682 164 673 188C 673 188 617 338 617 338C 617 338 663 338 663 338C 692 338 710 370 695 395C 695 395 420 845 420 845C 410 860 391 866 375 860C 358 854 348 837 350 819C 350 819 394 538 394 538C 394 538 338 538 338 538C 313 538 296 515 301 492C 301 492 376 167 376 167C 380 150 395 138 413 138C 413 138 638 138 638 138" })));
 };
 
 var Box = styled.div(templateObject_1$4 || (templateObject_1$4 = __makeTemplateObject(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), background, border, layout, position, space);
