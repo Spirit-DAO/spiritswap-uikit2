@@ -2134,7 +2134,7 @@ var Logo = function (_a) {
     _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
     return (React.createElement(IconContainer, null,
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
-        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "20px", fontSize: "20px" } },
+        isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "30px", fontSize: "20px" } },
             "Spirit",
             React.createElement("span", { style: { color: "#60D5DC" } }, "Swap"))) : (React.createElement(React.Fragment, null))));
 };
