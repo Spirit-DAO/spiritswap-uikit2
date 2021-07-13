@@ -2578,6 +2578,8 @@ var MenuLink = function (_a) {
 
 var Icons = IconModule;
 var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
+var rotate$1 = keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(25px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(25px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
+var NewIcon = styled.img(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  width: 43px;\n  animation: ", " 3s infinite;\n"], ["\n  width: 43px;\n  animation: ", " 3s infinite;\n"])), rotate$1);
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = useLocation();
@@ -2598,10 +2600,10 @@ var PanelBody = function (_a) {
             React.createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
                 React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
-                entry.label === "Home" ? React.createElement("p", null, "SOY IGUAL") : React.createElement("p", null, "SOY DISTINTO"))));
+                entry.label === "Exchange" ? React.createElement(NewIcon, { src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI5MS43MjggMjkxLjcyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjkxLjcyOCAyOTEuNzI4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojM0RCMzlFOyIgZD0iTTI5MS43MjgsMTQ1Ljg2bC0zOS40ODksMjguNTJsMTkuOTQ5LDQ0LjQzOWwtNDguNDY5LDQuODk2bC00Ljg5Niw0OC40NzlsLTQ0LjQzOS0xOS45NTkNCgkJbC0yOC41MiwzOS40ODlsLTI4LjUyLTM5LjQ4OWwtNDQuNDM5LDE5Ljk1OWwtNC44OTYtNDguNDc5bC00OC40NjktNC44OTZsMTkuOTQ5LTQ0LjQzOUwwLDE0NS44NmwzOS40ODktMjguNTExTDE5LjUzLDcyLjkwOQ0KCQlsNDguNDc5LTQuODk2bDQuOTA1LTQ4LjQ3OWw0NC40MywxOS45NTlsMjguNTItMzkuNDg5bDI4LjUyLDM5LjQ4OWw0NC40MzktMTkuOTU5bDQuODg3LDQ4LjQ3OWw0OC40NzksNC44OTZsLTE5Ljk0OSw0NC40Mw0KCQlDMjUyLjI0LDExNy4zNCwyOTEuNzI4LDE0NS44NiwyOTEuNzI4LDE0NS44NnoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTEwOC4wMzUsMTI3LjYxNWMtMi44MzYsMC00Ljk0MiwxLjc2LTQuOTQyLDQuOTE0djIzLjgzNGgtMC4xMzdMODIuMDUsMTI5LjY5NA0KCQljLTAuODU3LTEuMTQtMi44OTktMi4wODgtNC4xNTgtMi4wODhjLTIuODM2LDAtNC45NDIsMS43Ni00Ljk0Miw0LjkxNHYzNS44MjNjMCwzLjE1NSwyLjEwNiw0LjkxNCw0Ljk0Miw0LjkxNA0KCQljMi44NDUsMCw0Ljk1MS0xLjc2LDQuOTUxLTQuOTE0di0yMy41MTRoMC4xMzdsMjAuOTA3LDI2LjM1YzAuOTIxLDEuMTQsMi44OSwyLjA4OCw0LjE0OSwyLjA4OGMyLjg0NSwwLDQuOTUxLTEuNzYsNC45NTEtNC45MTQNCgkJVjEzMi41M0MxMTIuOTg2LDEyOS4zODQsMTEwLjg4LDEyNy42MTUsMTA4LjAzNSwxMjcuNjE1eiBNMTQ3LjI0MSwxNjQuMTg2aC0xMi4yMDl2LTkuNTgzaDEwLjgyM2MzLjE3MywwLDQuODE0LTIuMjA2LDQuODE0LTQuMzQ5DQoJCWMwLTIuMjE2LTEuNTg2LTQuMzU4LTQuODE0LTQuMzU4aC0xMC44MjN2LTkuMjA5aDExLjYwN2MzLjEsMCw0LjY4Ni0yLjIwNiw0LjY4Ni00LjM0OWMwLTIuMjA2LTEuNTE0LTQuMzY3LTQuNjg2LTQuMzY3aC0xNi4zNTcNCgkJYy0zLjQ5MiwwLTUuMTMzLDIuMzM0LTUuMTMzLDUuNDk4djM0LjY4NGMwLDIuODM2LDIuMTcsNC43MjMsNS4wNzksNC43MjNoMTcuMDE0YzMuMSwwLDQuNjc3LTIuMTk3LDQuNjc3LTQuMzQ5DQoJCUMxNTEuOTE4LDE2Ni4zMjksMTUwLjQwNSwxNjQuMTg2LDE0Ny4yNDEsMTY0LjE4NnogTTIxNCwxMjcuNjE1Yy0zLjE2NCwwLTQuNjg2LDEuNzYtNS4yNyw0LjU0MWwtNS42MDcsMjYuNzk3aC0wLjEzNw0KCQlsLTguNTcxLTI3LjYxN2MtMC43Mi0yLjI3LTIuNjk5LTMuNzItNS4xMzMtMy43MnMtNC40MjIsMS40NS01LjE0MiwzLjcybC04LjU3MSwyNy42MTdoLTAuMTI4bC01LjYwNy0yNi43OTcNCgkJYy0wLjU5My0yLjc4MS0yLjEwNi00LjU0MS01LjI3OS00LjU0MWMtMi44OSwwLTQuNjc3LDIuMTQzLTQuNjc3LDQuMTY3bDAuMjU1LDIuMTM0bDguMzc5LDM0LjQyOA0KCQljMC42NTYsMi42NDQsMi44MzYsNC45MTQsNi41MjgsNC45MTRjMy4yMjgsMCw1LjczNS0yLjAyNCw2LjUyOC00LjYwNGw3LjY1LTI0LjMzNWgwLjEzN2w3LjY1LDI0LjMzNQ0KCQljMC43OTMsMi41OCwzLjMwMSw0LjYwNCw2LjUyOCw0LjYwNGMzLjY5MywwLDUuODgxLTIuMjcsNi41MzctNC45MTRsOC4zNy0zNC40MjhsMC4yNjQtMi4xMzQNCgkJQzIxOC42NzgsMTI5Ljc1OCwyMTYuOSwxMjcuNjE1LDIxNCwxMjcuNjE1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" }) : null)));
     })));
 };
-var templateObject_1$E;
+var templateObject_1$E, templateObject_2$f, templateObject_3$8;
 
 var PriceLink = styled.span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
@@ -2638,8 +2640,8 @@ var Container$4 = styled.div(templateObject_1$G || (templateObject_1$G = __makeT
     var theme = _a.theme;
     return (theme.isDark ? "#161f33" : "#E6FDFF");
 });
-var SettingsEntry = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
-var SocialEntry = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var SettingsEntry = styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var SocialEntry = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     if (!isPushed) {
@@ -2654,7 +2656,7 @@ var PanelFooter = function (_a) {
         React.createElement(SettingsEntry, null,
             React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang }))));
 };
-var templateObject_1$G, templateObject_2$f, templateObject_3$8;
+var templateObject_1$G, templateObject_2$g, templateObject_3$9;
 
 var StyledPanel = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 3px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
     ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ",
@@ -2806,7 +2808,7 @@ var StyleButton = styled(Text).attrs({ role: "button" })(templateObject_1$J || (
     var theme = _a.theme;
     return theme.colors.primary;
 });
-var Tooltip = styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  display: ", ";\n  position: absolute;\n  bottom: -22px;\n  right: 0;\n  left: 0;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 0.5rem;\n  opacity: 0.7;\n"], ["\n  display: ", ";\n  position: absolute;\n  bottom: -22px;\n  right: 0;\n  left: 0;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 0.5rem;\n  opacity: 0.7;\n"])), function (_a) {
+var Tooltip = styled.div(templateObject_2$h || (templateObject_2$h = __makeTemplateObject(["\n  display: ", ";\n  position: absolute;\n  bottom: -22px;\n  right: 0;\n  left: 0;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 0.5rem;\n  opacity: 0.7;\n"], ["\n  display: ", ";\n  position: absolute;\n  bottom: -22px;\n  right: 0;\n  left: 0;\n  text-align: center;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 0.5rem;\n  opacity: 0.7;\n"])), function (_a) {
     var isTooltipDisplayed = _a.isTooltipDisplayed;
     return (isTooltipDisplayed ? "block" : "none");
 }, function (_a) {
@@ -2832,7 +2834,7 @@ var CopyToClipboard = function (_a) {
         React.createElement(Icon$n, { width: "20px", color: "primary", ml: "4px" }),
         React.createElement(Tooltip, { isTooltipDisplayed: isTooltipDisplayed }, "Copied")));
 };
-var templateObject_1$J, templateObject_2$g;
+var templateObject_1$J, templateObject_2$h;
 
 var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
@@ -2876,7 +2878,7 @@ var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return
 var templateObject_1$K;
 
 var Wrapper$1 = styled.div(templateObject_1$L || (templateObject_1$L = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled.nav(templateObject_2$h || (templateObject_2$h = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background: ", ";\n  //border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background: ",
+var StyledNav = styled.nav(templateObject_2$i || (templateObject_2$i = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background: ", ";\n  //border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background: ",
     ";\n  //border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
@@ -2895,7 +2897,7 @@ var StyledNav = styled.nav(templateObject_2$h || (templateObject_2$h = __makeTem
     var showMenu = _a.showMenu;
     return (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none");
 });
-var BodyWrapper = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
+var BodyWrapper = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
@@ -2963,7 +2965,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$L, templateObject_2$h, templateObject_3$9, templateObject_4$3, templateObject_5$1;
+var templateObject_1$L, templateObject_2$i, templateObject_3$a, templateObject_4$3, templateObject_5$1;
 
 var ToastAction = function (_a) {
     var action = _a.action;
