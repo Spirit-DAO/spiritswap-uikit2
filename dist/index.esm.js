@@ -2597,7 +2597,8 @@ var PanelBody = function (_a) {
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React.createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
-                React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label))));
+                React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
+                entry.label === "Home" ? React.createElement("p", null, "SOY IGUAL") : React.createElement("p", null, "SOY DISTINTO"))));
     })));
 };
 var templateObject_1$E;

@@ -2610,7 +2610,8 @@ var PanelBody = function (_a) {
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
-                React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label))));
+                React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
+                entry.label === "Home" ? React__default['default'].createElement("p", null, "SOY IGUAL") : React__default['default'].createElement("p", null, "SOY DISTINTO"))));
     })));
 };
 var templateObject_1$E;
