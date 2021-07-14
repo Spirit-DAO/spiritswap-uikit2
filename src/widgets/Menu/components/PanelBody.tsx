@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const rotate = keyframes`
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(15px, 0); }
+    50%  { transform: translate(8px, 0); }
     100%   { transform: translate(0, -0px); }  
   }
 `;
@@ -33,7 +33,7 @@ const rotate = keyframes`
 const NewIcon = styled.img`
   width: 43px;
   margin-right: 50px;
-  animation: ${rotate} 4s infinite;
+  animation: ${rotate} 6s infinite;
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
