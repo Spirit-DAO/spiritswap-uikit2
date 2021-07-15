@@ -29,21 +29,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background: ${({ showMenu, theme }) => {
-    switch (showMenu) {
-      case true:
-        return theme.isDark
-          ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-          : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
-        break;
-      case false:
-        return "transparent";
-        break;
-      default:
-        break;
-    }
-    return "";
-  }};
   //border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   border-bottom: none;
   z-index: 20;
