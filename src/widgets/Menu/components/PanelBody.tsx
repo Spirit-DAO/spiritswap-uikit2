@@ -24,6 +24,18 @@ const Container = styled.div`
   margin-top: 72px;
 `;
 
+const rotate = keyframes`
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(8px, 0); }
+    100%   { transform: translate(0, -0px); }  
+  }
+`;
+
+const NewIcon = styled(BadgeNewIcon)`
+  width: 43px;
+  margin-right: 50px;
+  animation: ${rotate} 6s infinite;
+`;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
@@ -69,7 +81,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-              {entry.label === "Exchange" ? <BadgeNewIcon/> : null}
+              {entry.label === "Exchange" ? <NewIcon/> : null}
             </MenuLink>
           </MenuEntry>
         );
