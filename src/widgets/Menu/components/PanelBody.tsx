@@ -33,7 +33,7 @@ const rotate = keyframes`
 const NewIcon = styled.img`
   width: 43px;
   margin-right: 50px;
-  animation: ${rotate} 6s infinite;
+  // animation: ${rotate} 6s infinite;
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
@@ -41,8 +41,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
-  const newIcon = `/images/new.svg` 
-
+  const newIcon = '/images/new.svg';
 
   return (
     <Container>
@@ -81,9 +80,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-              {entry.label === "Exchange" ? (
-                <NewIcon src={newIcon} />
-              ) : null}
+              {entry.label === "Exchange" ? <NewIcon src={newIcon} /> : null}
             </MenuLink>
           </MenuEntry>
         );

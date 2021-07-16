@@ -2592,13 +2592,13 @@ var MenuLink = function (_a) {
 var Icons = IconModule;
 var Container$3 = styled__default['default'].div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
 var rotate$1 = styled.keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
-var NewIcon = styled__default['default'].img(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  width: 43px;\n  margin-right: 50px;\n  animation: ", " 6s infinite;\n"], ["\n  width: 43px;\n  margin-right: 50px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
+var NewIcon = styled__default['default'].img(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  width: 43px;\n  margin-right: 50px;\n  // animation: ", " 6s infinite;\n"], ["\n  width: 43px;\n  margin-right: 50px;\n  // animation: ", " 6s infinite;\n"])), rotate$1);
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = reactRouterDom.useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    var newIcon = "/images/new.svg";
+    var newIcon = '/images/new.svg';
     return (React__default['default'].createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
@@ -2614,7 +2614,7 @@ var PanelBody = function (_a) {
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
                 React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
-                entry.label === "Exchange" ? (React__default['default'].createElement(NewIcon, { src: newIcon })) : null)));
+                entry.label === "Exchange" ? React__default['default'].createElement(NewIcon, { src: newIcon }) : null)));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$8;
