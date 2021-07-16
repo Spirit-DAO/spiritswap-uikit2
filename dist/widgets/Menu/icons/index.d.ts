@@ -27,3 +27,4 @@ export { default as VaultIcon } from "./Vault";
 export { default as StoreIcon } from "./Store";
 export { default as AnalyticIcon } from "./Analytic";
 export { default as DonateIcon } from "./Donate";
+export { default as BadgeNewIcon } from "./BadgeNew";
