@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const StyledNav = styled.nav<{ showMenu: boolean }>`
+const StyledNav = styled.nav<{ showMenu: boolean; isPushed: boolean }>`
   position: fixed;
   //top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   top: 0;
@@ -25,25 +25,10 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 8px;
+  padding-left: ${({ isPushed }) => (isPushed ? "8px" : "0")};
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background: ${({ showMenu, theme }) => {
-    switch (showMenu) {
-      case true:
-        return theme.isDark
-          ? "linear-gradient(to bottom, #151e31 40%, #1F2B46 80%)"
-          : "linear-gradient(to bottom, #E6FDFF 40%, #FFFFFF 80%)";
-        break;
-      case false:
-        return "transparent";
-        break;
-      default:
-        break;
-    }
-    return "";
-  }};
   //border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   border-bottom: none;
   z-index: 20;
@@ -132,7 +117,7 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu}>
+      <StyledNav showMenu={showMenu} isPushed={isPushed}>
         <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
