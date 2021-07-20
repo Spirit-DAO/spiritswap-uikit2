@@ -81,7 +81,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-              {entry.label === "Exchange" ? <NewIcon/> : null}
+              {entry.label === "Exchange" || entry.label === "Portfolio"? <NewIcon/> : null}
             </MenuLink>
           </MenuEntry>
         );
