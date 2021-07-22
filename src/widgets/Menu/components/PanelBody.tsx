@@ -7,7 +7,7 @@ import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "../types";
-import {BadgeNewIcon} from "../icons"
+import { BadgeNewIcon } from "../icons";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -42,7 +42,6 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
-
 
   return (
     <Container>
@@ -81,7 +80,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-              {entry.label === "Exchange" || entry.label === "InSpirit" || entry.label === "Portfolio"? <NewIcon/> : null}
+
+              {entry.label === "Exchange" || entry.label === "Portfolio" || entry.label === "InSpirit"  ? <NewIcon /> : null}
+
             </MenuLink>
           </MenuEntry>
         );
