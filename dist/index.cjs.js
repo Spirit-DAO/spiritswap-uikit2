@@ -2659,7 +2659,7 @@ var PanelBody = function (_a) {
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
                 React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
-                entry.label === "Exchange" || entry.label === "Portfolio" || entry.label === "InSpirit" ? (React__default['default'].createElement(NewIcon, null)) : null)));
+                entry.label === "Exchange" || entry.label === "Portfolio" || entry.label === "InSpirit" || entry.label === "Gauges" ? (React__default['default'].createElement(NewIcon, null)) : null)));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$8;
