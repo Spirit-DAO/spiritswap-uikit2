@@ -2297,6 +2297,14 @@ var Icon$1d = function (props) {
                 React.createElement("feBlend", { mode: "normal", in: "SourceGraphic", in2: "effect1_dropShadow", result: "shape" })))));
 };
 
+var Icon$1e = function (props) {
+    return (React.createElement(Svg, { width: "24px", height: "24px", viewBox: "0 0 26 26", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+        React.createElement("circle", { cx: "13", cy: "13", r: "12", stroke: "#52D784", "stroke-width": "2", "stroke-linejoin": "round" }),
+        React.createElement("path", { d: "M20 13C20 12.0807 19.8189 11.1705 19.4672 10.3212C19.1154 9.47194 18.5998 8.70026 17.9497 8.05025C17.2997 7.40024 16.5281 6.88463 15.6788 6.53284C14.8295 6.18106 13.9193 6 13 6C12.0807 6 11.1705 6.18106 10.3212 6.53284C9.47194 6.88463 8.70026 7.40024 8.05025 8.05025C7.40024 8.70026 6.88463 9.47194 6.53284 10.3212C6.18106 11.1705 6 12.0807 6 13", stroke: "#52D784", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }),
+        React.createElement("path", { d: "M13 10L13 14", stroke: "#52D784", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }),
+        React.createElement("circle", { cx: "13", cy: "17", r: "3", fill: "#52D784" })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$N,
@@ -2328,7 +2336,8 @@ var IconModule = /*#__PURE__*/Object.freeze({
     StoreIcon: Icon$1a,
     AnalyticIcon: Icon$1b,
     DonateIcon: Icon$1c,
-    BadgeNewIcon: Icon$1d
+    BadgeNewIcon: Icon$1d,
+    Gauge: Icon$1e
 });
 
 var MenuButton = styled(Button)(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
@@ -2777,7 +2786,7 @@ var templateObject_1$H;
 // };
 // export default Panel;
 
-var Icon$1e = function (props) {
+var Icon$1f = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
         React.createElement("circle", { cx: "48", cy: "48", r: "48", fill: "white" }),
         React.createElement("path", { d: "M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z", fill: "#E17726" }),
@@ -2821,7 +2830,7 @@ var ConnectorNames;
 var connectors = [
     {
         title: "MetaMask",
-        icon: Icon$1e,
+        icon: Icon$1f,
         connectorId: ConnectorNames.Injected,
     },
 ];
