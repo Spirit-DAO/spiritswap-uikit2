@@ -2350,7 +2350,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     AnalyticIcon: Icon$1b,
     DonateIcon: Icon$1c,
     BadgeNewIcon: Icon$1d,
-    Gauge: Icon$1e
+    GaugeIcon: Icon$1e
 });
 
 var MenuButton = styled__default['default'](Button)(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
@@ -2443,6 +2443,10 @@ var links = [
         label: "Pools",
         icon: "PoolIcon",
         href: "/syrup",
+    }, {
+        label: "Gaunge",
+        icon: "GaugeIcon",
+        href: "/gauges",
     },
     {
         label: "Certik Audit (In-Progress)",

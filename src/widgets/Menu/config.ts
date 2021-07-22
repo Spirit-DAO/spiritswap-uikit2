@@ -27,6 +27,10 @@ export const links = [
     label: "Pools",
     icon: "PoolIcon",
     href: "/syrup",
+  },{
+    label: "Gaunge",
+    icon: "GaugeIcon",
+    href: "/gauges",
   },
   {
     label: "Certik Audit (In-Progress)",

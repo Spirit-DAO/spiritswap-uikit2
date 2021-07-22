@@ -28,4 +28,4 @@ export { default as StoreIcon } from "./Store";
 export { default as AnalyticIcon } from "./Analytic";
 export { default as DonateIcon } from "./Donate";
 export { default as BadgeNewIcon } from "./BadgeNew";
-export { default as Gauge } from "./Gauge";
+export { default as GaugeIcon } from "./Gauge";
