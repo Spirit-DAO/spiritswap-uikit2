@@ -46,7 +46,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   transform: translate3d(0, 0, 0);
 
   ${({ theme }) => theme.mediaQueries.nav} {
-    border-width: 3px;
+    border-width: 1px;
     border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
     width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   }

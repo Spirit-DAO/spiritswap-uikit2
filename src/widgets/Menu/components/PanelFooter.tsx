@@ -16,7 +16,7 @@ const Container = styled.div`
   padding: 8px 0;
 
   background: ${({ theme }) => (theme.isDark ? "#161f33" : "#E6FDFF")};
-  border-top: solid 2px #42d784;
+  border-top: solid 1px #42d784;
 `;
 
 const SettingsEntry = styled.div`

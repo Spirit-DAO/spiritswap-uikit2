@@ -89,9 +89,9 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
       }
       return "";
     }};
-    border-right: 3px solid #42d785;
-    border-top: 3px solid #42d785;
-    border-bottom: 3px solid #42d785;
+    border-right: 1px solid #42d785;
+    border-top: 1px solid #42d785;
+    border-bottom: 1px solid #42d785;
     background-image: none;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
