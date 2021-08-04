@@ -5,7 +5,12 @@ import { SvgProps } from "../../../components/Svg/types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" {...props}>
-      <image id="image0" width="24" height="24" x="0" y="0"
+      <image
+        id="image0"
+        width="24"
+        height="24"
+        x="0"
+        y="0"
         xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAf
 G0lEQVR42u2deZgU1dWH32EZUJBFQEFRAREQQVE0oAbFJcYF3OMuJp9b3GOixohLTERjTIzBLYkY
@@ -150,7 +155,8 @@ nZWpx/uojFM9En+H1KMbGu29m0Hn1GMD5Ozymiq0Itgh9WvUIfYbNOp6jxWoddUyJOJPUOWdVan3
 eMflqhsXObZGN4wawPbRDaMGMKEbRg1gQjeMGsCEbhg1gAndMGqA/wdUGWgSlYZziAAAACV0RVh0
 ZGF0ZTpjcmVhdGUAMjAyMS0wNy0yOFQwNDoxNzozOSswMzowMBzsxQAAAAAldEVYdGRhdGU6bW9k
 aWZ5ADIwMjEtMDctMjhUMDQ6MTc6MzkrMDM6MDBtsX28AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==" />
+bWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg=="
+      />
     </Svg>
   );
 };
