@@ -49,7 +49,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        const inSpiritLinks = entry.label === "Home" || entry.label === "Home" ? "inSpirit" : "noInSpirit";
+        const inSpiritLinks = entry.label === "InSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
 
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);

@@ -2676,7 +2676,7 @@ var PanelBody = function (_a) {
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        var inSpiritLinks = entry.label === "Home" || entry.label === "Home" ? "inSpirit" : "noInSpirit";
+        var inSpiritLinks = entry.label === "InSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
             var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
