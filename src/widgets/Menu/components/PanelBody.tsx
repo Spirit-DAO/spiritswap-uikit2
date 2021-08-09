@@ -67,7 +67,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             >
               {isPushed &&
                 entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick} inSpirit={inSpiritLinks}>
                     <MenuLink href={item.href} target={item.target}>
                       {item.label}
                     </MenuLink>
@@ -85,8 +85,8 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           >
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
-              <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks} >
-                {entry.label} {" "}
+              <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
+                {entry.label}{" "}
               </LinkLabel>
               {entry.label === "Exchange" ||
               entry.label === "Portfolio" ||
