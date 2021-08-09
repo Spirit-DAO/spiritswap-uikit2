@@ -2590,7 +2590,8 @@ var LinkLabel = styled__default['default'].div(templateObject_2$d || (templateOb
     var isPushed = _a.isPushed, theme = _a.theme;
     return (isPushed ? theme.colors.textSubtle : "transparent");
 });
-var MenuEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
+var MenuEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ",
+    ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
 }, function (_a) {
@@ -2609,8 +2610,8 @@ var MenuEntry = styled__default['default'].div(templateObject_3$7 || (templateOb
     var theme = _a.theme;
     return theme.colors.textSubtle;
 }, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.tertiary;
+    var theme = _a.theme, inSpirit = _a.inSpirit;
+    return inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(96, 213, 220, 0.15)";
 }, rainbowAnimation, function (_a) {
     var theme = _a.theme;
     return theme.colors.gradients.bubblegum;
@@ -2675,6 +2676,7 @@ var PanelBody = function (_a) {
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        var inSpiritLinks = entry.label === "Home" || entry.label === "Home" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
             var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
@@ -2682,7 +2684,7 @@ var PanelBody = function (_a) {
                 entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
                     React__default['default'].createElement(MenuLink, { href: item.href, target: item.target }, item.label))); })));
         }
-        return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
+        return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 iconElement,
                 React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label),
