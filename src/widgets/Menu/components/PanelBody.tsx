@@ -83,9 +83,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             className={calloutClass}
             inSpirit={inSpiritLinks}
           >
-            <MenuLink href={entry.href} target={entry.target} onClick={handleClick} >
+            <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
-              <LinkLabel isPushed={isPushed}>{entry.label} inSpirit={inSpiritLinks} </LinkLabel>
+              <LinkLabel isPushed={isPushed}>
+                {entry.label} inSpirit={inSpiritLinks}{" "}
+              </LinkLabel>
               {entry.label === "Exchange" ||
               entry.label === "Portfolio" ||
               entry.label === "InSpirit" ||
