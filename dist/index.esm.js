@@ -2573,9 +2573,10 @@ var SIDEBAR_WIDTH_FULL = 240;
 var SIDEBAR_WIDTH_REDUCED = 56;
 
 var rainbowAnimation = keyframes(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"], ["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"])));
-var LinkLabel = styled.div(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"])), function (_a) {
+var LinkLabel = styled.div(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  color: ",
+    ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"])), function (_a) {
     var isPushed = _a.isPushed, theme = _a.theme, inSpirit = _a.inSpirit;
-    return (inSpirit === "noInSpirit" && isPushed ? theme.colors.textSubtle : "#35b9c0");
+    return inSpirit === "noInSpirit" && isPushed ? theme.colors.textSubtle : "#35b9c0";
 });
 var MenuEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ",
     ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
@@ -2620,7 +2621,7 @@ var AccordionContent = styled.div(templateObject_2$e || (templateObject_2$e = __
     return (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent");
 });
 var Accordion = function (_a) {
-    var label = _a.label, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className;
+    var label = _a.label, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, inSpirit = _a.inSpirit;
     var _c = useState(initialOpenState), isOpen = _c[0], setIsOpen = _c[1];
     var handleClick = function () {
         if (isPushed) {
@@ -2632,9 +2633,9 @@ var Accordion = function (_a) {
         }
     };
     return (React.createElement(Container$2, null,
-        React.createElement(MenuEntry, { onClick: handleClick, className: className },
+        React.createElement(MenuEntry, { onClick: handleClick, className: className, inSpirit: inSpirit },
             icon,
-            React.createElement(LinkLabelMemo, { isPushed: isPushed }, label),
+            React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpirit }, label),
             isOpen ? React.createElement(Icon$8, null) : React.createElement(Icon$7, null)),
         React.createElement(AccordionContent, { isOpen: isOpen, isPushed: isPushed, maxHeight: React.Children.count(children) * MENU_ENTRY_HEIGHT }, children)));
 };
@@ -2663,11 +2664,11 @@ var PanelBody = function (_a) {
         var Icon = Icons[entry.icon];
         var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        var inSpiritLinks = entry.label === "InSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
+        var inSpiritLinks = entry.label === "inSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
             var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
-            return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass }, isPushed &&
+            return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, inSpirit: inSpiritLinks }, isPushed &&
                 entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
                     React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); })));
         }

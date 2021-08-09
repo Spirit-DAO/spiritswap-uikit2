@@ -6,6 +6,7 @@ interface Props extends PushedProps {
     initialOpenState?: boolean;
     className?: string;
     children: ReactNode;
+    inSpirit?: string;
 }
 declare const _default: React.NamedExoticComponent<Props>;
 export default _default;
