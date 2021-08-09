@@ -29,7 +29,7 @@ export const links = [
     href: "/syrup",
   },
   {
-    label: "Gaunge",
+    label: "Gauge",
     icon: "GaugeIcon",
     href: "/gauges",
   },
