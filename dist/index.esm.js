@@ -2588,8 +2588,8 @@ var MenuEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTem
     var secondary = _a.secondary, theme = _a.theme;
     return (secondary ? theme.colors.background : "transparent");
 }, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.textSubtle;
+    var theme = _a.theme, inSpirit = _a.inSpirit;
+    return inSpirit === "noInSpirit" ? theme.colors.textSubtle : '#35b9c0';
 }, function (_a) {
     var isActive = _a.isActive, theme = _a.theme;
     return (isActive ? "inset 0px 0px 10px " + theme.colors.primary : "none");
