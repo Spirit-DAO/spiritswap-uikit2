@@ -6,6 +6,7 @@ export interface Props {
   secondary?: boolean;
   isActive?: boolean;
   theme: DefaultTheme;
+  inSpirit?: string
 }
 
 const rainbowAnimation = keyframes`
@@ -47,7 +48,7 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    background-color: ${({ theme, inSpirit }) => inSpirit === 'noInSpirit' ? theme.colors.tertiary : 'rgba(96, 213, 220, 0.15)'};
   }
 
   // Safari fix

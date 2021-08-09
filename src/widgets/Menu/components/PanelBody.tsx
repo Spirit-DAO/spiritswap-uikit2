@@ -49,6 +49,8 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        const inSpiritLinks = entry.label === "Home" || entry.label === "Home" ? "inSpirit" : "noInSpirit";
+
 
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
@@ -76,7 +78,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass} inSpirit={inSpiritLinks} >
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
