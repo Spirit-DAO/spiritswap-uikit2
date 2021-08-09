@@ -11,7 +11,7 @@ interface Props extends PushedProps {
   initialOpenState?: boolean;
   className?: string;
   children: ReactNode;
-  inSpirit?: string
+  inSpirit?: string;
 }
 
 const Container = styled.div`
@@ -38,7 +38,7 @@ const Accordion: React.FC<Props> = ({
   initialOpenState = false,
   children,
   className,
-  inSpirit
+  inSpirit,
 }) => {
   const [isOpen, setIsOpen] = useState(initialOpenState);
 
@@ -55,7 +55,9 @@ const Accordion: React.FC<Props> = ({
     <Container>
       <MenuEntry onClick={handleClick} className={className} inSpirit={inSpirit}>
         {icon}
-        <LinkLabel isPushed={isPushed} inSpirit={inSpirit}>{label}</LinkLabel>
+        <LinkLabel isPushed={isPushed} inSpirit={inSpirit}>
+          {label}
+        </LinkLabel>
         {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
       </MenuEntry>
       <AccordionContent

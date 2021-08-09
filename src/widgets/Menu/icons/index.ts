@@ -30,4 +30,5 @@ export { default as AnalyticIcon } from "./Analytic";
 export { default as DonateIcon } from "./Donate";
 export { default as BadgeNewIcon } from "./BadgeNew";
 export { default as GaugeIcon } from "./Gauge";
+export { default as inSpiritIcon } from "./inSpirit";
 export { default as NftZoo } from "./NftZoo";
