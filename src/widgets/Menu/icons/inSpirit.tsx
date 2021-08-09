@@ -5,7 +5,7 @@ import { SvgProps } from "../../../components/Svg/types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px"
-      viewBox="0 0 155 172" enable-background="new 0 0 155 172" >
+      viewBox="0 0 155 172" enable-background="new 0 0 155 172" style={{ marginRight: "8px" }} >
 
       <image id="image0" width="155" height="172" x="0" y="0"
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAACsCAYAAABsHt6ZAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
