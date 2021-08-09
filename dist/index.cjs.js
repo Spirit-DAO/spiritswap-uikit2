@@ -2601,14 +2601,14 @@ var MenuEntry = styled__default['default'].div(templateObject_3$7 || (templateOb
     var secondary = _a.secondary, theme = _a.theme;
     return (secondary ? theme.colors.background : "transparent");
 }, function (_a) {
-    var theme = _a.theme, inSpirit = _a.inSpirit;
-    return (inSpirit === "noInSpirit" ? theme.colors.textSubtle : "#35b9c0");
+    var theme = _a.theme;
+    return theme.colors.textSubtle;
 }, function (_a) {
     var isActive = _a.isActive, theme = _a.theme;
     return (isActive ? "inset 0px 0px 10px " + theme.colors.primary : "none");
 }, function (_a) {
-    var theme = _a.theme, inSpirit = _a.inSpirit;
-    return (inSpirit === "noInSpirit" ? theme.colors.textSubtle : "#35b9c0");
+    var theme = _a.theme;
+    return theme.colors.textSubtle;
 }, function (_a) {
     var theme = _a.theme, inSpirit = _a.inSpirit;
     return inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(96, 213, 220, 0.15)";
