@@ -97,7 +97,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               </LinkLabel>
               {entry.label === "Exchange" ||
               entry.label === "Portfolio" ||
-              entry.label === "InSpirit" ||
+              entry.label === "inSpirit" ||
               entry.label === "Gauges" ? (
                 <NewIcon />
               ) : null}

@@ -34,9 +34,9 @@ export const links = [
     href: "/gauges",
   },
   {
-    label: 'inSpirit',
-    icon: 'inSpiritIcon',
-    href: 'http://spiritswap-inspirit-staging.s3-website.us-east-2.amazonaws.com/', // to change in production
+    label: "inSpirit",
+    icon: "inSpiritIcon",
+    href: "http://spiritswap-inspirit-staging.s3-website.us-east-2.amazonaws.com/", // to change in production
   },
   {
     label: "Certik Audit (In-Progress)",

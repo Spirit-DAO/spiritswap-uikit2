@@ -2312,7 +2312,7 @@ var Icon$1f = function (props) {
 };
 
 var Icon$1g = function (props) {
-    return (React.createElement(Svg, __assign({ width: "155", height: "172", viewBox: "0 0 155 172", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, props),
+    return (React.createElement(Svg, __assign({ width: "155", viewBox: "0 0 155 172", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, props),
         React.createElement("g", { opacity: "0.9" },
             React.createElement("path", { d: "M152.479 102.633C152.013 94.7166 150.052 99.4167 144.298 98.5536C125 90.5 128.5 62 128.5 62C128.5 29.3622 102.031 2 67.9453 2H62.4916C29.7689 2 2 29.8622 2 62.5V95.5C2 113.179 5.09244 124.041 16 139C28.271 153.959 50.2773 176.659 83 168.5C83 168.5 87.8686 166.887 88.5 164.5C89.1314 162.113 93 152.5 108 152.5C121.634 149.78 120.5 136 120.5 136C120.5 136 121 121.996 136 120.5C149.634 119.14 152.945 110.55 152.479 102.633Z", fill: "url(#paint0_linear)", stroke: "#1F2B46" }),
             React.createElement("g", null,
@@ -2471,9 +2471,9 @@ var links = [
         href: "/gauges",
     },
     {
-        label: 'inSpirit',
-        icon: 'inSpiritIcon',
-        href: 'http://spiritswap-inspirit-staging.s3-website.us-east-2.amazonaws.com/',
+        label: "inSpirit",
+        icon: "inSpiritIcon",
+        href: "http://spiritswap-inspirit-staging.s3-website.us-east-2.amazonaws.com/",
     },
     {
         label: "Certik Audit (In-Progress)",
@@ -2706,7 +2706,7 @@ var PanelBody = function (_a) {
                     " "),
                 entry.label === "Exchange" ||
                     entry.label === "Portfolio" ||
-                    entry.label === "InSpirit" ||
+                    entry.label === "inSpirit" ||
                     entry.label === "Gauges" ? (React.createElement(NewIcon, null)) : null)));
     })));
 };
