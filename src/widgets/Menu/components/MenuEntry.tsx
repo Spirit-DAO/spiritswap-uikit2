@@ -33,7 +33,7 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme, inSpirit }) => inSpirit === "noInSpirit" ? theme.colors.textSubtle : '#35b9c0'};
+  color: ${({ theme, inSpirit }) => (inSpirit === "noInSpirit" ? theme.colors.textSubtle : "#35b9c0")};
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 0px 0px 10px ${theme.colors.primary}` : "none")};
 
   a {
@@ -44,6 +44,7 @@ const MenuEntry = styled.div<Props>`
   }
 
   svg {
+    color: ${({ theme, inSpirit }) => (inSpirit === "noInSpirit" ? theme.colors.textSubtle : "#35b9c0")};
     fill: ${({ theme }) => theme.colors.textSubtle};
   }
 
