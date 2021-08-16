@@ -11,7 +11,7 @@ const connectors: Config[] = [
   {
     title: "Coin98 Wallet",
     icon: Coin98Wallet,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.Coin98,
   },
 ];
 

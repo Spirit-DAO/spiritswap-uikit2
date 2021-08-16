@@ -2891,6 +2891,7 @@ exports.ConnectorNames = void 0;
     ConnectorNames["Injected"] = "injected";
     ConnectorNames["WalletConnect"] = "walletconnect";
     ConnectorNames["BSC"] = "bsc";
+    ConnectorNames["Coin98"] = "coin98";
 })(exports.ConnectorNames || (exports.ConnectorNames = {}));
 
 var connectors = [
@@ -2902,7 +2903,7 @@ var connectors = [
     {
         title: "Coin98 Wallet",
         icon: Icon$1j,
-        connectorId: exports.ConnectorNames.Injected,
+        connectorId: exports.ConnectorNames.Coin98,
     },
 ];
 var connectorLocalStorageKey = "connectorId";
