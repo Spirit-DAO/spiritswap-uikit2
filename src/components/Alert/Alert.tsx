@@ -46,18 +46,18 @@ const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
 
 const IconLabel = styled.div<ThemedIconLabel>`
   background-color: ${getThemeColor};
-  border-radius: 16px 0 0 16px;
+  border-radius: 5px 0 0 5px;
   color: ${({ theme }) => theme.alert.background};
   padding: 12px;
 `;
 
-const withHandlerSpacing = 32 + 12 + 8; // button size + inner spacing + handler position
+const withHandlerSpacing = 32 + 24 + 8; // button size + inner spacing + handler position
 const Details = styled.div<{ hasHandler: boolean }>`
   flex: 1;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: ${({ hasHandler }) => (hasHandler ? `${withHandlerSpacing}px` : "12px")};
-  padding-top: 12px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: ${({ hasHandler }) => (hasHandler ? `${withHandlerSpacing}px` : "24px")};
+  padding-top: 16px;
 `;
 
 const CloseHandler = styled.div`
@@ -70,9 +70,8 @@ const CloseHandler = styled.div`
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
-  //border-radius: 16px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px ${({ theme }) => theme.colors.primary};
 `;
 
 const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
@@ -81,7 +80,7 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   return (
     <StyledAlert>
       <IconLabel variant={variant} hasDescription={!!children}>
-        <Icon color="currentColor" width="24px" />
+        <Icon fill="white" width="24px" />
       </IconLabel>
       <Details hasHandler={!!onClick}>
         <Text bold>{title}</Text>
@@ -90,7 +89,7 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
       {onClick && (
         <CloseHandler>
           <IconButton scale="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
+            <CloseIcon width="24px" fill="white" />
           </IconButton>
         </CloseHandler>
       )}
