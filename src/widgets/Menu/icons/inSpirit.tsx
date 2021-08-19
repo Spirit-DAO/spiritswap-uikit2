@@ -4,10 +4,23 @@ import { SvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<SvgProps> = (props) => {
   return (
-    <Svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px"
-      viewBox="0 0 155 172" enable-background="new 0 0 155 172" style={{ marginRight: "8px" }} >
-
-      <image id="image0" width="155" height="172" x="0" y="0"
+    <Svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="24px"
+      viewBox="0 0 155 172"
+      enable-background="new 0 0 155 172"
+      style={{ marginRight: "8px" }}
+    >
+      <image
+        id="image0"
+        width="155"
+        height="172"
+        x="0"
+        y="0"
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAACsCAYAAABsHt6ZAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
     AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
     CXBIWXMAAAsTAAALEwEAmpwYAABU+klEQVR42u29eZSd1XUn+tvfreHWpKoSUmkwkq4YhEACZHA8
@@ -394,9 +407,9 @@ const Icon: React.FC<SvgProps> = (props) => {
     V8L0rh+HmLPFbD/2YGvWahddswMF99UD1QhUA7ivAHq5RAVJCuYEYBigIQYPViphCNP13f8ErPm3
     /x+tezOgTBiw0QAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0xMFQwMjowNTowMiswMzowMJbs
     FDwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMTBUMDI6MDU6MDIrMDM6MDDnsayAAAAAAElF
-    TkSuQmCC" />
+    TkSuQmCC"
+      />
     </Svg>
-
   );
 };
 
