@@ -21,7 +21,7 @@ const rainbowAnimation = keyframes`
 
 const LinkLabel = styled.div<{ isPushed: boolean; inSpirit: string }>`
   color: ${({ isPushed, theme, inSpirit }) =>
-    inSpirit === "noInSpirit" && isPushed ? theme.colors.textSubtle : "#35b9c0"};
+    (!isPushed && "transparent") || (inSpirit === "noInSpirit" && theme.colors.textSubtle) || "#35b9c0"};
   transition: color 0.4s;
   flex-grow: 1;
 `;
