@@ -1,0 +1,36 @@
+.audit-badge {
+  opacity: 0.5;
+  border-radius: 2.5rem;
+  box-shadow: 1px 1px 30px 1px #60d5dc;
+  border: solid 3px #60d5dc;
+  cursor: pointer;
+  font-size: 12px;
+  height: fit-content;
+  min-width: 130px;
+  padding: 6px 15px;
+
+  span {
+    margin-right: 0.5rem;
+  }
+  .logo {
+    height: 25px;
+  }
+
+  &:hover {
+    span {
+      color: rgb(96, 213, 220);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 1rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+    min-width: 175px;
+    padding: 8px 25px;
+    span {
+      margin-right: 1rem;
+    }
+  }
+}
