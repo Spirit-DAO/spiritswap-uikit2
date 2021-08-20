@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
 import { LogoIcon as LogoWithText, ChevronLeft, ChevronRight, HamburgerCloseIcon, HamburgerIcon } from "../icons";
 import MenuButton from "./MenuButton";
@@ -37,6 +36,50 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledMenuButton = styled(MenuButton)`
+  position: absolute;
+  left: ${({ isMobile, isPushed }) => {
+    switch (isMobile) {
+      case true:
+        return "20px";
+      case false:
+        return isPushed ? "240.2px" : "56.2px";
+      default:
+        break;
+    }
+    return "";
+  }};
+  top: ${({ isMobile }) => {
+    switch (isMobile) {
+      case true:
+        return "10px";
+      case false:
+        return "320px";
+      default:
+        break;
+    }
+    return "";
+  }};
+  padding: ${({ isMobile }) => {
+    switch (isMobile) {
+      case true:
+        return 0;
+      case false:
+        return "50px 5px";
+      default:
+        break;
+    }
+    return "";
+  }};
+  border-right: 1px solid #42d785;
+  border-top: 1px solid #42d785;
+  border-bottom: 1px solid #42d785;
+  background-image: none;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: ${({ isMobile }) => (isMobile ? "none" : "")};
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -48,59 +91,9 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
 
-  const StyledMenuButton = styled(MenuButton)`
-    position: absolute;
-    left: ${() => {
-      switch (isMobile) {
-        case true:
-          return "20px";
-          break;
-        case false:
-          return isPushed ? "240.2px" : "56.2px";
-          break;
-        default:
-          break;
-      }
-      return "";
-    }};
-    top: ${() => {
-      switch (isMobile) {
-        case true:
-          return "10px";
-          break;
-        case false:
-          return "320px";
-          break;
-        default:
-          break;
-      }
-      return "";
-    }};
-    padding: ${() => {
-      switch (isMobile) {
-        case true:
-          return 0;
-          break;
-        case false:
-          return "50px 5px";
-          break;
-        default:
-          break;
-      }
-      return "";
-    }};
-    border-right: 1px solid #42d785;
-    border-top: 1px solid #42d785;
-    border-bottom: 1px solid #42d785;
-    background-image: none;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    border: ${() => (isMobile ? "none" : "")};
-  `;
-
   return !isMobile ? (
     <Flex>
-      <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
+      <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? <ChevronLeft width="24px" color="textSubtle" /> : <ChevronRight width="24px" color="textSubtle" />}
       </StyledMenuButton>
       {isAbsoluteUrl ? (
@@ -115,7 +108,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     </Flex>
   ) : (
     <Flex>
-      <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
+      <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
         ) : (

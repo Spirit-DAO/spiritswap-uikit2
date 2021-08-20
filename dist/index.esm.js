@@ -2307,9 +2307,9 @@ var Icon$1e = function (props) {
 
 var Icon$1f = function (props) {
     return (React.createElement(Svg, __assign({ width: "26px", height: "26px", viewBox: "0 0 26 26", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, props),
-        React.createElement("circle", { cx: "13", cy: "13", r: "12", stroke: "#35b9c0", "stroke-width": "2", "stroke-linejoin": "round", fill: "none" }),
-        React.createElement("path", { d: "M20 13C20 12.0807 19.8189 11.1705 19.4672 10.3212C19.1154 9.47194 18.5998 8.70026 17.9497 8.05025C17.2997 7.40024 16.5281 6.88463 15.6788 6.53284C14.8295 6.18106 13.9193 6 13 6C12.0807 6 11.1705 6.18106 10.3212 6.53284C9.47194 6.88463 8.70026 7.40024 8.05025 8.05025C7.40024 8.70026 6.88463 9.47194 6.53284 10.3212C6.18106 11.1705 6 12.0807 6 13", stroke: "#35b9c0", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", fill: "none" }),
-        React.createElement("path", { d: "M13 10L13 14", stroke: "#35b9c0", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" }),
+        React.createElement("circle", { cx: "13", cy: "13", r: "12", stroke: "#35b9c0", strokeWidth: "2", strokeLinejoin: "round", fill: "none" }),
+        React.createElement("path", { d: "M20 13C20 12.0807 19.8189 11.1705 19.4672 10.3212C19.1154 9.47194 18.5998 8.70026 17.9497 8.05025C17.2997 7.40024 16.5281 6.88463 15.6788 6.53284C14.8295 6.18106 13.9193 6 13 6C12.0807 6 11.1705 6.18106 10.3212 6.53284C9.47194 6.88463 8.70026 7.40024 8.05025 8.05025C7.40024 8.70026 6.88463 9.47194 6.53284 10.3212C6.18106 11.1705 6 12.0807 6 13", stroke: "#35b9c0", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", fill: "none" }),
+        React.createElement("path", { d: "M13 10L13 14", stroke: "#35b9c0", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }),
         React.createElement("circle", { cx: "13", cy: "17", r: "3", fill: "#35b9c0" }),
         " "));
 };
@@ -2379,6 +2379,40 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$B || (templateObject_1$B = __
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
+var StyledMenuButton = styled(MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n"], ["\n  position: absolute;\n  left: ",
+    ";\n  top: ",
+    ";\n  padding: ",
+    ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n"])), function (_a) {
+    var isMobile = _a.isMobile, isPushed = _a.isPushed;
+    switch (isMobile) {
+        case true:
+            return "20px";
+        case false:
+            return isPushed ? "240.2px" : "56.2px";
+    }
+    return "";
+}, function (_a) {
+    var isMobile = _a.isMobile;
+    switch (isMobile) {
+        case true:
+            return "10px";
+        case false:
+            return "320px";
+    }
+    return "";
+}, function (_a) {
+    var isMobile = _a.isMobile;
+    switch (isMobile) {
+        case true:
+            return 0;
+        case false:
+            return "50px 5px";
+    }
+    return "";
+}, function (_a) {
+    var isMobile = _a.isMobile;
+    return (isMobile ? "none" : "");
+});
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
@@ -2386,38 +2420,10 @@ var Logo$1 = function (_a) {
         React.createElement(Logo, { className: "desktop-icon", isDark: isDark, isPushed: isPushed })));
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
-    var StyledMenuButton = styled(MenuButton)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n    position: absolute;\n    left: ", ";\n    top: ", ";\n    padding: ", ";\n    border-right: 1px solid #42d785;\n    border-top: 1px solid #42d785;\n    border-bottom: 1px solid #42d785;\n    background-image: none;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "], ["\n    position: absolute;\n    left: ",
-        ";\n    top: ",
-        ";\n    padding: ",
-        ";\n    border-right: 1px solid #42d785;\n    border-top: 1px solid #42d785;\n    border-bottom: 1px solid #42d785;\n    background-image: none;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0;\n    border: ", ";\n  "])), function () {
-        switch (isMobile) {
-            case true:
-                return "20px";
-            case false:
-                return isPushed ? "240.2px" : "56.2px";
-        }
-        return "";
-    }, function () {
-        switch (isMobile) {
-            case true:
-                return "10px";
-            case false:
-                return "320px";
-        }
-        return "";
-    }, function () {
-        switch (isMobile) {
-            case true:
-                return 0;
-            case false:
-                return "50px 5px";
-        }
-        return "";
-    }, function () { return (isMobile ? "none" : ""); });
     return !isMobile ? (React.createElement(Flex, null,
-        React.createElement(StyledMenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? React.createElement(Icon$R, { width: "24px", color: "textSubtle" }) : React.createElement(Icon$S, { width: "24px", color: "textSubtle" })),
+        React.createElement(StyledMenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px", isMobile: isMobile, isPushed: isPushed }, isPushed ? React.createElement(Icon$R, { width: "24px", color: "textSubtle" }) : React.createElement(Icon$S, { width: "24px", color: "textSubtle" })),
         isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Pancake home page" }, innerLogo)))) : (React.createElement(Flex, null,
-        React.createElement(StyledMenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$Q, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$P, { width: "24px", color: "textSubtle" }))),
+        React.createElement(StyledMenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px", isMobile: isMobile, isPushed: isPushed }, isPushed ? (React.createElement(Icon$Q, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$P, { width: "24px", color: "textSubtle" }))),
         isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
 };
 var Logo$2 = React.memo(Logo$1, function (prev, next) { return prev.isPushed === next.isPushed && prev.isDark === next.isDark; });
