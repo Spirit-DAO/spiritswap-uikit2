@@ -2704,7 +2704,7 @@ var PanelBody = function (_a) {
                 React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks },
                     entry.label,
                     " "),
-                entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" ? (React.createElement(NewIcon, null)) : null)));
+                entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" || entry.label === "IDO" ? (React.createElement(NewIcon, null)) : null)));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$8;

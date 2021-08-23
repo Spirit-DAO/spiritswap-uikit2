@@ -95,7 +95,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                 {entry.label}{" "}
               </LinkLabel>
-              {entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" ? (
+              {entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" || entry.label === "IDO" ? (
                 <NewIcon />
               ) : null}
             </MenuLink>
