@@ -2686,7 +2686,7 @@ var MenuLink = function (_a) {
 var Icons = IconModule;
 var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
 var rotate$1 = keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
-var NewIcon = styled(Icon$1e)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  width: 43px;\n  margin-right: 50px;\n  animation: ", " 6s infinite;\n"], ["\n  width: 43px;\n  margin-right: 50px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
+var NewIcon = styled(Icon$1e)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = useLocation();

@@ -32,8 +32,8 @@ const rotate = keyframes`
 `;
 
 const NewIcon = styled(BadgeNewIcon)`
-  width: 43px;
-  margin-right: 50px;
+  width: 40px;
+  margin-right: 45px;
   animation: ${rotate} 6s infinite;
 `;
 
