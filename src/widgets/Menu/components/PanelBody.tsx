@@ -38,6 +38,9 @@ const NewIcon = styled(BadgeNewIcon)`
   margin-right: 45px;
   animation: ${rotate} 6s infinite;
 `;
+const MenuWrapper = styled.div`
+  position: relative;
+`
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
@@ -93,6 +96,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             inSpirit={inSpiritLinks}
           >
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
+              <MenuWrapper>
               {iconElement}
               <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                 {entry.label}{" "}
@@ -104,6 +108,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               entry.label === "Lend/Borrow" ? (
                 <NewIcon />
               ) : null}
+            </MenuWrapper>
             </MenuLink>
           </MenuEntry>
         );

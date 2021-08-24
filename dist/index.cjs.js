@@ -2700,6 +2700,7 @@ var Icons = IconModule;
 var Container$3 = styled__default['default'].div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
 var rotate$1 = styled.keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
 var NewIcon = styled__default['default'](Icon$1e)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: absolute;\n  left: 170px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  position: absolute;\n  left: 170px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
+var MenuWrapper = styled__default['default'].div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = reactRouterDom.useLocation();
@@ -2719,18 +2720,19 @@ var PanelBody = function (_a) {
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
-                iconElement,
-                React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks },
-                    entry.label,
-                    " "),
-                entry.label === "Portfolio" ||
-                    entry.label === "inSpirit" ||
-                    entry.label === "Boosted Farms" ||
-                    entry.label === "IDO" ||
-                    entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null)));
+                React__default['default'].createElement(MenuWrapper, null,
+                    iconElement,
+                    React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks },
+                        entry.label,
+                        " "),
+                    entry.label === "Portfolio" ||
+                        entry.label === "inSpirit" ||
+                        entry.label === "Boosted Farms" ||
+                        entry.label === "IDO" ||
+                        entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null))));
     })));
 };
-var templateObject_1$E, templateObject_2$f, templateObject_3$8;
+var templateObject_1$E, templateObject_2$f, templateObject_3$8, templateObject_4$3;
 
 var PriceLink = styled__default['default'].span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
@@ -3016,7 +3018,7 @@ var StyledNav = styled__default['default'].nav(templateObject_2$i || (templateOb
     return (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none");
 });
 var BodyWrapper = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled__default['default'].div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
+var Inner = styled__default['default'].div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
 }, function (_a) {
@@ -3083,7 +3085,7 @@ var Menu = function (_a) {
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$L, templateObject_2$i, templateObject_3$a, templateObject_4$3, templateObject_5$1;
+var templateObject_1$L, templateObject_2$i, templateObject_3$a, templateObject_4$4, templateObject_5$1;
 
 var ToastAction = function (_a) {
     var action = _a.action;
