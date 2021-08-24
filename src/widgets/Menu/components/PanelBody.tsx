@@ -40,7 +40,9 @@ const NewIcon = styled(BadgeNewIcon)`
 `;
 const MenuWrapper = styled.div`
   position: relative;
-`
+  display: flex;
+  align-items: center
+`;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
@@ -97,18 +99,18 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           >
             <MenuLink href={entry.href} target={entry.target} onClick={handleClick}>
               <MenuWrapper>
-              {iconElement}
-              <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
-                {entry.label}{" "}
-              </LinkLabel>
-              {entry.label === "Portfolio" ||
-              entry.label === "inSpirit" ||
-              entry.label === "Boosted Farms" ||
-              entry.label === "IDO" ||
-              entry.label === "Lend/Borrow" ? (
-                <NewIcon />
-              ) : null}
-            </MenuWrapper>
+                {iconElement}
+                <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
+                  {entry.label}{" "}
+                </LinkLabel>
+                {entry.label === "Portfolio" ||
+                entry.label === "inSpirit" ||
+                entry.label === "Boosted Farms" ||
+                entry.label === "IDO" ||
+                entry.label === "Lend/Borrow" ? (
+                  <NewIcon />
+                ) : null}
+              </MenuWrapper>
             </MenuLink>
           </MenuEntry>
         );
