@@ -33,7 +33,7 @@ const rotate = keyframes`
 
 const NewIcon = styled(BadgeNewIcon)`
   position: absolute;
-  left: 170px;
+  left: 155px;
   width: 40px;
   margin-right: 45px;
   animation: ${rotate} 6s infinite;
@@ -41,7 +41,7 @@ const NewIcon = styled(BadgeNewIcon)`
 const MenuWrapper = styled.div`
   position: relative;
   display: flex;
-  align-items: center
+  align-items: center;
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
