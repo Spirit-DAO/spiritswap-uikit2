@@ -49,7 +49,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        const inSpiritLinks = entry.label === "inSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
+        const inSpiritLinks = entry.label === "inSpirit" || entry.label === "Boosted Farms" ? "inSpirit" : "noInSpirit";
 
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
@@ -95,7 +95,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                 {entry.label}{" "}
               </LinkLabel>
-              {entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" || entry.label === "IDO" || entry.label === "Lend/Borrow" ? (
+              {entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Boosted Farms" || entry.label === "IDO" || entry.label === "Lend/Borrow" ? (
                 <NewIcon />
               ) : null}
             </MenuLink>

@@ -29,9 +29,9 @@ export const links = [
     href: "/syrup",
   },
   {
-    label: "Gauge",
+    label: "Boosted Farms",
     icon: "GaugeIcon",
-    href: "/gauges",
+    href: "/boostedfarms",
   },
   {
     label: "inSpirit",
