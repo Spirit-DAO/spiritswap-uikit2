@@ -4,12 +4,8 @@ import styled from "styled-components";
 const Wrapper = styled.a`
   display: flex;
   align-items: center;
-  opacity: 0.8;
-  border-radius: 2.5rem;
-  box-shadow: 1px 1px 30px 1px #60d5dc;
-  border: solid 3px #60d5dc;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 20px;
   height: fit-content;
   min-width: 130px;
   padding: 6px 15px;
@@ -19,7 +15,7 @@ const Wrapper = styled.a`
     margin-right: 0.5rem;
   }
   .logo {
-    height: 25px;
+    height: 30px;
   }
 
   &:hover {
