@@ -2485,9 +2485,9 @@ var links = [
         href: "/syrup",
     },
     {
-        label: "Gauge",
+        label: "Boosted Farms",
         icon: "GaugeIcon",
-        href: "/gauges",
+        href: "/boostedfarms",
     },
     {
         label: "inSpirit",
@@ -2709,7 +2709,7 @@ var PanelBody = function (_a) {
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        var inSpiritLinks = entry.label === "inSpirit" || entry.label === "Gauges" ? "inSpirit" : "noInSpirit";
+        var inSpiritLinks = entry.label === "inSpirit" || entry.label === "Boosted Farms" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
             var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
@@ -2723,7 +2723,11 @@ var PanelBody = function (_a) {
                 React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks },
                     entry.label,
                     " "),
-                entry.label === "Portfolio" || entry.label === "inSpirit" || entry.label === "Gauges" || entry.label === "IDO" || entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null)));
+                entry.label === "Portfolio" ||
+                    entry.label === "inSpirit" ||
+                    entry.label === "Boosted Farms" ||
+                    entry.label === "IDO" ||
+                    entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null)));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$8;
