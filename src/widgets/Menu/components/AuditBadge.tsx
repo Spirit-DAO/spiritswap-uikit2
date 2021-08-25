@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.a`
+interface Props {
+  isPushed: boolean;
+}
+
+const Wrapper = styled.a<{ isPushed: boolean }>`
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   font-size: 20px;
   height: fit-content;
-  min-width: 130px;
-  padding: 6px 15px;
+  margin: 0.5rem auto;
 
   span {
     color: white;
-    margin-right: 0.5rem;
+    display: ${({ isPushed }) => (isPushed ? "unset" : "none")};
+    margin-right: 1rem;
   }
   .logo {
     height: 30px;
@@ -23,27 +28,16 @@ const Wrapper = styled.a`
       color: rgb(96, 213, 220);
     }
   }
-
-  @media (min-width: 1024px) {
-    margin-left: 1rem;
-  }
-  @media (min-width: 768px) {
-    font-size: 16px;
-    min-width: 175px;
-    padding: 8px 25px;
-    span {
-      margin-right: 1rem;
-    }
-  }
 }`;
 
-const AuditBadge: React.FC = () => {
+const AuditBadge: React.FC<Props> = ({ isPushed }) => {
   return (
     <Wrapper
       className="audit-badge"
       href="https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf"
       rel="noreferrer"
       target="_blank"
+      isPushed={isPushed}
     >
       <span>audited by</span>
       <img

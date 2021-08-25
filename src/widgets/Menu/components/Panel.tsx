@@ -59,7 +59,7 @@ const Panel: React.FC<Props> = (props) => {
     <StyledPanel isMobile={isMobile} isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
       <PanelFooter {...props} />
-      <AuditBadge />
+      <AuditBadge isPushed={isPushed} />
     </StyledPanel>
   );
 };

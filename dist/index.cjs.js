@@ -2787,9 +2787,13 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$G, templateObject_2$g, templateObject_3$9;
 
-var Wrapper$1 = styled__default['default'].a(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  min-width: 130px;\n  padding: 6px 15px;\n\n  span {\n    color: white;\n    margin-right: 0.5rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n\n  @media (min-width: 1024px) {\n    margin-left: 1rem;\n  }\n  @media (min-width: 768px) {\n    font-size: 16px;\n    min-width: 175px;\n    padding: 8px 25px;\n    span {\n      margin-right: 1rem;\n    }\n  }\n}"], ["\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  min-width: 130px;\n  padding: 6px 15px;\n\n  span {\n    color: white;\n    margin-right: 0.5rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n\n  @media (min-width: 1024px) {\n    margin-left: 1rem;\n  }\n  @media (min-width: 768px) {\n    font-size: 16px;\n    min-width: 175px;\n    padding: 8px 25px;\n    span {\n      margin-right: 1rem;\n    }\n  }\n}"])));
-var AuditBadge = function () {
-    return (React__default['default'].createElement(Wrapper$1, { className: "audit-badge", href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", rel: "noreferrer", target: "_blank" },
+var Wrapper$1 = styled__default['default'].a(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  margin: 0.5rem auto;\n\n  span {\n    color: white;\n    display: ", ";\n    margin-right: 1rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n}"], ["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  margin: 0.5rem auto;\n\n  span {\n    color: white;\n    display: ", ";\n    margin-right: 1rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n}"])), function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "unset" : "none");
+});
+var AuditBadge = function (_a) {
+    var isPushed = _a.isPushed;
+    return (React__default['default'].createElement(Wrapper$1, { className: "audit-badge", href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", rel: "noreferrer", target: "_blank", isPushed: isPushed },
         React__default['default'].createElement("span", null, "audited by"),
         React__default['default'].createElement("img", { alt: "Logo", className: "logo", src: "https://static.tildacdn.com/tild3736-6636-4564-a262-333031646230/Logo-mixBytes-kvadra.svg" })));
 };
@@ -2835,7 +2839,7 @@ var Panel = function (props) {
     return (React__default['default'].createElement(StyledPanel, { isMobile: isMobile, isPushed: isPushed, showMenu: showMenu },
         React__default['default'].createElement(PanelBody, __assign({}, props)),
         React__default['default'].createElement(PanelFooter, __assign({}, props)),
-        React__default['default'].createElement(AuditBadge, null)));
+        React__default['default'].createElement(AuditBadge, { isPushed: isPushed })));
 };
 var templateObject_1$I;
 // const Panel: React.FC<Props> = (props) => {
