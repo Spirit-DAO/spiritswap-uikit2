@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
+import AuditBadge from "./AuditBadge";
 import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
 import { PanelProps, PushedProps } from "../types";
 
@@ -58,6 +59,7 @@ const Panel: React.FC<Props> = (props) => {
     <StyledPanel isMobile={isMobile} isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
       <PanelFooter {...props} />
+      <AuditBadge isPushed={isPushed} />
     </StyledPanel>
   );
 };

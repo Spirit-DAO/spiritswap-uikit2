@@ -17,6 +17,7 @@ const Container = styled.div`
 
   background: ${({ theme }) => (theme.isDark ? "#161f33" : "#E6FDFF")};
   border-top: solid 1px #42d784;
+  border-bottom: solid 1px #42d784;
 `;
 
 const SettingsEntry = styled.div`
