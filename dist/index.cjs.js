@@ -2732,11 +2732,7 @@ var PanelBody = function (_a) {
                         entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null))));
     })));
 };
-<<<<<<< HEAD
-var templateObject_1$F, templateObject_2$f, templateObject_3$8, templateObject_4$3;
-=======
-var templateObject_1$E, templateObject_2$f, templateObject_3$8;
->>>>>>> 95febf9... move the audit button on bottom of the left panel
+var templateObject_1$E, templateObject_2$f, templateObject_3$8, templateObject_4$3;
 
 var PriceLink = styled__default['default'].span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
