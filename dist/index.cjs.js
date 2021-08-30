@@ -2907,7 +2907,7 @@ var Icon$1k = function (props) {
         React__default['default'].createElement("path", { d: "M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z", fill: "#F5841F" })));
 };
 
-var Icon$1j = function (props) {
+var Icon$1l = function (props) {
     return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
         React__default['default'].createElement("defs", null,
             React__default['default'].createElement("linearGradient", { id: "prefix__a", x1: 48.733, y1: 944.09, x2: 942.955, y2: 64.09, gradientUnits: "userSpaceOnUse" },
@@ -2939,7 +2939,7 @@ var connectors = [
     },
     {
         title: "Coin98 Wallet",
-        icon: Icon$1j,
+        icon: Icon$1l,
         connectorId: exports.ConnectorNames.Coin98,
     },
 ];
