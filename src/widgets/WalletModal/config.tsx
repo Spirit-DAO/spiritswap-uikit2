@@ -1,5 +1,6 @@
 import Metamask from "./icons/Metamask";
 import Coin98Wallet from "./icons/Coin98Wallet";
+import Coinbase from "./icons/Coinbase";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -12,6 +13,11 @@ const connectors: Config[] = [
     title: "Coin98 Wallet",
     icon: Coin98Wallet,
     connectorId: ConnectorNames.Coin98,
+  },
+  {
+    title: "Coinbase",
+    icon: Coinbase,
+    connectorId: ConnectorNames.WalletLink,
   },
 ];
 
