@@ -1,5 +1,10 @@
 {
   "extends": "@pancakeswap-libs/eslint-config-pancake",
+  "settings": {
+    "import/resolver": {
+      "typescript": {} 
+    }
+  },
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
