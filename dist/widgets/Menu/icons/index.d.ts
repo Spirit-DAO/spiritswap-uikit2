@@ -34,3 +34,4 @@ export { default as inSpiritIcon } from "./inSpirit";
 export { default as NftZoo } from "./NftZoo";
 export { default as Rocket } from "./Rocket";
 export { default as LendIcon } from "./Lend";
+export { default as MediumIcon } from "./Medium";

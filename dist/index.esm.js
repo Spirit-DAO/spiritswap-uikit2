@@ -2338,6 +2338,11 @@ var Icon$1j = function (props) {
         React.createElement("path", { fill: "#6CD784", d: "M271.06,144.3l54.27,14.3a8.59,8.59,0,0,1,6.63,8.1c0,4.6-4.09,8.4-9.12,8.4h-35.6a30,30,0,0,1-11.19-2.2c-5.24-2.2-11.28-1.7-15.3,2l-19,17.5a11.68,11.68,0,0,0-2.25,2.66,11.42,11.42,0,0,0,3.88,15.74,83.77,83.77,0,0,0,34.51,11.5V240c0,8.8,7.83,16,17.37,16h17.37c9.55,0,17.38-7.2,17.38-16V222.4c32.93-3.6,57.84-31,53.5-63-3.15-23-22.46-41.3-46.56-47.7L282.68,97.4a8.59,8.59,0,0,1-6.63-8.1c0-4.6,4.09-8.4,9.12-8.4h35.6A30,30,0,0,1,332,83.1c5.23,2.2,11.28,1.7,15.3-2l19-17.5A11.31,11.31,0,0,0,368.47,61a11.43,11.43,0,0,0-3.84-15.78,83.82,83.82,0,0,0-34.52-11.5V16c0-8.8-7.82-16-17.37-16H295.37C285.82,0,278,7.2,278,16V33.6c-32.89,3.6-57.85,31-53.51,63C227.63,119.6,247,137.9,271.06,144.3ZM565.27,328.1c-11.8-10.7-30.2-10-42.6,0L430.27,402a63.64,63.64,0,0,1-40,14H272a16,16,0,0,1,0-32h78.29c15.9,0,30.71-10.9,33.25-26.6a31.2,31.2,0,0,0,.46-5.46A32,32,0,0,0,352,320H192a117.66,117.66,0,0,0-74.1,26.29L71.4,384H16A16,16,0,0,0,0,400v96a16,16,0,0,0,16,16H372.77a64,64,0,0,0,40-14L564,377a32,32,0,0,0,1.28-48.9Z" })));
 };
 
+var Icon$1k = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M51.5302 10.9594L56 6.66462V5.724H40.5198L29.4875 33.3157L16.9385 5.724H0.707291V6.66462L5.92813 12.9792C6.43854 13.4459 6.70104 14.1313 6.63542 14.8167V39.6302C6.79583 40.5271 6.51146 41.4386 5.88437 42.0875L0 49.2552V50.1813H16.6687V49.2407L10.7917 42.0948C10.4768 41.7751 10.2399 41.3871 10.0995 40.9609C9.95915 40.5347 9.91903 40.0818 9.98229 39.6375V18.1709L24.6167 50.1959H26.3156L38.901 18.1709V43.6844C38.901 44.3552 38.901 44.4938 38.4635 44.9386L33.9354 49.3355V50.2761H55.8979V49.3355L51.5302 45.0407C51.151 44.749 50.9542 44.2605 51.0344 43.7865V12.2136C50.9966 11.9793 51.0227 11.7391 51.11 11.5184C51.1973 11.2977 51.3424 11.1046 51.5302 10.9594V10.9594Z", fill: "black" })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$N,
@@ -2375,7 +2380,8 @@ var IconModule = /*#__PURE__*/Object.freeze({
     inSpiritIcon: Icon$1g,
     NftZoo: Icon$1h,
     Rocket: Icon$1i,
-    LendIcon: Icon$1j
+    LendIcon: Icon$1j,
+    MediumIcon: Icon$1k
 });
 
 var MenuButton = styled(Button)(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
@@ -2601,6 +2607,11 @@ var socials = [
         label: "Youtube",
         icon: "YoutubeIcon",
         href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
+    },
+    {
+        label: "Medium",
+        icon: "MediumIcon",
+        href: "https://spiritswap.medium.com/",
     },
 ];
 var MENU_HEIGHT = 64;
@@ -2881,7 +2892,7 @@ var templateObject_1$I;
 // };
 // export default Panel;
 
-var Icon$1k = function (props) {
+var Icon$1l = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
         React.createElement("circle", { cx: "48", cy: "48", r: "48", fill: "white" }),
         React.createElement("path", { d: "M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z", fill: "#E17726" }),
@@ -2915,7 +2926,7 @@ var Icon$1k = function (props) {
         React.createElement("path", { d: "M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z", fill: "#F5841F" })));
 };
 
-var Icon$1l = function (props) {
+var Icon$1m = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
         React.createElement("defs", null,
             React.createElement("linearGradient", { id: "prefix__a", x1: 48.733, y1: 944.09, x2: 942.955, y2: 64.09, gradientUnits: "userSpaceOnUse" },
@@ -2931,7 +2942,7 @@ var Icon$1l = function (props) {
         React.createElement("path", { d: "M470.273 616.333a133.712 133.712 0 01-133.635 133.835c-73.577 0-133.838-59.857-133.838-133.835h64.237c0 38.381 31.218 69.8 69.6 69.8s69.6-31.42 69.6-69.8zm22.668-210.2c0 86.107-70.2 156.107-156.3 156.107-86.307 0-156.307-70-156.307-156.107s70-156.3 156.307-156.3c86.101-.001 156.3 70.198 156.3 156.304zm-64.033 0a92.272 92.272 0 00-184.544 0c0 50.71 41.564 92.272 92.274 92.272a92.467 92.467 0 0092.27-92.268zm-81.535-26.448v-23.264H325.9v23.268a31.9 31.9 0 00-21.678 30.226 32.315 32.315 0 1064.63 0 31.719 31.719 0 00-21.479-30.226zm472.3 214.372c0 86.107-70 156.107-156.1 156.107s-156.507-70-156.507-156.107c0-86.5 70.4-156.5 156.507-156.5s156.096 70 156.096 156.504zm-63.834 0a92.27 92.27 0 10-184.539 0c0 50.71 41.36 91.874 92.27 91.874s92.265-41.16 92.265-91.87zM663.57 562.24a32.548 32.548 0 00-32.417 32.414 31.709 31.709 0 0021.677 30.425v23.466h21.479v-23.462a32.05 32.05 0 0021.474-30.425 32.506 32.506 0 00-32.217-32.414zm0-312.412c-73.777 0-133.834 59.857-133.834 133.635a132.935 132.935 0 0016.5 64.033 177.809 177.809 0 0156.081-31.022 68.405 68.405 0 01-8.351-33.011 69.6 69.6 0 01139.2 0 70.726 70.726 0 01-8.355 33.011 177.761 177.761 0 0156.08 31.022 132.7 132.7 0 0016.309-64.029c0-73.778-60.057-133.635-133.634-133.635z", fill: "url(#prefix__b)" })));
 };
 
-var Icon$1m = function (props) {
+var Icon$1n = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 512 512" }, props),
         React.createElement("rect", { width: "512", height: "512", fill: "#2F51FA" }),
         React.createElement("circle", { cx: "256", cy: "256", r: "179", fill: "white" }),
@@ -2950,17 +2961,17 @@ var ConnectorNames;
 var connectors = [
     {
         title: "MetaMask",
-        icon: Icon$1k,
+        icon: Icon$1l,
         connectorId: ConnectorNames.Injected,
     },
     {
         title: "Coin98 Wallet",
-        icon: Icon$1l,
+        icon: Icon$1m,
         connectorId: ConnectorNames.Coin98,
     },
     {
         title: "Coinbase Wallet",
-        icon: Icon$1m,
+        icon: Icon$1n,
         connectorId: ConnectorNames.WalletLink,
     },
 ];

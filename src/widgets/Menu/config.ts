@@ -156,7 +156,11 @@ export const socials = [
     icon: "YoutubeIcon",
     href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
   },
- 
+  {
+    label: "Medium",
+    icon: "MediumIcon",
+    href: "https://spiritswap.medium.com/",
+  },
 ];
 
 export const MENU_HEIGHT = 64;
