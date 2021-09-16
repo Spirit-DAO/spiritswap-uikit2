@@ -152,11 +152,15 @@ export const socials = [
     href: "https://t.me/spirit_swap",
   },
   {
-    label: "Youtube",
-    icon: "YoutubeIcon",
-    href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
+    label: "GitHub",
+    icon: "GitHubIcon",
+    href: "https://github.com/Layer3Org/spiritswap-core/",
   },
- 
+  {
+    label: "Medium",
+    icon: "MediumIcon",
+    href: "https://spiritswap.medium.com/",
+  },
 ];
 
 export const MENU_HEIGHT = 64;
