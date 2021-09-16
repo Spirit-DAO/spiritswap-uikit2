@@ -66,12 +66,10 @@ const MenuWrapper = styled.div`
 `;
 
 const BottomContainer = styled.div`
-  flex-direction:column;
-  margin-top: 45%;
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePriceUsd }) => {

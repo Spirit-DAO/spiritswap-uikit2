@@ -29,13 +29,13 @@ const LinkLabelBottom = styled.div<{ isPushed: boolean; inSpirit: string }>`
 const MenuBottomEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
-align-items: flex-start;
+  align-items: flex-start;
   height: ${ MENU_BOTTOM_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "18px 16px" : "18px 16px")};
   font-size: 15px; // ${({ secondary }) => (secondary ? "14px" : "16px")};
   font-weight: bold;
   background-color: transparent; // ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: lightgrey; // ${({ theme }) => theme.colors.textSubtle};
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 0px 0px 10px ${theme.colors.primary}` : "none")};
   cursor: pointer;
   align-self: flex-start;
