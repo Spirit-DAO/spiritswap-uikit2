@@ -35,7 +35,7 @@ const MenuBottomEntry = styled.div<Props>`
   font-size: 15px; // ${({ secondary }) => (secondary ? "14px" : "16px")};
   font-weight: bold;
   background-color: transparent; // ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: rgb(96, 213, 220); // ${({ theme }) => theme.colors.textSubtle};
+  color: lightgrey; // ${({ theme }) => theme.colors.textSubtle};
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 0px 0px 10px ${theme.colors.primary}` : "none")};
   cursor: pointer;
   align-self: flex-start;

@@ -67,7 +67,7 @@ const MenuWrapper = styled.div`
 
 const BottomContainer = styled.div`
   position: relative;
-  margin: auto;
+  margin-top: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
