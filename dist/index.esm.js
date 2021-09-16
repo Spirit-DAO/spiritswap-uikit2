@@ -2343,6 +2343,11 @@ var Icon$1k = function (props) {
         React.createElement("path", { d: "M51.5302 10.9594L56 6.66462V5.724H40.5198L29.4875 33.3157L16.9385 5.724H0.707291V6.66462L5.92813 12.9792C6.43854 13.4459 6.70104 14.1313 6.63542 14.8167V39.6302C6.79583 40.5271 6.51146 41.4386 5.88437 42.0875L0 49.2552V50.1813H16.6687V49.2407L10.7917 42.0948C10.4768 41.7751 10.2399 41.3871 10.0995 40.9609C9.95915 40.5347 9.91903 40.0818 9.98229 39.6375V18.1709L24.6167 50.1959H26.3156L38.901 18.1709V43.6844C38.901 44.3552 38.901 44.4938 38.4635 44.9386L33.9354 49.3355V50.2761H55.8979V49.3355L51.5302 45.0407C51.151 44.749 50.9542 44.2605 51.0344 43.7865V12.2136C50.9966 11.9793 51.0227 11.7391 51.11 11.5184C51.1973 11.2977 51.3424 11.1046 51.5302 10.9594V10.9594Z", fill: "black" })));
 };
 
+var Icon$1l = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M28 0C12.53 0 0 12.53 0 28C0 40.39 8.015 50.855 19.145 54.565C20.545 54.81 21.07 53.97 21.07 53.235C21.07 52.57 21.035 50.365 21.035 48.02C14 49.315 12.18 46.305 11.62 44.73C11.305 43.925 9.94 41.44 8.75 40.775C7.77 40.25 6.37 38.955 8.715 38.92C10.92 38.885 12.495 40.95 13.02 41.79C15.54 46.025 19.565 44.835 21.175 44.1C21.42 42.28 22.155 41.055 22.96 40.355C16.73 39.655 10.22 37.24 10.22 26.53C10.22 23.485 11.305 20.965 13.09 19.005C12.81 18.305 11.83 15.435 13.37 11.585C13.37 11.585 15.715 10.85 21.07 14.455C23.31 13.825 25.69 13.51 28.07 13.51C30.45 13.51 32.83 13.825 35.07 14.455C40.425 10.815 42.77 11.585 42.77 11.585C44.31 15.435 43.33 18.305 43.05 19.005C44.835 20.965 45.92 23.45 45.92 26.53C45.92 37.275 39.375 39.655 33.145 40.355C34.16 41.23 35.035 42.91 35.035 45.535C35.035 49.28 35 52.29 35 53.235C35 53.97 35.525 54.845 36.925 54.565C42.4838 52.689 47.3142 49.1167 50.7361 44.3512C54.158 39.5856 55.999 33.8668 56 28C56 12.53 43.47 0 28 0Z", fill: "black" })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$N,
@@ -2381,7 +2386,8 @@ var IconModule = /*#__PURE__*/Object.freeze({
     NftZoo: Icon$1h,
     Rocket: Icon$1i,
     LendIcon: Icon$1j,
-    MediumIcon: Icon$1k
+    MediumIcon: Icon$1k,
+    GitHubIcon: Icon$1l
 });
 
 var MenuButton = styled(Button)(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
@@ -2604,9 +2610,9 @@ var socials = [
         href: "https://t.me/spirit_swap",
     },
     {
-        label: "Youtube",
-        icon: "YoutubeIcon",
-        href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
+        label: "GitHub",
+        icon: "GitHubIcon",
+        href: "https://github.com/Layer3Org/spiritswap-core/",
     },
     {
         label: "Medium",
@@ -2892,7 +2898,7 @@ var templateObject_1$I;
 // };
 // export default Panel;
 
-var Icon$1l = function (props) {
+var Icon$1m = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
         React.createElement("circle", { cx: "48", cy: "48", r: "48", fill: "white" }),
         React.createElement("path", { d: "M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z", fill: "#E17726" }),
@@ -2926,7 +2932,7 @@ var Icon$1l = function (props) {
         React.createElement("path", { d: "M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z", fill: "#F5841F" })));
 };
 
-var Icon$1m = function (props) {
+var Icon$1n = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
         React.createElement("defs", null,
             React.createElement("linearGradient", { id: "prefix__a", x1: 48.733, y1: 944.09, x2: 942.955, y2: 64.09, gradientUnits: "userSpaceOnUse" },
@@ -2942,7 +2948,7 @@ var Icon$1m = function (props) {
         React.createElement("path", { d: "M470.273 616.333a133.712 133.712 0 01-133.635 133.835c-73.577 0-133.838-59.857-133.838-133.835h64.237c0 38.381 31.218 69.8 69.6 69.8s69.6-31.42 69.6-69.8zm22.668-210.2c0 86.107-70.2 156.107-156.3 156.107-86.307 0-156.307-70-156.307-156.107s70-156.3 156.307-156.3c86.101-.001 156.3 70.198 156.3 156.304zm-64.033 0a92.272 92.272 0 00-184.544 0c0 50.71 41.564 92.272 92.274 92.272a92.467 92.467 0 0092.27-92.268zm-81.535-26.448v-23.264H325.9v23.268a31.9 31.9 0 00-21.678 30.226 32.315 32.315 0 1064.63 0 31.719 31.719 0 00-21.479-30.226zm472.3 214.372c0 86.107-70 156.107-156.1 156.107s-156.507-70-156.507-156.107c0-86.5 70.4-156.5 156.507-156.5s156.096 70 156.096 156.504zm-63.834 0a92.27 92.27 0 10-184.539 0c0 50.71 41.36 91.874 92.27 91.874s92.265-41.16 92.265-91.87zM663.57 562.24a32.548 32.548 0 00-32.417 32.414 31.709 31.709 0 0021.677 30.425v23.466h21.479v-23.462a32.05 32.05 0 0021.474-30.425 32.506 32.506 0 00-32.217-32.414zm0-312.412c-73.777 0-133.834 59.857-133.834 133.635a132.935 132.935 0 0016.5 64.033 177.809 177.809 0 0156.081-31.022 68.405 68.405 0 01-8.351-33.011 69.6 69.6 0 01139.2 0 70.726 70.726 0 01-8.355 33.011 177.761 177.761 0 0156.08 31.022 132.7 132.7 0 0016.309-64.029c0-73.778-60.057-133.635-133.634-133.635z", fill: "url(#prefix__b)" })));
 };
 
-var Icon$1n = function (props) {
+var Icon$1o = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 512 512" }, props),
         React.createElement("rect", { width: "512", height: "512", fill: "#2F51FA" }),
         React.createElement("circle", { cx: "256", cy: "256", r: "179", fill: "white" }),
@@ -2961,17 +2967,17 @@ var ConnectorNames;
 var connectors = [
     {
         title: "MetaMask",
-        icon: Icon$1l,
+        icon: Icon$1m,
         connectorId: ConnectorNames.Injected,
     },
     {
         title: "Coin98 Wallet",
-        icon: Icon$1m,
+        icon: Icon$1n,
         connectorId: ConnectorNames.Coin98,
     },
     {
         title: "Coinbase Wallet",
-        icon: Icon$1n,
+        icon: Icon$1o,
         connectorId: ConnectorNames.WalletLink,
     },
 ];

@@ -35,3 +35,4 @@ export { default as NftZoo } from "./NftZoo";
 export { default as Rocket } from "./Rocket";
 export { default as LendIcon } from "./Lend";
 export { default as MediumIcon } from "./Medium";
+export { default as GitHubIcon } from "./GitHub";
