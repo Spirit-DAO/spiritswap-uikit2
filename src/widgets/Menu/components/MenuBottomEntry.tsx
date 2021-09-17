@@ -31,7 +31,9 @@ const MenuBottomEntry = styled.div<Props>`
   display: flex;
   align-items: flex-start;
   height: ${ MENU_BOTTOM_ENTRY_HEIGHT}px;
-  padding: ${({ secondary }) => (secondary ? "18px 16px" : "18px 16px")};
+  text-decoration: underline;
+  padding: ${({ secondary }) => (secondary ? "18px 5px" : "18px 5px")};
+  margin: auto;
   font-size: 15px; // ${({ secondary }) => (secondary ? "14px" : "16px")};
   font-weight: bold;
   background-color: transparent; // ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
