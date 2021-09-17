@@ -68,8 +68,9 @@ const MenuWrapper = styled.div`
 const BottomContainer = styled.div`
   position: relative;
   margin-top: auto;
+  margin-bottom: 16px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePriceUsd }) => {
