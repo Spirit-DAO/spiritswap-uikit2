@@ -2461,6 +2461,11 @@ var links = [
         href: "/",
     },
     {
+        label: "LGE",
+        icon: "PoolIcon",
+        href: "/lge",
+    },
+    {
         label: "Trade",
         icon: "TradeIcon",
         items: [
@@ -2729,7 +2734,8 @@ var PanelBody = function (_a) {
                         entry.label === "inSpirit" ||
                         entry.label === "Boosted Farms" ||
                         entry.label === "IDO" ||
-                        entry.label === "Lend/Borrow" ? (React__default['default'].createElement(NewIcon, null)) : null))));
+                        entry.label === "Lend/Borrow" ||
+                        entry.label === "LGE" ? (React__default['default'].createElement(NewIcon, null)) : null))));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$8, templateObject_4$3;

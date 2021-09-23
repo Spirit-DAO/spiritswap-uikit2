@@ -5,6 +5,11 @@ export const links = [
     href: "/",
   },
   {
+    label: "LGE",
+    icon: "PoolIcon",
+    href: "/lge",
+  },
+  {
     label: "Trade",
     icon: "TradeIcon",
     items: [

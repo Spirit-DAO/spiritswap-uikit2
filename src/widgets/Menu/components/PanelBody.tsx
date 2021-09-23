@@ -107,7 +107,8 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
                 entry.label === "inSpirit" ||
                 entry.label === "Boosted Farms" ||
                 entry.label === "IDO" ||
-                entry.label === "Lend/Borrow" ? (
+                entry.label === "Lend/Borrow" ||
+                entry.label === "LGE" ? (
                   <NewIcon />
                 ) : null}
               </MenuWrapper>
