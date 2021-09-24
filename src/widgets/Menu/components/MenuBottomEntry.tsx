@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
-import {  MENU_BOTTOM_ENTRY_HEIGHT} from "../config";
+import { MENU_BOTTOM_ENTRY_HEIGHT } from "../config";
 
 export interface Props {
   secondary?: boolean;
@@ -30,7 +30,7 @@ const MenuBottomEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
   align-items: flex-start;
-  height: ${ MENU_BOTTOM_ENTRY_HEIGHT}px;
+  height: ${MENU_BOTTOM_ENTRY_HEIGHT}px;
   text-decoration: underline;
   padding: ${({ secondary }) => (secondary ? "18px 5px" : "18px 5px")};
   margin: auto;

@@ -15,20 +15,20 @@ import { PRICE_ENTRY_HEIGHT } from "../config";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
-  showMenu?: boolean
+  showMenu?: boolean;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 
 const Price = styled.div`
-height: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: ${PRICE_ENTRY_HEIGHT}px;
   //padding: 0 8px;
-  border-top: 1px solid #42BE71;
-  border-bottom: 1px solid #42BE71;
+  border-top: 1px solid #42be71;
+  border-bottom: 1px solid #42be71;
 `;
 
 const Container = styled.div`
@@ -41,9 +41,8 @@ const Container = styled.div`
 `;
 
 const Div = styled.div`
- height: 43px;
- margin: 40px 5px 25px 5px;
-
+  height: 43px;
+  margin: 40px 5px 25px 5px;
 `;
 
 const rotate = keyframes`
@@ -134,10 +133,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
               <MenuWrapper>
                 {iconElement}
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
-                  {entry.label}{" "}
+                  {entry.label}
                 </LinkLabel>
-                { entry.label === "inSpirit" ||
-                  entry.label === "Boosted Farms" ? (
+                {entry.label === "inSpirit" || entry.label === "Boosted Farms" || entry.label === "LGE" ? (
                   <NewIcon />
                 ) : null}
               </MenuWrapper>

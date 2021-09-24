@@ -9,7 +9,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 
-interface Props extends PanelProps, PushedProps { }
+interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   flex: none;
@@ -19,8 +19,8 @@ const Container = styled.div`
   border-bottom: solid 1px #42d784;
 `;
 const Div = styled.div`
- height: 43px;
- margin: 40px 5px 25px 5px;
+  height: 43px;
+  margin: 40px 5px 25px 5px;
 `;
 
 const SettingsEntry = styled.div`
@@ -47,10 +47,9 @@ const Price = styled.div`
   justify-content: center;
   height: ${PRICE_ENTRY_HEIGHT}px;
   padding: 8px;
-  border-top: 1px solid #42BE71;
+  border-top: 1px solid #42be71;
   // border-bottom: 1px solid #42BE71;
 `;
-
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,
