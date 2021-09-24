@@ -2722,9 +2722,9 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\nheight: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42BE71;\n  border-bottom: 1px solid #42BE71;\n"], ["\nheight: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42BE71;\n  border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
+styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42be71;\n  border-bottom: 1px solid #42be71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42be71;\n  border-bottom: 1px solid #42be71;\n"])), PRICE_ENTRY_HEIGHT);
 var Container$2 = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
-styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n height: 43px;\n margin: 40px 5px 25px 5px;\n\n"], ["\n height: 43px;\n margin: 40px 5px 25px 5px;\n\n"])));
+styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"], ["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"])));
 var rotate$1 = keyframes(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
 var NewIcon = styled(Icon$1e)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
 var MenuWrapper = styled.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
@@ -2752,12 +2752,7 @@ var PanelBody = function (_a) {
                 React.createElement(MenuWrapper, null,
                     iconElement,
                     React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks }, entry.label),
-                    entry.label === "Portfolio" ||
-                        entry.label === "inSpirit" ||
-                        entry.label === "Boosted Farms" ||
-                        entry.label === "IDO" ||
-                        entry.label === "Lend/Borrow" ||
-                        entry.label === "LGE" ? (React.createElement(NewIcon, null)) : null))));
+                    entry.label === "inSpirit" || entry.label === "Boosted Farms" || entry.label === "LGE" ? (React.createElement(NewIcon, null)) : null))));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$9, templateObject_4$3, templateObject_5$1, templateObject_6, templateObject_7;
@@ -2797,10 +2792,10 @@ var Container$3 = styled.div(templateObject_1$G || (templateObject_1$G = __makeT
     var theme = _a.theme;
     return (theme.isDark ? "#161f33" : "#E6FDFF");
 });
-styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n height: 43px;\n margin: 40px 5px 25px 5px;\n"], ["\n height: 43px;\n margin: 40px 5px 25px 5px;\n"])));
+styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"], ["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"])));
 var SettingsEntry = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
-var Price = styled.div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42BE71;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42BE71;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
+var Price = styled.div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     if (!isPushed) {
