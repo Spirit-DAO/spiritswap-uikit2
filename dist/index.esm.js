@@ -2183,8 +2183,11 @@ var Icon$10 = function (props) {
 };
 
 var Icon$11 = function (props) {
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
-        React.createElement("path", { d: "M12 3C7.02985 3 3 7.02985 3 11.9904C3 16.9606 7.02985 21 12 21C16.9701 21 21 16.9606 21 11.9904C21 7.02985 16.9701 3 12 3ZM16.4328 8.65139C16.3753 9.48614 14.8305 15.7228 14.8305 15.7228C14.8305 15.7228 14.7345 16.0874 14.3987 16.097C14.2836 16.097 14.1301 16.0874 13.9574 15.9243C13.6023 15.6269 12.7964 15.0512 12.0384 14.5235C12.0096 14.5522 11.9808 14.581 11.9424 14.6098C11.7697 14.7633 11.5107 14.984 11.2324 15.2527C11.1269 15.3486 11.0117 15.4542 10.8966 15.5693L10.887 15.5789C10.8198 15.6461 10.7623 15.694 10.7143 15.7324C10.3401 16.0394 10.3017 15.7804 10.3017 15.6461L10.5032 13.4488V13.4296L10.5128 13.4104C10.5224 13.3817 10.5416 13.3721 10.5416 13.3721C10.5416 13.3721 14.4659 9.87953 14.5714 9.50533C14.581 9.48614 14.5522 9.46695 14.5043 9.48614C14.2452 9.57249 9.72601 12.4318 9.22708 12.7484C9.19829 12.7676 9.11194 12.758 9.11194 12.758L6.91471 12.0384C6.91471 12.0384 6.65565 11.9328 6.742 11.693C6.76119 11.645 6.78998 11.597 6.89552 11.5299C7.38486 11.1844 15.8955 8.12367 15.8955 8.12367C15.8955 8.12367 16.1354 8.04691 16.2793 8.09488C16.3465 8.12367 16.3849 8.15245 16.4232 8.2484C16.4328 8.28678 16.4424 8.36354 16.4424 8.44989C16.4424 8.49787 16.4328 8.55544 16.4328 8.65139Z" })));
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M28 0C12.5359 0 0 12.5359 0 28C0 43.4641 12.5359 56 28 56C43.4641 56 56 43.4641 56 28C56 12.5359 43.4641 0 28 0Z", fill: "#40B3E0" }),
+        React.createElement("path", { d: "M41.6244 16.1065L36.6231 41.3216C36.6231 41.3216 35.9238 43.0703 34.0003 42.231L22.4595 33.383L18.263 31.3547L11.1987 28.9765C11.1987 28.9765 10.1146 28.5919 10.0096 27.7526C9.90457 26.9132 11.2337 26.4586 11.2337 26.4586L39.3159 15.4424C39.3159 15.4424 41.6242 14.4283 41.6242 16.107", fill: "white" }),
+        React.createElement("path", { d: "M21.5727 41.0382C21.5727 41.0382 21.2359 41.0067 20.8159 39.6776C20.3965 38.3487 18.2631 31.3543 18.2631 31.3543L35.2245 20.5831C35.2245 20.5831 36.2038 19.9885 36.1688 20.5831C36.1688 20.5831 36.3436 20.6881 35.8188 21.1777C35.2945 21.6674 22.4948 33.173 22.4948 33.173", fill: "#D2E5F1" }),
+        React.createElement("path", { d: "M26.8847 36.7751L22.32 40.9371C22.32 40.9371 21.963 41.2079 21.5728 41.0381L22.4469 33.3075", fill: "#B5CFE4" })));
 };
 
 var Icon$12 = function (props) {
@@ -2199,17 +2202,18 @@ var Icon$13 = function (props) {
 
 var Icon$14 = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
-        React.createElement("path", { d: "M8.65854 19C15.4488 19 19.1659 13.2338 19.1659 8.23717C19.1659 8.07728 19.1659 7.91739 19.1561 7.7475C19.878 7.21785 20.5024 6.5483 21 5.78881C20.3366 6.08861 19.6244 6.28847 18.8732 6.38841C19.6341 5.91872 20.2195 5.17921 20.5024 4.28981C19.7902 4.72951 19 5.03931 18.1512 5.20919C17.478 4.45969 16.522 4 15.4585 4C13.4195 4 11.761 5.69887 11.761 7.78747C11.761 8.08728 11.8 8.36709 11.8585 8.6469C8.79512 8.497 6.07317 6.97801 4.24878 4.68954C3.92683 5.25916 3.75122 5.90873 3.75122 6.59827C3.75122 7.90739 4.40488 9.06662 5.39024 9.74617C4.78537 9.72618 4.21951 9.5563 3.72195 9.27648C3.72195 9.28648 3.72195 9.30646 3.72195 9.32645C3.72195 11.1552 5 12.6942 6.67805 13.034C6.36585 13.1239 6.0439 13.1639 5.70244 13.1639C5.46829 13.1639 5.23415 13.1439 5.00976 13.0939C5.47805 14.6029 6.8439 15.6922 8.46341 15.7222C7.19512 16.7415 5.60488 17.3411 3.87805 17.3411C3.58537 17.3411 3.28293 17.3311 3 17.2911C4.62927 18.3704 6.57073 19 8.65854 19Z" })));
+        React.createElement("path", { d: "M8.65854 19C15.4488 19 19.1659 13.2338 19.1659 8.23717C19.1659 8.07728 19.1659 7.91739 19.1561 7.7475C19.878 7.21785 20.5024 6.5483 21 5.78881C20.3366 6.08861 19.6244 6.28847 18.8732 6.38841C19.6341 5.91872 20.2195 5.17921 20.5024 4.28981C19.7902 4.72951 19 5.03931 18.1512 5.20919C17.478 4.45969 16.522 4 15.4585 4C13.4195 4 11.761 5.69887 11.761 7.78747C11.761 8.08728 11.8 8.36709 11.8585 8.6469C8.79512 8.497 6.07317 6.97801 4.24878 4.68954C3.92683 5.25916 3.75122 5.90873 3.75122 6.59827C3.75122 7.90739 4.40488 9.06662 5.39024 9.74617C4.78537 9.72618 4.21951 9.5563 3.72195 9.27648C3.72195 9.28648 3.72195 9.30646 3.72195 9.32645C3.72195 11.1552 5 12.6942 6.67805 13.034C6.36585 13.1239 6.0439 13.1639 5.70244 13.1639C5.46829 13.1639 5.23415 13.1439 5.00976 13.0939C5.47805 14.6029 6.8439 15.6922 8.46341 15.7222C7.19512 16.7415 5.60488 17.3411 3.87805 17.3411C3.58537 17.3411 3.28293 17.3311 3 17.2911C4.62927 18.3704 6.57073 19 8.65854 19Z", fill: "#55ACEE" })));
 };
 
 var Icon$15 = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
-        React.createElement("path", { d: "M 386 203C 387 203 388 203 388 203C 388 203 395 212 395 212C 267 248 209 304 209 304C 209 304 224 296 250 284C 326 250 386 241 411 239C 415 238 419 238 423 238C 466 232 515 231 566 236C 633 244 705 264 779 304C 779 304 723 251 603 214C 603 214 612 203 612 203C 612 203 709 201 811 277C 811 277 913 462 913 689C 913 689 853 792 697 797C 697 797 671 767 650 740C 743 714 778 656 778 656C 749 675 721 688 697 697C 661 712 627 722 594 728C 526 740 464 737 411 727C 371 719 336 708 307 697C 291 690 273 682 255 673C 253 671 251 670 249 669C 248 668 247 668 246 667C 233 660 226 655 226 655C 226 655 260 711 350 738C 329 765 303 797 303 797C 146 792 87 689 87 689C 87 462 189 277 189 277C 284 206 375 203 386 203C 386 203 386 203 386 203M 368 467C 327 467 296 502 296 545C 296 588 328 624 368 624C 408 624 440 588 440 545C 441 502 408 467 368 467C 368 467 368 467 368 467M 626 467C 586 467 554 502 554 545C 554 588 586 624 626 624C 666 624 698 588 698 545C 698 502 666 467 626 467C 626 467 626 467 626 467" })));
+        React.createElement("path", { d: "M 386 203C 387 203 388 203 388 203C 388 203 395 212 395 212C 267 248 209 304 209 304C 209 304 224 296 250 284C 326 250 386 241 411 239C 415 238 419 238 423 238C 466 232 515 231 566 236C 633 244 705 264 779 304C 779 304 723 251 603 214C 603 214 612 203 612 203C 612 203 709 201 811 277C 811 277 913 462 913 689C 913 689 853 792 697 797C 697 797 671 767 650 740C 743 714 778 656 778 656C 749 675 721 688 697 697C 661 712 627 722 594 728C 526 740 464 737 411 727C 371 719 336 708 307 697C 291 690 273 682 255 673C 253 671 251 670 249 669C 248 668 247 668 246 667C 233 660 226 655 226 655C 226 655 260 711 350 738C 329 765 303 797 303 797C 146 792 87 689 87 689C 87 462 189 277 189 277C 284 206 375 203 386 203C 386 203 386 203 386 203M 368 467C 327 467 296 502 296 545C 296 588 328 624 368 624C 408 624 440 588 440 545C 441 502 408 467 368 467C 368 467 368 467 368 467M 626 467C 586 467 554 502 554 545C 554 588 586 624 626 624C 666 624 698 588 698 545C 698 502 666 467 626 467C 626 467 626 467 626 467", fill: "#5865F2" })));
 };
 
 var Icon$16 = function (props) {
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 512 512" }, props),
-        React.createElement("path", { d: "M255.7,446.3c-53.3,0.3-106.6-0.4-159.8-3.3c-17.3-1-34.6-2.5-50.3-11c-10.5-5.7-18.6-13.6-23.7-24.8   C13.3,388.6,10.6,369,9,349c-3.4-41.3-3.6-82.6-1.8-123.8c0.9-21.9,1.6-44,6.8-65.5c2-8.4,4.9-16.6,8.8-24.4   c9.2-18.3,25.2-27.4,44.5-31.2c16.2-3.2,32.8-3.1,49.3-3.8c55.9-2.3,111.9-3.5,167.9-2.9c43.1,0.5,86.3,1.6,129.4,3.8   c13.3,0.7,26.7,0.9,39.4,5.6c17.2,6.4,30,17.2,36.9,34.7c6.7,16.8,9.3,34.2,10.7,52.1c3.9,48.6,4,97.2,0.8,145.8   c-1.1,16.4-2.2,32.8-6.5,48.9c-9.7,37-32.8,51.5-66.7,53.8c-36.2,2.4-72.5,3.7-108.8,4.2C298.4,446.5,277,446.3,255.7,446.3z    M203.2,344c48.4-26.5,96.2-52.7,144.8-79.3c-48.7-26.7-96.5-52.8-144.8-79.3C203.2,238.7,203.2,291,203.2,344z" })));
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M54.7642 14.5319C54.4429 13.3448 53.8164 12.2626 52.9468 11.3931C52.0773 10.5235 50.9951 9.89685 49.8081 9.57559C45.4623 8.39038 27.9721 8.39038 27.9721 8.39038C27.9721 8.39038 10.481 8.42626 6.13521 9.61146C4.94814 9.93275 3.86595 10.5594 2.99641 11.429C2.12686 12.2986 1.5003 13.3809 1.17912 14.568C-0.135366 22.2896 -0.645281 34.0554 1.21522 41.4681C1.53643 42.6552 2.163 43.7374 3.03255 44.607C3.90209 45.4765 4.98426 46.1032 6.1713 46.4244C10.5171 47.6096 28.0077 47.6096 28.0077 47.6096C28.0077 47.6096 45.4982 47.6096 49.8437 46.4244C51.0308 46.1032 52.113 45.4766 52.9826 44.607C53.8522 43.7374 54.4788 42.6552 54.8 41.4681C56.1865 33.7356 56.6137 21.9772 54.7642 14.5321V14.5319Z", fill: "#FF0000" }),
+        React.createElement("path", { d: "M22.4048 36.404L36.9145 27.9999L22.405 19.5958L22.4048 36.404Z", fill: "white" })));
 };
 
 var Icon$17 = function (props) {
@@ -2334,6 +2338,16 @@ var Icon$1j = function (props) {
         React.createElement("path", { fill: "#6CD784", d: "M271.06,144.3l54.27,14.3a8.59,8.59,0,0,1,6.63,8.1c0,4.6-4.09,8.4-9.12,8.4h-35.6a30,30,0,0,1-11.19-2.2c-5.24-2.2-11.28-1.7-15.3,2l-19,17.5a11.68,11.68,0,0,0-2.25,2.66,11.42,11.42,0,0,0,3.88,15.74,83.77,83.77,0,0,0,34.51,11.5V240c0,8.8,7.83,16,17.37,16h17.37c9.55,0,17.38-7.2,17.38-16V222.4c32.93-3.6,57.84-31,53.5-63-3.15-23-22.46-41.3-46.56-47.7L282.68,97.4a8.59,8.59,0,0,1-6.63-8.1c0-4.6,4.09-8.4,9.12-8.4h35.6A30,30,0,0,1,332,83.1c5.23,2.2,11.28,1.7,15.3-2l19-17.5A11.31,11.31,0,0,0,368.47,61a11.43,11.43,0,0,0-3.84-15.78,83.82,83.82,0,0,0-34.52-11.5V16c0-8.8-7.82-16-17.37-16H295.37C285.82,0,278,7.2,278,16V33.6c-32.89,3.6-57.85,31-53.51,63C227.63,119.6,247,137.9,271.06,144.3ZM565.27,328.1c-11.8-10.7-30.2-10-42.6,0L430.27,402a63.64,63.64,0,0,1-40,14H272a16,16,0,0,1,0-32h78.29c15.9,0,30.71-10.9,33.25-26.6a31.2,31.2,0,0,0,.46-5.46A32,32,0,0,0,352,320H192a117.66,117.66,0,0,0-74.1,26.29L71.4,384H16A16,16,0,0,0,0,400v96a16,16,0,0,0,16,16H372.77a64,64,0,0,0,40-14L564,377a32,32,0,0,0,1.28-48.9Z" })));
 };
 
+var Icon$1k = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M51.5302 10.9594L56 6.66462V5.724H40.5198L29.4875 33.3157L16.9385 5.724H0.707291V6.66462L5.92813 12.9792C6.43854 13.4459 6.70104 14.1313 6.63542 14.8167V39.6302C6.79583 40.5271 6.51146 41.4386 5.88437 42.0875L0 49.2552V50.1813H16.6687V49.2407L10.7917 42.0948C10.4768 41.7751 10.2399 41.3871 10.0995 40.9609C9.95915 40.5347 9.91903 40.0818 9.98229 39.6375V18.1709L24.6167 50.1959H26.3156L38.901 18.1709V43.6844C38.901 44.3552 38.901 44.4938 38.4635 44.9386L33.9354 49.3355V50.2761H55.8979V49.3355L51.5302 45.0407C51.151 44.749 50.9542 44.2605 51.0344 43.7865V12.2136C50.9966 11.9793 51.0227 11.7391 51.11 11.5184C51.1973 11.2977 51.3424 11.1046 51.5302 10.9594V10.9594Z", fill: "white" })));
+};
+
+var Icon$1l = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 56 56" }, props),
+        React.createElement("path", { d: "M28 0C12.53 0 0 12.53 0 28C0 40.39 8.015 50.855 19.145 54.565C20.545 54.81 21.07 53.97 21.07 53.235C21.07 52.57 21.035 50.365 21.035 48.02C14 49.315 12.18 46.305 11.62 44.73C11.305 43.925 9.94 41.44 8.75 40.775C7.77 40.25 6.37 38.955 8.715 38.92C10.92 38.885 12.495 40.95 13.02 41.79C15.54 46.025 19.565 44.835 21.175 44.1C21.42 42.28 22.155 41.055 22.96 40.355C16.73 39.655 10.22 37.24 10.22 26.53C10.22 23.485 11.305 20.965 13.09 19.005C12.81 18.305 11.83 15.435 13.37 11.585C13.37 11.585 15.715 10.85 21.07 14.455C23.31 13.825 25.69 13.51 28.07 13.51C30.45 13.51 32.83 13.825 35.07 14.455C40.425 10.815 42.77 11.585 42.77 11.585C44.31 15.435 43.33 18.305 43.05 19.005C44.835 20.965 45.92 23.45 45.92 26.53C45.92 37.275 39.375 39.655 33.145 40.355C34.16 41.23 35.035 42.91 35.035 45.535C35.035 49.28 35 52.29 35 53.235C35 53.97 35.525 54.845 36.925 54.565C42.4838 52.689 47.3142 49.1167 50.7361 44.3512C54.158 39.5856 55.999 33.8668 56 28C56 12.53 43.47 0 28 0Z", fill: "white" })));
+};
+
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FarmIcon: Icon$N,
@@ -2371,7 +2385,9 @@ var IconModule = /*#__PURE__*/Object.freeze({
     inSpiritIcon: Icon$1g,
     NftZoo: Icon$1h,
     Rocket: Icon$1i,
-    LendIcon: Icon$1j
+    LendIcon: Icon$1j,
+    MediumIcon: Icon$1k,
+    GitHubIcon: Icon$1l
 });
 
 var MenuButton = styled(Button)(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"], ["\n  color: ", ";\n  padding: 0 8px;\n  border-radius: 8px;\n"])), function (_a) {
@@ -2584,14 +2600,9 @@ var links = [
 ];
 var socials = [
     {
-        label: "Youtube",
-        icon: "YoutubeIcon",
-        href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
-    },
-    {
-        label: "Telegram",
-        icon: "TelegramIcon",
-        href: "https://t.me/spirit_swap",
+        label: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://twitter.com/Spirit_Swap",
     },
     {
         label: "Discord",
@@ -2599,13 +2610,25 @@ var socials = [
         href: "https://discord.gg/8FGd4nFQdT",
     },
     {
-        label: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://twitter.com/Spirit_Swap",
+        label: "Telegram",
+        icon: "TelegramIcon",
+        href: "https://t.me/spirit_swap",
+    },
+    {
+        label: "GitHub",
+        icon: "GitHubIcon",
+        href: "https://github.com/Layer3Org/spiritswap-core/",
+    },
+    {
+        label: "Medium",
+        icon: "MediumIcon",
+        href: "https://spiritswap.medium.com/",
     },
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
+var MENU_BOTTOM_ENTRY_HEIGHT = 20;
+var PRICE_ENTRY_HEIGHT = 42;
 var SIDEBAR_WIDTH_FULL = 240;
 var SIDEBAR_WIDTH_REDUCED = 56;
 
@@ -2649,35 +2672,45 @@ MenuEntry.defaultProps = {
 var LinkLabelMemo = React.memo(LinkLabel, function (prev, next) { return prev.isPushed === next.isPushed; });
 var templateObject_1$C, templateObject_2$d, templateObject_3$7;
 
-var Container$2 = styled.div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  // Safari fix\n  flex-shrink: 0;\n"], ["\n  display: flex;\n  flex-direction: column;\n  // Safari fix\n  flex-shrink: 0;\n"])));
-var AccordionContent = styled.div(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  max-height: ", ";\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px;\n"], ["\n  max-height: ", ";\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px;\n"])), function (_a) {
-    var isOpen = _a.isOpen, maxHeight = _a.maxHeight;
-    return (isOpen ? maxHeight + "px" : 0);
-}, function (_a) {
-    var isOpen = _a.isOpen, isPushed = _a.isPushed;
-    return (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent");
+var rainbowAnimation$1 = keyframes(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"], ["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"])));
+var LinkLabelBottom = styled.div(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  color: ",
+    ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"])), function (_a) {
+    var isPushed = _a.isPushed, theme = _a.theme, inSpirit = _a.inSpirit;
+    return (!isPushed && "transparent") || (inSpirit === "noInSpirit" && theme.colors.textSubtle) || "#35b9c0";
 });
-var Accordion = function (_a) {
-    var label = _a.label, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, inSpirit = _a.inSpirit;
-    var _c = useState(initialOpenState), isOpen = _c[0], setIsOpen = _c[1];
-    var handleClick = function () {
-        if (isPushed) {
-            setIsOpen(function (prevState) { return !prevState; });
-        }
-        else {
-            pushNav(true);
-            setIsOpen(true);
-        }
-    };
-    return (React.createElement(Container$2, null,
-        React.createElement(MenuEntry, { onClick: handleClick, className: className, inSpirit: inSpirit },
-            icon,
-            React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpirit }, label),
-            isOpen ? React.createElement(Icon$8, null) : React.createElement(Icon$7, null)),
-        React.createElement(AccordionContent, { isOpen: isOpen, isPushed: isPushed, maxHeight: React.Children.count(children) * MENU_ENTRY_HEIGHT }, children)));
+var MenuBottomEntry = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: flex-start;\n  height: ", "px;\n  text-decoration: underline;\n  padding: ", ";\n  margin: auto;\n  font-size: 15px; // ", ";\n  font-weight: bold;\n  background-color: transparent; // ", ";\n  color: lightgrey; // ", ";\n  box-shadow: ", ";\n  cursor: pointer;\n  align-self: flex-start;\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: flex-start;\n  height: ", "px;\n  text-decoration: underline;\n  padding: ", ";\n  margin: auto;\n  font-size: 15px; // ", ";\n  font-weight: bold;\n  background-color: transparent; // ", ";\n  color: lightgrey; // ", ";\n  box-shadow: ", ";\n  cursor: pointer;\n  align-self: flex-start;\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ",
+    ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_BOTTOM_ENTRY_HEIGHT, function (_a) {
+    var secondary = _a.secondary;
+    return (secondary ? "18px 5px" : "18px 5px");
+}, function (_a) {
+    var secondary = _a.secondary;
+    return (secondary ? "14px" : "16px");
+}, function (_a) {
+    var secondary = _a.secondary, theme = _a.theme;
+    return (secondary ? theme.colors.background : "transparent");
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.textSubtle;
+}, function (_a) {
+    var isActive = _a.isActive, theme = _a.theme;
+    return (isActive ? "inset 0px 0px 10px " + theme.colors.primary : "none");
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.textSubtle;
+}, function (_a) {
+    var theme = _a.theme, inSpirit = _a.inSpirit;
+    return inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(96, 213, 220, 0.15)";
+}, rainbowAnimation$1, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.gradients.bubblegum;
+});
+MenuBottomEntry.defaultProps = {
+    secondary: false,
+    isActive: false,
+    role: "button",
 };
-var Accordion$1 = React.memo(Accordion, function (prev, next) { return prev.isPushed === next.isPushed; });
-var templateObject_1$D, templateObject_2$e;
+React.memo(LinkLabelBottom, function (prev, next) { return prev.isPushed === next.isPushed; });
+var templateObject_1$D, templateObject_2$e, templateObject_3$8;
 
 var MenuLink = function (_a) {
     var href = _a.href, otherProps = __rest(_a, ["href"]);
@@ -2689,34 +2722,36 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
-var rotate$1 = keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
-var NewIcon = styled(Icon$1e)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
-var MenuWrapper = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
+styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\nheight: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42BE71;\n  border-bottom: 1px solid #42BE71;\n"], ["\nheight: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42BE71;\n  border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
+var Container$2 = styled.div(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
+styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n height: 43px;\n margin: 40px 5px 25px 5px;\n\n"], ["\n height: 43px;\n margin: 40px 5px 25px 5px;\n\n"])));
+var rotate$1 = keyframes(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
+var NewIcon = styled(Icon$1e)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$1);
+var MenuWrapper = styled.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
+var BottomContainer = styled.div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  position: relative;\n  margin-top: auto;\n  margin-bottom: 16px;\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n"], ["\n  position: relative;\n  margin-top: auto;\n  margin-bottom: 16px;\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n"])));
 var PanelBody = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links; _a.cakePriceUsd;
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React.createElement(Container$3, null, links.map(function (entry) {
+    return (React.createElement(Container$2, null, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
         var inSpiritLinks = entry.label === "inSpirit" || entry.label === "Boosted Farms" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
-            var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
-            return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, inSpirit: inSpiritLinks }, isPushed &&
-                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
-                    React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); })));
+            entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
+            return (React.createElement(React.Fragment, null,
+                React.createElement(BottomContainer, null, isPushed &&
+                    entry.items.map(function (item) { return (React.createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
+                        React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
             React.createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 React.createElement(MenuWrapper, null,
                     iconElement,
-                    React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks },
-                        entry.label,
-                        " "),
+                    React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks }, entry.label),
                     entry.label === "Portfolio" ||
                         entry.label === "inSpirit" ||
                         entry.label === "Boosted Farms" ||
@@ -2725,7 +2760,7 @@ var PanelBody = function (_a) {
                         entry.label === "LGE" ? (React.createElement(NewIcon, null)) : null))));
     })));
 };
-var templateObject_1$E, templateObject_2$f, templateObject_3$8, templateObject_4$3;
+var templateObject_1$E, templateObject_2$f, templateObject_3$9, templateObject_4$3, templateObject_5$1, templateObject_6, templateObject_7;
 
 var PriceLink = styled.span(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n\n  svg {\n    transition: transform 0.3s;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n\n  svg {\n    transition: transform 0.3s;\n  }\n"])));
 var CakePrice = function (_a) {
@@ -2738,7 +2773,7 @@ var CakePrice$1 = React.memo(CakePrice);
 var templateObject_1$F;
 
 var Icons$1 = IconModule;
-var SocialLinks = function () { return (React.createElement(Flex, null, socials.map(function (social, index) {
+var SocialLinks = function () { return (React.createElement(Flex, { style: { width: "100%" }, justifyContent: "space-around" }, socials.map(function (social, index) {
     var Icon = Icons$1[social.icon];
     var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
     var mr = index < socials.length - 1 ? "7px" : 0;
@@ -2758,27 +2793,31 @@ var LangSelector = function (_a) {
 };
 var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
-var Container$4 = styled.div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"])), function (_a) {
+var Container$3 = styled.div(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
     return (theme.isDark ? "#161f33" : "#E6FDFF");
 });
-var SettingsEntry = styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
-var SocialEntry = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n height: 43px;\n margin: 40px 5px 25px 5px;\n"], ["\n height: 43px;\n margin: 40px 5px 25px 5px;\n"])));
+var SettingsEntry = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var SocialEntry = styled.div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var Price = styled.div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42BE71;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42BE71;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     if (!isPushed) {
-        return (React.createElement(Container$4, null,
+        return (React.createElement(Container$3, null,
             React.createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
                 React.createElement(Icon$l, null))));
     }
-    return (React.createElement(Container$4, null,
-        React.createElement(SocialEntry, null,
-            React.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }),
-            React.createElement(SocialLinks$1, null)),
-        React.createElement(SettingsEntry, null,
-            React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang }))));
+    return (React.createElement(React.Fragment, null,
+        React.createElement(Price, null,
+            React.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })),
+        React.createElement(Container$3, null,
+            React.createElement(SocialEntry, null,
+                React.createElement(SocialLinks$1, null)),
+            React.createElement(SettingsEntry, null,
+                React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })))));
 };
-var templateObject_1$G, templateObject_2$g, templateObject_3$9;
+var templateObject_1$G, templateObject_2$g, templateObject_3$a, templateObject_4$4, templateObject_5$2;
 
 var Wrapper$1 = styled.a(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  margin: 0.5rem auto;\n\n  span {\n    color: white;\n    display: ", ";\n    margin-right: 1rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n}"], ["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n  font-size: 20px;\n  height: fit-content;\n  margin: 0.5rem auto;\n\n  span {\n    color: white;\n    display: ", ";\n    margin-right: 1rem;\n  }\n  .logo {\n    height: 30px;\n  }\n\n  &:hover {\n    span {\n      color: rgb(96, 213, 220);\n    }\n  }\n}"])), function (_a) {
     var isPushed = _a.isPushed;
@@ -2866,7 +2905,7 @@ var templateObject_1$I;
 // };
 // export default Panel;
 
-var Icon$1k = function (props) {
+var Icon$1m = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
         React.createElement("circle", { cx: "48", cy: "48", r: "48", fill: "white" }),
         React.createElement("path", { d: "M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z", fill: "#E17726" }),
@@ -2900,7 +2939,7 @@ var Icon$1k = function (props) {
         React.createElement("path", { d: "M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z", fill: "#F5841F" })));
 };
 
-var Icon$1l = function (props) {
+var Icon$1n = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 1000 1000" }, props),
         React.createElement("defs", null,
             React.createElement("linearGradient", { id: "prefix__a", x1: 48.733, y1: 944.09, x2: 942.955, y2: 64.09, gradientUnits: "userSpaceOnUse" },
@@ -2916,7 +2955,7 @@ var Icon$1l = function (props) {
         React.createElement("path", { d: "M470.273 616.333a133.712 133.712 0 01-133.635 133.835c-73.577 0-133.838-59.857-133.838-133.835h64.237c0 38.381 31.218 69.8 69.6 69.8s69.6-31.42 69.6-69.8zm22.668-210.2c0 86.107-70.2 156.107-156.3 156.107-86.307 0-156.307-70-156.307-156.107s70-156.3 156.307-156.3c86.101-.001 156.3 70.198 156.3 156.304zm-64.033 0a92.272 92.272 0 00-184.544 0c0 50.71 41.564 92.272 92.274 92.272a92.467 92.467 0 0092.27-92.268zm-81.535-26.448v-23.264H325.9v23.268a31.9 31.9 0 00-21.678 30.226 32.315 32.315 0 1064.63 0 31.719 31.719 0 00-21.479-30.226zm472.3 214.372c0 86.107-70 156.107-156.1 156.107s-156.507-70-156.507-156.107c0-86.5 70.4-156.5 156.507-156.5s156.096 70 156.096 156.504zm-63.834 0a92.27 92.27 0 10-184.539 0c0 50.71 41.36 91.874 92.27 91.874s92.265-41.16 92.265-91.87zM663.57 562.24a32.548 32.548 0 00-32.417 32.414 31.709 31.709 0 0021.677 30.425v23.466h21.479v-23.462a32.05 32.05 0 0021.474-30.425 32.506 32.506 0 00-32.217-32.414zm0-312.412c-73.777 0-133.834 59.857-133.834 133.635a132.935 132.935 0 0016.5 64.033 177.809 177.809 0 0156.081-31.022 68.405 68.405 0 01-8.351-33.011 69.6 69.6 0 01139.2 0 70.726 70.726 0 01-8.355 33.011 177.761 177.761 0 0156.08 31.022 132.7 132.7 0 0016.309-64.029c0-73.778-60.057-133.635-133.634-133.635z", fill: "url(#prefix__b)" })));
 };
 
-var Icon$1m = function (props) {
+var Icon$1o = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 512 512" }, props),
         React.createElement("rect", { width: "512", height: "512", fill: "#2F51FA" }),
         React.createElement("circle", { cx: "256", cy: "256", r: "179", fill: "white" }),
@@ -2935,17 +2974,17 @@ var ConnectorNames;
 var connectors = [
     {
         title: "MetaMask",
-        icon: Icon$1k,
+        icon: Icon$1m,
         connectorId: ConnectorNames.Injected,
     },
     {
         title: "Coin98 Wallet",
-        icon: Icon$1l,
+        icon: Icon$1n,
         connectorId: ConnectorNames.Coin98,
     },
     {
         title: "Coinbase Wallet",
-        icon: Icon$1m,
+        icon: Icon$1o,
         connectorId: ConnectorNames.WalletLink,
     },
 ];
@@ -3058,8 +3097,8 @@ var StyledNav = styled.nav(templateObject_2$i || (templateObject_2$i = __makeTem
     var showMenu = _a.showMenu;
     return (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none");
 });
-var BodyWrapper = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled.div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
+var BodyWrapper = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
+var Inner = styled.div(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
 }, function (_a) {
@@ -3075,7 +3114,7 @@ var Inner = styled.div(templateObject_4$4 || (templateObject_4$4 = __makeTemplat
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 });
-var MobileOnlyOverlay = styled(Overlay)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var MobileOnlyOverlay = styled(Overlay)(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
@@ -3126,7 +3165,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$M, templateObject_2$i, templateObject_3$a, templateObject_4$4, templateObject_5$1;
+var templateObject_1$M, templateObject_2$i, templateObject_3$b, templateObject_4$5, templateObject_5$3;
 
 var ToastAction = function (_a) {
     var action = _a.action;

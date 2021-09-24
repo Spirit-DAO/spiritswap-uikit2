@@ -142,14 +142,9 @@ export const links = [
 
 export const socials = [
   {
-    label: "Youtube",
-    icon: "YoutubeIcon",
-    href: "https://www.youtube.com/channel/UCrKLtNctO0obN4-bDMGlFuQ/featured",
-  },
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    href: "https://t.me/spirit_swap",
+    label: "Twitter",
+    icon: "TwitterIcon",
+    href: "https://twitter.com/Spirit_Swap",
   },
   {
     label: "Discord",
@@ -157,13 +152,25 @@ export const socials = [
     href: "https://discord.gg/8FGd4nFQdT",
   },
   {
-    label: "Twitter",
-    icon: "TwitterIcon",
-    href: "https://twitter.com/Spirit_Swap",
+    label: "Telegram",
+    icon: "TelegramIcon",
+    href: "https://t.me/spirit_swap",
+  },
+  {
+    label: "GitHub",
+    icon: "GitHubIcon",
+    href: "https://github.com/Layer3Org/spiritswap-core/",
+  },
+  {
+    label: "Medium",
+    icon: "MediumIcon",
+    href: "https://spiritswap.medium.com/",
   },
 ];
 
 export const MENU_HEIGHT = 64;
 export const MENU_ENTRY_HEIGHT = 48;
+export const MENU_BOTTOM_ENTRY_HEIGHT = 20;
+export const PRICE_ENTRY_HEIGHT = 42;
 export const SIDEBAR_WIDTH_FULL = 240;
 export const SIDEBAR_WIDTH_REDUCED = 56;

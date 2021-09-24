@@ -5,15 +5,31 @@ import { SvgProps } from "../../../components/Svg";
 import * as IconModule from "../icons";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
+import { MenuBottomEntry, LinkBottomLabel } from "./MenuBottomEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "../types";
 import { BadgeNewIcon } from "../icons";
+import CakePrice from "./CakePrice";
+import SocialLinks from "./SocialLinks";
+import { PRICE_ENTRY_HEIGHT } from "../config";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
+  showMenu?: boolean
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+
+const Price = styled.div`
+height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${PRICE_ENTRY_HEIGHT}px;
+  //padding: 0 8px;
+  border-top: 1px solid #42BE71;
+  border-bottom: 1px solid #42BE71;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -24,13 +40,18 @@ const Container = styled.div`
   margin-top: 72px;
 `;
 
+const Div = styled.div`
+ height: 43px;
+ margin: 40px 5px 25px 5px;
+
+`;
+
 const rotate = keyframes`
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(8px, 0); }
     100%   { transform: translate(0, -0px); }  
   }
 `;
-
 const NewIcon = styled(BadgeNewIcon)`
   position: absolute;
   left: 155px;
@@ -44,12 +65,19 @@ const MenuWrapper = styled.div`
   align-items: center;
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
+const BottomContainer = styled.div`
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+`;
+
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePriceUsd }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
-
   return (
     <Container>
       {links.map((entry) => {
@@ -63,31 +91,36 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
 
           return (
-            <Accordion
-              key={entry.label}
-              isPushed={isPushed}
-              pushNav={pushNav}
-              icon={iconElement}
-              label={entry.label}
-              initialOpenState={initialOpenState}
-              className={calloutClass}
-              inSpirit={inSpiritLinks}
-            >
-              {isPushed &&
-                entry.items.map((item) => (
-                  <MenuEntry
-                    key={item.href}
-                    secondary
-                    isActive={item.href === location.pathname}
-                    onClick={handleClick}
-                    inSpirit={inSpiritLinks}
-                  >
-                    <MenuLink href={item.href} target={item.target}>
-                      {item.label}
-                    </MenuLink>
-                  </MenuEntry>
-                ))}
-            </Accordion>
+            <>
+              <BottomContainer>
+                {/*   <Accordion
+                key={entry.label}
+                isPushed={isPushed}
+                pushNav={pushNav}
+                icon={iconElement}
+                label={entry.label}
+                initialOpenState={initialOpenState}
+                className={calloutClass}
+                inSpirit={inSpiritLinks}
+              > */}
+
+                {isPushed &&
+                  entry.items.map((item) => (
+                    <MenuBottomEntry
+                      key={item.href}
+                      secondary
+                      isActive={item.href === location.pathname}
+                      onClick={handleClick}
+                      inSpirit={inSpiritLinks}
+                    >
+                      <MenuLink href={item.href} target={item.target}>
+                        {item.label}
+                      </MenuLink>
+                    </MenuBottomEntry>
+                  ))}
+                {/* </Accordion> */}
+              </BottomContainer>
+            </>
           );
         }
         return (
@@ -101,7 +134,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               <MenuWrapper>
                 {iconElement}
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
-                  {entry.label}{" "}
+                  {entry.label}
                 </LinkLabel>
                 {entry.label === "Portfolio" ||
                 entry.label === "inSpirit" ||
