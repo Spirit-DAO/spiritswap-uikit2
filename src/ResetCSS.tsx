@@ -73,7 +73,7 @@ const ResetCSS = createGlobalStyle`
     width: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.textSubtle}; 
+    background: #4b5563; 
     border-radius: 8px;
   }
   ::-webkit-scrollbar-track {
