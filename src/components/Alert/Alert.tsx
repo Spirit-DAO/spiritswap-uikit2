@@ -48,7 +48,7 @@ const IconLabel = styled.div<ThemedIconLabel>`
   background-color: ${getThemeColor};
   border-radius: 5px 0 0 5px;
   color: ${({ theme }) => theme.alert.background};
-  padding: 12px;
+  padding: 8px;
 `;
 
 const withHandlerSpacing = 32 + 24 + 8; // button size + inner spacing + handler position
@@ -68,8 +68,8 @@ const CloseHandler = styled.div`
 `;
 
 const StyledAlert = styled(Flex)`
-  position: relative;
   background-color: ${({ theme }) => theme.alert.background};
+  position: relative;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 3px ${({ theme }) => theme.colors.primary};
 `;
@@ -83,7 +83,9 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
         <Icon fill="white" width="24px" />
       </IconLabel>
       <Details hasHandler={!!onClick}>
-        <Text bold>{title}</Text>
+        <Text bold fontSize='16px' color='white'>
+          {title}
+        </Text>
         {typeof children === "string" ? <Text as="p">{children}</Text> : children}
       </Details>
       {onClick && (
