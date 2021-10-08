@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useCallback, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
@@ -37,7 +38,6 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   const handleMouseEnter = () => {
     clearTimeout(timer.current);
   };
-
   const handleMouseLeave = () => {
     if (timer.current) {
       clearTimeout(timer.current);
@@ -75,7 +75,6 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   if (description === "Already processing eth_requestAccounts. Please wait.") {
     descriptionSpecific = "Already processing request. Please wait.";
   }
-  console.log(title);
 
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
@@ -83,9 +82,10 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
         <Alert title={titleSpecific} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
-              <Text as="p" mb="8px">
+              <Text as="p" fontSize="14px" mb="24px">
                 {descriptionSpecific}
               </Text>
+
               <ToastAction action={action} />
             </>
           ) : (

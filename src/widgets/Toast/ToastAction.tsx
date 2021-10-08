@@ -1,7 +1,10 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import React from "react";
 import { Link } from "react-router-dom";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import { Button } from "../../components/Button";
+import LinkExternal from "../../components/Link/LinkExternal";
 import { ToastAction as Action } from "./types";
 
 interface ToastActionProps {
@@ -11,9 +14,9 @@ interface ToastActionProps {
 const ToastAction: React.FC<ToastActionProps> = ({ action }) => {
   if (action.url.startsWith("http")) {
     return (
-      <Button as="a" scale="sm" href={action.url} {...getExternalLinkProps()}>
+      <LinkExternal color="secondary" fontSize="16px" href={action.url} {...getExternalLinkProps()}>
         {action.text}
-      </Button>
+      </LinkExternal>
     );
   }
 
