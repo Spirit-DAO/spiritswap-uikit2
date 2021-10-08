@@ -124,7 +124,7 @@ var getFontSize = function (_a) {
 };
 var Text = styled__default['default'].div(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n  ", "\n"], ["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n  ", "\n"])), getColor, getFontSize, function (_a) {
     var bold = _a.bold;
-    return (bold ? 'bold' : 500);
+    return (bold ? "bold" : 500);
 }, function (_a) {
     var textTransform = _a.textTransform;
     return textTransform && "text-transform: " + textTransform + ";";
@@ -691,7 +691,7 @@ var getIcon = function (variant) {
             return Icon$3;
     }
 };
-var IconLabel = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 8px;\n"], ["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 8px;\n"])), getThemeColor, function (_a) {
+var IconLabel = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 21px 8px 8px 8px;\n"], ["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 21px 8px 8px 8px;\n"])), getThemeColor, function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 });
@@ -715,7 +715,7 @@ var Alert = function (_a) {
         React__default['default'].createElement(IconLabel, { variant: variant, hasDescription: !!children },
             React__default['default'].createElement(Icon, { fill: "white", width: "24px" })),
         React__default['default'].createElement(Details, { hasHandler: !!onClick },
-            React__default['default'].createElement(Text, { bold: true, fontSize: '16px', color: 'white' }, title),
+            React__default['default'].createElement(Text, { bold: true, fontSize: "20px", color: "white" }, title),
             typeof children === "string" ? React__default['default'].createElement(Text, { as: "p" }, children) : children),
         onClick && (React__default['default'].createElement(CloseHandler, null,
             React__default['default'].createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
@@ -3251,7 +3251,7 @@ var Toast = function (_a) {
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
             React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
-                React__default['default'].createElement(Text, { as: "p", fontSize: '14px', mb: "24px" }, descriptionSpecific),
+                React__default['default'].createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
                 React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
 };
 var templateObject_1$N;

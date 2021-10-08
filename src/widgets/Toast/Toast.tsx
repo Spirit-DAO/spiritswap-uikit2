@@ -82,7 +82,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
         <Alert title={titleSpecific} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
-              <Text as="p" fontSize='14px' mb="24px">
+              <Text as="p" fontSize="14px" mb="24px">
                 {descriptionSpecific}
               </Text>
 
