@@ -31,7 +31,9 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   const timer = useRef<number>();
   const ref = useRef(null);
   const removeHandler = useRef(onRemove);
+
   const { id, title, description, type, action } = toast;
+  const time = type === "info" ? 200000 : ttl;
 
   const handleRemove = useCallback(() => removeHandler.current(id), [id, removeHandler]);
 
@@ -45,7 +47,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
 
     timer.current = window.setTimeout(() => {
       handleRemove();
-    }, ttl);
+    }, time);
   };
 
   useEffect(() => {
@@ -55,12 +57,12 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
 
     timer.current = window.setTimeout(() => {
       handleRemove();
-    }, ttl);
+    }, time);
 
     return () => {
       clearTimeout(timer.current);
     };
-  }, [timer, ttl, handleRemove]);
+  }, [timer, time, handleRemove]);
 
   let titleSpecific = title;
   let descriptionSpecific = description;

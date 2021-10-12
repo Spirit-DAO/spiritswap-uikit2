@@ -3221,6 +3221,7 @@ var Toast = function (_a) {
     var ref = useRef(null);
     var removeHandler = useRef(onRemove);
     var id = toast.id, title = toast.title, description = toast.description, type = toast.type, action = toast.action;
+    var time = type === 'info' ? 200000 : ttl;
     var handleRemove = useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
     var handleMouseEnter = function () {
         clearTimeout(timer.current);
@@ -3231,7 +3232,7 @@ var Toast = function (_a) {
         }
         timer.current = window.setTimeout(function () {
             handleRemove();
-        }, ttl);
+        }, time);
     };
     useEffect(function () {
         if (timer.current) {
@@ -3239,11 +3240,11 @@ var Toast = function (_a) {
         }
         timer.current = window.setTimeout(function () {
             handleRemove();
-        }, ttl);
+        }, time);
         return function () {
             clearTimeout(timer.current);
         };
-    }, [timer, ttl, handleRemove]);
+    }, [timer, time, handleRemove]);
     var titleSpecific = title;
     var descriptionSpecific = description;
     if (type === "danger") {
