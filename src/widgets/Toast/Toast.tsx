@@ -75,7 +75,6 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   if (description === "Already processing eth_requestAccounts. Please wait.") {
     descriptionSpecific = "Already processing request. Please wait.";
   }
-  console.log(title);
 
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
