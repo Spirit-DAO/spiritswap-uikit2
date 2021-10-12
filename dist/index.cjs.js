@@ -3234,7 +3234,7 @@ var Toast = function (_a) {
     var ref = React.useRef(null);
     var removeHandler = React.useRef(onRemove);
     var id = toast.id, title = toast.title, description = toast.description, type = toast.type, action = toast.action;
-    var time = type === 'info' ? 200000 : ttl;
+    var time = type === "info" ? 200000 : ttl;
     var handleRemove = React.useCallback(function () { return removeHandler.current(id); }, [id, removeHandler]);
     var handleMouseEnter = function () {
         clearTimeout(timer.current);
