@@ -2771,7 +2771,7 @@ var PanelBody = function (_a) {
                 React__default['default'].createElement(MenuWrapper, null,
                     iconElement,
                     React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks }, entry.label),
-                    entry.label === "inSpirit" || entry.label === "Boosted Farms" || entry.label === "LGE" ? (React__default['default'].createElement(NewIcon, null)) : null))));
+                    entry.label === "Bridge" || entry.label === "LGE" ? (React__default['default'].createElement(NewIcon, null)) : null))));
     })));
 };
 var templateObject_1$E, templateObject_2$f, templateObject_3$9, templateObject_4$3, templateObject_5$1, templateObject_6, templateObject_7;
