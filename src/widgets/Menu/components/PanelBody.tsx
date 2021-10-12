@@ -135,7 +135,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                   {entry.label}
                 </LinkLabel>
-                {entry.label === "inSpirit" || entry.label === "Boosted Farms" || entry.label === "LGE" ? (
+                {entry.label === "Bridge" || entry.label === "LGE" ? (
                   <NewIcon />
                 ) : null}
               </MenuWrapper>
