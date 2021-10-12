@@ -146,7 +146,7 @@ var getFontSize = function (_a) {
 };
 var Text = styled__default['default'].div(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n  ", "\n"], ["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n  ", "\n"])), getColor, getFontSize, function (_a) {
     var bold = _a.bold;
-    return (bold ? 600 : 400);
+    return (bold ? "bold" : 500);
 }, function (_a) {
     var textTransform = _a.textTransform;
     return textTransform && "text-transform: " + textTransform + ";";
@@ -713,7 +713,7 @@ var getIcon = function (variant) {
             return Icon$3;
     }
 };
-var IconLabel = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 12px;\n"], ["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 12px;\n"])), getThemeColor, function (_a) {
+var IconLabel = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 21px 8px 8px 8px;\n"], ["\n  background-color: ", ";\n  border-radius: 5px 0 0 5px;\n  color: ", ";\n  padding: 21px 8px 8px 8px;\n"])), getThemeColor, function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 });
@@ -723,7 +723,7 @@ var Details = styled__default['default'].div(templateObject_2$2 || (templateObje
     return (hasHandler ? withHandlerSpacing + "px" : "24px");
 });
 var CloseHandler = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
-var StyledAlert = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"], ["\n  position: relative;\n  background-color: ", ";\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"])), function (_a) {
+var StyledAlert = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"], ["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"])), function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 }, function (_a) {
@@ -734,9 +734,9 @@ var Alert = function (_a) {
     var title = _a.title, children = _a.children, variant = _a.variant, onClick = _a.onClick;
     var Icon = getIcon(variant);
     return (React__default['default'].createElement(StyledAlert, null,
-        React__default['default'].createElement(IconLabel, { variant: variant, hasDescription: !!children }, variant === "info" ? React__default['default'].createElement(Loader, { stroke: 'white', size: '25px' }) : React__default['default'].createElement(Icon, { fill: "white", width: "24px" })),
+        React__default['default'].createElement(IconLabel, { variant: variant, hasDescription: !!children }, variant === "info" ? React__default['default'].createElement(Loader, { stroke: "white", size: "25px" }) : React__default['default'].createElement(Icon, { fill: "white", width: "24px" })),
         React__default['default'].createElement(Details, { hasHandler: !!onClick },
-            React__default['default'].createElement(Text, { bold: true }, title),
+            React__default['default'].createElement(Text, { bold: true, fontSize: "20px", color: "white" }, title),
             typeof children === "string" ? React__default['default'].createElement(Text, { as: "p" }, children) : children),
         onClick && (React__default['default'].createElement(CloseHandler, null,
             React__default['default'].createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
@@ -1283,14 +1283,14 @@ Tag.defaultProps = {
     outline: false,
 };
 
-var StyledLink = styled__default['default'](Text)(templateObject_1$r || (templateObject_1$r = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n  }\n"])));
+var StyledLink = styled__default['default'](Text)(templateObject_1$r || (templateObject_1$r = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: none;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: none;\n  }\n"])));
 var Link = function (_a) {
     var external = _a.external, props = __rest(_a, ["external"]);
     var internalProps = external ? getExternalLinkProps() : {};
     return React__default['default'].createElement(StyledLink, __assign({ as: "a", bold: true }, internalProps, props));
 };
 Link.defaultProps = {
-    color: "primary",
+    color: "#6DD784",
 };
 var templateObject_1$r;
 
@@ -1298,7 +1298,7 @@ var LinkExternal = function (_a) {
     var children = _a.children, props = __rest(_a, ["children"]);
     return (React__default['default'].createElement(Link, __assign({ external: true }, props),
         children,
-        React__default['default'].createElement(Icon$v, { color: "primary", ml: "4px" })));
+        React__default['default'].createElement(Icon$v, { color: "#6DD784", ml: "4px" })));
 };
 
 var Bar = styled__default['default'].div(templateObject_1$s || (templateObject_1$s = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: ", ";\n  border-top-left-radius: 32px;\n  border-bottom-left-radius: 32px;\n  height: 16px;\n  transition: width 200ms ease;\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: ", ";\n  border-top-left-radius: 32px;\n  border-bottom-left-radius: 32px;\n  height: 16px;\n  transition: width 200ms ease;\n"])), function (props) { return (props.primary ? props.theme.colors.secondary : props.theme.colors.secondary + "80"); });
@@ -3205,7 +3205,7 @@ var templateObject_1$N, templateObject_2$j, templateObject_3$b, templateObject_4
 var ToastAction = function (_a) {
     var action = _a.action;
     if (action.url.startsWith("http")) {
-        return (React__default['default'].createElement(Button, __assign({ as: "a", scale: "sm", href: action.url }, getExternalLinkProps()), action.text));
+        return (React__default['default'].createElement(LinkExternal, __assign({ color: "secondary", fontSize: "16px", href: action.url }, getExternalLinkProps()), action.text));
     }
     return (React__default['default'].createElement(Button, { as: reactRouterDom.Link, scale: "sm", to: action.url }, action.text));
 };
@@ -3269,11 +3269,10 @@ var Toast = function (_a) {
     if (description === "Already processing eth_requestAccounts. Please wait.") {
         descriptionSpecific = "Already processing request. Please wait.";
     }
-    console.log(title);
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
             React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
-                React__default['default'].createElement(Text, { as: "p", mb: "8px" }, descriptionSpecific),
+                React__default['default'].createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
                 React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
 };
 var templateObject_1$O;
