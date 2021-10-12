@@ -5,7 +5,7 @@ import styled, { DefaultTheme } from "styled-components";
 import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
 import ErrorIcon from "../Svg/Icons/Error";
 import BlockIcon from "../Svg/Icons/Block";
-import Loader from '../Loader'
+import Loader from "../Loader";
 import InfoIcon from "../Svg/Icons/Info";
 import { Text } from "../Text";
 import { IconButton } from "../Button";
@@ -83,7 +83,7 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   return (
     <StyledAlert>
       <IconLabel variant={variant} hasDescription={!!children}>
-        {variant === "info" ? <Loader stroke='white' size='25px' /> : <Icon fill="white" width="24px" />}
+        {variant === "info" ? <Loader stroke="white" size="25px" /> : <Icon fill="white" width="24px" />}
       </IconLabel>
       <Details hasHandler={!!onClick}>
         <Text bold>{title}</Text>
