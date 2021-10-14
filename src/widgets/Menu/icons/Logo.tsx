@@ -24,7 +24,7 @@ const IconContainer = styled.div`
   padding-left:16px;
   padding-top:8px;
   width:100%;
-  margin-left: 30px;
+  margin-left: 18px;
 `;
 
 
