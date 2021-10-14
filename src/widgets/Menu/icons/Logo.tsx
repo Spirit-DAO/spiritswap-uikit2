@@ -14,7 +14,7 @@ const Tspan = styled.tspan`
   font-weight: 700;
   letter-spacing: 0em;
 `;
-const IconContainer = styled.div`
+const IconContainer = styled.div<{isPushed?:boolean}>`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -24,6 +24,7 @@ const IconContainer = styled.div`
   padding-left:16px;
   padding-top:8px;
   width:100%;
+  margin-top: ${({ isPushed }) => (isPushed ? `18px` : `4px`)};
   margin-left: 18px;
 `;
 
@@ -40,7 +41,7 @@ interface LogoProps extends SvgProps {
 const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#432918";
   return (
-    <IconContainer>
+    <IconContainer isPushed >
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
       {isPushed ? (
         <span className="desktop-icon" style={{ color: "#52D784", marginLeft: "30px", fontSize: "20px" }}>
