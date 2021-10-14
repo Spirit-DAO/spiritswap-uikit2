@@ -26,9 +26,12 @@ const Price = styled.div`
   align-items: center;
   justify-content: center;
   height: ${PRICE_ENTRY_HEIGHT}px;
-  //padding: 0 8px;
-  border-top: 1px solid #42be71;
-  border-bottom: 1px solid #42be71;
+  background-color:rgba(109, 215, 132, 0.15);
+  //border-radius: 4px;
+  //margin: 8px;
+  // padding: 0 8px;
+  // border-top: 1px solid #42be71;
+  // border-bottom: 1px solid #42be71;
 `;
 
 const Container = styled.div`
@@ -37,8 +40,20 @@ const Container = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
-  margin-top: 72px;
+  // border: 1px solid #374151;
+  // margin-top: 70px;
+  // margin: 70px 8px 8px 8px;
+  // border-radius: 8px;
+  // padding: 6px;
 `;
+
+  /* 
+  background: ${({ theme }) =>
+    theme.isDark
+      ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+      : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"
+  }; 
+  */
 
 const Div = styled.div`
   height: 43px;
@@ -51,6 +66,7 @@ const rotate = keyframes`
     100%   { transform: translate(0, -0px); }  
   }
 `;
+
 const NewIcon = styled(BadgeNewIcon)`
   position: absolute;
   left: 155px;
@@ -58,6 +74,7 @@ const NewIcon = styled(BadgeNewIcon)`
   margin-right: 45px;
   animation: ${rotate} 6s infinite;
 `;
+
 const MenuWrapper = styled.div`
   position: relative;
   display: flex;
@@ -92,7 +109,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
           return (
             <>
               <BottomContainer>
-                {/*   <Accordion
+                { /*   <Accordion
                 key={entry.label}
                 isPushed={isPushed}
                 pushNav={pushNav}
@@ -101,7 +118,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 initialOpenState={initialOpenState}
                 className={calloutClass}
                 inSpirit={inSpiritLinks}
-              > */}
+              > */ }
 
                 {isPushed &&
                   entry.items.map((item) => (

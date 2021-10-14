@@ -43,7 +43,7 @@ const StyledMenuButton = styled(MenuButton)`
       case true:
         return "20px";
       case false:
-        return isPushed ? "240.2px" : "56.2px";
+        return isPushed ? "248px" : "84px";
       default:
         break;
     }
@@ -54,7 +54,7 @@ const StyledMenuButton = styled(MenuButton)`
       case true:
         return "10px";
       case false:
-        return "320px";
+        return "350px";
       default:
         break;
     }

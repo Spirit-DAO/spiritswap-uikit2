@@ -20,7 +20,13 @@ const IconContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
+  padding-left:16px;
+  padding-top:8px;
+  width:100%;
+  margin-left: 30px;
 `;
+
 
 interface LogoProps extends SvgProps {
   isDark: boolean;
