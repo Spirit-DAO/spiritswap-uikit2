@@ -25,13 +25,13 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
       ? "linear-gradient(to bottom, rgb(21, 30, 49) 40%, #0d0e21 80%)"
       : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
-  height: 92%;
+  height: 91%;
   transition: padding-top 0.2s, width 0.2s;
   border: 1px solid #374151;
   margin-top: 70px;
   margin: 70px 8px 8px 8px;
   border-radius: 8px;
-  padding: ${({ isMobile , isPushed }) => (isMobile && isPushed ? "0" : "6px")}; 
+  padding: ${({ isMobile , isPushed }) => (isMobile && isPushed ? "6px" : "0")};
   /* 
   border-right: ${({ isPushed }) => (isPushed ? "2px solid #42d785" : "2px solid #42d785")};
   border-right: ${({ isMobile }) => (isMobile ? "2px solid #42d785" : "none")}; 
