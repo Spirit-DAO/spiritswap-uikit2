@@ -45,6 +45,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   const removeHandler = useRef(onRemove);
 
   const { id, title, description, type, action } = toast;
+
   const time = type === "info" ? 200000 : ttl;
 
   const handleRemove = useCallback(() => removeHandler.current(id), [id, removeHandler]);
@@ -113,7 +114,8 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
               {description}
             </Text>
           )}
-          {ttl !== null ? <AnimatedFader style={faderStyle} /> : null}
+
+          {ttl !== null && type !== "info" ? <AnimatedFader style={faderStyle} /> : null}
         </Alert>
       </StyledToast>
     </CSSTransition>
