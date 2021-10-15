@@ -16,8 +16,8 @@ const Container = styled.div`
   padding: 8px 0;
   margin: 8px;
   background: ${({ theme }) => (theme.isDark ? "#0D0E21" : "#E6FDFF")};
- // border-top: solid 1px #42d784;
- // border-bottom: solid 1px #42d784;
+  // border-top: solid 1px #42d784;
+  // border-bottom: solid 1px #42d784;
 `;
 const Div = styled.div`
   height: 43px;
@@ -49,7 +49,7 @@ const Price = styled.div`
   height: ${PRICE_ENTRY_HEIGHT}px;
   padding: 8px;
   border-radius: 4px;
-  background-color:rgba(109, 215, 132, 0.15);
+  background-color: rgba(109, 215, 132, 0.15);
   margin: 8px;
   // border-bottom: 1px solid #42BE71;
 `;
