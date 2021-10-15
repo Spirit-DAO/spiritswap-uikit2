@@ -22,8 +22,8 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   flex-shrink: 0;
   background: ${({ theme }) =>
     theme.isDark
-    ? "linear-gradient(to bottom, rgb(21, 30, 49) 40%, #0d0e21 80%)"
-    : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
+      ? "linear-gradient(to bottom, rgb(21, 30, 49) 40%, #0d0e21 80%)"
+      : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 92%;
   transition: padding-top 0.2s, width 0.2s;
@@ -38,18 +38,18 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   */
   /* 
     border-right: ${({ isMobile, isPushed }) => {
-      switch (isMobile) {
-        case true:
-          return isPushed ? "2px solid #42d785" : "none";
-          break;
-        case false:
-          return isPushed ? "2px solid #42d785" : "2px solid #42d785";
-          break;
-        default:
-          break;
-      }
-      return "";
-    }};
+    switch (isMobile) {
+      case true:
+        return isPushed ? "2px solid #42d785" : "none";
+        break;
+      case false:
+        return isPushed ? "2px solid #42d785" : "2px solid #42d785";
+        break;
+      default:
+        break;
+    }
+    return "";
+  }};
   */
   z-index: 11;
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
@@ -57,7 +57,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
 
   ${({ theme }) => theme.mediaQueries.nav} {
     border-width: 1px;
-   // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
+    // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;
     width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   }
 `;

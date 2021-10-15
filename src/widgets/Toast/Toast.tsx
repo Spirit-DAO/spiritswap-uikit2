@@ -2,6 +2,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
+import { useSpring, animated } from "react-spring";
 import { Alert, alertVariants } from "../../components/Alert";
 import { Text } from "../../components/Text";
 import ToastAction from "./ToastAction";
@@ -26,6 +27,17 @@ const StyledToast = styled.div`
     max-width: 400px;
   }
 `;
+
+const Fader = styled.div`
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: ${({ theme }) => theme.colors.success};
+`;
+
+const AnimatedFader = animated(Fader);
 
 const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) => {
   const timer = useRef<number>();
@@ -78,6 +90,12 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
     descriptionSpecific = "Already processing request. Please wait.";
   }
 
+  const faderStyle = useSpring({
+    from: { width: "100%" },
+    to: { width: "0%" },
+    config: { duration: ttl ?? undefined },
+  });
+
   return (
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -91,8 +109,11 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
               <ToastAction action={action} />
             </>
           ) : (
-            description
+            <Text as="p" color="white">
+              {description}
+            </Text>
           )}
+          {ttl !== null ? <AnimatedFader style={faderStyle} /> : null}
         </Alert>
       </StyledToast>
     </CSSTransition>

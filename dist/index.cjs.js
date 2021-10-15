@@ -11,6 +11,7 @@ var debounce = require('lodash/debounce');
 var throttle = require('lodash/throttle');
 var reactRouterDom = require('react-router-dom');
 var reactTransitionGroup = require('react-transition-group');
+var reactSpring = require('react-spring');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -3238,6 +3239,11 @@ var StyledToast = styled__default['default'].div(templateObject_1$O || (template
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
+var Fader = styled__default['default'].div(templateObject_2$k || (templateObject_2$k = __makeTemplateObject(["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"], ["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.success;
+});
+var AnimatedFader = reactSpring.animated(Fader);
 var Toast = function (_a) {
     var toast = _a.toast, onRemove = _a.onRemove, style = _a.style, ttl = _a.ttl, props = __rest(_a, ["toast", "onRemove", "style", "ttl"]);
     var timer = React.useRef();
@@ -3280,13 +3286,20 @@ var Toast = function (_a) {
     if (description === "Already processing eth_requestAccounts. Please wait.") {
         descriptionSpecific = "Already processing request. Please wait.";
     }
+    var faderStyle = reactSpring.useSpring({
+        from: { width: "100%" },
+        to: { width: "0%" },
+        config: { duration: ttl !== null && ttl !== void 0 ? ttl : undefined },
+    });
     return (React__default['default'].createElement(reactTransitionGroup.CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React__default['default'].createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
-                React__default['default'].createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
-                React__default['default'].createElement(ToastAction, { action: action }))) : (description)))));
+            React__default['default'].createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove },
+                action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
+                    React__default['default'].createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
+                    React__default['default'].createElement(ToastAction, { action: action }))) : (React__default['default'].createElement(Text, { as: "p", color: "white" }, description)),
+                ttl !== null ? React__default['default'].createElement(AnimatedFader, { style: faderStyle }) : null))));
 };
-var templateObject_1$O;
+var templateObject_1$O, templateObject_2$k;
 
 var ZINDEX = 1000;
 var TOP_POSITION = 80; // Initial position from the top
