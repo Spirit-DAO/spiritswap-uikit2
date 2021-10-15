@@ -7,6 +7,7 @@ import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { animated, useSpring } from 'react-spring';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -3225,6 +3226,11 @@ var StyledToast = styled.div(templateObject_1$O || (templateObject_1$O = __makeT
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
+var Fader = styled.div(templateObject_2$k || (templateObject_2$k = __makeTemplateObject(["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"], ["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.success;
+});
+var AnimatedFader = animated(Fader);
 var Toast = function (_a) {
     var toast = _a.toast, onRemove = _a.onRemove, style = _a.style, ttl = _a.ttl, props = __rest(_a, ["toast", "onRemove", "style", "ttl"]);
     var timer = useRef();
@@ -3267,13 +3273,20 @@ var Toast = function (_a) {
     if (description === "Already processing eth_requestAccounts. Please wait.") {
         descriptionSpecific = "Already processing request. Please wait.";
     }
+    var faderStyle = useSpring({
+        from: { width: "100%" },
+        to: { width: "0%" },
+        config: { duration: ttl !== null && ttl !== void 0 ? ttl : undefined },
+    });
     return (React.createElement(CSSTransition, __assign({ nodeRef: ref, timeout: 250, style: style }, props),
         React.createElement(StyledToast, { ref: ref, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
-            React.createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove }, action ? (React.createElement(React.Fragment, null,
-                React.createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
-                React.createElement(ToastAction, { action: action }))) : (description)))));
+            React.createElement(Alert, { title: titleSpecific, variant: alertTypeMap[type], onClick: handleRemove },
+                action ? (React.createElement(React.Fragment, null,
+                    React.createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
+                    React.createElement(ToastAction, { action: action }))) : (React.createElement(Text, { as: "p", color: "white" }, description)),
+                ttl !== null ? React.createElement(AnimatedFader, { style: faderStyle }) : null))));
 };
-var templateObject_1$O;
+var templateObject_1$O, templateObject_2$k;
 
 var ZINDEX = 1000;
 var TOP_POSITION = 80; // Initial position from the top

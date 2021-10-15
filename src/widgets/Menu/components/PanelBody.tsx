@@ -26,7 +26,7 @@ const Price = styled.div`
   align-items: center;
   justify-content: center;
   height: ${PRICE_ENTRY_HEIGHT}px;
-  background-color:rgba(109, 215, 132, 0.15);
+  background-color: rgba(109, 215, 132, 0.15);
   //border-radius: 4px;
   //margin: 8px;
   // padding: 0 8px;
@@ -47,7 +47,7 @@ const Container = styled.div`
   // padding: 6px;
 `;
 
-  /* 
+/* 
   background: ${({ theme }) =>
     theme.isDark
       ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
@@ -109,7 +109,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
           return (
             <>
               <BottomContainer>
-                { /*   <Accordion
+                {/*   <Accordion
                 key={entry.label}
                 isPushed={isPushed}
                 pushNav={pushNav}
@@ -118,7 +118,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 initialOpenState={initialOpenState}
                 className={calloutClass}
                 inSpirit={inSpiritLinks}
-              > */ }
+              > */}
 
                 {isPushed &&
                   entry.items.map((item) => (
@@ -152,9 +152,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                   {entry.label}
                 </LinkLabel>
-                {entry.label === "Bridge" || entry.label === "LGE" ? (
-                  <NewIcon />
-                ) : null}
+                {entry.label === "Bridge" || entry.label === "LGE" ? <NewIcon /> : null}
               </MenuWrapper>
             </MenuLink>
           </MenuEntry>
