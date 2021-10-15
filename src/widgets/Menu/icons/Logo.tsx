@@ -25,7 +25,7 @@ const IconContainer = styled.div<{isPushed?:boolean}>`
   padding-top:8px;
   width:100%;
   margin-top: ${({ isPushed }) => (isPushed ? `18px` : `4px`)};
-  margin-left: 18px;
+  margin-bottom: 5px;
 `;
 
 

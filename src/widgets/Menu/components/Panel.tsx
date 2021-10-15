@@ -31,7 +31,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   margin-top: 70px;
   margin: 70px 8px 8px 8px;
   border-radius: 8px;
-  padding: 6px;
+  padding: ${({ isMobile , isPushed }) => (isMobile && isPushed ? "0" : "6px")}; 
   /* 
   border-right: ${({ isPushed }) => (isPushed ? "2px solid #42d785" : "2px solid #42d785")};
   border-right: ${({ isMobile }) => (isMobile ? "2px solid #42d785" : "none")}; 
