@@ -2154,14 +2154,17 @@ var Icon$X = function (props) {
 
 styled.text(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled.tspan(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n"])));
+var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left:16px;\n  padding-top:8px;\n  width:100%;\n  margin-top: ", ";\n  margin-left: 18px;\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left:16px;\n  padding-top:8px;\n  width:100%;\n  margin-top: ", ";\n  margin-left: 18px;\n"])), function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "18px" : "4px");
+});
 // const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
 //   return <img {...props} width="220px" height="50px" src="/images/logo.png" />;
 // };
 var Logo = function (_a) {
     _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
-    return (React.createElement(IconContainer, null,
+    return (React.createElement(IconContainer, { isPushed: true },
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
         isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "30px", fontSize: "20px" } },
             "Spirit",
@@ -2443,7 +2446,7 @@ var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_
         case true:
             return "20px";
         case false:
-            return isPushed ? "240.2px" : "56.2px";
+            return isPushed ? "248px" : "84px";
     }
     return "";
 }, function (_a) {
@@ -2452,7 +2455,7 @@ var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_
         case true:
             return "10px";
         case false:
-            return "320px";
+            return "350px";
     }
     return "";
 }, function (_a) {
@@ -2657,7 +2660,7 @@ var MENU_ENTRY_HEIGHT = 48;
 var MENU_BOTTOM_ENTRY_HEIGHT = 20;
 var PRICE_ENTRY_HEIGHT = 42;
 var SIDEBAR_WIDTH_FULL = 240;
-var SIDEBAR_WIDTH_REDUCED = 56;
+var SIDEBAR_WIDTH_REDUCED = 76;
 
 var rainbowAnimation = keyframes(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"], ["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"])));
 var LinkLabel = styled.div(templateObject_2$e || (templateObject_2$e = __makeTemplateObject(["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  color: ",
@@ -2665,7 +2668,7 @@ var LinkLabel = styled.div(templateObject_2$e || (templateObject_2$e = __makeTem
     var isPushed = _a.isPushed, theme = _a.theme, inSpirit = _a.inSpirit;
     return (!isPushed && "transparent") || (inSpirit === "noInSpirit" && theme.colors.textSubtle) || "#35b9c0";
 });
-var MenuEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: ",
+var MenuEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ",
     ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
@@ -2679,14 +2682,14 @@ var MenuEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTem
     var theme = _a.theme;
     return theme.colors.textSubtle;
 }, function (_a) {
-    var isActive = _a.isActive, theme = _a.theme;
-    return (isActive ? "inset 0px 0px 10px " + theme.colors.primary : "none");
+    var isActive = _a.isActive; _a.theme;
+    return (isActive ? "rgba(96, 213, 220, 0.15)" : "none");
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.textSubtle;
 }, function (_a) {
     var theme = _a.theme, inSpirit = _a.inSpirit;
-    return inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(96, 213, 220, 0.15)";
+    return inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(109, 215, 132, 0.15)";
 }, rainbowAnimation, function (_a) {
     var theme = _a.theme;
     return theme.colors.gradients.bubblegum;
@@ -2749,8 +2752,15 @@ var MenuLink = function (_a) {
 };
 
 var Icons = IconModule;
-styled.div(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42be71;\n  border-bottom: 1px solid #42be71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  //padding: 0 8px;\n  border-top: 1px solid #42be71;\n  border-bottom: 1px solid #42be71;\n"])), PRICE_ENTRY_HEIGHT);
-var Container$2 = styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  margin-top: 72px;\n"])));
+styled.div(templateObject_1$F || (templateObject_1$F = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  background-color:rgba(109, 215, 132, 0.15);\n  //border-radius: 4px;\n  //margin: 8px;\n  // padding: 0 8px;\n  // border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42be71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  background-color:rgba(109, 215, 132, 0.15);\n  //border-radius: 4px;\n  //margin: 8px;\n  // padding: 0 8px;\n  // border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42be71;\n"])), PRICE_ENTRY_HEIGHT);
+var Container$2 = styled.div(templateObject_2$g || (templateObject_2$g = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  // border: 1px solid #374151;\n  // margin-top: 70px;\n  // margin: 70px 8px 8px 8px;\n  // border-radius: 8px;\n  // padding: 6px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  // border: 1px solid #374151;\n  // margin-top: 70px;\n  // margin: 70px 8px 8px 8px;\n  // border-radius: 8px;\n  // padding: 6px;\n"])));
+/*
+background: ${({ theme }) =>
+  theme.isDark
+    ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+    : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)"
+};
+*/
 styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"], ["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"])));
 var rotate$2 = keyframes(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"], ["\n    0% { transform: translate(0,  0px); }\n    50%  { transform: translate(8px, 0); }\n    100%   { transform: translate(0, -0px); }  \n  }\n"])));
 var NewIcon = styled(Icon$1e)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"], ["\n  position: absolute;\n  left: 155px;\n  width: 40px;\n  margin-right: 45px;\n  animation: ", " 6s infinite;\n"])), rotate$2);
@@ -2808,21 +2818,21 @@ var Icons$2 = IconModule;
 var LanguageIcon = Icons$2.LanguageIcon;
 var LangSelector = function (_a) {
     var currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
-    return (React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { style: { backgroundImage: "none" }, variant: "text", startIcon: React.createElement(LanguageIcon, { color: "textSubtle", width: "24px" }) },
-            React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
+    return (React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { style: { backgroundImage: "none" }, variant: "text", startIcon: React.createElement(LanguageIcon, { color: "white", width: "24px" }) },
+            React.createElement(Text, { color: "white" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
         // Safari fix
         style: { minHeight: "32px", height: "auto", backgroundImage: "none" } }, lang.language)); })));
 };
 var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
-var Container$3 = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  border-top: solid 1px #42d784;\n  border-bottom: solid 1px #42d784;\n"])), function (_a) {
+var Container$3 = styled.div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n  margin: 8px;\n  background: ", ";\n // border-top: solid 1px #42d784;\n // border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n  margin: 8px;\n  background: ", ";\n // border-top: solid 1px #42d784;\n // border-bottom: solid 1px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
-    return (theme.isDark ? "#161f33" : "#E6FDFF");
+    return (theme.isDark ? "#0D0E21" : "#E6FDFF");
 });
 styled.div(templateObject_2$h || (templateObject_2$h = __makeTemplateObject(["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"], ["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"])));
 var SettingsEntry = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
-var Price = styled.div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-top: 1px solid #42be71;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
+var Price = styled.div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color:rgba(109, 215, 132, 0.15);\n  margin: 8px;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color:rgba(109, 215, 132, 0.15);\n  margin: 8px;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     if (!isPushed) {
@@ -2853,12 +2863,12 @@ var AuditBadge = function (_a) {
 };
 var templateObject_1$I;
 
-var StyledPanel = styled.div(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
-    ";\n  width: ", ";\n  height: 100vh;\n  transition: padding-top 0.2s, width 0.2s;\n  /* border-right: ", ";\n  border-right: ", "; */\n  border-right: ",
-    ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n    border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled.div(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 92%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: 1px solid #374151;\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: 6px;\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ", ";\n  */\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n   // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
+    ";\n  width: ", ";\n  height: 92%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: 1px solid #374151;\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: 6px;\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ",
+    ";\n  */\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n   // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.isDark
-        ? "linear-gradient(to top, #151e31 40%, #1F2B46 80%)"
+        ? "linear-gradient(to bottom, rgb(21, 30, 49) 40%, #0d0e21 80%)"
         : "linear-gradient(to top, #E6FDFF 40%, #FFFFFF 80%)";
 }, function (_a) {
     var isPushed = _a.isPushed;
@@ -3109,7 +3119,7 @@ var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return
 var templateObject_1$M;
 
 var Wrapper$2 = styled.div(templateObject_1$N || (templateObject_1$N = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled.nav(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  //border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  //border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled.nav(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
@@ -3136,7 +3146,7 @@ var Inner = styled.div(templateObject_4$5 || (templateObject_4$5 = __makeTemplat
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 });
-var MobileOnlyOverlay = styled(Overlay)(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var MobileOnlyOverlay = styled(Overlay)(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });

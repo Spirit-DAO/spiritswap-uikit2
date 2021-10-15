@@ -48,4 +48,4 @@ export declare const MENU_ENTRY_HEIGHT = 48;
 export declare const MENU_BOTTOM_ENTRY_HEIGHT = 20;
 export declare const PRICE_ENTRY_HEIGHT = 42;
 export declare const SIDEBAR_WIDTH_FULL = 240;
-export declare const SIDEBAR_WIDTH_REDUCED = 56;
+export declare const SIDEBAR_WIDTH_REDUCED = 76;

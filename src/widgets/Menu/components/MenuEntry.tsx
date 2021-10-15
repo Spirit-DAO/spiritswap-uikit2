@@ -35,7 +35,8 @@ const MenuEntry = styled.div<Props>`
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: ${({ theme }) => theme.colors.textSubtle};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 0px 0px 10px ${theme.colors.primary}` : "none")};
+  border-radius: 4px;
+  background-color: ${({ isActive, theme }) => (isActive ? "rgba(96, 213, 220, 0.15)" : "none")};
 
   a {
     display: flex;
@@ -49,8 +50,9 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
+    border-radius: 4px;
     background-color: ${({ theme, inSpirit }) =>
-      inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(96, 213, 220, 0.15)"};
+      inSpirit === "noInSpirit" ? theme.colors.tertiary : "rgba(109, 215, 132, 0.15)"};
   }
 
   // Safari fix

@@ -28,7 +28,7 @@ const StyledNav = styled.nav<{ showMenu: boolean; isPushed: boolean }>`
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  //border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
+  // border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   border-bottom: none;
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -56,7 +56,6 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 const MobileOnlyOverlay = styled(Overlay)`
   position: fixed;
   height: 100%;
-
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
