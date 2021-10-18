@@ -2864,8 +2864,8 @@ var AuditBadge = function (_a) {
 };
 var templateObject_1$I;
 
-var StyledPanel = styled.div(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 91%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: 1px solid #374151;\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: ", ";\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ", ";\n  */\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n    // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
-    ";\n  width: ", ";\n  height: 91%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: 1px solid #374151;\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: ", ";\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ",
+var StyledPanel = styled.div(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ", ";\n  width: ", ";\n  height: 91%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: ", ";\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: ", ";\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ", ";\n  */\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n    // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: \"80px\";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background: ",
+    ";\n  width: ", ";\n  height: 91%;\n  transition: padding-top 0.2s, width 0.2s;\n  border: ", ";\n  margin-top: 70px;\n  margin: 70px 8px 8px 8px;\n  border-radius: 8px;\n  padding: ", ";\n  /* \n  border-right: ", ";\n  border-right: ", "; \n  */\n  /* \n    border-right: ",
     ";\n  */\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n\n  ", " {\n    border-width: 1px;\n    // border-image: linear-gradient(to top, #42d785, rgba(0, 0, 0, 0)) 0% 100%;\n    width: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.isDark
@@ -2874,6 +2874,9 @@ var StyledPanel = styled.div(templateObject_1$J || (templateObject_1$J = __makeT
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
+}, function (_a) {
+    var isPushed = _a.isPushed, isMobile = _a.isMobile;
+    return (!isPushed && isMobile ? "none" : "1px solid #374151");
 }, function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     return (isMobile && isPushed ? "6px" : "0");
