@@ -2438,10 +2438,10 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$C || (templateObject_1$C = __
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n"], ["\n  position: absolute;\n  left: ",
+var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-color: #151E31;\n"], ["\n  position: absolute;\n  left: ",
     ";\n  top: ",
     ";\n  padding: ",
-    ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n"])), function (_a) {
+    ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  background-image: none;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-color: #151E31;\n"])), function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     switch (isMobile) {
         case true:
