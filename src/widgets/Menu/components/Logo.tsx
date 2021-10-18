@@ -78,6 +78,7 @@ const StyledMenuButton = styled(MenuButton)`
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border: ${({ isMobile }) => (isMobile ? "none" : "")};
+  background-color: #151E31;
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
