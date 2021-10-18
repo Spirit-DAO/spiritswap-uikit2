@@ -3301,7 +3301,7 @@ var Toast = function (_a) {
                 action ? (React__default['default'].createElement(React__default['default'].Fragment, null,
                     React__default['default'].createElement(Text, { as: "p", fontSize: "14px", mb: "24px" }, descriptionSpecific),
                     React__default['default'].createElement(ToastAction, { action: action }))) : (React__default['default'].createElement(Text, { as: "p", color: "white" }, description)),
-                ttl !== null ? React__default['default'].createElement(AnimatedFader, { style: faderStyle }) : null))));
+                ttl !== null && type !== "info" ? React__default['default'].createElement(AnimatedFader, { style: faderStyle }) : null))));
 };
 var templateObject_1$O, templateObject_2$k;
 
