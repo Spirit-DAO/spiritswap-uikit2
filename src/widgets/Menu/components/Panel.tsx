@@ -27,7 +27,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 91%;
   transition: padding-top 0.2s, width 0.2s;
-  border: 1px solid #374151;
+  border: ${({ isPushed , isMobile}) => (!isPushed && isMobile ? "none" :  "1px solid #374151")};
   margin-top: 70px;
   margin: 70px 8px 8px 8px;
   border-radius: 8px;
