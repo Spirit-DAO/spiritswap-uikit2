@@ -153,7 +153,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                   {entry.label}
                 </LinkLabel>
-                {entry.label === "LGE" ? <NewIcon /> : null} // entry.label === "Bridge" || 
+                {entry.label === "LGE" ? <NewIcon /> : null} 
               </MenuWrapper>
             </MenuLink>
           </MenuEntry>
@@ -162,5 +162,4 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
     </Container>
   );
 };
-
 export default PanelBody;
