@@ -40,6 +40,7 @@ const Container = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
+  margin:8px;
   // border: 1px solid #374151;
   // margin-top: 70px;
   // margin: 70px 8px 8px 8px;
@@ -84,7 +85,7 @@ const MenuWrapper = styled.div`
 const BottomContainer = styled.div`
   position: relative;
   margin-top: auto;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 `;
@@ -152,7 +153,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                 <LinkLabel isPushed={isPushed} inSpirit={inSpiritLinks}>
                   {entry.label}
                 </LinkLabel>
-                {entry.label === "Bridge" || entry.label === "LGE" ? <NewIcon /> : null}
+                {entry.label === "LGE" ? <NewIcon /> : null} // entry.label === "Bridge" || 
               </MenuWrapper>
             </MenuLink>
           </MenuEntry>

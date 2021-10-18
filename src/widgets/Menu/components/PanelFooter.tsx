@@ -14,7 +14,7 @@ interface Props extends PanelProps, PushedProps {}
 const Container = styled.div`
   flex: none;
   padding: 8px 0;
-  margin: 8px;
+
   background: ${({ theme }) => (theme.isDark ? "#0D0E21" : "#E6FDFF")};
   // border-top: solid 1px #42d784;
   // border-bottom: solid 1px #42d784;
@@ -50,7 +50,7 @@ const Price = styled.div`
   padding: 8px;
   border-radius: 4px;
   background-color: rgba(109, 215, 132, 0.15);
-  margin: 8px;
+  margin: 0 8px ;
   // border-bottom: 1px solid #42BE71;
 `;
 
