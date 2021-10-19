@@ -50,7 +50,7 @@ const Price = styled.div`
   padding: 8px;
   border-radius: 4px;
   background-color: rgba(109, 215, 132, 0.15);
-  margin: 0 8px ;
+  margin: 0 8px;
   // border-bottom: 1px solid #42BE71;
 `;
 

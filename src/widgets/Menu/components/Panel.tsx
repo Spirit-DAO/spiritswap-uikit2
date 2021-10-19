@@ -27,11 +27,11 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile:
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 91%;
   transition: padding-top 0.2s, width 0.2s;
-  border: ${({ isPushed , isMobile}) => (!isPushed && isMobile ? "none" :  "1px solid #374151")};
+  border: ${({ isPushed, isMobile }) => (!isPushed && isMobile ? "none" : "1px solid #374151")};
   margin-top: 70px;
   margin: 70px 8px 8px 8px;
   border-radius: 8px;
-  padding: ${({ isMobile , isPushed }) => (isMobile && isPushed ? "6px" : "0")};
+  padding: ${({ isMobile, isPushed }) => (isMobile && isPushed ? "6px" : "0")};
   /* 
   border-right: ${({ isPushed }) => (isPushed ? "2px solid #42d785" : "2px solid #42d785")};
   border-right: ${({ isMobile }) => (isMobile ? "2px solid #42d785" : "none")}; 
