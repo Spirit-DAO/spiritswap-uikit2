@@ -75,6 +75,10 @@ const StyledAlert = styled(Flex)`
   position: relative;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 3px ${({ theme }) => theme.colors.primary};
+
+  @media only screen and (max-width: 580px) {
+    left: 30px;
+  }
 `;
 
 const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {

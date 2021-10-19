@@ -724,7 +724,7 @@ var Details = styled__default['default'].div(templateObject_2$2 || (templateObje
     return (hasHandler ? withHandlerSpacing + "px" : "24px");
 });
 var CloseHandler = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
-var StyledAlert = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"], ["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n"])), function (_a) {
+var StyledAlert = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n\n  @media only screen and (max-width: 580px) {\n    left: 30px;\n  }\n"], ["\n  background-color: ", ";\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px 3px ", ";\n\n  @media only screen and (max-width: 580px) {\n    left: 30px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 }, function (_a) {
