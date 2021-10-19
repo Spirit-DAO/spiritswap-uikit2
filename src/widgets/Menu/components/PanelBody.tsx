@@ -143,7 +143,13 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
         return (
           <MenuEntry
             key={entry.label}
-            isActive={entry.href === location.pathname}
+            isActive={
+              entry.href === location.pathname ||
+              location.pathname === "/pool" ||
+              location.pathname === "/add" ||
+              location.pathname === "/zap" ||
+              location.pathname === "/migrate"
+            }
             className={calloutClass}
             inSpirit={inSpiritLinks}
           >
