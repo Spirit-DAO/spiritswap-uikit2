@@ -2785,11 +2785,7 @@ var PanelBody = function (_a) {
                     entry.items.map(function (item) { return (React.createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
                         React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
-        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname ||
-                location.pathname === "/pool" ||
-                location.pathname === "/add" ||
-                location.pathname === "/zap" ||
-                location.pathname === "/migrate", className: calloutClass, inSpirit: inSpiritLinks },
+        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
             React.createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 React.createElement(MenuWrapper, null,
                     iconElement,
