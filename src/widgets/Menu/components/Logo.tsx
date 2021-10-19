@@ -77,7 +77,8 @@ const StyledMenuButton = styled(MenuButton)`
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border: ${({ isMobile }) => (isMobile ? "none" : "")};
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
