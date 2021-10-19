@@ -2155,9 +2155,12 @@ var Icon$X = function (props) {
 
 styled.text(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled.tspan(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n"])), function (_a) {
+var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n  display:  ", ";\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n  display:  ", ";\n"])), function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "18px" : "4px");
+}, function (_a) {
+    var isMobile = _a.isMobile;
+    return (isMobile ? "none" : "flex");
 });
 // const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
 //   const textColor = isDark ? "#FFFFFF" : "#432918";
@@ -2165,7 +2168,9 @@ var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __mak
 // };
 var Logo = function (_a) {
     _a.isDark; var isPushed = _a.isPushed, props = __rest(_a, ["isDark", "isPushed"]);
-    return (React.createElement(IconContainer, { isPushed: true },
+    var isXl = useMatchBreakpoints().isXl;
+    var isMobile = isXl === false;
+    return (React.createElement(IconContainer, { isMobile: isMobile, isPushed: true },
         React.createElement("img", __assign({}, props, { src: "/images/spiritswap_logo.png", alt: "", width: "80", height: "116" })),
         isPushed ? (React.createElement("span", { className: "desktop-icon", style: { color: "#52D784", marginLeft: "30px", fontSize: "20px" } },
             "Spirit",

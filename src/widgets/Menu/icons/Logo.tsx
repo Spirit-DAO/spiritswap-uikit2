@@ -2,6 +2,7 @@ import React from "react";
 import Svg from "../../../components/Svg/Svg";
 import { SvgProps } from "../../../components/Svg/types";
 import styled from "styled-components";
+import { useMatchBreakpoints } from "../../../hooks";
 
 const Text = styled.text`
   font-size: 26.26px;
@@ -14,7 +15,7 @@ const Tspan = styled.tspan`
   font-weight: 700;
   letter-spacing: 0em;
 `;
-const IconContainer = styled.div<{ isPushed?: boolean }>`
+const IconContainer = styled.div<{ isPushed?: boolean , isMobile?:boolean }>`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -26,6 +27,7 @@ const IconContainer = styled.div<{ isPushed?: boolean }>`
   width: 100%;
   margin-top: ${({ isPushed }) => (isPushed ? `18px` : `4px`)};
   margin-bottom: 5px;
+  display:  ${({ isMobile }) => (isMobile ? `none` : `flex`)};
 `;
 
 interface LogoProps extends SvgProps {
@@ -39,8 +41,11 @@ interface LogoProps extends SvgProps {
 // };
 const Logo: React.FC<LogoProps> = ({ isDark, isPushed, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#432918";
+  const { isXl } = useMatchBreakpoints();
+  const isMobile = isXl === false;
+
   return (
-    <IconContainer isPushed>
+    <IconContainer isMobile={isMobile} isPushed>
       <img {...props} src="/images/spiritswap_logo.png" alt="" width="80" height="116" />
       {isPushed ? (
         <span className="desktop-icon" style={{ color: "#52D784", marginLeft: "30px", fontSize: "20px" }}>
