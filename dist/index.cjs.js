@@ -2456,10 +2456,10 @@ var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObjec
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));\n"], ["\n  position: absolute;\n  left: ",
+var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"], ["\n  position: absolute;\n  left: ",
     ";\n  top: ",
     ";\n  padding: ",
-    ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));\n"])), function (_a) {
+    ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"])), function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     switch (isMobile) {
         case true:
@@ -2474,7 +2474,7 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d
         case true:
             return "10px";
         case false:
-            return "350px";
+            return "85px";
     }
     return "";
 }, function (_a) {
@@ -2483,7 +2483,7 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d
         case true:
             return 0;
         case false:
-            return "50px 5px";
+            return 0;
     }
     return "";
 }, function (_a) {

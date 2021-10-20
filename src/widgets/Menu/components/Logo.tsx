@@ -54,7 +54,7 @@ const StyledMenuButton = styled(MenuButton)`
       case true:
         return "10px";
       case false:
-        return "350px";
+        return "85px";
       default:
         break;
     }
@@ -65,12 +65,13 @@ const StyledMenuButton = styled(MenuButton)`
       case true:
         return 0;
       case false:
-        return "50px 5px";
+        return 0;
       default:
         break;
     }
     return "";
   }};
+  width: 31px;
   border-right: 1px solid #42d785;
   border-top: 1px solid #42d785;
   border-bottom: 1px solid #42d785;
@@ -78,7 +79,7 @@ const StyledMenuButton = styled(MenuButton)`
   border-top-left-radius: 0;
   border: ${({ isMobile }) => (isMobile ? "none" : "")};
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));
+    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
