@@ -9,13 +9,16 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps { }
 
 const Container = styled.div`
   flex: none;
   padding: 8px 0;
-
   background: ${({ theme }) => (theme.isDark ? "#0D0E21" : "#E6FDFF")};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   // border-top: solid 1px #42d784;
   // border-bottom: solid 1px #42d784;
 `;
@@ -39,6 +42,7 @@ const SocialEntry = styled.div`
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 8px;
+  width: 100%;
 `;
 
 const Price = styled.div`
