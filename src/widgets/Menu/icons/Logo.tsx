@@ -23,10 +23,8 @@ const IconContainer = styled.div<{ isPushed?: boolean , isMobile?:boolean }>`
   align-items: center;
   padding-right: 20px;
   padding-left: 16px;
-  padding-top: 8px;
   width: 100%;
-  margin-top: ${({ isPushed }) => (isPushed ? `18px` : `4px`)};
-  margin-bottom: 5px;
+  margin-top: ${({ isPushed }) => (isPushed ? `6px` : `4px`)};
   display:  ${({ isMobile }) => (isMobile ? `none` : `flex`)};
 `;
 

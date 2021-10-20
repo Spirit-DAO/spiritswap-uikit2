@@ -2168,9 +2168,9 @@ var Icon$X = function (props) {
 
 styled__default['default'].text(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled__default['default'].tspan(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n  display:  ", ";\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  padding-top: 8px;\n  width: 100%;\n  margin-top: ", ";\n  margin-bottom: 5px;\n  display:  ", ";\n"])), function (_a) {
+var IconContainer = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display:  ", ";\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display:  ", ";\n"])), function (_a) {
     var isPushed = _a.isPushed;
-    return (isPushed ? "18px" : "4px");
+    return (isPushed ? "6px" : "4px");
 }, function (_a) {
     var isMobile = _a.isMobile;
     return (isMobile ? "none" : "flex");
@@ -2456,10 +2456,10 @@ var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObjec
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));\n"], ["\n  position: absolute;\n  left: ",
+var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"], ["\n  position: absolute;\n  left: ",
     ";\n  top: ",
     ";\n  padding: ",
-    ";\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(18, 25, 44), rgb(18, 25, 44));\n"])), function (_a) {
+    ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"])), function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     switch (isMobile) {
         case true:
@@ -2474,7 +2474,7 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d
         case true:
             return "10px";
         case false:
-            return "350px";
+            return "85px";
     }
     return "";
 }, function (_a) {
@@ -2483,7 +2483,7 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d
         case true:
             return 0;
         case false:
-            return "50px 5px";
+            return 0;
     }
     return "";
 }, function (_a) {
@@ -2844,13 +2844,13 @@ var LangSelector = function (_a) {
 };
 var LangSelector$1 = React__default['default'].memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
-var Container$3 = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  // border-top: solid 1px #42d784;\n  // border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n\n  background: ", ";\n  // border-top: solid 1px #42d784;\n  // border-bottom: solid 1px #42d784;\n"])), function (_a) {
+var Container$3 = styled__default['default'].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  // border-top: solid 1px #42d784;\n  // border-bottom: solid 1px #42d784;\n"], ["\n  flex: none;\n  padding: 8px 0;\n  background: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  // border-top: solid 1px #42d784;\n  // border-bottom: solid 1px #42d784;\n"])), function (_a) {
     var theme = _a.theme;
     return (theme.isDark ? "#0D0E21" : "#E6FDFF");
 });
 styled__default['default'].div(templateObject_2$h || (templateObject_2$h = __makeTemplateObject(["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"], ["\n  height: 43px;\n  margin: 40px 5px 25px 5px;\n"])));
 var SettingsEntry = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  //justify-content: space-between;\n  justify-content: flex-start;\n  height: ", "px;\n  //padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
-var SocialEntry = styled__default['default'].div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
+var SocialEntry = styled__default['default'].div(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n  width: 100%;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n  width: 100%;\n"])), MENU_ENTRY_HEIGHT);
 var Price = styled__default['default'].div(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color: rgba(109, 215, 132, 0.15);\n  margin: 0 8px;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color: rgba(109, 215, 132, 0.15);\n  margin: 0 8px;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
