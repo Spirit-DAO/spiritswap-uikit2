@@ -2474,7 +2474,7 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$d
         case true:
             return "10px";
         case false:
-            return "85px";
+            return "79px";
     }
     return "";
 }, function (_a) {

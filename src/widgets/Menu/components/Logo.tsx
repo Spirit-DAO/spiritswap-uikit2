@@ -54,7 +54,7 @@ const StyledMenuButton = styled(MenuButton)`
       case true:
         return "10px";
       case false:
-        return "85px";
+        return "79px";
       default:
         break;
     }
