@@ -92,6 +92,7 @@ const BottomContainer = styled.div`
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePriceUsd }) => {
   const location = useLocation();
+  
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -126,7 +127,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
                     <MenuBottomEntry
                       key={item.href}
                       secondary
-                      isActive={item.href === location.pathname}
+                      isActive={item.href.toLowerCase() === location.pathname.toLowerCase()}
                       onClick={handleClick}
                       inSpirit={inSpiritLinks}
                     >

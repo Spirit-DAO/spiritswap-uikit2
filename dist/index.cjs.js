@@ -2800,7 +2800,7 @@ var PanelBody = function (_a) {
             entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
             return (React__default['default'].createElement(React__default['default'].Fragment, null,
                 React__default['default'].createElement(BottomContainer, null, isPushed &&
-                    entry.items.map(function (item) { return (React__default['default'].createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
+                    entry.items.map(function (item) { return (React__default['default'].createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href.toLowerCase() === location.pathname.toLowerCase(), onClick: handleClick, inSpirit: inSpiritLinks },
                         React__default['default'].createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
