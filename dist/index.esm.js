@@ -2461,7 +2461,7 @@ var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_
         case true:
             return "10px";
         case false:
-            return "85px";
+            return "79px";
     }
     return "";
 }, function (_a) {
@@ -2787,7 +2787,7 @@ var PanelBody = function (_a) {
             entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
             return (React.createElement(React.Fragment, null,
                 React.createElement(BottomContainer, null, isPushed &&
-                    entry.items.map(function (item) { return (React.createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick, inSpirit: inSpiritLinks },
+                    entry.items.map(function (item) { return (React.createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href.toLowerCase() === location.pathname.toLowerCase(), onClick: handleClick, inSpirit: inSpiritLinks },
                         React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
