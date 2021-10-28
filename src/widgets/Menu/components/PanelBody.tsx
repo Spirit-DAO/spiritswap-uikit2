@@ -105,7 +105,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
         const inSpiritLinks = entry.label === "inSpirit" || entry.label === "Boosted Farms" ? "inSpirit" : "noInSpirit";
 
         if (entry.items) {
-          const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
+          const itemsMatchIndex = entry.items.findIndex((item) => {
+            return item.href === location.pathname || entry.href?.includes('exchange') && location.pathname.includes('exchange')
+          });
           const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
 
           return (
@@ -144,7 +146,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
         return (
           <MenuEntry
             key={entry.label}
-            isActive={entry.href === location.pathname}
+            isActive={entry.href === location.pathname || entry.href?.includes('exchange') && location.pathname.includes('exchange') }
             className={calloutClass}
             inSpirit={inSpiritLinks}
           >

@@ -2791,19 +2791,23 @@ var PanelBody = function (_a) {
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
     return (React__default['default'].createElement(Container$2, null, links.map(function (entry) {
+        var _a;
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
         var inSpiritLinks = entry.label === "inSpirit" || entry.label === "Boosted Farms" ? "inSpirit" : "noInSpirit";
         if (entry.items) {
-            var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
+            var itemsMatchIndex = entry.items.findIndex(function (item) {
+                var _a;
+                return item.href === location.pathname || ((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes('exchange')) && location.pathname.includes('exchange');
+            });
             entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
             return (React__default['default'].createElement(React__default['default'].Fragment, null,
                 React__default['default'].createElement(BottomContainer, null, isPushed &&
                     entry.items.map(function (item) { return (React__default['default'].createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href.toLowerCase() === location.pathname.toLowerCase(), onClick: handleClick, inSpirit: inSpiritLinks },
                         React__default['default'].createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
-        return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass, inSpirit: inSpiritLinks },
+        return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname || ((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes('exchange')) && location.pathname.includes('exchange'), className: calloutClass, inSpirit: inSpiritLinks },
             React__default['default'].createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 React__default['default'].createElement(MenuWrapper, null,
                     iconElement,
