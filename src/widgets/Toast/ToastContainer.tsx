@@ -29,12 +29,14 @@ const StyledToastContainer = styled.div`
   }
 `;
 
-const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 6000, stackSpacing = 24 }) => {
+const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 6000 }) => {
   return (
     <StyledToastContainer>
       <TransitionGroup>
         {toasts.map((toast, index) => {
           const zIndex = (ZINDEX - index).toString();
+          const stackSpacing = 150;
+
           const top = TOP_POSITION + index * stackSpacing;
 
           return (
