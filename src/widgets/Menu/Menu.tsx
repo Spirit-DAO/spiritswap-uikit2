@@ -116,12 +116,15 @@ const Menu: React.FC<NavProps> = ({
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu} isPushed={isPushed}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
+        {showMenu && (
+          <Logo
+            isPushed={isPushed}
+            togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
+            isDark={isDark}
+            href={homeLink?.href ?? "/"}
+          />
+        )}
+
         <Flex>{showMenu ? <UserBlock account={account} login={login} logout={logout} isDark={isDark} /> : <></>}</Flex>
       </StyledNav>
       <BodyWrapper>
