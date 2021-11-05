@@ -2155,7 +2155,7 @@ var Icon$X = function (props) {
 
 styled.text(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n"])));
 styled.tspan(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"], ["\n  font-size: 26.26px;\n  font-family: GoodTimingRg-Bold, Good Timing !important;\n  font-weight: 700;\n  letter-spacing: 0em;\n"])));
-var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display:  ", ";\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display:  ", ";\n"])), function (_a) {
+var IconContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display: ", ";\n"], ["\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  padding-right: 20px;\n  padding-left: 16px;\n  width: 100%;\n  margin-top: ", ";\n  display: ", ";\n"])), function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "6px" : "4px");
 }, function (_a) {
@@ -2786,7 +2786,8 @@ var PanelBody = function (_a) {
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) {
                 var _a;
-                return item.href === location.pathname || ((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes('exchange')) && location.pathname.includes('exchange');
+                return (item.href === location.pathname ||
+                    (((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes("exchange")) && location.pathname.includes("exchange")));
             });
             entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
             return (React.createElement(React.Fragment, null,
@@ -2794,7 +2795,8 @@ var PanelBody = function (_a) {
                     entry.items.map(function (item) { return (React.createElement(MenuBottomEntry, { key: item.href, secondary: true, isActive: item.href.toLowerCase() === location.pathname.toLowerCase(), onClick: handleClick, inSpirit: inSpiritLinks },
                         React.createElement(MenuLink, { href: item.href, target: item.target }, item.label))); }))));
         }
-        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname || ((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes('exchange')) && location.pathname.includes('exchange'), className: calloutClass, inSpirit: inSpiritLinks },
+        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname ||
+                (((_a = entry.href) === null || _a === void 0 ? void 0 : _a.includes("exchange")) && location.pathname.includes("exchange")), className: calloutClass, inSpirit: inSpiritLinks },
             React.createElement(MenuLink, { href: entry.href, target: entry.target, onClick: handleClick },
                 React.createElement(MenuWrapper, null,
                     iconElement,
@@ -3129,7 +3131,7 @@ var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
-    var glowing = keyframes(templateObject_1$M || (templateObject_1$M = __makeTemplateObject([" \n  0% {\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
+    var glowing = keyframes(templateObject_1$M || (templateObject_1$M = __makeTemplateObject([" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
     var OwnButtonDisconnected = styled(Button)(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    background-color: #212230;\n    background-clip: content-box, border-box;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    background-color: #212230;\n    background-clip: content-box, border-box;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "])), function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "#fff" : "#0ad9e4");
