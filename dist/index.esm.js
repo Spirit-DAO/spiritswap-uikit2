@@ -2443,10 +2443,10 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$C || (templateObject_1$C = __
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"], ["\n  position: absolute;\n  left: ",
+var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n\n    @media only screen and (max-width: 970px) { \n      background-image: none;\n    }\n"], ["\n  position: absolute;\n  left: ",
     ";\n  top: ",
     ";\n  padding: ",
-    ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n"])), function (_a) {
+    ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n    linear-gradient(90deg, rgb(21, 30, 49) 40%, rgb(21, 30, 49) 40%);\n\n    @media only screen and (max-width: 970px) { \n      background-image: none;\n    }\n"])), function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     switch (isMobile) {
         case true:
@@ -3129,24 +3129,29 @@ var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
-    var OwnButton = styled(Button)(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";\n  "])), function (_a) {
+    var glowing = keyframes(templateObject_1$M || (templateObject_1$M = __makeTemplateObject([" \n  0% {\n    // background-color: #2ba805;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    box-shadow: 0 0 25px rgb(96 213 220);\n\n  }\n  40% {\n    // background-color: #49e819;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n\n  60% {\n    // background-color: #49e819;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    // background-color: #2ba805;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    // background-color: #2ba805;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    // background-color: #2ba805;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    box-shadow: 0 0 25px rgb(96 213 220);\n\n  }\n  40% {\n    // background-color: #49e819;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n\n  60% {\n    // background-color: #49e819;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    // background-color: #2ba805;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    // background-color: #2ba805;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
+    var OwnButton = styled(Button)(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";    \n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px transparent;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #42d784, #60d5dc);\n    background-origin: border-box;\n    background-clip: content-box, border-box;\n    box-shadow: ", ";    \n  "])), function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "#6DD784" : "#0d0e21");
     }, function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "2px 1000px 1px #1f2b46 inset" : "2px 1000px 1px #fff inset");
     });
-    return (React.createElement("div", null, account ? (React.createElement(OwnButton, { scale: "sm", onClick: function () {
+    var OwnButtonConnect = styled(Button)(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    padding: 0 16px;\n    background-color: transparent;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    padding: 0 16px;\n    background-color: transparent;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "])), function (_a) {
+        var theme = _a.theme;
+        return (theme.isDark ? "#6DD784" : "#0d0e21");
+    }, glowing);
+    return (React.createElement("div", null, account ? (React.createElement(OwnButton, { scale: "sm", id: "wallet", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React.createElement(OwnButton, { scale: "sm", onClick: function () {
+        } }, accountEllipsis)) : (React.createElement(OwnButtonConnect, { scale: "sm", id: "connect", onClick: function () {
             onPresentConnectModal();
         } }, "Connect"))));
 };
 var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
-var templateObject_1$M;
+var templateObject_1$M, templateObject_2$j, templateObject_3$b;
 
 var Wrapper$2 = styled.div(templateObject_1$N || (templateObject_1$N = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled.nav(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled.nav(templateObject_2$k || (templateObject_2$k = __makeTemplateObject(["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  //top: ", ";\n  top: 0;\n  left: 0;\n  transition: 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: ", ";\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // border-bottom: ", ";\n  border-bottom: none;\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
@@ -3156,7 +3161,7 @@ var StyledNav = styled.nav(templateObject_2$j || (templateObject_2$j = __makeTem
     var showMenu = _a.showMenu;
     return (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none");
 });
-var BodyWrapper = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
+var BodyWrapper = styled.div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled.div(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
@@ -3224,7 +3229,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$N, templateObject_2$j, templateObject_3$b, templateObject_4$5, templateObject_5$3;
+var templateObject_1$N, templateObject_2$k, templateObject_3$c, templateObject_4$5, templateObject_5$3;
 
 var ToastAction = function (_a) {
     var action = _a.action;
@@ -3252,7 +3257,7 @@ var StyledToast = styled.div(templateObject_1$O || (templateObject_1$O = __makeT
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
-var Fader = styled.div(templateObject_2$k || (templateObject_2$k = __makeTemplateObject(["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"], ["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"])), function (_a) {
+var Fader = styled.div(templateObject_2$l || (templateObject_2$l = __makeTemplateObject(["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"], ["\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 3px;\n  background-color: ", ";\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.success;
 });
@@ -3312,7 +3317,7 @@ var Toast = function (_a) {
                     React.createElement(ToastAction, { action: action }))) : (React.createElement(Text, { as: "p", color: "white" }, description)),
                 ttl !== null && type !== "info" ? React.createElement(AnimatedFader, { style: faderStyle }) : null))));
 };
-var templateObject_1$O, templateObject_2$k;
+var templateObject_1$O, templateObject_2$l;
 
 var ZINDEX = 1000;
 var TOP_POSITION = 80; // Initial position from the top
