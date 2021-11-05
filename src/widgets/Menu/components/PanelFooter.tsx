@@ -9,7 +9,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 
-interface Props extends PanelProps, PushedProps { }
+interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   flex: none;

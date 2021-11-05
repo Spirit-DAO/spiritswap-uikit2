@@ -92,7 +92,6 @@ const BottomContainer = styled.div`
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePriceUsd }) => {
   const location = useLocation();
-  
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -106,7 +105,10 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
 
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => {
-            return item.href === location.pathname || entry.href?.includes('exchange') && location.pathname.includes('exchange')
+            return (
+              item.href === location.pathname ||
+              (entry.href?.includes("exchange") && location.pathname.includes("exchange"))
+            );
           });
           const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
 
@@ -146,7 +148,10 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
         return (
           <MenuEntry
             key={entry.label}
-            isActive={entry.href === location.pathname || entry.href?.includes('exchange') && location.pathname.includes('exchange') }
+            isActive={
+              entry.href === location.pathname ||
+              (entry.href?.includes("exchange") && location.pathname.includes("exchange"))
+            }
             className={calloutClass}
             inSpirit={inSpiritLinks}
           >
