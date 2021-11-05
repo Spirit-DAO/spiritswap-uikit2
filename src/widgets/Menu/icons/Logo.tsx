@@ -15,7 +15,7 @@ const Tspan = styled.tspan`
   font-weight: 700;
   letter-spacing: 0em;
 `;
-const IconContainer = styled.div<{ isPushed?: boolean , isMobile?:boolean }>`
+const IconContainer = styled.div<{ isPushed?: boolean; isMobile?: boolean }>`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -25,7 +25,7 @@ const IconContainer = styled.div<{ isPushed?: boolean , isMobile?:boolean }>`
   padding-left: 16px;
   width: 100%;
   margin-top: ${({ isPushed }) => (isPushed ? `6px` : `4px`)};
-  display:  ${({ isMobile }) => (isMobile ? `none` : `flex`)};
+  display: ${({ isMobile }) => (isMobile ? `none` : `flex`)};
 `;
 
 interface LogoProps extends SvgProps {

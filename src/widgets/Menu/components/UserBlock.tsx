@@ -19,21 +19,27 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
 
   const glowing = keyframes` 
   0% {
+    background-color: #212230;
     box-shadow: rgb(96 213 220) 0px 0px 20px;
   }
   20%{
+    background-color: #212230;
     box-shadow: 0 0 25px rgb(96 213 220);
   }
   40% {
+    background-color: #212230;
     box-shadow: 0 0 15px rgb(96 213 220);
   }
   60% {
+    background-color: #212230;
     box-shadow: 0 0 10px rgb(96 213 220);
   }
   80% {
+    background-color: #212230;
     box-shadow: 0 0 15px rgb(96 213 220);
   }
   100% {
+    background-color: #212230;
     box-shadow: 0 0 20px rgb(96 213 220);
   }
 `;
