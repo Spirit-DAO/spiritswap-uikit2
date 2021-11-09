@@ -2443,10 +2443,10 @@ var StyledLink$1 = styled(Link$1)(templateObject_1$C || (templateObject_1$C = __
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background: transparent;\n"], ["\n  position: absolute;\n  left: ",
+var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  position: absolute;\n  left: ", ";\n  top: ", ";\n  padding: ", ";\n  width: 31px;\n  border-right: ", ";\n  border-top: ", ";\n  border-bottom: ", ";\n  border: ", ";\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  background: transparent;\n"], ["\n  position: absolute;\n  left: ",
     ";\n  top: ",
     ";\n  padding: ",
-    ";\n  width: 31px;\n  border-right: 1px solid #42d785;\n  border-top: 1px solid #42d785;\n  border-bottom: 1px solid #42d785;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  border: ", ";\n  background: transparent;\n"])), function (_a) {
+    ";\n  width: 31px;\n  border-right: ", ";\n  border-top: ", ";\n  border-bottom: ", ";\n  border: ", ";\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  background: transparent;\n"])), function (_a) {
     var isMobile = _a.isMobile, isPushed = _a.isPushed;
     switch (isMobile) {
         case true:
@@ -2473,6 +2473,15 @@ var StyledMenuButton = styled(MenuButton)(templateObject_2$d || (templateObject_
             return 0;
     }
     return "";
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785");
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785");
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785");
 }, function (_a) {
     var isMobile = _a.isMobile;
     return (isMobile ? "none" : "");
@@ -3224,7 +3233,7 @@ var Menu = function (_a) {
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$2, null,
         React.createElement(StyledNav, { showMenu: showMenu, isPushed: isPushed },
-            showMenu && (React.createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" })),
+            React.createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null, showMenu ? React.createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark }) : React.createElement(React.Fragment, null))),
         React.createElement(BodyWrapper, null,
             React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
