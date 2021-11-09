@@ -72,12 +72,12 @@ const StyledMenuButton = styled(MenuButton)`
     return "";
   }};
   width: 31px;
-  border-right: 1px solid #42d785;
-  border-top: 1px solid #42d785;
-  border-bottom: 1px solid #42d785;
+  border-right: ${({ isPushed }) => (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785")};
+  border-top: ${({ isPushed }) => (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785")};
+  border-bottom: ${({ isPushed }) => (isPushed ? "1px solid rgb(55, 65, 81)" : "1px solid #42d785")};
+  border: ${({ isMobile }) => (isMobile ? "none" : "")};
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border: ${({ isMobile }) => (isMobile ? "none" : "")};
   background: transparent;
 `;
 
