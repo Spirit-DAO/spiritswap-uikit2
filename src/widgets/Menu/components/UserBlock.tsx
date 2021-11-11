@@ -9,11 +9,12 @@ import { Login } from "../../WalletModal/types";
 interface Props {
   account?: string;
   login: Login;
+  showMenu: boolean;
   logout: () => void;
   isDark: boolean;
 }
 
-const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
+const UserBlock: React.FC<Props> = ({ account, login, logout, showMenu }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
@@ -48,9 +49,9 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     border-radius: 0.5rem;
     color: ${({ theme }) => (theme.isDark ? `#fff` : `#0ad9e4`)};
     border: solid 3px #0ae4b5;
-    background-image: none;
-    background-color: #212230;
     background-clip: content-box, border-box;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      linear-gradient(90deg, #0d0e21, #0d0e21);
     animation: ${glowing} ease-in-out 2s infinite;
     &:hover {
       opacity: 0.6;
@@ -69,9 +70,23 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     box-shadow: ${({ theme }) => (theme.isDark ? `2px 1000px 1px #1f2b46 inset` : `2px 1000px 1px #fff inset`)};
   `;
 
+  if (!account) {
+    return (
+      <div>
+        <OwnButtonDisconnected
+          scale="sm"
+          onClick={() => {
+            onPresentConnectModal();
+          }}
+        >
+          Connect
+        </OwnButtonDisconnected>
+      </div>
+    );
+  }
   return (
     <div>
-      {account ? (
+      {account && showMenu ? (
         <OwnButtonConnected
           scale="sm"
           onClick={() => {
@@ -81,17 +96,14 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           {accountEllipsis}
         </OwnButtonConnected>
       ) : (
-        <OwnButtonDisconnected
-          scale="sm"
-          onClick={() => {
-            onPresentConnectModal();
-          }}
-        >
-          Connect
-        </OwnButtonDisconnected>
+        <></>
       )}
     </div>
   );
 };
 
-export default React.memo(UserBlock, (prevProps, nextProps) => prevProps.account === nextProps.account);
+const propsAreEqual = (prevProps: Props, nextProps: Props) => {
+  return prevProps.showMenu === nextProps.showMenu && prevProps.account === nextProps.account;
+};
+
+export default React.memo(UserBlock, propsAreEqual);
