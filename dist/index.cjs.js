@@ -3141,11 +3141,11 @@ var useWalletModal = function (login, logout, account) {
 };
 
 var UserBlock = function (_a) {
-    var account = _a.account, login = _a.login, logout = _a.logout;
+    var account = _a.account, login = _a.login, logout = _a.logout, showMenu = _a.showMenu;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
     var glowing = styled.keyframes(templateObject_1$M || (templateObject_1$M = __makeTemplateObject([" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
-    var OwnButtonDisconnected = styled__default['default'](Button)(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    background-color: #212230;\n    background-clip: content-box, border-box;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-image: none;\n    background-color: #212230;\n    background-clip: content-box, border-box;\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "])), function (_a) {
+    var OwnButtonDisconnected = styled__default['default'](Button)(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-clip: content-box, border-box;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #0d0e21, #0d0e21);\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-clip: content-box, border-box;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #0d0e21, #0d0e21);\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "])), function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "#fff" : "#0ad9e4");
     }, glowing);
@@ -3156,13 +3156,20 @@ var UserBlock = function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "2px 1000px 1px #1f2b46 inset" : "2px 1000px 1px #fff inset");
     });
-    return (React__default['default'].createElement("div", null, account ? (React__default['default'].createElement(OwnButtonConnected, { scale: "sm", onClick: function () {
+    if (!account) {
+        return (React__default['default'].createElement("div", null,
+            React__default['default'].createElement(OwnButtonDisconnected, { scale: "sm", onClick: function () {
+                    onPresentConnectModal();
+                } }, "Connect")));
+    }
+    return (React__default['default'].createElement("div", null, account && showMenu ? (React__default['default'].createElement(OwnButtonConnected, { scale: "sm", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React__default['default'].createElement(OwnButtonDisconnected, { scale: "sm", onClick: function () {
-            onPresentConnectModal();
-        } }, "Connect"))));
+        } }, accountEllipsis)) : (React__default['default'].createElement(React__default['default'].Fragment, null))));
 };
-var UserBlock$1 = React__default['default'].memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
+var propsAreEqual = function (prevProps, nextProps) {
+    return prevProps.showMenu === nextProps.showMenu && prevProps.account === nextProps.account;
+};
+var UserBlock$1 = React__default['default'].memo(UserBlock, propsAreEqual);
 var templateObject_1$M, templateObject_2$j, templateObject_3$b;
 
 var Wrapper$2 = styled__default['default'].div(templateObject_1$N || (templateObject_1$N = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
@@ -3238,7 +3245,8 @@ var Menu = function (_a) {
     return (React__default['default'].createElement(Wrapper$2, null,
         React__default['default'].createElement(StyledNav, { showMenu: showMenu, isPushed: isPushed },
             React__default['default'].createElement(Logo$2, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-            React__default['default'].createElement(Flex, null, showMenu ? React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark }) : React__default['default'].createElement(React__default['default'].Fragment, null))),
+            React__default['default'].createElement(Flex, null,
+                React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout, isDark: isDark, showMenu: showMenu }))),
         React__default['default'].createElement(BodyWrapper, null,
             React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
