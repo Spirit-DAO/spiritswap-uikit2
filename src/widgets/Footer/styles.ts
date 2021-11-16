@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 500px) {
     margin-top: -80px;
   }
-`
+`;
 
 export const Body = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ export const Body = styled.div`
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
-`
+`;
 
 export const SocialColum = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ export const SocialColum = styled.div`
     margin-bottom: 40px;
     margin-right: 0;
   }
-`
+`;
 export const SocialIcons = styled.div`
   display: flex;
   -webkit-box-pack: justify;
@@ -52,39 +52,39 @@ export const SocialIcons = styled.div`
     margin-bottom: 30px;
     justify-content: space-around;
   }
-`
+`;
 
 export const Colums = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
-  margin-right: 15px;
   @media only screen and (max-width: 1000px) {
     width: 100%;
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
   }
-`
+`;
 
 export const Title = styled(Text)`
   box-sizing: border-box;
   margin: 0px;
-  min-width: 0px;
-  font-weight: 600;
   font-size: 16px;
-`
+  font-weight: 600;
+  color: #6dd784;
+`;
 
 export const StyledLink = styled(Link)`
   font-size: 14px;
   cursor: pointer;
   font-weight: 500;
+  color: #fcfae2;
 
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 export const Info = styled.div`
   display: flex;
@@ -94,7 +94,7 @@ export const Info = styled.div`
     width: 100%;
     justify-content: space-evenly;
   }
-`
+`;
 
 export const InfoItems = styled(Link)`
   margin-right: 2rem;
@@ -104,24 +104,27 @@ export const InfoItems = styled(Link)`
   @media only screen and (max-width: 1000px) {
     margin: 0;
   }
-`
+`;
+
 export const LinksColum = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
   align-items: flex-start;
+  justify-items: center;
 
   @media only screen and (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
   }
-`
+`;
 
 export const Copyright = styled(Text)`
   text-align: start;
   font-size: 14px;
   margin-top: 2rem;
+  color: gray;
   @media only screen and (max-width: 1000px) {
     text-align: center;
   }
-`
+`;

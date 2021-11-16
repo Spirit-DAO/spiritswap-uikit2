@@ -5,10 +5,9 @@ import styled from "styled-components";
 import { SvgProps } from "../../components/Svg";
 import Link from "../../components/Link/Link";
 import * as IconModule from "../Menu/icons";
-import  socials  from "./config";
+import socials from "./config";
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
-
 
 const SocialIcons = styled.div`
   display: flex;
@@ -28,7 +27,7 @@ const SocialLinks: React.FC = () => (
       const Icon = Icons[social.icon];
       const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
       return (
-        <Link external key={social.label} href={social.href} aria-label={social.label} >
+        <Link external key={social.label} href={social.href} aria-label={social.label}>
           <Icon {...iconProps} />
         </Link>
       );

@@ -6,19 +6,20 @@ import {
   Colums,
   Title,
   StyledLink,
-  Info,
   InfoItems,
+  Info,
   LinksColum,
   Copyright,
 } from "./styles";
 
 import SocialLinks from "./SocialLinks";
+
 const Footer: React.FC = () => {
   return (
     <Wrapper>
       <Body>
         <SocialColum>
-          <SocialLinks/>
+          <SocialLinks />
           <Info>
             <InfoItems>Analytics</InfoItems>
             <InfoItems>Docs</InfoItems>
