@@ -27,6 +27,7 @@ export * from "./components/Table";
 export * from "./hooks";
 
 // Widgets
+export * from "./widgets/Footer";
 export * from "./widgets/Modal";
 export * from "./widgets/Menu";
 export * from "./widgets/Toast";
