@@ -124,8 +124,7 @@ const Menu: React.FC<NavProps> = ({
         />
 
         <Flex>
-          {}
-          <UserBlock account={account} login={login} logout={logout} isDark={isDark} showMenu={showMenu}/>
+          <UserBlock account={account} login={login} logout={logout} isDark={isDark} showMenu={showMenu} />
         </Flex>
       </StyledNav>
       <BodyWrapper>
