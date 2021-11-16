@@ -21,9 +21,15 @@ const Footer: React.FC = () => {
         <SocialColum>
           <SocialLinks />
           <Info>
-            <InfoItems>Analytics</InfoItems>
-            <InfoItems>Docs</InfoItems>
-            <InfoItems>About Us</InfoItems>
+            <InfoItems href="https://info.spiritswap.finance/" external>
+              Analytics
+            </InfoItems>
+            <InfoItems href="https://layer3.gitbook.io/spirit-swap/" external>
+              Docs
+            </InfoItems>
+            <InfoItems href="https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/" external>
+              About Us
+            </InfoItems>
           </Info>
 
           <Copyright>© 2021 SpiritSwap</Copyright>
@@ -32,31 +38,52 @@ const Footer: React.FC = () => {
         <LinksColum>
           <Colums>
             <Title>Spirit DEX</Title>
-            <StyledLink href="https://defillama.com/protocol/spiritswap">Defi Llama</StyledLink>
-            <StyledLink href="https://www.coingecko.com/en/exchanges/spiritswap">Coingecko</StyledLink>
-            <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/">CoinMarketCap</StyledLink>
+            <StyledLink href="https://defillama.com/protocol/spiritswap" external>
+              Defi Llama
+            </StyledLink>
+            <StyledLink href="https://www.coingecko.com/en/exchanges/spiritswap" external>
+              Coingecko
+            </StyledLink>
+            <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/" external>
+              CoinMarketCap
+            </StyledLink>
           </Colums>
 
           <Colums>
             <Title>Exchanges</Title>
-            <StyledLink href="https://www.gate.io/trade/SPIRIT_USDT">Gate.io</StyledLink>
-            <StyledLink href="https://www.mexc.com/exchange/SPIRIT_USDT">MEXC</StyledLink>
-            <StyledLink href="https://www.hotbit.io/exchange?symbol=SPIRIT_USDT">Hotbit</StyledLink>
+            <StyledLink href="https://www.gate.io/trade/SPIRIT_USDT" external>
+              Gate.io
+            </StyledLink>
+            <StyledLink href="https://www.mexc.com/exchange/SPIRIT_USDT" external>
+              MEXC
+            </StyledLink>
+            <StyledLink href="https://www.hotbit.io/exchange?symbol=SPIRIT_USDT" external>
+              Hotbit
+            </StyledLink>
           </Colums>
           <Colums>
             <Title>Spirit Token</Title>
-            <StyledLink href="https://www.coingecko.com/en/coins/spiritswap">Coingecko</StyledLink>
-            <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/">CoinMarketCap</StyledLink>
+            <StyledLink href="https://www.coingecko.com/en/coins/spiritswap" external>
+              Coingecko
+            </StyledLink>
+            <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/" external>
+              CoinMarketCap
+            </StyledLink>
           </Colums>
 
           <Colums>
             <Title>Business</Title>
-            <StyledLink href="https://forms.gle/NAC6oFjSytU5Gs2Q9">Apply for Farm</StyledLink>
+            <StyledLink href="https://forms.gle/NAC6oFjSytU5Gs2Q9" external>
+              Apply for Farm
+            </StyledLink>
           </Colums>
 
           <Colums>
             <Title>Auditors</Title>
-            <StyledLink href="https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf">
+            <StyledLink
+              href="https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf"
+              external
+            >
               Mixbytes
             </StyledLink>
           </Colums>

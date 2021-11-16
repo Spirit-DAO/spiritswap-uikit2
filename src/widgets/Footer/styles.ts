@@ -98,6 +98,7 @@ export const Info = styled.div`
 
 export const InfoItems = styled(Link)`
   margin-right: 2rem;
+  cursor: pointer;
   &:hover {
     text-decoration: underline;
   }

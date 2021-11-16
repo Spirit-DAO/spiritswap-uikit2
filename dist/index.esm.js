@@ -2003,7 +2003,7 @@ var Colums = styled.div(templateObject_5$1 || (templateObject_5$1 = __makeTempla
 var Title = styled(Text)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  box-sizing: border-box;\n  margin: 0px;\n  font-size: 16px;\n  font-weight: 600;\n  color: #6dd784;\n"], ["\n  box-sizing: border-box;\n  margin: 0px;\n  font-size: 16px;\n  font-weight: 600;\n  color: #6dd784;\n"])));
 var StyledLink$1 = styled(Link)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  font-size: 14px;\n  cursor: pointer;\n  font-weight: 500;\n  color: #fcfae2;\n\n  &:hover {\n    text-decoration: underline;\n  }\n"], ["\n  font-size: 14px;\n  cursor: pointer;\n  font-weight: 500;\n  color: #fcfae2;\n\n  &:hover {\n    text-decoration: underline;\n  }\n"])));
 var Info = styled.div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  display: flex;\n  width: 100%;\n  margin-top: 2rem;\n  @media only screen and (max-width: 1000px) {\n    width: 100%;\n    justify-content: space-evenly;\n  }\n"], ["\n  display: flex;\n  width: 100%;\n  margin-top: 2rem;\n  @media only screen and (max-width: 1000px) {\n    width: 100%;\n    justify-content: space-evenly;\n  }\n"])));
-var InfoItems = styled(Link)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  margin-right: 2rem;\n  &:hover {\n    text-decoration: underline;\n  }\n  @media only screen and (max-width: 1000px) {\n    margin: 0;\n  }\n"], ["\n  margin-right: 2rem;\n  &:hover {\n    text-decoration: underline;\n  }\n  @media only screen and (max-width: 1000px) {\n    margin: 0;\n  }\n"])));
+var InfoItems = styled(Link)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  margin-right: 2rem;\n  cursor: pointer;\n  &:hover {\n    text-decoration: underline;\n  }\n  @media only screen and (max-width: 1000px) {\n    margin: 0;\n  }\n"], ["\n  margin-right: 2rem;\n  cursor: pointer;\n  &:hover {\n    text-decoration: underline;\n  }\n  @media only screen and (max-width: 1000px) {\n    margin: 0;\n  }\n"])));
 var LinksColum = styled.div(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  grid-gap: 1rem;\n  align-items: flex-start;\n  justify-items: center;\n\n  @media only screen and (max-width: 1000px) {\n    grid-template-columns: repeat(2, 1fr);\n    margin-top: 30px;\n  }\n"], ["\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  grid-gap: 1rem;\n  align-items: flex-start;\n  justify-items: center;\n\n  @media only screen and (max-width: 1000px) {\n    grid-template-columns: repeat(2, 1fr);\n    margin-top: 30px;\n  }\n"])));
 var Copyright = styled(Text)(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  text-align: start;\n  font-size: 14px;\n  margin-top: 2rem;\n  color: gray;\n  @media only screen and (max-width: 1000px) {\n    text-align: center;\n  }\n"], ["\n  text-align: start;\n  font-size: 14px;\n  margin-top: 2rem;\n  color: gray;\n  @media only screen and (max-width: 1000px) {\n    text-align: center;\n  }\n"])));
 var templateObject_1$x, templateObject_2$b, templateObject_3$5, templateObject_4$3, templateObject_5$1, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11;
@@ -2385,31 +2385,31 @@ var Footer = function () {
             React.createElement(SocialColum, null,
                 React.createElement(SocialLinks$1, null),
                 React.createElement(Info, null,
-                    React.createElement(InfoItems, null, "Analytics"),
-                    React.createElement(InfoItems, null, "Docs"),
-                    React.createElement(InfoItems, null, "About Us")),
+                    React.createElement(InfoItems, { href: "https://info.spiritswap.finance/", external: true }, "Analytics"),
+                    React.createElement(InfoItems, { href: "https://layer3.gitbook.io/spirit-swap/", external: true }, "Docs"),
+                    React.createElement(InfoItems, { href: "https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/", external: true }, "About Us")),
                 React.createElement(Copyright, null, "\u00A9 2021 SpiritSwap")),
             React.createElement(LinksColum, null,
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Spirit DEX"),
-                    React.createElement(StyledLink$1, { href: "https://defillama.com/protocol/spiritswap" }, "Defi Llama"),
-                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap" }, "Coingecko"),
-                    React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/" }, "CoinMarketCap")),
+                    React.createElement(StyledLink$1, { href: "https://defillama.com/protocol/spiritswap", external: true }, "Defi Llama"),
+                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap", external: true }, "Coingecko"),
+                    React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Exchanges"),
-                    React.createElement(StyledLink$1, { href: "https://www.gate.io/trade/SPIRIT_USDT" }, "Gate.io"),
-                    React.createElement(StyledLink$1, { href: "https://www.mexc.com/exchange/SPIRIT_USDT" }, "MEXC"),
-                    React.createElement(StyledLink$1, { href: "https://www.hotbit.io/exchange?symbol=SPIRIT_USDT" }, "Hotbit")),
+                    React.createElement(StyledLink$1, { href: "https://www.gate.io/trade/SPIRIT_USDT", external: true }, "Gate.io"),
+                    React.createElement(StyledLink$1, { href: "https://www.mexc.com/exchange/SPIRIT_USDT", external: true }, "MEXC"),
+                    React.createElement(StyledLink$1, { href: "https://www.hotbit.io/exchange?symbol=SPIRIT_USDT", external: true }, "Hotbit")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Spirit Token"),
-                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap" }, "Coingecko"),
-                    React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/" }, "CoinMarketCap")),
+                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap", external: true }, "Coingecko"),
+                    React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Business"),
-                    React.createElement(StyledLink$1, { href: "https://forms.gle/NAC6oFjSytU5Gs2Q9" }, "Apply for Farm")),
+                    React.createElement(StyledLink$1, { href: "https://forms.gle/NAC6oFjSytU5Gs2Q9", external: true }, "Apply for Farm")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Auditors"),
-                    React.createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf" }, "Mixbytes"))))));
+                    React.createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "Mixbytes"))))));
 };
 
 var StyledModal = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 0.5rem;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 0.5rem;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
