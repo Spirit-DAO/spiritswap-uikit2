@@ -1,16 +1,24 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
+import Svg, {SvgIcon} from "../../../components/Svg/Svg";
 import { SvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<SvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 24 24" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M18.86 4.86003L21.65 7.65003C21.84 7.84003 21.84 8.16003 21.64 8.35003L18.85 11.14C18.54 11.46 18 11.24 18 10.79V9.00003H4C3.45 9.00003 3 8.55003 3 8.00003C3 7.45003 3.45 7.00003 4 7.00003H18V5.21003C18 4.76003 18.54 4.54003 18.86 4.86003ZM5.14001 19.14L2.35001 16.35C2.16001 16.16 2.16001 15.84 2.36001 15.65L5.15001 12.86C5.46001 12.54 6.00001 12.76 6.00001 13.21V15H20C20.55 15 21 15.45 21 16C21 16.55 20.55 17 20 17H6.00001V18.79C6.00001 19.24 5.46001 19.46 5.14001 19.14Z"
-      />
+    <Svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path d="M8 4L6.5 5.5" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6.5 2.5L8 4" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6 4C4.343 4 3 5.343 3 7" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6 4H8" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16 20L17.5 18.5" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M17.5 21.5L16 20" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 20C19.657 20 21 18.657 21 17" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 20H16" stroke="#7BD784" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9.5 20C12.525 20 15 17.525 15 14.5C15 11.475 12.525 9 9.5 9C6.475 9 4 11.475 4 14.5C4 15.734 4.417 16.873 5.11 17.792C6.115 19.129 7.709 20 9.5 20Z" fill="#35B9C0" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9.5 20C12.525 20 15 17.525 15 14.5C15 11.475 12.525 9 9.5 9C6.475 9 4 11.475 4 14.5C4 15.734 4.417 16.873 5.11 17.792C6.115 19.129 7.709 20 9.5 20Z" fill="#35B9C0" stroke="#26868C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.5 15C18.525 15 21 12.525 21 9.5C21 6.475 18.525 4 15.5 4C12.475 4 10 6.475 10 9.5C10 10.734 10.417 11.873 11.11 12.792C12.115 14.129 13.709 15 15.5 15Z" fill="#35B9C0" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.5 15C18.525 15 21 12.525 21 9.5C21 6.475 18.525 4 15.5 4C12.475 4 10 6.475 10 9.5C10 10.734 10.417 11.873 11.11 12.792C12.115 14.129 13.709 15 15.5 15Z" fill="#35B9C0" stroke="#26868C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </Svg>
+
   );
 };
 

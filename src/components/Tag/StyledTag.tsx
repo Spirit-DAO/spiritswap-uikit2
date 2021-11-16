@@ -24,9 +24,7 @@ export const StyledTag = styled.div<ThemedProps>`
   padding: 0 8px;
   white-space: nowrap;
 
-  svg {
-    fill: ${getThemeTextColor};
-  }
+
 `;
 
 export default null;
