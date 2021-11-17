@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 500px) {
     margin-top: -80px;
   }
-`;
+`
 
 export const Body = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ export const Body = styled.div`
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
-`;
+`
 
 export const SocialColum = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ export const SocialColum = styled.div`
     margin-bottom: 40px;
     margin-right: 0;
   }
-`;
+`
 export const SocialIcons = styled.div`
   display: flex;
   -webkit-box-pack: justify;
@@ -52,7 +52,7 @@ export const SocialIcons = styled.div`
     margin-bottom: 30px;
     justify-content: space-around;
   }
-`;
+`
 
 export const Colums = styled.div`
   display: flex;
@@ -61,11 +61,12 @@ export const Colums = styled.div`
   gap: 1rem;
   @media only screen and (max-width: 1000px) {
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    padding-left: 40px;
+    align-items: flex-start;
+    justify-content: start;
     margin-bottom: 40px;
   }
-`;
+`
 
 export const Title = styled(Text)`
   box-sizing: border-box;
@@ -73,7 +74,7 @@ export const Title = styled(Text)`
   font-size: 16px;
   font-weight: 600;
   color: #6dd784;
-`;
+`
 
 export const StyledLink = styled(Link)`
   font-size: 14px;
@@ -84,7 +85,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`;
+`
 
 export const Info = styled.div`
   display: flex;
@@ -94,7 +95,7 @@ export const Info = styled.div`
     width: 100%;
     justify-content: space-evenly;
   }
-`;
+`
 
 export const InfoItems = styled(Link)`
   margin-right: 2rem;
@@ -105,7 +106,7 @@ export const InfoItems = styled(Link)`
   @media only screen and (max-width: 1000px) {
     margin: 0;
   }
-`;
+`
 
 export const LinksColum = styled.div`
   display: grid;
@@ -115,10 +116,12 @@ export const LinksColum = styled.div`
   justify-items: center;
 
   @media only screen and (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+    grid-column-gap: 20%;
     margin-top: 30px;
   }
-`;
+`
 
 export const Copyright = styled(Text)`
   text-align: start;
@@ -127,5 +130,15 @@ export const Copyright = styled(Text)`
   color: gray;
   @media only screen and (max-width: 1000px) {
     text-align: center;
+    display: none;
   }
-`;
+`
+
+export const CopyrightInMobile = styled(Text)`
+  font-size: 14px;
+  text-align: center;
+  color: gray;
+  @media only screen and (min-width: 1000px) {
+    display: none;
+  }
+`

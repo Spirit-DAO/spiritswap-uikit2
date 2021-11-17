@@ -10,3 +10,4 @@ export declare const Info: import("styled-components").StyledComponent<"div", im
 export declare const InfoItems: import("styled-components").StyledComponent<import("react").FC<import("../../components/Link").LinkProps>, import("styled-components").DefaultTheme, {}, never>;
 export declare const LinksColum: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, {}, never>;
 export declare const Copyright: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, import("../../components/Text").TextProps, never>;
+export declare const CopyrightInMobile: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, import("../../components/Text").TextProps, never>;
