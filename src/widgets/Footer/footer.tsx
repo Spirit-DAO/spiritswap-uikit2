@@ -10,6 +10,7 @@ import {
   Info,
   LinksColum,
   Copyright,
+  CopyrightInMobile,
 } from "./styles";
 
 import SocialLinks from "./SocialLinks";
@@ -31,7 +32,6 @@ const Footer: React.FC = () => {
               About Us
             </InfoItems>
           </Info>
-
           <Copyright>© 2021 SpiritSwap</Copyright>
         </SocialColum>
 
@@ -88,6 +88,7 @@ const Footer: React.FC = () => {
             </StyledLink>
           </Colums>
         </LinksColum>
+        <CopyrightInMobile>© 2021 SpiritSwap</CopyrightInMobile>
       </Body>
     </Wrapper>
   );
