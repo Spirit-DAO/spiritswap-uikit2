@@ -25,7 +25,7 @@ const SocialLinks: React.FC = () => (
   <SocialIcons>
     {socials.map((social) => {
       const Icon = Icons[social.icon];
-      const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
+      const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" }, colorFill: "#6DD784" };
       return (
         <Link external key={social.label} href={social.href} aria-label={social.label}>
           <Icon {...iconProps} />
