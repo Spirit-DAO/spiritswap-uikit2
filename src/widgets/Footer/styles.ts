@@ -5,18 +5,10 @@ import { Text } from "../../components/Text";
 import { Link } from "../../components/Link";
 
 export const Wrapper = styled.div`
-  background-color: none;
   display: flex;
   width: 100%;
   padding: 3rem 1rem;
   border-radius: 0.5rem;
-  margin-top: -140px;
-  @media only screen and (max-width: 1000px) {
-    margin-top: 0;
-  }
-  @media only screen and (max-width: 500px) {
-    margin-top: -80px;
-  }
 `
 
 export const Body = styled.div`
