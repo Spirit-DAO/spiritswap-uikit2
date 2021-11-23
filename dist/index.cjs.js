@@ -2467,7 +2467,7 @@ var Footer = function () {
                 React__default['default'].createElement(Colums, null,
                     React__default['default'].createElement(Title, null, "Spirit DEX"),
                     React__default['default'].createElement(StyledLink$1, { href: "https://defillama.com/protocol/spiritswap", external: true }, "Defi Llama"),
-                    React__default['default'].createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap", external: true }, "Coingecko"),
+                    React__default['default'].createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap", external: true }, "CoinGecko"),
                     React__default['default'].createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React__default['default'].createElement(Colums, null,
                     React__default['default'].createElement(Title, null, "Exchanges"),
@@ -2476,14 +2476,14 @@ var Footer = function () {
                     React__default['default'].createElement(StyledLink$1, { href: "https://www.hotbit.io/exchange?symbol=SPIRIT_USDT", external: true }, "Hotbit")),
                 React__default['default'].createElement(Colums, null,
                     React__default['default'].createElement(Title, null, "Spirit Token"),
-                    React__default['default'].createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap", external: true }, "Coingecko"),
+                    React__default['default'].createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap", external: true }, "CoinGecko"),
                     React__default['default'].createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React__default['default'].createElement(Colums, null,
                     React__default['default'].createElement(Title, null, "Business"),
                     React__default['default'].createElement(StyledLink$1, { href: "https://forms.gle/NAC6oFjSytU5Gs2Q9", external: true }, "Apply for Farm")),
                 React__default['default'].createElement(Colums, null,
                     React__default['default'].createElement(Title, null, "Auditors"),
-                    React__default['default'].createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "Mixbytes"))),
+                    React__default['default'].createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "MixBytes"))),
             React__default['default'].createElement(CopyrightInMobile, null, "\u00A9 2021 SpiritSwap"))));
 };
 

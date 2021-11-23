@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               Defi Llama
             </StyledLink>
             <StyledLink href="https://www.coingecko.com/en/exchanges/spiritswap" external>
-              Coingecko
+              CoinGecko
             </StyledLink>
             <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/" external>
               CoinMarketCap
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
           <Colums>
             <Title>Spirit Token</Title>
             <StyledLink href="https://www.coingecko.com/en/coins/spiritswap" external>
-              Coingecko
+              CoinGecko
             </StyledLink>
             <StyledLink href="https://coinmarketcap.com/exchanges/spiritswap/" external>
               CoinMarketCap
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               href="https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf"
               external
             >
-              Mixbytes
+              MixBytes
             </StyledLink>
           </Colums>
         </LinksColum>

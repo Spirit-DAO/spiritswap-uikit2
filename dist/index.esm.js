@@ -2454,7 +2454,7 @@ var Footer = function () {
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Spirit DEX"),
                     React.createElement(StyledLink$1, { href: "https://defillama.com/protocol/spiritswap", external: true }, "Defi Llama"),
-                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap", external: true }, "Coingecko"),
+                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/exchanges/spiritswap", external: true }, "CoinGecko"),
                     React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Exchanges"),
@@ -2463,14 +2463,14 @@ var Footer = function () {
                     React.createElement(StyledLink$1, { href: "https://www.hotbit.io/exchange?symbol=SPIRIT_USDT", external: true }, "Hotbit")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Spirit Token"),
-                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap", external: true }, "Coingecko"),
+                    React.createElement(StyledLink$1, { href: "https://www.coingecko.com/en/coins/spiritswap", external: true }, "CoinGecko"),
                     React.createElement(StyledLink$1, { href: "https://coinmarketcap.com/exchanges/spiritswap/", external: true }, "CoinMarketCap")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Business"),
                     React.createElement(StyledLink$1, { href: "https://forms.gle/NAC6oFjSytU5Gs2Q9", external: true }, "Apply for Farm")),
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Auditors"),
-                    React.createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "Mixbytes"))),
+                    React.createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "MixBytes"))),
             React.createElement(CopyrightInMobile, null, "\u00A9 2021 SpiritSwap"))));
 };
 
