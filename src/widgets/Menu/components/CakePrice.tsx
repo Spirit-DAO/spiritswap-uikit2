@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon } from "../../../components/Svg";
-import Text from "../../../components/Text/Text";
+import { PancakeRoundIcon, FantomRoundIcon } from "../../../components/Svg";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import { Link } from "../../../components/Link";
 
+export enum Token {
+  SPIRIT = 'SPIRIT',
+  FTM = 'FTM'
+};
+
 interface Props {
+  token?: Token;
   cakePriceUsd?: number;
 }
 
@@ -18,12 +23,39 @@ const PriceLink = styled.span`
   }
 `;
 
-const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
+const CakePrice: React.FC<Props> = ({ token = Token.SPIRIT, cakePriceUsd }) => {
+  const renderIcon = () => {
+    const styles = {
+      width: "24px",
+      mr: "8px"
+    };
+    switch(token) {
+      case Token.SPIRIT: 
+        return <PancakeRoundIcon {...styles} />;
+      case Token.FTM:
+        return <FantomRoundIcon {...styles} />;
+      default:
+        return null;
+    }
+  };
+
+  const getPriceLink = () => {
+    const base = "https://coinmarketcap.com/currencies";
+    switch(token) {
+      case Token.SPIRIT: 
+        return `${base}/spiritswap/`;
+      case Token.FTM:
+        return `${base}/fantom/`;
+      default:
+        return base;
+    }
+  };
+
   return cakePriceUsd ? (
     <PriceLink>
-      <PancakeRoundIcon width="24px" mr="8px" />
+      {renderIcon()}
       <Link
-        href={"https://coinmarketcap.com/currencies/spiritswap/"}
+        href={getPriceLink()}
         style={{ marginLeft: "5px", textDecoration: "none" }}
         target="_blank"
         color="textSubtle"
