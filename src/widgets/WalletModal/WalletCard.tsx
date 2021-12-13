@@ -9,9 +9,10 @@ interface Props {
   login: Login;
   onDismiss: () => void;
   mb: string;
+  key: string
 }
 
-const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
+const WalletCard = ({ login, walletConfig, onDismiss, mb }: Props) => {
   const { title, icon: Icon } = walletConfig;
   return (
     <Button

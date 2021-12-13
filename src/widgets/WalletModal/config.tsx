@@ -2,6 +2,7 @@ import Metamask from "./icons/Metamask";
 import Coin98Wallet from "./icons/Coin98Wallet";
 import Coinbase from "./icons/Coinbase";
 import WalletConnect from "./icons/WalletConnect";
+import TrustWallet from './icons/TrustWallet'
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -24,6 +25,11 @@ const connectors: Config[] = [
     title: "Wallet Connect",
     icon: WalletConnect,
     connectorId: ConnectorNames.WalletConnect,
+  },
+  {
+    title: "Trust Wallet",
+    icon: TrustWallet,
+    connectorId: ConnectorNames.TrustWallet,
   },
 ];
 
