@@ -19,7 +19,7 @@ const HelpLink = styled(Link)`
   margin-top: 24px;
 `;
 
-const ConnectModal = ({ login, onDismiss = () => null }: Props) => (
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
   <Modal title="Connect to a wallet" onDismiss={onDismiss}>
     {config.map((entry, index) => (
       <WalletCard

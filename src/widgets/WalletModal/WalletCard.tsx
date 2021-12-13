@@ -9,7 +9,6 @@ interface Props {
   login: Login;
   onDismiss: () => void;
   mb: string;
-  key: string
 }
 
 const WalletCard = ({ login, walletConfig, onDismiss, mb }: Props) => {
