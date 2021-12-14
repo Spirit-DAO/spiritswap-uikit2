@@ -6,33 +6,42 @@ import WalletConnect from "./icons/WalletConnect";
 import TrustWallet from "./icons/TrustWallet";
 import { Config, ConnectorNames } from "./types";
 
-const connectors: Config[] = [
-  {
-    title: "MetaMask",
-    icon: Metamask,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "Coin98 Wallet",
-    icon: Coin98Wallet,
-    connectorId: ConnectorNames.Coin98,
-  },
-  {
-    title: "Coinbase Wallet",
-    icon: Coinbase,
-    connectorId: ConnectorNames.WalletLink,
-  },
-  {
-    title: "Wallet Connect",
-    icon: WalletConnect,
-    connectorId: ConnectorNames.WalletConnect,
-  },
-  {
-    title: "Trust Connect",
-    icon: TrustWallet,
-    connectorId: ConnectorNames.TrustWallet,
-  },
-];
+const Connectors = () => {
+  const { isXl } = useMatchBreakpoints()
+  const isMobile = isXl === false
 
-export default connectors;
+  const connectors: Config[] = [
+    {
+      title: "MetaMask",
+      icon: Metamask,
+      connectorId: ConnectorNames.Injected,
+    },
+    {
+      title: "Coin98 Wallet",
+      icon: Coin98Wallet,
+      connectorId: ConnectorNames.Coin98,
+    },
+    {
+      title: "Coinbase Wallet",
+      icon: Coinbase,
+      connectorId: ConnectorNames.WalletLink,
+    },
+    {
+      title: "Wallet Connect",
+      icon: WalletConnect,
+      connectorId: ConnectorNames.WalletConnect,
+    },
+  ]
+
+  if (isMobile)
+    connectors.push({
+      title: "Trust Connect",
+      icon: TrustWallet,
+      connectorId: ConnectorNames.Injected,
+    })
+
+  return connectors;
+}
+
+export default Connectors;
 export const connectorLocalStorageKey = "connectorId";
