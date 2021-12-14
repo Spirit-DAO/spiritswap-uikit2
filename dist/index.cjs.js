@@ -3237,60 +3237,34 @@ exports.ConnectorNames = void 0;
 var Connectors = function () {
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
-    var connectors;
-    if (isMobile) {
-        connectors = [
-            {
-                title: "MetaMask",
-                icon: Icon$1o,
-                connectorId: exports.ConnectorNames.Injected,
-            },
-            {
-                title: "Coin98 Wallet",
-                icon: Icon$1p,
-                connectorId: exports.ConnectorNames.Coin98,
-            },
-            {
-                title: "Coinbase Wallet",
-                icon: Icon$1q,
-                connectorId: exports.ConnectorNames.WalletLink,
-            },
-            {
-                title: "Wallet Connect",
-                icon: Icon$1r,
-                connectorId: exports.ConnectorNames.WalletConnect,
-            },
-            {
-                title: "Trust Connect",
-                icon: Icon$1s,
-                connectorId: exports.ConnectorNames.Injected,
-            },
-        ];
-    }
-    else {
-        connectors = [
-            {
-                title: "MetaMask",
-                icon: Icon$1o,
-                connectorId: exports.ConnectorNames.Injected,
-            },
-            {
-                title: "Coin98 Wallet",
-                icon: Icon$1p,
-                connectorId: exports.ConnectorNames.Coin98,
-            },
-            {
-                title: "Coinbase Wallet",
-                icon: Icon$1q,
-                connectorId: exports.ConnectorNames.WalletLink,
-            },
-            {
-                title: "Wallet Connect",
-                icon: Icon$1r,
-                connectorId: exports.ConnectorNames.WalletConnect,
-            },
-        ];
-    }
+    var connectors = [
+        {
+            title: "MetaMask",
+            icon: Icon$1o,
+            connectorId: exports.ConnectorNames.Injected,
+        },
+        {
+            title: "Coin98 Wallet",
+            icon: Icon$1p,
+            connectorId: exports.ConnectorNames.Coin98,
+        },
+        {
+            title: "Coinbase Wallet",
+            icon: Icon$1q,
+            connectorId: exports.ConnectorNames.WalletLink,
+        },
+        {
+            title: "Wallet Connect",
+            icon: Icon$1r,
+            connectorId: exports.ConnectorNames.WalletConnect,
+        },
+    ];
+    if (isMobile)
+        connectors.push({
+            title: "Trust Connect",
+            icon: Icon$1s,
+            connectorId: exports.ConnectorNames.Injected,
+        });
     return connectors;
 };
 var connectorLocalStorageKey = "connectorId";
