@@ -3221,65 +3221,33 @@ var ConnectorNames;
     ConnectorNames["TrustWallet"] = "trustwallet";
 })(ConnectorNames || (ConnectorNames = {}));
 
-var Connectors = function () {
-    var isXl = useMatchBreakpoints().isXl;
-    var isMobile = isXl === false;
-    var connectors;
-    if (isMobile) {
-        connectors = [
-            {
-                title: "MetaMask",
-                icon: Icon$1o,
-                connectorId: ConnectorNames.Injected,
-            },
-            {
-                title: "Coin98 Wallet",
-                icon: Icon$1p,
-                connectorId: ConnectorNames.Coin98,
-            },
-            {
-                title: "Coinbase Wallet",
-                icon: Icon$1q,
-                connectorId: ConnectorNames.WalletLink,
-            },
-            {
-                title: "Wallet Connect",
-                icon: Icon$1r,
-                connectorId: ConnectorNames.WalletConnect,
-            },
-            {
-                title: "Trust Connect",
-                icon: Icon$1s,
-                connectorId: ConnectorNames.Injected,
-            },
-        ];
-    }
-    else {
-        connectors = [
-            {
-                title: "MetaMask",
-                icon: Icon$1o,
-                connectorId: ConnectorNames.Injected,
-            },
-            {
-                title: "Coin98 Wallet",
-                icon: Icon$1p,
-                connectorId: ConnectorNames.Coin98,
-            },
-            {
-                title: "Coinbase Wallet",
-                icon: Icon$1q,
-                connectorId: ConnectorNames.WalletLink,
-            },
-            {
-                title: "Wallet Connect",
-                icon: Icon$1r,
-                connectorId: ConnectorNames.WalletConnect,
-            },
-        ];
-    }
-    return connectors;
-};
+var connectors = [
+    {
+        title: "MetaMask",
+        icon: Icon$1o,
+        connectorId: ConnectorNames.Injected,
+    },
+    {
+        title: "Coin98 Wallet",
+        icon: Icon$1p,
+        connectorId: ConnectorNames.Coin98,
+    },
+    {
+        title: "Coinbase Wallet",
+        icon: Icon$1q,
+        connectorId: ConnectorNames.WalletLink,
+    },
+    {
+        title: "Wallet Connect",
+        icon: Icon$1r,
+        connectorId: ConnectorNames.WalletConnect,
+    },
+    {
+        title: "Trust Connect",
+        icon: Icon$1s,
+        connectorId: ConnectorNames.TrustWallet,
+    },
+];
 var connectorLocalStorageKey = "connectorId";
 
 var WalletCard = function (_a) {
@@ -3297,9 +3265,8 @@ var WalletCard = function (_a) {
 var HelpLink = styled(Link)(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"])));
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
-    var connectors = Connectors();
     return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
-        connectors.map(function (entry, index) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < Connectors.length - 1 ? "8px" : "0" })); }),
+        connectors.map(function (entry, index) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" })); }),
         React.createElement(HelpLink, { href: "https://layer3.gitbook.io/spirit-swap/howto/connect-metamask", external: true },
             React.createElement(Icon$o, { color: "primary", mr: "6px" }),
             "Learn how to connect")));
