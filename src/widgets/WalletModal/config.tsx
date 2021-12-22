@@ -5,6 +5,7 @@ import Coinbase from "./icons/Coinbase";
 import WalletConnect from "./icons/WalletConnect";
 import CloverWallet from "./icons/CloverWallet";
 import TrustWallet from "./icons/TrustWallet";
+import MathWallet from "./icons/MathWallet";
 import { Config, ConnectorNames } from "./types";
 
 const Connectors = (): Config[] => {
@@ -28,7 +29,12 @@ const Connectors = (): Config[] => {
       connectorId: ConnectorNames.WalletLink,
     },
     {
-      title: "Clover Connect",
+      title: "Math Wallet",
+      icon: MathWallet,
+      connectorId: ConnectorNames.MathWallet,
+    },
+    {
+      title: "Clover Wallet",
       icon: CloverWallet,
       connectorId: ConnectorNames.CloverWallet,
     },
@@ -41,12 +47,12 @@ const Connectors = (): Config[] => {
 
   if (isMobile) {
     connectors.push({
-      title: "Trust Connect",
+      title: "Trust Wallet",
       icon: TrustWallet,
-      connectorId: ConnectorNames.Injected,
+      connectorId: ConnectorNames.TrustWallet,
     });
 
-    const cloverIndexToRemove = connectors.findIndex((prop: Config) => prop.title === "Clover Connect");
+    const cloverIndexToRemove = connectors.findIndex((prop: Config) => prop.title === "Clover Wallet");
     if (cloverIndexToRemove) connectors.splice(cloverIndexToRemove, 1);
   }
 
