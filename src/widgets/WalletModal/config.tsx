@@ -5,7 +5,6 @@ import Coinbase from "./icons/Coinbase";
 import WalletConnect from "./icons/WalletConnect";
 import CloverWallet from "./icons/CloverWallet";
 import TrustWallet from "./icons/TrustWallet";
-import MathWallet from "./icons/MathWallet";
 import { Config, ConnectorNames } from "./types";
 
 const Connectors = (): Config[] => {
@@ -27,11 +26,6 @@ const Connectors = (): Config[] => {
       title: "Coinbase Wallet",
       icon: Coinbase,
       connectorId: ConnectorNames.WalletLink,
-    },
-    {
-      title: "Math Wallet",
-      icon: MathWallet,
-      connectorId: ConnectorNames.MathWallet,
     },
     {
       title: "Clover Wallet",
