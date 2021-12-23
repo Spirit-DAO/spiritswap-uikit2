@@ -7,8 +7,7 @@ export declare enum ConnectorNames {
     Coin98 = "coin98",
     WalletLink = "walletlink",
     TrustWallet = "trustwallet",
-    CloverWallet = "cloverwallet",
-    MathWallet = "mathwallet"
+    CloverWallet = "cloverwallet"
 }
 export declare type Login = (connectorId: ConnectorNames) => void;
 export interface Config {

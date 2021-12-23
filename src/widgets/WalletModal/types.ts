@@ -9,7 +9,6 @@ export enum ConnectorNames {
   WalletLink = "walletlink",
   TrustWallet = "trustwallet",
   CloverWallet = "cloverwallet",
-  MathWallet = 'mathwallet'
  }
 
 export type Login = (connectorId: ConnectorNames) => void;
