@@ -2949,7 +2949,7 @@ var PanelBody = function (_a) {
                 React.createElement(MenuWrapper, null,
                     iconElement,
                     React.createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks }, entry.label),
-                    entry.label === "LGE" ? React.createElement(NewIcon, null) : null))));
+                    entry.newIcon ? React.createElement(NewIcon, null) : null))));
     })));
 };
 var templateObject_1$H, templateObject_2$h, templateObject_3$a, templateObject_4$5, templateObject_5$2, templateObject_6$1, templateObject_7$1;
