@@ -19,22 +19,25 @@ const HelpLink = styled(Link)`
   margin-top: 24px;
 `;
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
-  <Modal title="Connect to a wallet" onDismiss={onDismiss}>
-    {config.map((entry, index) => (
-      <WalletCard
-        key={entry.title}
-        login={login}
-        walletConfig={entry}
-        onDismiss={onDismiss}
-        mb={index < config.length - 1 ? "8px" : "0"}
-      />
-    ))}
-    <HelpLink href="https://app.gitbook.com/@layer3/s/spirit-swap/howto/connect-metamask" external>
-      <HelpIcon color="primary" mr="6px" />
-      Learn how to connect
-    </HelpLink>
-  </Modal>
-);
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
+  const connectors = config();
+  return (
+    <Modal title="Connect to a wallet" onDismiss={onDismiss}>
+      {connectors.map((entry, index) => (
+        <WalletCard
+          key={entry.title}
+          login={login}
+          walletConfig={entry}
+          onDismiss={onDismiss}
+          mb={index < config.length - 1 ? "8px" : "0"}
+        />
+      ))}
+      <HelpLink href="https://layer3.gitbook.io/spirit-swap/howto/connect-metamask" external>
+        <HelpIcon color="primary" mr="6px" />
+        Learn how to connect
+      </HelpLink>
+    </Modal>
+  );
+};
 
 export default ConnectModal;

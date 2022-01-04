@@ -7,5 +7,5 @@ interface Props {
     logout: () => void;
     isDark: boolean;
 }
-declare const _default: React.NamedExoticComponent<Props>;
+declare const _default: React.MemoExoticComponent<({ account, login, logout, showMenu }: Props) => JSX.Element>;
 export default _default;

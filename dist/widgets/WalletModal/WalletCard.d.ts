@@ -1,4 +1,3 @@
-import React from "react";
 import { Login, Config } from "./types";
 interface Props {
     walletConfig: Config;
@@ -6,5 +5,5 @@ interface Props {
     onDismiss: () => void;
     mb: string;
 }
-declare const WalletCard: React.FC<Props>;
+declare const WalletCard: ({ login, walletConfig, onDismiss, mb }: Props) => JSX.Element;
 export default WalletCard;

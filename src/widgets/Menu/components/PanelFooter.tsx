@@ -4,7 +4,7 @@ import { CogIcon } from "../../../components/Svg";
 import IconButton from "../../../components/Button/IconButton";
 import { MENU_ENTRY_HEIGHT, PRICE_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import CakePrice from "./CakePrice";
+import CakePrice, { Token } from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
@@ -45,7 +45,14 @@ const SocialEntry = styled.div`
   width: 100%;
 `;
 
+const PriceGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+`;
+
 const Price = styled.div`
+  flex: 1;
   height: 42px;
   display: flex;
   align-items: center;
@@ -54,8 +61,15 @@ const Price = styled.div`
   padding: 8px;
   border-radius: 4px;
   background-color: rgba(109, 215, 132, 0.15);
-  margin: 0 8px;
+  margin: 0 2px;
   // border-bottom: 1px solid #42BE71;
+`;
+
+const FantomPrice = styled(Price)`
+  background-color: #002943;
+  a {
+    color: #1C9BCA;
+  }
 `;
 
 const PanelFooter: React.FC<Props> = ({
@@ -64,6 +78,7 @@ const PanelFooter: React.FC<Props> = ({
   toggleTheme,
   isDark,
   cakePriceUsd,
+  ftmPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -80,9 +95,14 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <>
-      <Price>
-        <CakePrice cakePriceUsd={cakePriceUsd} />
-      </Price>
+      <PriceGroup>
+        <Price>
+          <CakePrice cakePriceUsd={cakePriceUsd} />
+        </Price>
+        <FantomPrice>
+          <CakePrice token={Token.FTM} cakePriceUsd={ftmPriceUsd} />
+        </FantomPrice>
+      </PriceGroup>
       <Container>
         <SocialEntry>
           <SocialLinks />

@@ -14,7 +14,7 @@ interface Props {
   isDark: boolean;
 }
 
-const UserBlock: React.FC<Props> = ({ account, login, logout, showMenu }) => {
+const UserBlock = ({ account, login, logout, showMenu } : Props) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
