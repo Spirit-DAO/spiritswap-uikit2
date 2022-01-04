@@ -2958,7 +2958,7 @@ var PanelBody = function (_a) {
                 React__default['default'].createElement(MenuWrapper, null,
                     iconElement,
                     React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed, inSpirit: inSpiritLinks }, entry.label),
-                    entry.label === "LGE" || entry.label === "Bridge" ? React__default['default'].createElement(NewIcon, null) : null))));
+                    entry.newIcon ? React__default['default'].createElement(NewIcon, null) : null))));
     })));
 };
 var templateObject_1$H, templateObject_2$h, templateObject_3$a, templateObject_4$5, templateObject_5$2, templateObject_6$1, templateObject_7$1;
