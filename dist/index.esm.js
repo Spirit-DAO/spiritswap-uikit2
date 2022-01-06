@@ -2896,6 +2896,7 @@ MenuBottomEntry.defaultProps = {
 React.memo(LinkLabelBottom, function (prev, next) { return prev.isPushed === next.isPushed; });
 var templateObject_1$G, templateObject_2$g, templateObject_3$9;
 
+
 var MenuLink = function (_a) {
     var href = _a.href, otherProps = __rest(_a, ["href"]);
     var isHttpLink = href === null || href === void 0 ? void 0 : href.startsWith("http");
@@ -2952,6 +2953,7 @@ var PanelBody = function (_a) {
                     entry.label === "LGE" ? React.createElement(NewIcon, null) : null))));
     })));
 };
+
 var templateObject_1$H, templateObject_2$h, templateObject_3$a, templateObject_4$5, templateObject_5$2, templateObject_6$1, templateObject_7$1;
 
 var Token;
@@ -3138,6 +3140,7 @@ var templateObject_1$L;
 // };
 // export default Panel;
 
+
 var Icon$1o = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96" }, props),
         React.createElement("circle", { cx: "48", cy: "48", r: "48", fill: "white" }),
@@ -3269,6 +3272,7 @@ var Connectors = function () {
     }
     return connectors;
 };
+
 var connectorLocalStorageKey = "connectorId";
 
 var WalletCard = function (_a) {
