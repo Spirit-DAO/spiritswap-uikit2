@@ -2,14 +2,27 @@ export declare const links: ({
     label: string;
     icon: string;
     href: string;
-    target?: undefined;
+    newIcon?: undefined;
     items?: undefined;
+    target?: undefined;
+    calloutClass?: undefined;
+} | {
+    label: string;
+    icon: string;
+    newIcon: boolean;
+    items: {
+        label: string;
+        href: string;
+    }[];
+    href?: undefined;
+    target?: undefined;
     calloutClass?: undefined;
 } | {
     label: string;
     icon: string;
     href: string;
     target: string;
+    newIcon?: undefined;
     items?: undefined;
     calloutClass?: undefined;
 } | {
@@ -21,6 +34,7 @@ export declare const links: ({
     }[];
     calloutClass: string;
     href?: undefined;
+    newIcon?: undefined;
     target?: undefined;
 } | {
     label: string;
@@ -35,6 +49,7 @@ export declare const links: ({
         target?: undefined;
     })[];
     href?: undefined;
+    newIcon?: undefined;
     target?: undefined;
     calloutClass?: undefined;
 })[];

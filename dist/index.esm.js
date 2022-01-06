@@ -2658,6 +2658,7 @@ var links = [
     {
         label: "Trade",
         icon: "TradeIcon",
+        newIcon: true,
         items: [
             {
                 label: "Exchange",
