@@ -81,6 +81,10 @@ const StyledMenuButton = styled(MenuButton)`
   background: transparent;
 `;
 
+const StyledFlex = styled(Flex)`
+  z-index: 20;
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -93,7 +97,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isMobile = isXl === false;
 
   return !isMobile ? (
-    <Flex>
+    <StyledFlex>
       <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? <ChevronLeft width="24px" color="textSubtle" /> : <ChevronRight width="24px" color="textSubtle" />}
       </StyledMenuButton>
@@ -106,9 +110,9 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </Flex>
+    </StyledFlex>
   ) : (
-    <Flex>
+    <StyledFlex>
       <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
@@ -125,7 +129,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </Flex>
+    </StyledFlex>
   );
 };
 

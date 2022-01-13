@@ -30,8 +30,11 @@ const StyledNav = styled.nav<{ showMenu: boolean; isPushed: boolean }>`
   height: ${MENU_HEIGHT}px;
   // border-bottom: ${({ showMenu }) => (showMenu ? "solid 2px rgba(133, 133, 133, 0.1)" : "none")};
   border-bottom: none;
-  z-index: 20;
   transform: translate3d(0, 0, 0);
+`;
+
+const StyledFlex = styled(Flex)`
+  z-index: 20;
 `;
 
 const BodyWrapper = styled.div`
@@ -123,10 +126,9 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-
-        <Flex>
+        <StyledFlex>
           <UserBlock account={account} login={login} logout={logout} isDark={isDark} showMenu={showMenu} />
-        </Flex>
+        </StyledFlex>
       </StyledNav>
       <BodyWrapper>
         <Panel
