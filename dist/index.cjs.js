@@ -2641,7 +2641,10 @@ var StyledMenuButton = styled__default['default'](MenuButton)(templateObject_2$e
     var isMobile = _a.isMobile;
     return (isMobile ? "none" : "");
 });
-var StyledContainer = styled__default['default'](Flex)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  z-index: 20;\n"], ["\n  position: fixed;\n  top: 0;\n  z-index: 20;\n"])));
+var StyledContainer = styled__default['default'](Flex)(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  z-index: 20;\n  padding-left: ", ";\n"], ["\n  position: fixed;\n  top: 0;\n  z-index: 20;\n  padding-left: ", ";\n"])), function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? "8px" : "0");
+});
 var Logo$1 = function (_a) {
     var isPushed = _a.isPushed, togglePush = _a.togglePush, isDark = _a.isDark, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
@@ -2655,7 +2658,7 @@ var Logo$1 = function (_a) {
     var renderMobile = function () { return (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(StyledMenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px", isMobile: isMobile, isPushed: isPushed }, isPushed ? (React__default['default'].createElement(Icon$R, { width: "24px", color: "textSubtle" })) : (React__default['default'].createElement(Icon$Q, { width: "24px", color: "textSubtle" }))),
         isAbsoluteUrl ? (React__default['default'].createElement(StyledLink$2, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink$2, { to: href, "aria-label": "Pancake home page" }, innerLogo)))); };
-    return React__default['default'].createElement(StyledContainer, null, !isMobile ? renderNotMobile() : renderMobile());
+    return React__default['default'].createElement(StyledContainer, { isPushed: isPushed }, !isMobile ? renderNotMobile() : renderMobile());
 };
 var Logo$2 = React__default['default'].memo(Logo$1, function (prev, next) { return prev.isPushed === next.isPushed && prev.isDark === next.isDark; });
 var templateObject_1$E, templateObject_2$e, templateObject_3$8;

@@ -83,10 +83,11 @@ const StyledMenuButton = styled(MenuButton)`
   background: transparent;
 `;
 
-const StyledContainer = styled(Flex)`
+const StyledContainer = styled(Flex)<{ isPushed: boolean }>`
   position: fixed;
   top: 0;
   z-index: 20;
+  padding-left: ${({ isPushed }) => (isPushed ? "8px" : "0")};
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
@@ -138,7 +139,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     </>
   );
 
-  return <StyledContainer>{!isMobile ? renderNotMobile() : renderMobile()}</StyledContainer>;
+  return <StyledContainer isPushed={isPushed}>{!isMobile ? renderNotMobile() : renderMobile()}</StyledContainer>;
 };
 
 export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark);
