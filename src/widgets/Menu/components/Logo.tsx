@@ -16,6 +16,8 @@ interface Props {
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
+  margin-top: -8px;
+  transition: 0.2s;
   .mobile-icon {
     width: 32px;
     ${({ theme }) => theme.mediaQueries.nav} {
@@ -81,8 +83,11 @@ const StyledMenuButton = styled(MenuButton)`
   background: transparent;
 `;
 
-const StyledFlex = styled(Flex)`
+const StyledContainer = styled(Flex)<{ isPushed: boolean }>`
+  position: fixed;
+  top: 0;
   z-index: 20;
+  padding-left: ${({ isPushed }) => (isPushed ? "8px" : "0")};
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
@@ -96,8 +101,8 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
 
-  return !isMobile ? (
-    <StyledFlex>
+  const renderNotMobile = () => (
+    <>
       <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? <ChevronLeft width="24px" color="textSubtle" /> : <ChevronRight width="24px" color="textSubtle" />}
       </StyledMenuButton>
@@ -110,9 +115,11 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </StyledFlex>
-  ) : (
-    <StyledFlex>
+    </>
+  );
+
+  const renderMobile = () => (
+    <>
       <StyledMenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px" isMobile={isMobile} isPushed={isPushed}>
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
@@ -129,8 +136,10 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </StyledFlex>
+    </>
   );
+
+  return <StyledContainer isPushed={isPushed}>{!isMobile ? renderNotMobile() : renderMobile()}</StyledContainer>;
 };
 
 export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark);
