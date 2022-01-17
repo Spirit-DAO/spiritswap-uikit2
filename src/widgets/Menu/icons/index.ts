@@ -37,3 +37,4 @@ export { default as LendIcon } from "./Lend";
 export { default as MediumIcon } from "./Medium";
 export { default as GitHubIcon } from "./GitHub";
 export { default as WalletIcon } from "./Wallet";
+export { default as GovernanceIcon } from "./GovernanceIcon";
