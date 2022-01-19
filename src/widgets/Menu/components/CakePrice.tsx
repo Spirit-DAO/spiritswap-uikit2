@@ -5,9 +5,9 @@ import Skeleton from "../../../components/Skeleton/Skeleton";
 import { Link } from "../../../components/Link";
 
 export enum Token {
-  SPIRIT = 'SPIRIT',
-  FTM = 'FTM'
-};
+  SPIRIT = "SPIRIT",
+  FTM = "FTM",
+}
 
 interface Props {
   token?: Token;
@@ -27,10 +27,10 @@ const CakePrice: React.FC<Props> = ({ token = Token.SPIRIT, cakePriceUsd }) => {
   const renderIcon = () => {
     const styles = {
       width: "24px",
-      mr: "8px"
+      mr: "8px",
     };
-    switch(token) {
-      case Token.SPIRIT: 
+    switch (token) {
+      case Token.SPIRIT:
         return <PancakeRoundIcon {...styles} />;
       case Token.FTM:
         return <FantomRoundIcon {...styles} />;
@@ -41,8 +41,8 @@ const CakePrice: React.FC<Props> = ({ token = Token.SPIRIT, cakePriceUsd }) => {
 
   const getPriceLink = () => {
     const base = "https://coinmarketcap.com/currencies";
-    switch(token) {
-      case Token.SPIRIT: 
+    switch (token) {
+      case Token.SPIRIT:
         return `${base}/spiritswap/`;
       case Token.FTM:
         return `${base}/fantom/`;

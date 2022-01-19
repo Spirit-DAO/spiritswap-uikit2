@@ -23,8 +23,6 @@ export const StyledTag = styled.div<ThemedProps>`
   line-height: 1.5;
   padding: 0 8px;
   white-space: nowrap;
-
-
 `;
 
 export default null;
