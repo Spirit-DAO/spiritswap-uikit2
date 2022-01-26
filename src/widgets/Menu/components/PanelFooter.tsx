@@ -68,7 +68,7 @@ const Price = styled.div`
 const FantomPrice = styled(Price)`
   background-color: #002943;
   a {
-    color: #1C9BCA;
+    color: #1c9bca;
   }
 `;
 

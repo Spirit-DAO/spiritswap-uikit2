@@ -18,7 +18,7 @@ interface Props extends PanelProps, PushedProps {
   showMenu?: boolean;
 }
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Price = styled.div`
   height: 42px;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { Login, Config } from "./types";
 interface Props {
     walletConfig: Config;
