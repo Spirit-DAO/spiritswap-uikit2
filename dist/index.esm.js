@@ -61,11 +61,9 @@ function __makeTemplateObject(cooked, raw) {
     return cooked;
 }
 
-var getThemeValue = function (path, fallback) {
-    return function (theme) {
-        return get(theme, path, fallback);
-    };
-};
+var getThemeValue = function (path, fallback) { return function (theme) {
+    return get(theme, path, fallback);
+}; };
 
 var rotate = keyframes(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var spinStyle = css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n"], ["\n  animation: ", " 2s linear infinite;\n"])), rotate);
