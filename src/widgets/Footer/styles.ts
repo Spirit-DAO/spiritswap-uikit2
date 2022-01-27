@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   width: 100%;
   padding: 3rem 1rem;
   border-radius: 0.5rem;
-`
+`;
 
 export const Body = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ export const Body = styled.div`
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
-`
+`;
 
 export const SocialColum = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export const SocialColum = styled.div`
     margin-bottom: 40px;
     margin-right: 0;
   }
-`
+`;
 export const SocialIcons = styled.div`
   display: flex;
   -webkit-box-pack: justify;
@@ -44,7 +44,7 @@ export const SocialIcons = styled.div`
     margin-bottom: 30px;
     justify-content: space-around;
   }
-`
+`;
 
 export const Colums = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ export const Colums = styled.div`
     justify-content: start;
     margin-bottom: 40px;
   }
-`
+`;
 
 export const Title = styled(Text)`
   box-sizing: border-box;
@@ -66,7 +66,7 @@ export const Title = styled(Text)`
   font-size: 16px;
   font-weight: 600;
   color: #6dd784;
-`
+`;
 
 export const StyledLink = styled(Link)`
   font-size: 14px;
@@ -77,7 +77,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 export const Info = styled.div`
   display: flex;
@@ -87,7 +87,7 @@ export const Info = styled.div`
     width: 100%;
     justify-content: space-evenly;
   }
-`
+`;
 
 export const InfoItems = styled(Link)`
   margin-right: 2rem;
@@ -98,7 +98,7 @@ export const InfoItems = styled(Link)`
   @media only screen and (max-width: 1000px) {
     margin: 0;
   }
-`
+`;
 
 export const LinksColum = styled.div`
   display: grid;
@@ -113,7 +113,7 @@ export const LinksColum = styled.div`
     grid-column-gap: 20%;
     margin-top: 30px;
   }
-`
+`;
 
 export const Copyright = styled(Text)`
   text-align: start;
@@ -124,7 +124,7 @@ export const Copyright = styled(Text)`
     text-align: center;
     display: none;
   }
-`
+`;
 
 export const CopyrightInMobile = styled(Text)`
   font-size: 14px;
@@ -133,4 +133,4 @@ export const CopyrightInMobile = styled(Text)`
   @media only screen and (min-width: 1000px) {
     display: none;
   }
-`
+`;

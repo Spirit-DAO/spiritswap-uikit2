@@ -61,9 +61,11 @@ function __makeTemplateObject(cooked, raw) {
     return cooked;
 }
 
-var getThemeValue = function (path, fallback) { return function (theme) {
-    return get(theme, path, fallback);
-}; };
+var getThemeValue = function (path, fallback) {
+    return function (theme) {
+        return get(theme, path, fallback);
+    };
+};
 
 var rotate = keyframes(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var spinStyle = css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n"], ["\n  animation: ", " 2s linear infinite;\n"])), rotate);
@@ -1251,8 +1253,8 @@ var getThemeTextColor = function (_a) {
     var outline = _a.outline, _b = _a.variant, variant = _b === void 0 ? "primary" : _b, theme = _a.theme;
     return outline ? getColor$1(variant, theme) : "#ffffff";
 };
-var StyledTag = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: 0.5rem;\n  color: ", ";\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 400;\n  height: 28px;\n  line-height: 1.5;\n  padding: 0 8px;\n  white-space: nowrap;\n\n\n"], ["\n  align-items: center;\n  background-color: ",
-    ";\n  border: 2px solid ", ";\n  border-radius: 0.5rem;\n  color: ", ";\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 400;\n  height: 28px;\n  line-height: 1.5;\n  padding: 0 8px;\n  white-space: nowrap;\n\n\n"])), function (_a) {
+var StyledTag = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: 0.5rem;\n  color: ", ";\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 400;\n  height: 28px;\n  line-height: 1.5;\n  padding: 0 8px;\n  white-space: nowrap;\n"], ["\n  align-items: center;\n  background-color: ",
+    ";\n  border: 2px solid ", ";\n  border-radius: 0.5rem;\n  color: ", ";\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 400;\n  height: 28px;\n  line-height: 1.5;\n  padding: 0 8px;\n  white-space: nowrap;\n"])), function (_a) {
     var outline = _a.outline, theme = _a.theme, _b = _a.variant, variant = _b === void 0 ? "primary" : _b;
     return outline ? "transparent" : getColor$1(variant, theme);
 }, function (_a) {
@@ -1401,10 +1403,12 @@ var scaleKeyValues = {
         toggleWidth: "72px",
     },
 };
-var getScale$2 = function (property) { return function (_a) {
-    var _b = _a.scale, scale = _b === void 0 ? scales$1.MD : _b;
-    return scaleKeyValues[scale][property];
-}; };
+var getScale$2 = function (property) {
+    return function (_a) {
+        var _b = _a.scale, scale = _b === void 0 ? scales$1.MD : _b;
+        return scaleKeyValues[scale][property];
+    };
+};
 var Handle = styled.div(templateObject_1$w || (templateObject_1$w = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"], ["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.toggle.handleBackground;
@@ -1441,28 +1445,32 @@ Toggle.defaultProps = {
     scale: scales$4.MD,
 };
 
-var byTextAscending = function (getTextProperty) { return function (objectA, objectB) {
-    var upperA = getTextProperty(objectA).toUpperCase();
-    var upperB = getTextProperty(objectB).toUpperCase();
-    if (upperA < upperB) {
-        return -1;
-    }
-    if (upperA > upperB) {
-        return 1;
-    }
-    return 0;
-}; };
-var byTextDescending = function (getTextProperty) { return function (objectA, objectB) {
-    var upperA = getTextProperty(objectA).toUpperCase();
-    var upperB = getTextProperty(objectB).toUpperCase();
-    if (upperA > upperB) {
-        return -1;
-    }
-    if (upperA < upperB) {
-        return 1;
-    }
-    return 0;
-}; };
+var byTextAscending = function (getTextProperty) {
+    return function (objectA, objectB) {
+        var upperA = getTextProperty(objectA).toUpperCase();
+        var upperB = getTextProperty(objectB).toUpperCase();
+        if (upperA < upperB) {
+            return -1;
+        }
+        if (upperA > upperB) {
+            return 1;
+        }
+        return 0;
+    };
+};
+var byTextDescending = function (getTextProperty) {
+    return function (objectA, objectB) {
+        var upperA = getTextProperty(objectA).toUpperCase();
+        var upperB = getTextProperty(objectB).toUpperCase();
+        if (upperA > upperB) {
+            return -1;
+        }
+        if (upperA < upperB) {
+            return 1;
+        }
+        return 0;
+    };
+};
 
 var sortByColumn = function (data, sortColumn, columns) {
     var isAscending = null;
@@ -1504,151 +1512,153 @@ var getColumnsByName = function (columns) {
     });
     return columnsByName;
 };
-var createReducer = function () { return function (state, action) {
-    var rows = [];
-    var nextPage = 0;
-    var prevPage = 0;
-    var isAscending = null;
-    var sortedRows = [];
-    var columnCopy = [];
-    var filteredRows = [];
-    var selectedRowsById = {};
-    var stateCopy = __assign({}, state);
-    var rowIds = {};
-    switch (action.type) {
-        case "SET_ROWS":
-            rows = __spreadArrays(action.data);
-            // preserve sorting if a sort is already enabled when data changes
-            if (state.sortColumn) {
-                rows = sortByColumn(action.data, state.sortColumn, state.columns);
-            }
-            if (state.paginationEnabled === true) {
-                rows = getPaginatedData(rows, state.pagination.perPage, state.pagination.page);
-            }
-            if (state.paginationEnabled === true) {
-                rows = getPaginatedData(rows, state.pagination.perPage, state.pagination.page);
-            }
-            columnCopy = state.columns.map(function (column) {
-                if (state.sortColumn === column.name) {
-                    return __assign(__assign({}, column), { sorted: {
-                            on: true,
-                            asc: column.sorted.asc,
-                        } });
+var createReducer = function () {
+    return function (state, action) {
+        var rows = [];
+        var nextPage = 0;
+        var prevPage = 0;
+        var isAscending = null;
+        var sortedRows = [];
+        var columnCopy = [];
+        var filteredRows = [];
+        var selectedRowsById = {};
+        var stateCopy = __assign({}, state);
+        var rowIds = {};
+        switch (action.type) {
+            case "SET_ROWS":
+                rows = __spreadArrays(action.data);
+                // preserve sorting if a sort is already enabled when data changes
+                if (state.sortColumn) {
+                    rows = sortByColumn(action.data, state.sortColumn, state.columns);
                 }
-                return column;
-            });
-            return __assign(__assign({}, state), { rows: rows, originalRows: action.data, columns: columnCopy });
-        case "NEXT_PAGE":
-            nextPage = state.pagination.page + 1;
-            return __assign(__assign({}, state), { rows: getPaginatedData(state.originalRows, state.pagination.perPage, nextPage), pagination: __assign(__assign({}, state.pagination), { page: nextPage, canNext: nextPage * state.pagination.perPage < state.originalRows.length, canPrev: nextPage !== 1 }) });
-        case "PREV_PAGE":
-            prevPage = state.pagination.page === 1 ? 1 : state.pagination.page - 1;
-            return __assign(__assign({}, state), { rows: getPaginatedData(state.originalRows, state.pagination.perPage, prevPage), pagination: __assign(__assign({}, state.pagination), { page: prevPage, canNext: prevPage * state.pagination.perPage < state.originalRows.length, canPrev: prevPage !== 1 }) });
-        case "TOGGLE_SORT":
-            if (!(action.columnName in state.columnsByName)) {
-                throw new Error("Invalid column, " + action.columnName + " not found");
-            }
-            // loop through all columns and set the sort parameter to off unless
-            // it's the specified column (only one column at a time for )
-            columnCopy = state.columns.map(function (column) {
-                // if the row was found
-                if (action.columnName === column.name) {
-                    if (action.isAscOverride !== undefined) {
-                        // force the sort order
-                        isAscending = action.isAscOverride;
-                    }
-                    else {
-                        // if it's undefined, start by setting to ascending, otherwise toggle
-                        isAscending = column.sorted.asc === undefined ? true : !column.sorted.asc;
-                    }
-                    if (column.sort) {
-                        sortedRows = isAscending ? state.rows.sort(column.sort) : state.rows.sort(column.sort).reverse();
-                        // default to sort by string
-                    }
-                    else {
-                        sortedRows = isAscending
-                            ? state.rows.sort(byTextAscending(function (object) { return object.original[action.columnName]; }))
-                            : state.rows.sort(byTextDescending(function (object) { return object.original[action.columnName]; }));
-                    }
-                    return __assign(__assign({}, column), { sorted: {
-                            on: true,
-                            asc: isAscending,
-                        } });
+                if (state.paginationEnabled === true) {
+                    rows = getPaginatedData(rows, state.pagination.perPage, state.pagination.page);
                 }
-                // set sorting to false for all other columns
-                return __assign(__assign({}, column), { sorted: {
-                        on: false,
-                        asc: false,
-                    } });
-            });
-            return __assign(__assign({}, state), { columns: columnCopy, rows: sortedRows, sortColumn: action.columnName, columnsByName: getColumnsByName(columnCopy) });
-        case "GLOBAL_FILTER":
-            filteredRows = action.filter(state.originalRows);
-            selectedRowsById = {};
-            state.selectedRows.forEach(function (row) {
-                var _a;
-                selectedRowsById[row.id] = (_a = row.selected) !== null && _a !== void 0 ? _a : false;
-            });
-            return __assign(__assign({}, state), { rows: filteredRows.map(function (row) {
-                    return selectedRowsById[row.id] ? __assign(__assign({}, row), { selected: selectedRowsById[row.id] }) : __assign({}, row);
-                }), filterOn: true });
-        case "SELECT_ROW":
-            stateCopy = __assign({}, state);
-            stateCopy.rows = stateCopy.rows.map(function (row) {
-                var newRow = __assign({}, row);
-                if (newRow.id === action.rowId) {
-                    newRow.selected = !newRow.selected;
+                if (state.paginationEnabled === true) {
+                    rows = getPaginatedData(rows, state.pagination.perPage, state.pagination.page);
                 }
-                return newRow;
-            });
-            stateCopy.originalRows = stateCopy.originalRows.map(function (row) {
-                var newRow = __assign({}, row);
-                if (newRow.id === action.rowId) {
-                    newRow.selected = !newRow.selected;
-                }
-                return newRow;
-            });
-            stateCopy.selectedRows = stateCopy.originalRows.filter(function (row) { return row.selected === true; });
-            stateCopy.toggleAllState =
-                stateCopy.selectedRows.length === stateCopy.rows.length
-                    ? (stateCopy.toggleAllState = true)
-                    : (stateCopy.toggleAllState = false);
-            return stateCopy;
-        case "SEARCH_STRING":
-            stateCopy = __assign({}, state);
-            stateCopy.rows = stateCopy.originalRows.filter(function (row) {
-                return (row.cells.filter(function (cell) {
-                    if (cell.value.includes(action.searchString)) {
-                        return true;
+                columnCopy = state.columns.map(function (column) {
+                    if (state.sortColumn === column.name) {
+                        return __assign(__assign({}, column), { sorted: {
+                                on: true,
+                                asc: column.sorted.asc,
+                            } });
                     }
-                    return false;
-                }).length > 0);
-            });
-            return stateCopy;
-        case "TOGGLE_ALL":
-            if (state.selectedRows.length < state.rows.length) {
-                stateCopy.rows = stateCopy.rows.map(function (row) {
-                    rowIds[row.id] = true;
-                    return __assign(__assign({}, row), { selected: true });
+                    return column;
                 });
-                stateCopy.toggleAllState = true;
-            }
-            else {
-                stateCopy.rows = stateCopy.rows.map(function (row) {
-                    rowIds[row.id] = false;
-                    return __assign(__assign({}, row), { selected: false });
+                return __assign(__assign({}, state), { rows: rows, originalRows: action.data, columns: columnCopy });
+            case "NEXT_PAGE":
+                nextPage = state.pagination.page + 1;
+                return __assign(__assign({}, state), { rows: getPaginatedData(state.originalRows, state.pagination.perPage, nextPage), pagination: __assign(__assign({}, state.pagination), { page: nextPage, canNext: nextPage * state.pagination.perPage < state.originalRows.length, canPrev: nextPage !== 1 }) });
+            case "PREV_PAGE":
+                prevPage = state.pagination.page === 1 ? 1 : state.pagination.page - 1;
+                return __assign(__assign({}, state), { rows: getPaginatedData(state.originalRows, state.pagination.perPage, prevPage), pagination: __assign(__assign({}, state.pagination), { page: prevPage, canNext: prevPage * state.pagination.perPage < state.originalRows.length, canPrev: prevPage !== 1 }) });
+            case "TOGGLE_SORT":
+                if (!(action.columnName in state.columnsByName)) {
+                    throw new Error("Invalid column, " + action.columnName + " not found");
+                }
+                // loop through all columns and set the sort parameter to off unless
+                // it's the specified column (only one column at a time for )
+                columnCopy = state.columns.map(function (column) {
+                    // if the row was found
+                    if (action.columnName === column.name) {
+                        if (action.isAscOverride !== undefined) {
+                            // force the sort order
+                            isAscending = action.isAscOverride;
+                        }
+                        else {
+                            // if it's undefined, start by setting to ascending, otherwise toggle
+                            isAscending = column.sorted.asc === undefined ? true : !column.sorted.asc;
+                        }
+                        if (column.sort) {
+                            sortedRows = isAscending ? state.rows.sort(column.sort) : state.rows.sort(column.sort).reverse();
+                            // default to sort by string
+                        }
+                        else {
+                            sortedRows = isAscending
+                                ? state.rows.sort(byTextAscending(function (object) { return object.original[action.columnName]; }))
+                                : state.rows.sort(byTextDescending(function (object) { return object.original[action.columnName]; }));
+                        }
+                        return __assign(__assign({}, column), { sorted: {
+                                on: true,
+                                asc: isAscending,
+                            } });
+                    }
+                    // set sorting to false for all other columns
+                    return __assign(__assign({}, column), { sorted: {
+                            on: false,
+                            asc: false,
+                        } });
                 });
-                stateCopy.toggleAllState = false;
-            }
-            stateCopy.originalRows = stateCopy.originalRows.map(function (row) {
-                return row.id in rowIds ? __assign(__assign({}, row), { selected: rowIds[row.id] }) : __assign({}, row);
-            });
-            stateCopy.selectedRows = stateCopy.originalRows.filter(function (row) { return row.selected; });
-            return stateCopy;
-        default:
-            throw new Error("Invalid reducer action");
-    }
-}; };
+                return __assign(__assign({}, state), { columns: columnCopy, rows: sortedRows, sortColumn: action.columnName, columnsByName: getColumnsByName(columnCopy) });
+            case "GLOBAL_FILTER":
+                filteredRows = action.filter(state.originalRows);
+                selectedRowsById = {};
+                state.selectedRows.forEach(function (row) {
+                    var _a;
+                    selectedRowsById[row.id] = (_a = row.selected) !== null && _a !== void 0 ? _a : false;
+                });
+                return __assign(__assign({}, state), { rows: filteredRows.map(function (row) {
+                        return selectedRowsById[row.id] ? __assign(__assign({}, row), { selected: selectedRowsById[row.id] }) : __assign({}, row);
+                    }), filterOn: true });
+            case "SELECT_ROW":
+                stateCopy = __assign({}, state);
+                stateCopy.rows = stateCopy.rows.map(function (row) {
+                    var newRow = __assign({}, row);
+                    if (newRow.id === action.rowId) {
+                        newRow.selected = !newRow.selected;
+                    }
+                    return newRow;
+                });
+                stateCopy.originalRows = stateCopy.originalRows.map(function (row) {
+                    var newRow = __assign({}, row);
+                    if (newRow.id === action.rowId) {
+                        newRow.selected = !newRow.selected;
+                    }
+                    return newRow;
+                });
+                stateCopy.selectedRows = stateCopy.originalRows.filter(function (row) { return row.selected === true; });
+                stateCopy.toggleAllState =
+                    stateCopy.selectedRows.length === stateCopy.rows.length
+                        ? (stateCopy.toggleAllState = true)
+                        : (stateCopy.toggleAllState = false);
+                return stateCopy;
+            case "SEARCH_STRING":
+                stateCopy = __assign({}, state);
+                stateCopy.rows = stateCopy.originalRows.filter(function (row) {
+                    return (row.cells.filter(function (cell) {
+                        if (cell.value.includes(action.searchString)) {
+                            return true;
+                        }
+                        return false;
+                    }).length > 0);
+                });
+                return stateCopy;
+            case "TOGGLE_ALL":
+                if (state.selectedRows.length < state.rows.length) {
+                    stateCopy.rows = stateCopy.rows.map(function (row) {
+                        rowIds[row.id] = true;
+                        return __assign(__assign({}, row), { selected: true });
+                    });
+                    stateCopy.toggleAllState = true;
+                }
+                else {
+                    stateCopy.rows = stateCopy.rows.map(function (row) {
+                        rowIds[row.id] = false;
+                        return __assign(__assign({}, row), { selected: false });
+                    });
+                    stateCopy.toggleAllState = false;
+                }
+                stateCopy.originalRows = stateCopy.originalRows.map(function (row) {
+                    return row.id in rowIds ? __assign(__assign({}, row), { selected: rowIds[row.id] }) : __assign({}, row);
+                });
+                stateCopy.selectedRows = stateCopy.originalRows.filter(function (row) { return row.selected; });
+                return stateCopy;
+            default:
+                throw new Error("Invalid reducer action");
+        }
+    };
+};
 var sortDataInOrder = function (data, columns) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return data.map(function (row) {
@@ -2466,6 +2476,12 @@ var SocialLinks$1 = React.memo(SocialLinks, function () { return true; });
 var templateObject_1$z;
 
 var Footer = function () {
+    var _a = useState(2022), dateYear = _a[0], setDateyear = _a[1];
+    useEffect(function () {
+        var today = new Date();
+        var year = today.getFullYear();
+        setDateyear(year);
+    }, []);
     return (React.createElement(Wrapper$1, null,
         React.createElement(Body, null,
             React.createElement(SocialColum, null,
@@ -2474,7 +2490,10 @@ var Footer = function () {
                     React.createElement(InfoItems, { href: "https://info.spiritswap.finance/", external: true }, "Analytics"),
                     React.createElement(InfoItems, { href: "https://layer3.gitbook.io/spirit-swap/", external: true }, "Docs"),
                     React.createElement(InfoItems, { href: "https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/", external: true }, "About Us")),
-                React.createElement(Copyright, null, "\u00A9 2021 SpiritSwap")),
+                React.createElement(Copyright, null,
+                    "\u00A9 ",
+                    dateYear,
+                    " SpiritSwap")),
             React.createElement(LinksColum, null,
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Spirit DEX"),
@@ -2496,7 +2515,10 @@ var Footer = function () {
                 React.createElement(Colums, null,
                     React.createElement(Title, null, "Auditors"),
                     React.createElement(StyledLink$1, { href: "https://github.com/Layer3Org/spiritswap-core/blob/main/SpiritSwap-Core%20Security%20Audit%20Report.pdf", external: true }, "MixBytes"))),
-            React.createElement(CopyrightInMobile, null, "\u00A9 2021 SpiritSwap"))));
+            React.createElement(CopyrightInMobile, null,
+                "\u00A9 ",
+                dateYear,
+                " SpiritSwap"))));
 };
 
 var StyledModal = styled.div(templateObject_1$A || (templateObject_1$A = __makeTemplateObject(["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 0.5rem;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 0.5rem;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
@@ -2852,7 +2874,7 @@ var LinkLabel = styled.div(templateObject_2$f || (templateObject_2$f = __makeTem
     var isPushed = _a.isPushed, theme = _a.theme, inSpirit = _a.inSpirit;
     return (!isPushed && "transparent") || (inSpirit === "noInSpirit" && theme.colors.textSubtle) || "#35b9c0";
 });
-var MenuEntry = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ",
+var MenuEntry = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ", ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  &:hover {\n    border-radius: 4px;\n    background-color: ",
     ";\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
@@ -2992,7 +3014,7 @@ var CakePrice = function (_a) {
     var renderIcon = function () {
         var styles = {
             width: "24px",
-            mr: "8px"
+            mr: "8px",
         };
         switch (token) {
             case Token.SPIRIT:
@@ -3051,7 +3073,7 @@ var SettingsEntry = styled.div(templateObject_3$c || (templateObject_3$c = __mak
 var SocialEntry = styled.div(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n  width: 100%;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n  width: 100%;\n"])), MENU_ENTRY_HEIGHT);
 var PriceGroup = styled.div(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  justify-content: center;\n  padding: 0 8px;\n"])));
 var Price = styled.div(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n  flex: 1;\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color: rgba(109, 215, 132, 0.15);\n  margin: 0 2px;\n  // border-bottom: 1px solid #42BE71;\n"], ["\n  flex: 1;\n  height: 42px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: ", "px;\n  padding: 8px;\n  border-radius: 4px;\n  background-color: rgba(109, 215, 132, 0.15);\n  margin: 0 2px;\n  // border-bottom: 1px solid #42BE71;\n"])), PRICE_ENTRY_HEIGHT);
-var FantomPrice = styled(Price)(templateObject_7$2 || (templateObject_7$2 = __makeTemplateObject(["\n  background-color: #002943;\n  a {\n    color: #1C9BCA;\n  }\n"], ["\n  background-color: #002943;\n  a {\n    color: #1C9BCA;\n  }\n"])));
+var FantomPrice = styled(Price)(templateObject_7$2 || (templateObject_7$2 = __makeTemplateObject(["\n  background-color: #002943;\n  a {\n    color: #1c9bca;\n  }\n"], ["\n  background-color: #002943;\n  a {\n    color: #1c9bca;\n  }\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, ftmPriceUsd = _a.ftmPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     if (!isPushed) {

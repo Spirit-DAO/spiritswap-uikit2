@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Wrapper,
   Body,
@@ -16,6 +16,12 @@ import {
 import SocialLinks from "./SocialLinks";
 
 const Footer: React.FC = () => {
+  const [dateYear, setDateyear] = useState(2022);
+  useEffect(() => {
+    let today = new Date();
+    let year = today.getFullYear();
+    setDateyear(year);
+  }, []);
   return (
     <Wrapper>
       <Body>
@@ -32,7 +38,7 @@ const Footer: React.FC = () => {
               About Us
             </InfoItems>
           </Info>
-          <Copyright>© 2021 SpiritSwap</Copyright>
+          <Copyright>© {dateYear} SpiritSwap</Copyright>
         </SocialColum>
 
         <LinksColum>
@@ -88,7 +94,7 @@ const Footer: React.FC = () => {
             </StyledLink>
           </Colums>
         </LinksColum>
-        <CopyrightInMobile>© 2021 SpiritSwap</CopyrightInMobile>
+        <CopyrightInMobile>© {dateYear} SpiritSwap</CopyrightInMobile>
       </Body>
     </Wrapper>
   );

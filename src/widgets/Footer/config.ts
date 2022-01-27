@@ -26,5 +26,4 @@ const socials = [
   },
 ];
 
-
-export default socials
+export default socials;
