@@ -149,8 +149,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, cakePr
           <MenuEntry
             key={entry.label}
             isActive={
-              entry.href === location.pathname ||
+              entry.href === location.pathname
+              ||
               (entry.href?.includes("exchange") && location.pathname.includes("exchange"))
+              ||
+              (entry.href?.includes("farms") && location.pathname.includes("farms"))
             }
             className={calloutClass}
             inSpirit={inSpiritLinks}
