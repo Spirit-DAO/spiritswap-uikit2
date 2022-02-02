@@ -3,6 +3,7 @@ import { useMatchBreakpoints } from "../../hooks";
 import Coin98Wallet from "./icons/Coin98Wallet";
 import Coinbase from "./icons/Coinbase";
 import WalletConnect from "./icons/WalletConnect";
+import MathWallet from "./icons/MathWallet";
 import CloverWallet from "./icons/CloverWallet";
 import TrustWallet from "./icons/TrustWallet";
 import TokenPocket from "./icons/TokenPocket";
@@ -41,6 +42,11 @@ const Connectors = (): Config[] => {
     {
       title: "Token Pocket",
       icon: TokenPocket,
+      connectorId: ConnectorNames.Injected,
+    },
+    {
+      title: "Math Wallet",
+      icon: MathWallet,
       connectorId: ConnectorNames.Injected,
     },
   ];
