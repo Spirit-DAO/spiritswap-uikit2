@@ -2486,7 +2486,7 @@ var Footer = function () {
                 React.createElement(SocialLinks$1, null),
                 React.createElement(Info, null,
                     React.createElement(InfoItems, { href: "https://info.spiritswap.finance/", external: true }, "Analytics"),
-                    React.createElement(InfoItems, { href: "https://layer3.gitbook.io/spirit-swap/", external: true }, "Docs"),
+                    React.createElement(InfoItems, { href: "https://docs.spiritswap.finance/", external: true }, "Docs"),
                     React.createElement(InfoItems, { href: "https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/", external: true }, "About Us")),
                 React.createElement(Copyright, null,
                     "\u00A9 ",
@@ -3361,7 +3361,7 @@ var ConnectModal = function (_a) {
     var connectors = Connectors();
     return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
         connectors.map(function (entry, index) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < Connectors.length - 1 ? "8px" : "0" })); }),
-        React.createElement(HelpLink, { href: "https://layer3.gitbook.io/spirit-swap/howto/connect-metamask", external: true },
+        React.createElement(HelpLink, { href: "https://docs.spiritswap.finance/spirit-swap/howto/connect-metamask", external: true },
             React.createElement(Icon$o, { color: "primary", mr: "6px" }),
             "Learn how to connect")));
 };

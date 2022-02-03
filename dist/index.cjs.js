@@ -2499,7 +2499,7 @@ var Footer = function () {
                 React__default['default'].createElement(SocialLinks$1, null),
                 React__default['default'].createElement(Info, null,
                     React__default['default'].createElement(InfoItems, { href: "https://info.spiritswap.finance/", external: true }, "Analytics"),
-                    React__default['default'].createElement(InfoItems, { href: "https://layer3.gitbook.io/spirit-swap/", external: true }, "Docs"),
+                    React__default['default'].createElement(InfoItems, { href: "https://docs.spiritswap.finance/", external: true }, "Docs"),
                     React__default['default'].createElement(InfoItems, { href: "https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/", external: true }, "About Us")),
                 React__default['default'].createElement(Copyright, null,
                     "\u00A9 ",
@@ -3374,7 +3374,7 @@ var ConnectModal = function (_a) {
     var connectors = Connectors();
     return (React__default['default'].createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
         connectors.map(function (entry, index) { return (React__default['default'].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < Connectors.length - 1 ? "8px" : "0" })); }),
-        React__default['default'].createElement(HelpLink, { href: "https://layer3.gitbook.io/spirit-swap/howto/connect-metamask", external: true },
+        React__default['default'].createElement(HelpLink, { href: "https://docs.spiritswap.finance/spirit-swap/howto/connect-metamask", external: true },
             React__default['default'].createElement(Icon$o, { color: "primary", mr: "6px" }),
             "Learn how to connect")));
 };
