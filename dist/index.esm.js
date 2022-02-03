@@ -3279,6 +3279,13 @@ var Icon$1x = function (props) {
         React.createElement("path", { d: "M61.8919 17.2798H55.7534H39.2134C38.7019 17.2798 38.3608 17.6208 38.3608 18.1324V73.3792C38.3608 73.8908 38.7019 74.2318 39.2134 74.2318H55.0713C55.5829 74.2318 55.9239 73.8908 55.9239 73.3792V59.397H62.0624C73.6575 59.397 83.0358 50.0187 83.0358 38.4237C83.0358 26.6581 73.487 17.2798 61.8919 17.2798Z", fill: "#2761E7" })));
 };
 
+var Icon$1y = function (props) {
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 96 96", xmlns: "http://www.w3.org/2000/svg" }, props),
+        React.createElement("path", { d: "M62.2857 87.9644L25.4728 66.7006C24.1796 65.953 23.3839 64.5736 23.3839 63.0797V20.5003C23.3839 19.8561 22.6869 19.4534 22.1289 19.7761L14.5964 24.1311C11.7514 25.7765 10 28.8124 10 32.0972V67.9051C10 71.1911 11.7514 74.227 14.5964 75.8712L45.5468 93.7641C48.3956 95.412 51.9081 95.412 54.7581 93.7641L62.2857 89.4116C62.8436 89.0914 62.8436 88.2871 62.2857 87.9644Z", fill: "#495BFF" }),
+        React.createElement("path", { d: "M32.1596 62.8185L48.0511 72.0064C49.3468 72.7552 50.943 72.7552 52.2374 72.0064L68.1326 62.8185C69.4258 62.0709 70.2214 60.6915 70.2214 59.1976V40.8108C70.2214 39.3169 69.4246 37.9375 68.1326 37.1899L52.2386 28.0008C50.943 27.252 49.3468 27.252 48.0524 28.0008L44.1087 30.2805C43.8292 30.4419 43.4806 30.2399 43.4806 29.9184L43.5065 8.90093C43.5077 8.25679 42.8094 7.85282 42.2515 8.17551L32.1879 13.9937C30.896 14.74 30.1004 16.1194 30.0991 17.6121L30.072 59.1951C30.0696 60.6891 30.8664 62.0709 32.1596 62.8185ZM41.3622 46.6314C41.3622 45.5759 41.9251 44.6005 42.8389 44.0721L48.6669 40.7037C49.582 40.1741 50.7102 40.1741 51.6253 40.7037L57.4533 44.0721C58.3671 44.6005 58.93 45.5759 58.93 46.6314V53.3757C58.93 54.4312 58.3671 55.4067 57.4533 55.935L51.6253 59.3035C50.7102 59.8331 49.582 59.8331 48.6669 59.3035L42.8389 55.935C41.9251 55.4067 41.3622 54.4312 41.3622 53.3757V46.6314Z", fill: "#495BFF" }),
+        React.createElement("path", { d: "M85.7047 24.12L54.7542 6.22591C53.4574 5.47586 52.0238 5.0682 50.5778 5.00046C50.3401 4.98937 50.1418 5.1815 50.1418 5.41921V18.5433C50.1418 18.8426 50.3007 19.1184 50.5594 19.2675L74.8283 33.2906C76.1215 34.0382 76.9171 35.4176 76.9171 36.9116V63.0674C76.9171 64.5613 76.1203 65.9407 74.8283 66.6883L58.0968 76.3614C57.5401 76.6841 57.5401 77.4883 58.0968 77.8098L69.3858 84.3275C69.9043 84.6268 70.5423 84.6268 71.0596 84.3275L85.7047 75.8614C88.5485 74.2172 90.3011 71.1812 90.3011 67.8953V32.0861C90.3011 28.8002 88.5497 25.7642 85.7047 24.12Z", fill: "#495BFF" })));
+};
+
 var ConnectorNames;
 (function (ConnectorNames) {
     ConnectorNames["Injected"] = "injected";
@@ -3328,6 +3335,11 @@ var Connectors = function () {
             icon: Icon$1u,
             connectorId: ConnectorNames.Injected,
         },
+        {
+            title: "BitKeep",
+            icon: Icon$1y,
+            connectorId: ConnectorNames.Injected,
+        },
     ];
     if (isMobile) {
         connectors.push({
@@ -3343,6 +3355,7 @@ var Connectors = function () {
 };
 var connectorLocalStorageKey = "connectorId";
 
+var FlexCenter = styled.div(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n"], ["\n  display: flex;\n  justify-content: center;\n"])));
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
@@ -3351,11 +3364,14 @@ var WalletCard = function (_a) {
             window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
             onDismiss();
         }, style: { backgroundImage: "none" }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
-        React.createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
-        React.createElement(Icon, { width: "32px" })));
+        React.createElement(FlexCenter, null,
+            React.createElement(Text, { bold: true, color: "primary", mr: "16px" }, title)),
+        React.createElement(FlexCenter, null,
+            React.createElement(Icon, { width: "32px" }))));
 };
+var templateObject_1$M;
 
-var HelpLink = styled(Link)(templateObject_1$M || (templateObject_1$M = __makeTemplateObject(["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"])));
+var HelpLink = styled(Link)(templateObject_1$N || (templateObject_1$N = __makeTemplateObject(["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"])));
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     var connectors = Connectors();
@@ -3365,9 +3381,9 @@ var ConnectModal = function (_a) {
             React.createElement(Icon$o, { color: "primary", mr: "6px" }),
             "Learn how to connect")));
 };
-var templateObject_1$M;
+var templateObject_1$N;
 
-var StyleButton = styled(Text).attrs({ role: "button" })(templateObject_1$N || (templateObject_1$N = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n  color: ", ";\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n  color: ", ";\n"])), function (_a) {
+var StyleButton = styled(Text).attrs({ role: "button" })(templateObject_1$O || (templateObject_1$O = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n  color: ", ";\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n  color: ", ";\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 });
@@ -3397,7 +3413,7 @@ var CopyToClipboard = function (_a) {
         React.createElement(Icon$n, { width: "20px", color: "primary", ml: "4px" }),
         React.createElement(Tooltip, { isTooltipDisplayed: isTooltipDisplayed }, "Copied")));
 };
-var templateObject_1$N, templateObject_2$j;
+var templateObject_1$O, templateObject_2$j;
 
 var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
@@ -3424,7 +3440,7 @@ var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout, showMenu = _a.showMenu;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
-    var glowing = keyframes(templateObject_1$O || (templateObject_1$O = __makeTemplateObject([" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
+    var glowing = keyframes(templateObject_1$P || (templateObject_1$P = __makeTemplateObject([" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"], [" \n  0% {\n    background-color: #212230;\n    box-shadow: rgb(96 213 220) 0px 0px 20px;\n  }\n  20%{\n    background-color: #212230;\n    box-shadow: 0 0 25px rgb(96 213 220);\n  }\n  40% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  60% {\n    background-color: #212230;\n    box-shadow: 0 0 10px rgb(96 213 220);\n  }\n  80% {\n    background-color: #212230;\n    box-shadow: 0 0 15px rgb(96 213 220);\n  }\n  100% {\n    background-color: #212230;\n    box-shadow: 0 0 20px rgb(96 213 220);\n  }\n"])));
     var OwnButtonDisconnected = styled(Button)(templateObject_2$k || (templateObject_2$k = __makeTemplateObject(["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-clip: content-box, border-box;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #0d0e21, #0d0e21);\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "], ["\n    border-radius: 0.5rem;\n    color: ", ";\n    border: solid 3px #0ae4b5;\n    background-clip: content-box, border-box;\n    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),\n      linear-gradient(90deg, #0d0e21, #0d0e21);\n    animation: ", " ease-in-out 2s infinite;\n    &:hover {\n      opacity: 0.6;\n    }\n  "])), function (_a) {
         var theme = _a.theme;
         return (theme.isDark ? "#fff" : "#0ad9e4");
@@ -3450,9 +3466,9 @@ var propsAreEqual = function (prevProps, nextProps) {
     return prevProps.showMenu === nextProps.showMenu && prevProps.account === nextProps.account;
 };
 var UserBlock$1 = React.memo(UserBlock, propsAreEqual);
-var templateObject_1$O, templateObject_2$k, templateObject_3$d;
+var templateObject_1$P, templateObject_2$k, templateObject_3$d;
 
-var Wrapper$3 = styled.div(templateObject_1$P || (templateObject_1$P = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
+var Wrapper$3 = styled.div(templateObject_1$Q || (templateObject_1$Q = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 var ConnectButton = styled(Flex)(templateObject_2$l || (templateObject_2$l = __makeTemplateObject(["\n  position: fixed;\n  right: 16px;\n  top: 16px;\n  transition: 0.2s;\n  z-index: 20;\n}\n"], ["\n  position: fixed;\n  right: 16px;\n  top: 16px;\n  transition: 0.2s;\n  z-index: 20;\n}\n"])));
 var BodyWrapper = styled.div(templateObject_3$e || (templateObject_3$e = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled.div(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  //margin-top: ", ";\n  margin-top: ", ";\n  //colortransition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
@@ -3522,7 +3538,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$P, templateObject_2$l, templateObject_3$e, templateObject_4$7, templateObject_5$4;
+var templateObject_1$Q, templateObject_2$l, templateObject_3$e, templateObject_4$7, templateObject_5$4;
 
 var ToastAction = function (_a) {
     var action = _a.action;
@@ -3546,7 +3562,7 @@ var alertTypeMap = (_a$2 = {},
     _a$2[types.DANGER] = variants$1.DANGER,
     _a$2[types.WARNING] = variants$1.WARNING,
     _a$2);
-var StyledToast = styled.div(templateObject_1$Q || (templateObject_1$Q = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
+var StyledToast = styled.div(templateObject_1$R || (templateObject_1$R = __makeTemplateObject(["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"], ["\n  right: 16px;\n  position: fixed;\n  max-width: calc(100% - 32px);\n  transition: all 250ms ease-in;\n  width: 100%;\n  margin-right: 30px;\n\n  ", " {\n    max-width: 400px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
@@ -3610,11 +3626,11 @@ var Toast = function (_a) {
                     React.createElement(ToastAction, { action: action }))) : (React.createElement(Text, { as: "p", color: "white" }, description)),
                 ttl !== null && type !== "info" ? React.createElement(AnimatedFader, { style: faderStyle }) : null))));
 };
-var templateObject_1$Q, templateObject_2$m;
+var templateObject_1$R, templateObject_2$m;
 
 var ZINDEX = 1000;
 var TOP_POSITION = 80; // Initial position from the top
-var StyledToastContainer = styled.div(templateObject_1$R || (templateObject_1$R = __makeTemplateObject(["\n  .enter,\n  .appear {\n    opacity: 0.01;\n  }\n\n  .enter.enter-active,\n  .appear.appear-active {\n    opacity: 1;\n    transition: opacity 250ms ease-in;\n  }\n\n  .exit {\n    opacity: 1;\n  }\n\n  .exit.exit-active {\n    opacity: 0.01;\n    transition: opacity 250ms ease-out;\n  }\n"], ["\n  .enter,\n  .appear {\n    opacity: 0.01;\n  }\n\n  .enter.enter-active,\n  .appear.appear-active {\n    opacity: 1;\n    transition: opacity 250ms ease-in;\n  }\n\n  .exit {\n    opacity: 1;\n  }\n\n  .exit.exit-active {\n    opacity: 0.01;\n    transition: opacity 250ms ease-out;\n  }\n"])));
+var StyledToastContainer = styled.div(templateObject_1$S || (templateObject_1$S = __makeTemplateObject(["\n  .enter,\n  .appear {\n    opacity: 0.01;\n  }\n\n  .enter.enter-active,\n  .appear.appear-active {\n    opacity: 1;\n    transition: opacity 250ms ease-in;\n  }\n\n  .exit {\n    opacity: 1;\n  }\n\n  .exit.exit-active {\n    opacity: 0.01;\n    transition: opacity 250ms ease-out;\n  }\n"], ["\n  .enter,\n  .appear {\n    opacity: 0.01;\n  }\n\n  .enter.enter-active,\n  .appear.appear-active {\n    opacity: 1;\n    transition: opacity 250ms ease-in;\n  }\n\n  .exit {\n    opacity: 1;\n  }\n\n  .exit.exit-active {\n    opacity: 0.01;\n    transition: opacity 250ms ease-out;\n  }\n"])));
 var ToastContainer = function (_a) {
     var toasts = _a.toasts, onRemove = _a.onRemove, _b = _a.ttl, ttl = _b === void 0 ? 6000 : _b;
     return (React.createElement(StyledToastContainer, null,
@@ -3625,13 +3641,13 @@ var ToastContainer = function (_a) {
             return (React.createElement(Toast, { key: toast.id, toast: toast, onRemove: onRemove, ttl: ttl, style: { top: top + "px", zIndex: zIndex } }));
         }))));
 };
-var templateObject_1$R;
+var templateObject_1$S;
 
-var ResetCSS = createGlobalStyle(templateObject_1$S || (templateObject_1$S = __makeTemplateObject(["\n  /* prettier-ignore */\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed, \n  figure, figcaption, footer, header, hgroup, \n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  /* prettier-ignore */\n  article, aside, details, figcaption, figure, \n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n    font-size: 16px;\n  }\n  ol,\n  ul {\n    list-style: disc;\n    list-style-position: inside;\n  }\n  blockquote,\n  q {\n    quotes: none;\n  }\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \"\";\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n  }\n  [role=\"button\"] {\n    cursor: pointer;\n  }\n  *,\n  *::before,\n  *::after {\n    box-sizing: border-box;\n  }\n  * {\n    font-family: 'Kanit', sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n  /* Scrollbar */\n  ::-webkit-scrollbar {\n    width: 8px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: #4b5563; \n    border-radius: 8px;\n  }\n  ::-webkit-scrollbar-track {\n    box-shadow: inset 0 0 5px ", "; \n    border-radius: 10px;\n  }\n"], ["\n  /* prettier-ignore */\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed, \n  figure, figcaption, footer, header, hgroup, \n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  /* prettier-ignore */\n  article, aside, details, figcaption, figure, \n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n    font-size: 16px;\n  }\n  ol,\n  ul {\n    list-style: disc;\n    list-style-position: inside;\n  }\n  blockquote,\n  q {\n    quotes: none;\n  }\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \"\";\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n  }\n  [role=\"button\"] {\n    cursor: pointer;\n  }\n  *,\n  *::before,\n  *::after {\n    box-sizing: border-box;\n  }\n  * {\n    font-family: 'Kanit', sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n  /* Scrollbar */\n  ::-webkit-scrollbar {\n    width: 8px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: #4b5563; \n    border-radius: 8px;\n  }\n  ::-webkit-scrollbar-track {\n    box-shadow: inset 0 0 5px ", "; \n    border-radius: 10px;\n  }\n"])), function (_a) {
+var ResetCSS = createGlobalStyle(templateObject_1$T || (templateObject_1$T = __makeTemplateObject(["\n  /* prettier-ignore */\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed, \n  figure, figcaption, footer, header, hgroup, \n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  /* prettier-ignore */\n  article, aside, details, figcaption, figure, \n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n    font-size: 16px;\n  }\n  ol,\n  ul {\n    list-style: disc;\n    list-style-position: inside;\n  }\n  blockquote,\n  q {\n    quotes: none;\n  }\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \"\";\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n  }\n  [role=\"button\"] {\n    cursor: pointer;\n  }\n  *,\n  *::before,\n  *::after {\n    box-sizing: border-box;\n  }\n  * {\n    font-family: 'Kanit', sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n  /* Scrollbar */\n  ::-webkit-scrollbar {\n    width: 8px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: #4b5563; \n    border-radius: 8px;\n  }\n  ::-webkit-scrollbar-track {\n    box-shadow: inset 0 0 5px ", "; \n    border-radius: 10px;\n  }\n"], ["\n  /* prettier-ignore */\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed, \n  figure, figcaption, footer, header, hgroup, \n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  /* prettier-ignore */\n  article, aside, details, figcaption, figure, \n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n    font-size: 16px;\n  }\n  ol,\n  ul {\n    list-style: disc;\n    list-style-position: inside;\n  }\n  blockquote,\n  q {\n    quotes: none;\n  }\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \"\";\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n  }\n  [role=\"button\"] {\n    cursor: pointer;\n  }\n  *,\n  *::before,\n  *::after {\n    box-sizing: border-box;\n  }\n  * {\n    font-family: 'Kanit', sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n  /* Scrollbar */\n  ::-webkit-scrollbar {\n    width: 8px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: #4b5563; \n    border-radius: 8px;\n  }\n  ::-webkit-scrollbar-track {\n    box-shadow: inset 0 0 5px ", "; \n    border-radius: 10px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.input;
 });
-var templateObject_1$S;
+var templateObject_1$T;
 
 var baseColors = {
     failure: "#e02f58",
