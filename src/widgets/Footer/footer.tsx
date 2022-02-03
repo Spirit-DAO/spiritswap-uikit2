@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             <InfoItems href="https://info.spiritswap.finance/" external>
               Analytics
             </InfoItems>
-            <InfoItems href="https://layer3.gitbook.io/spirit-swap/" external>
+            <InfoItems href="https://docs.spiritswap.finance/" external>
               Docs
             </InfoItems>
             <InfoItems href="https://fantom.foundation/blog/fantom-ecosystem-spotlight-spiritswap/" external>
