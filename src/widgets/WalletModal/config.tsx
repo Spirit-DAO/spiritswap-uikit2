@@ -7,7 +7,7 @@ import MathWallet from "./icons/MathWallet";
 import CloverWallet from "./icons/CloverWallet";
 import TrustWallet from "./icons/TrustWallet";
 import TokenPocket from "./icons/TokenPocket";
-import BitKeep from './icons/BitKeep'
+import BitKeep from "./icons/BitKeep";
 import { Config, ConnectorNames } from "./types";
 
 const Connectors = (): Config[] => {
@@ -48,11 +48,6 @@ const Connectors = (): Config[] => {
     {
       title: "Math Wallet",
       icon: MathWallet,
-      connectorId: ConnectorNames.Injected,
-    },
-    {
-      title: "BitKeep",
-      icon: BitKeep,
       connectorId: ConnectorNames.Injected,
     },
   ];
