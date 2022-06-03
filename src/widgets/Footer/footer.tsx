@@ -57,6 +57,9 @@ const Footer: React.FC = () => {
 
           <Colums>
             <Title>Exchanges</Title>
+            <StyledLink href="https://trade.felix.com/en/trade/basic/SPIRIT_USDT" external>
+              Felix
+            </StyledLink>
             <StyledLink href="https://www.gate.io/trade/SPIRIT_USDT" external>
               Gate.io
             </StyledLink>
